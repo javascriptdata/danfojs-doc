@@ -1,0 +1,2 @@
+# danfo.Series.count
+

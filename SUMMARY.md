@@ -1,4 +1,21 @@
 # Table of contents
 
-* [Initial page](README.md)
+* [Getting started](README.md)
+* [User Guide](user-guide.md)
+* [API reference](api-reference/README.md)
+  * [Series](api-reference/series/README.md)
+    * [danfo.Series.count](api-reference/series/danfo.series.count.md)
+    * [danfo.Series.sum](api-reference/series/danfo.series.sum-1.md)
+    * [danfo.Series.mod](api-reference/series/danfo.series.mod.md)
+    * [danfo.Series.pow](api-reference/series/danfo.series.pow.md)
+    * [danfo.Series.div](api-reference/series/danfo.series.div.md)
+    * [danfo.Series.mul](api-reference/series/danfo.series.mul.md)
+    * [danfo.Series.sub](api-reference/series/danfo.series.sub.md)
+    * [danfo.Series.add](api-reference/series/danfo.series.add.md)
+    * [danfo.Series.sample](api-reference/series/danfo.series.sample.md)
+    * [danfo.Series.head](api-reference/series/danfo.series.head.md)
+    * [danfo.Series.tail](api-reference/series/danfo.series.tail.md)
+  * [Dataframe](api-reference/dataframe.md)
+* [Development](development.md)
+* [Release Notes](release-notes.md)
 
