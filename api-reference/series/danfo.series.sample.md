@@ -13,8 +13,9 @@ Gets \[num\] number of random rows in a Series
 **Example**
 
 ```javascript
-let config = { columns: this.column_names }
-return new Series(this.values, config)
+let data = [1, 2, 3, 4, 5, 620, 30, 40, 39, 89, 78]
+let sf = new Series(data)
+sf.sample(2)
 ```
 
 
