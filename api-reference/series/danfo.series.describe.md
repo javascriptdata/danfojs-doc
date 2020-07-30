@@ -8,7 +8,7 @@ Generate descriptive statistics. Descriptive statistics include those that summa
 
 **parameter:** 
 
-            **return:** {Series}
+            **return:** {frame}
 
 **Example**
 
