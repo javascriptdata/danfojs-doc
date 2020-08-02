@@ -1,8 +1,12 @@
-# Untitled
+---
+description: This function drops a row (axis=0) or column (axis=1) based on the axis.
+---
+
+# danfo.DataFrame.drop
 
 
 
-The apply function is similar to the map function, just that it only takes in a function
+Returns 
 
 
 
