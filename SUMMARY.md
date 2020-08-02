@@ -33,7 +33,8 @@
     * [danfo.Series.sample](api-reference/series/danfo.series.sample.md)
     * [danfo.Series.tail](api-reference/series/danfo.series.tail.md)
     * [danfo.Series.head](api-reference/series/danfo.series.head.md)
-  * [Dataframe](api-reference/dataframe.md)
+  * [Dataframe](api-reference/dataframe/README.md)
+    * [Untitled](api-reference/dataframe/untitled.md)
 * [Development](development.md)
 * [Release Notes](release-notes.md)
 
