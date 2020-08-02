@@ -12,16 +12,17 @@ Remove rows or columns by specifying label names and corresponding axis, or by s
 
                                      **inplace**: specify whether to drop the row/column with/without creating a new DataFrame}
 
-            **return:** DataFrame
+            **return:** DataFrame without the removed index or column labels.
 
-                         DataFrame without the removed index or column labels.
+                         
 
 **Example**
 
 ```javascript
-let data = [1, 2, 3, 4, 5, 620, 30, 40, 39, 89, 78]
-let cols = ["A"]
-let sf = new Series(data, { columns: cols })
-sf.head()
+let data = [[1, 2, 3], [4, 5, 6]]
+let cols = ["A", "B", "C"]
+let df = new DataFrame(data, { columns: cols })
+df.drop("C", { axis: 1, inplace: true });
+let column = ["A", "B"]
 ```
 
