@@ -27,5 +27,6 @@ let data = [[1, 2, 3], [4, 5, 6]]
 let cols = ["A", "B", "C"]
 let df = new DataFrame(data, { columns: cols })
 df.drop("C", { axis: 1, inplace: true });
+let column = ["A", "B"]
 ```
 
