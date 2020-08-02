@@ -10,7 +10,11 @@ Remove rows or columns by specifying label names and corresponding axis, or by s
 
                                      **axis**: row=0, columns=1
 
+**parameter:** {callable} callable \[FUNCTION\]
+
                                      **inplace**: specify whether to drop the row/column with/without creating a new DataFrame}
+
+   **return:** {array}
 
             **return:** DataFrame without the removed index or column labels.
 

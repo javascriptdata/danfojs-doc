@@ -4,6 +4,7 @@
 * [User Guide](user-guide.md)
 * [API reference](api-reference/README.md)
   * [Series](api-reference/series/README.md)
+    * [Untitled](api-reference/series/untitled.md)
     * [danfo.Series.toString](api-reference/series/danfo.series.tostring.md)
     * [danfo.Series.apply](api-reference/series/danfo.series.apply.md)
     * [danfo.Series.map](api-reference/series/danfo.series.map.md)
