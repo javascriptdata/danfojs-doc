@@ -12,15 +12,7 @@ Allowed inputs are:
 * A list or array of labels, e.g. `['a', 'b', 'c']`.
 * A slice object with labels, e.g. `'a':'f'`.
 
-**parameter:** kwargs object {rows: Array of index, columns: Array of column name\(s\)}
+**parameter:** kwargs\["type"\] = "loc"
 
-            **return:** DataFrame data structure
-
-```javascript
-let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
-let cols = ["A", "B", "C"]
-let df = new DataFrame(data, { columns: cols })
-let col_df = df.loc({ "rows": ["0:2"], "columns": ["B:C"] })
-let col_data = [[2, 3], [5, 6], [30, 40]]
-```
+            **return:** DataFrame without the removed index or column labels.
 

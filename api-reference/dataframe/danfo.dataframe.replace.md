@@ -10,7 +10,7 @@ This function replaces values in a dataframe with other values dynamically
 
             **return:** {Series}
 
-**Example**
+**Example1**
 
 ```javascript
  let data1 = [[10, 45, 56, 25], [23, 20, 10, 24]]
@@ -19,7 +19,12 @@ This function replaces values in a dataframe with other values dynamically
  let df_rep = sf.replace({ replace: 10, with: -999 })
 ```
 
+**Examples2**
 
-
-
+```javascript
+let data1 = [["A", "A", "A", "B"], ["B", "C", "C", "D"]]
+let sf = new DataFrame(data1)
+let expected = [["boy", "boy", "boy", "B"], ["B", "C", "C", "D"]]
+sf.replace({ replace: "A", with: "boy", inplace: true })
+```
 
