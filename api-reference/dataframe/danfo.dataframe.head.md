@@ -18,12 +18,7 @@ For negative values of n, this function returns all rows except the last n rows,
 let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
 let cols = ["A", "B", "C"]
 let df = new DataFrame(data, { columns: cols })
-```
-
-```javascript
-let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
-let cols = ["A", "B", "C"]
-let df = new DataFrame(data, { columns: cols })
+df.head(2)
 ```
 
 
