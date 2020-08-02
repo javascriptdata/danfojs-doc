@@ -14,5 +14,5 @@ Allowed inputs are:
 
 **parameter:** kwargs\["type"\] = "loc"
 
-            **return:** DataFrame without the removed index or column labels.
+            **return:** DataFrame without the removed index or column labels
 
