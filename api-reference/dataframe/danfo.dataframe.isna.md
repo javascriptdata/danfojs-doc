@@ -1,0 +1,2 @@
+# danfo.DataFrame.isna
+
