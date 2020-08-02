@@ -61,6 +61,9 @@
     * [danfo.DataFrame.copy](api-reference/dataframe/danfo.dataframe.copy.md)
     * [danfo.DataFrame.describe](api-reference/dataframe/danfo.dataframe.describe.md)
     * [danfo.DataFrame.sum](api-reference/dataframe/danfo.dataframe.sum.md)
+    * [danfo.DataFrame.abs](api-reference/dataframe/danfo.dataframe.abs.md)
+    * [danfo.DataFrame.query](api-reference/dataframe/danfo.dataframe.query.md)
+    * [danfo.DataFrame.addColumn](api-reference/dataframe/danfo.dataframe.addcolumn.md)
 * [Development](development.md)
 * [Release Notes](release-notes.md)
 
