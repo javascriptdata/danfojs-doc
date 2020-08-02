@@ -1,6 +1,6 @@
 # Table of contents
 
-* [Getting started](README.md)
+* [danfo documentation](README.md)
 * [User Guide](user-guide.md)
 * [API reference](api-reference/README.md)
   * [Series](api-reference/series/README.md)
