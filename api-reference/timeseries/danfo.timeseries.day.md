@@ -1,0 +1,2 @@
+# danfo.TimeSeries.day
+

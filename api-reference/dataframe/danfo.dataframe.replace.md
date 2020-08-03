@@ -17,6 +17,7 @@ This function replaces values in a dataframe with other values dynamically
  let sf = new DataFrame(data1)
  let expected = [[-999, 45, 56, 25], [23, 20, -999, 24]]
  let df_rep = sf.replace({ replace: 10, with: -999 })
+ df_rep.values
 ```
 
 **Examples2**
@@ -26,5 +27,6 @@ let data1 = [["A", "A", "A", "B"], ["B", "C", "C", "D"]]
 let sf = new DataFrame(data1)
 let expected = [["boy", "boy", "boy", "B"], ["B", "C", "C", "D"]]
 sf.replace({ replace: "A", with: "boy", inplace: true })
+sf.values
 ```
 
