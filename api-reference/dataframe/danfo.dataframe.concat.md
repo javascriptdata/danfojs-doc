@@ -1,40 +1,50 @@
 # danfo.DataFrame.concat
 
-Merge DataFrame or named Series objects with a database-style join.
+Concatenate pandas objects along a particular axis with optional set logic along the other axes.
 
-            **parameter:** {kwargs} keys: left, right, on, how
+            **parameter:** kwargs { df\_list: \[Array of DataFrame\], axis: int}
 
-            **return:** DataFrame
+            **return:** DataFrame object
 
 **Example1**
 
 ```javascript
-let data = [['K0', 'k0', 'A0', 'B0'], ['k0', 'K1', 'A1', 'B1'],['K1', 'K0', 'A2', 'B2'], ['K2', 'K2', 'A3', 'B3']]
-let data2 = [['K0', 'k0', 'C0', 'D0'], ['K1', 'K0', 'C1', 'D1'],['K1', 'K0', 'C2', 'D2'], ['K2', 'K0', 'C3', 'D3']]
+let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
+let cols = ["A", "B", "C"]
+let df = new DataFrame(data, { columns: cols })
 
-let colum1 = ['Key1', 'Key2', 'A', 'B']
-let colum2 = ['Key1', 'Key2', 'A', 'D']
+let data1 = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
+let cols1 = ["A", "B", "C"]
+let df1 = new DataFrame(data1, { columns: cols1 })
 
-let df1 = new DataFrame(data, { columns: colum1 })
-let df2 = new DataFrame(data2, { columns: colum2 })
-let merge_df = DataFrame.merge({ "left": df1, "right": df2, "on": ["Key1", "Key2"], "how": "outer" })
+let data2 = [[1, 2, 3, 5], [4, 5, 6, 8], [20, 30, 40, 10]]
+let cols2 = ["A", "B", "C", "D"]
+let df2 = new DataFrame(data2, { columns: cols2 })
 
-merge_df.values
+let new_df = DataFrame.concat({ "df_list": [df, df1, df2], "axis": 0 })
+
+new_df.values
 ```
 
 **Examples2**
 
 ```javascript
-let data = [['K0', 'k0', 'A0', 'B0'], ['k0', 'K1', 'A1', 'B1'],['K1', 'K0', 'A2', 'B2'], ['K2', 'K2', 'A3', 'B3']]
-let data2 = [['K0', 'k0', 'C0', 'D0'], ['K1', 'K0', 'C1', 'D1'],['K1', 'K0', 'C2', 'D2'], ['K2', 'K0', 'C3', 'D3']]
+let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
+let cols = ["A", "B", "C"]
+let df = new DataFrame(data, { columns: cols })
 
-let colum1 = ['Key1', 'Key2', 'A', 'B']
-let colum2 = ['Key1', 'Key2', 'A', 'D']
+let data1 = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
+let cols1 = ["A", "B", "C"]
+let df1 = new DataFrame(data1, { columns: cols1 })
 
-let df1 = new DataFrame(data, { columns: colum1 })
-let df2 = new DataFrame(data2, { columns: colum2 })
-let merge_df = DataFrame.merge({ "left": df1, "right": df2, "on": ["Key1", "Key2"], "how": "inner" })
+let data2 = [[1, 2, 3, 5], [4, 5, 6, 8], [20, 30, 40, 10]]
 
-merge_df.values
+
+let cols2 = ["A", "B", "C", "D"]
+let df2 = new DataFrame(data2, { columns: cols2 })
+
+let new_df = DataFrame.concat({ "df_list": [df, df1, df2], "axis": 1 })
+
+new_df.values
 ```
 
