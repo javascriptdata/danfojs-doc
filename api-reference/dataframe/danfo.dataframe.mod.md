@@ -20,3 +20,12 @@ let df = new DataFrame(data)
 df.mod(2)
 ```
 
+
+
+```javascript
+let data = [[0, 2, 4], [31, 15, 360]]
+let sf = new Series([1, 2, 1])
+let df = new DataFrame(data)
+df.mod(sf)
+```
+
