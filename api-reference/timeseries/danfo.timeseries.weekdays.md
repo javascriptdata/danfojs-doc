@@ -1,2 +1,2 @@
-# danfo.TimeSeries.weekdays
+# danfo.to\_datetime.weekdays
 

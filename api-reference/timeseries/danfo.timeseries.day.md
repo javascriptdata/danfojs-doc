@@ -1,2 +1,2 @@
-# danfo.TimeSeries.day
+# danfo.to\_datetime.day
 

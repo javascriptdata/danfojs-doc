@@ -1,2 +1,2 @@
-# danfo.TimeSeries.month
+# danfo.to\_datetime.month
 

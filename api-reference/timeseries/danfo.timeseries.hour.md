@@ -1,2 +1,2 @@
-# danfo.TimeSeries.hour
+# danfo.to\_datetime.hour
 
