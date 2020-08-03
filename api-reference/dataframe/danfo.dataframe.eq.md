@@ -19,6 +19,7 @@ Get Equal to of dataframe and other, element-wise \(binary operator eq\).
  let df = new DataFrame(data1)
  let df2 = new DataFrame(data2)
  let expected = [[false, false, false, false], [true, false, false, true]]
+ df.eq(df2).values
 ```
 
 **Examples2**
@@ -27,5 +28,6 @@ Get Equal to of dataframe and other, element-wise \(binary operator eq\).
 let data1 = [[10, 45, 56, 10], [25, 23, 30, 10]]
 let sf = new DataFrame(data1)
 let expected = [[false, false, false, false], [false, false, true, false]]
+sf.eq(30).values
 ```
 
