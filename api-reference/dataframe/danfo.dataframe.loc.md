@@ -21,7 +21,6 @@ let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
 let cols = ["A", "B", "C"]
 let df = new DataFrame(data, { columns: cols })
 let col_df = df.loc({ "rows": ["0:2"], "columns": ["B:C"] })
-let col_data = [[2, 3], [5, 6], [30, 40]]
 ```
 
 
@@ -31,6 +30,5 @@ let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
 let cols = ["A", "B", "C"]
 let df = new DataFrame(data, { columns: cols })
 let col_df = df.loc({ "rows": [0, 1], "columns": ["A:C"] })
-let col_data = [[1, 2, 3], [4, 5, 6]]
 ```
 

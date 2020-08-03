@@ -13,7 +13,6 @@
     * [danfo.to\_datetime.month\_name](api-reference/timeseries/danfo.to_datetime.month_name.md)
     * [danfo.to\_datetime.to\_date\_time](api-reference/timeseries/danfo.to_datetime.to_date_time.md)
   * [Series](api-reference/series/README.md)
-    * [Untitled](api-reference/series/untitled.md)
     * [danfo.Series.toString](api-reference/series/danfo.series.tostring.md)
     * [danfo.Series.apply](api-reference/series/danfo.series.apply.md)
     * [danfo.Series.map](api-reference/series/danfo.series.map.md)
