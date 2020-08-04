@@ -25,3 +25,18 @@ sf.map(map)
 
 ![](../../.gitbook/assets/series_map.png)
 
+```javascript
+const dfd = require("danfojs")
+
+let sf = new dfd.Series([1,2,3,4])
+
+sf.map((x)=>{
+    return `I have ${x} cat(s)`
+}).print()
+
+```
+
+**OUTPUT**
+
+![](../../.gitbook/assets/series_map1.png)
+
