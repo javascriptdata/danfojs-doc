@@ -1,10 +1,15 @@
 # danfo.read\_json
 
-**Parameters**: 
+> danfo.**read\_json**\(source, chunk\) [\[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/io/reader.js#L38)\]
 
-_**source**_: \(str, path or URL \). Any valid string path is acceptable. The string could be a URL. Valid URL schemes include http, ftp, s3, gs, and file. For local file path, it should be prefixed with " **file://**", for example, "**file:///home/path/to/table.csv**".
+| **Parameters** | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| _**source**_: | str, path or URL  | Any valid string path is acceptable. The string could be a URL. Valid URL schemes include http, ftp, s3, gs, and file. For local file path, it should be prefixed with " **file://**", for example, "**file:///home/path/to/table.csv**". |  |
+| **chunk**: |  int, optional | The number of rows of file to read. Useful for reading pieces of large files. |  |
 
-**chunk:** \(int, optional\). The number of rows of file to read. Useful for reading pieces of large files.
+**Returns:**
+
+     ****_**Promise**_. Resolves to DataFrame
 
 ### Example
 

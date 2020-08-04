@@ -8,11 +8,14 @@ description: >-
 
 > danfo.**read\_csv**\(source, chunk\) [\[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/io/reader.js#L21)\]
 
-**Parameters**: 
+| **Parameters** | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| _**source**_: | str, path or URL  | Any valid string path is acceptable. The string could be a URL. Valid URL schemes include http, ftp, s3, gs, and file. For local file path, it should be prefixed with " **file://**", for example, "**file:///home/path/to/table.csv**". |  |
+| **chunk**: |  int, optional | The number of rows of file to read. Useful for reading pieces of large files. |  |
 
-_**source**_: \(str, path or URL \). Any valid string path is acceptable. The string could be a URL. Valid URL schemes include http, ftp, s3, gs, and file. For local file path, it should be prefixed with " **file://**", for example, "**file:///home/path/to/table.csv**".
+**Returns:**
 
-**chunk:** \(int, optional\). The number of rows of file to read. Useful for reading pieces of large files.
+     ****_**Promise**_. Resolves to DataFrame
 
 ### Example
 
