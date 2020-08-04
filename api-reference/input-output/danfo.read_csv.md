@@ -6,7 +6,7 @@ description: >-
 
 # danfo.read\_csv
 
-danfo.**read\_csv**\(source, chunk\) [\[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/io/reader.js#L21)\]
+> danfo.**read\_csv**\(source, chunk\) [\[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/io/reader.js#L21)\]
 
 **Parameters**: 
 
