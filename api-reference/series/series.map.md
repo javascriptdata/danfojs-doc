@@ -12,6 +12,10 @@ description: Map the value of a series to it representation
 
 **Example**
 
+Mapping the element in a Series to a word
+
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs")
 
@@ -20,11 +24,23 @@ let map = { 1: "ok", 2: "okie", 3: "frit", 4: "gop" }
 sf.map(map)
 
 ```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
 
 **OUTPUT**
 
 ![](../../.gitbook/assets/series_map.png)
 
+Mapping values in a Series to a representation using functions.
+
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs")
 
@@ -35,6 +51,14 @@ sf.map((x)=>{
 }).print()
 
 ```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
 
 **OUTPUT**
 

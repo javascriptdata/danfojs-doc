@@ -18,6 +18,8 @@ description: invoke a function on Series Value
 
 **Example**
 
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs")
 
@@ -28,11 +30,21 @@ let apply_func = (x) => {
 }
 sf.apply(apply_func).print()
 ```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
 
 **OUTPUT:**
 
 ![](../../.gitbook/assets/series_apply.png)
 
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs")
 
@@ -40,11 +52,21 @@ let sf = new dfd.Series([1, 2, 3, 4, 5, 6, 7, 8])
 
 sf.apply(Math.log).print()
 ```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
 
 **OUTPUT:**
 
 ![](../../.gitbook/assets/series_apply1.png)
 
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs")
 
@@ -54,6 +76,14 @@ sf.apply((x)=>{
     return x.toLocaleLowerCase()
 }).print()
 ```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
 
 **OUTPUT**
 
