@@ -2,7 +2,7 @@
 description: Return the median of the values for the requested axis.
 ---
 
-# danfo.DataFrame.median
+# DataFrame.median
 
 **parameter**: {axis} Number {0: row, 1 : column} Axis for the function to be applied on
 

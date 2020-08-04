@@ -2,7 +2,7 @@
 description: 'Get Multiplication of dataframe and other, element-wise (binary operator mul).'
 ---
 
-# danfo.DataFrame.mul
+# DataFrame.mul
 
 Equivalent to `dataframe * other`, but with support to substitute a fill\_value for missing data in one of the inputs. With reverse version, rmul.
 

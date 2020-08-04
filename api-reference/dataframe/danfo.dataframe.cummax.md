@@ -2,7 +2,7 @@
 description: Return cumulative maximum over a DataFrame or Series axis.
 ---
 
-# danfo.DataFrame.cummax
+# DataFrame.cummax
 
 Returns a DataFrame or Series of the same size containing the cumulative minimum.
 

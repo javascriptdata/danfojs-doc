@@ -1,4 +1,4 @@
-# danfo.DataFrame.apply
+# DataFrame.apply
 
 Apply a function along an axis of the DataFrame.
 

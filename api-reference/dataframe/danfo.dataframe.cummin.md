@@ -2,7 +2,7 @@
 description: Return cumulative minimum over a DataFrame or Series axis.
 ---
 
-# danfo.DataFrame.cummin
+# DataFrame.cummin
 
 Returns a DataFrame or Series of the same size containing the cumulative minimum.
 

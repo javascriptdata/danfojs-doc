@@ -2,7 +2,7 @@
 description: Return the maximum of the values for the requested axis.
 ---
 
-# danfo.DataFrame.max
+# DataFrame.max
 
 
 

@@ -2,7 +2,7 @@
 description: Generate descriptive statistics.
 ---
 
-# danfo.DataFrame.describe
+# DataFrame.describe
 
 Descriptive statistics include those that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding `NaN` values. Analyzes both numeric and object series, as well as `DataFrame` column sets of mixed data types. The output will vary depending on what is provided. Refer to the notes below for more detail.
 

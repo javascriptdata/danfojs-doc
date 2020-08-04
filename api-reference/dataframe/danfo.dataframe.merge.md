@@ -1,4 +1,4 @@
-# danfo.DataFrame.merge
+# DataFrame.merge
 
 Merge DataFrame or named Series objects with a database-style join.
 

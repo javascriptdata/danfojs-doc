@@ -5,7 +5,7 @@ description: >-
   rows.
 ---
 
-# danfo.DataFrame.tail
+# DataFrame.tail
 
 For negative values of n, this function returns all rows except the first n rows, equivalent to `df[n:]`.
 

@@ -2,7 +2,7 @@
 description: Return the mean of the values for the requested axis.
 ---
 
-# danfo.DataFrame.mean
+# DataFrame.mean
 
 **parameter**: {axis} Number {0: row, 1 : column} Axis for the function to be applied on
 

@@ -1,4 +1,4 @@
-# danfo.DataFrame.sum
+# DataFrame.sum
 
 Return the sum of the values for the requested axis.
 

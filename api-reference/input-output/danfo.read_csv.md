@@ -33,6 +33,8 @@ dfd.read_csv("file:///home/Desktop/titanic.csv")
   
    df.head().print()
 
+  }).catch(err=>{
+     console.log(err);
   })
 ```
 {% endtab %}
@@ -65,6 +67,8 @@ dfd.read_csv("file:///home/Desktop/titanic.csv", chunk=10000)
   
    df.tail().print()
 
+  }).catch(err=>{
+      console.log(err);
   })
 ```
 {% endtab %}

@@ -2,7 +2,7 @@
 description: 'Get Equal to of dataframe and other, element-wise (binary operator eq).'
 ---
 
-# danfo.DataFrame.eq
+# DataFrame.eq
 
 Get Equal to of dataframe and other, element-wise \(binary operator eq\).
 

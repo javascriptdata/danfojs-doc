@@ -2,7 +2,7 @@
 description: Return cumulative sum over a DataFrame or Series axis.
 ---
 
-# danfo.DataFrame.cumsum
+# DataFrame.cumsum
 
 Returns a DataFrame or Series of the same size containing the cumulative sum.
 

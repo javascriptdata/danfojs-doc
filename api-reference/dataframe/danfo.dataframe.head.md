@@ -4,7 +4,7 @@ description: >-
   useful for quickly testing if your object has the right type of data in it.
 ---
 
-# danfo.DataFrame.head
+# DataFrame.head
 
 For negative values of n, this function returns all rows except the last n rows, equivalent to `df[:-n]`.
 

@@ -1,4 +1,4 @@
-# danfo.DataFrame.It
+# DataFrame.It
 
 Get Less than of dataframe and other, element-wise \(binary operator lt\).
 

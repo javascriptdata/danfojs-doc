@@ -4,7 +4,7 @@ description: >-
   pow).
 ---
 
-# danfo.DataFrame.pow
+# DataFrame.pow
 
 Equivalent to `dataframe ** other`, but with support to substitute a fill\_value for missing data in one of the inputs. With reverse version, rpow.
 

@@ -1,4 +1,4 @@
-# danfo.DataFrame.column
+# DataFrame.column
 
 Return the elements of the specified column in the dataframe
 

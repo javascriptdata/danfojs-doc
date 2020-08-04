@@ -1,4 +1,4 @@
-# danfo.DataFrame.query
+# DataFrame.query
 
 Query the columns of a DataFrame with a boolean expression.
 

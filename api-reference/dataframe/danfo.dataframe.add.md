@@ -2,7 +2,7 @@
 description: 'Get Addition of DataFrame and other, element-wise (binary operator add).'
 ---
 
-# danfo.DataFrame.add
+# DataFrame.add
 
 Equivalent to `dataframe + other`, but with support to substitute a fill\_value for missing data in one of the inputs. With reverse version, radd.
 

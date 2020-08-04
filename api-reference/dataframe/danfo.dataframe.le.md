@@ -1,4 +1,4 @@
-# danfo.DataFrame.le
+# DataFrame.le
 
 Get Less than or equal to of dataframe and other, element-wise \(binary operator le\).
 

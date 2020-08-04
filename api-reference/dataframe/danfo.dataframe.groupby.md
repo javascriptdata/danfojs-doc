@@ -1,4 +1,4 @@
-# danfo.DataFrame.groupby
+# DataFrame.groupby
 
 Group DataFrame using a mapper or by a Series of columns.
 

@@ -1,4 +1,4 @@
-# danfo.DataFrame.abs
+# DataFrame.abs
 
 Return a Series/DataFrame with absolute numeric value of each element.
 

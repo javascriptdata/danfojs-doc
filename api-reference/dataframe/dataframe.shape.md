@@ -1,0 +1,4 @@
+# DataFrame.shape
+
+shape
+

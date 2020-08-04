@@ -1,4 +1,4 @@
-# danfo.DataFrame.gt
+# DataFrame.gt
 
 Get Greater than of dataframe and other, element-wise \(binary operator gt\).
 

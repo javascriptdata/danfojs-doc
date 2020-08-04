@@ -1,4 +1,4 @@
-# danfo.DataFrame.nanindex
+# DataFrame.nanindex
 
 Return the index of NaN index
 

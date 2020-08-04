@@ -1,2 +1,2 @@
-# danfo.DataFrame.str
+# DataFrame.str
 

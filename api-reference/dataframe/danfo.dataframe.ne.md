@@ -1,4 +1,4 @@
-# danfo.DataFrame.ne
+# DataFrame.ne
 
 Get Not equal to of dataframe and other, element-wise \(binary operator ne\).
 

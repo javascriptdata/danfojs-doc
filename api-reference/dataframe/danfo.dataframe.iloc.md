@@ -2,7 +2,7 @@
 description: Purely integer-location based indexing for selection by position.
 ---
 
-# danfo.DataFrame.iloc
+# DataFrame.iloc
 
 `.iloc[]` is primarily integer position based \(from `0` to `length-1` of the axis\), but may also be used with a boolean array.
 

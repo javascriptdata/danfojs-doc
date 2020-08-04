@@ -1,4 +1,4 @@
-# danfo.DataFrame.addColumn
+# DataFrame.addColumn
 
 Add column to an existing dataframe
 

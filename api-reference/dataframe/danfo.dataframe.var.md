@@ -2,7 +2,7 @@
 description: Return unbiased variance over requested axis.
 ---
 
-# danfo.DataFrame.var
+# DataFrame.var
 
 Normalized by N-1 by default. This can be changed using the ddof argument
 

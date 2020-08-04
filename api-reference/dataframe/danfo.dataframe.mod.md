@@ -2,7 +2,7 @@
 description: 'Get Modulo of dataframe and other, element-wise (binary operator mod).'
 ---
 
-# danfo.DataFrame.mod
+# DataFrame.mod
 
 Equivalent to `dataframe % other`, but with support to substitute a fill\_value for missing data in one of the inputs. With reverse version, rmod.
 

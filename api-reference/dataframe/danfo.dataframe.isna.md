@@ -1,4 +1,4 @@
-# danfo.DataFrame.isna
+# DataFrame.isna
 
 Detect missing values for an array-like object.
 

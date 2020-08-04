@@ -2,7 +2,7 @@
 description: 'Get Subtraction of dataframe and other, element-wise (binary operator sub).'
 ---
 
-# danfo.DataFrame.sub
+# DataFrame.sub
 
 Equivalent to `dataframe - other`, but with support to substitute a fill\_value for missing data in one of the inputs. With reverse version, rsub.
 

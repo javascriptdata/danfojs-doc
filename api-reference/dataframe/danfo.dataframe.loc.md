@@ -2,7 +2,7 @@
 description: Access a group of rows and columns by label(s) or a boolean array.
 ---
 
-# danfo.DataFrame.loc
+# DataFrame.loc
 
 `.loc[]` is primarily label based, but may also be used with a boolean array.
 

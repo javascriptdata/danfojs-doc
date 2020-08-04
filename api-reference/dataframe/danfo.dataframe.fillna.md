@@ -1,4 +1,4 @@
-# danfo.DataFrame.fillna
+# DataFrame.fillna
 
 Fill NA/NaN values using the specified method.Detect missing values for an array-like object.
 

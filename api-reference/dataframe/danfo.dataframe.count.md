@@ -2,7 +2,7 @@
 description: Count non-NA cells for each column or row.
 ---
 
-# danfo.DataFrame.count
+# DataFrame.count
 
 The values None, NaN, NaT, and optionally numpy.inf \(depending on pandas.options.mode.use\_inf\_as\_na\) are considered NA.
 

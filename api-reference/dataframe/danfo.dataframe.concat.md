@@ -1,4 +1,4 @@
-# danfo.DataFrame.concat
+# DataFrame.concat
 
 Concatenate pandas objects along a particular axis with optional set logic along the other axes.
 

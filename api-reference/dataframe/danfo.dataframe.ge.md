@@ -1,4 +1,4 @@
-# danfo.DataFrame.ge
+# DataFrame.ge
 
 Get Greater than or equal to of dataframe and other, element-wise \(binary operator ge\).
 

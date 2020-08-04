@@ -2,7 +2,7 @@
 description: Return cumulative product over a DataFrame or Series axis.
 ---
 
-# danfo.DataFrame.cumprod
+# DataFrame.cumprod
 
 Returns a DataFrame or Series of the same size containing the cumulative product.
 

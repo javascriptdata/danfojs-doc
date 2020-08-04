@@ -2,7 +2,7 @@
 description: Make a copy of this object’s indices and data.
 ---
 
-# danfo.DataFrame.copy
+# DataFrame.copy
 
 **parameter**: 
 

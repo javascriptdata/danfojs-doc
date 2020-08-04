@@ -2,7 +2,7 @@
 description: Return sample standard deviation over requested axis.
 ---
 
-# danfo.DataFrame.std
+# DataFrame.std
 
 Normalized by N-1 by default. This can be changed using the ddof argument
 

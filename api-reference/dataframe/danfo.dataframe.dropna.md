@@ -1,4 +1,4 @@
-# danfo.DataFrame.dropna
+# DataFrame.dropna
 
 Remove missing values.
 

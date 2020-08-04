@@ -2,7 +2,7 @@
 description: Round a DataFrame to a variable number of decimal places.
 ---
 
-# danfo.DataFrame.round
+# DataFrame.round
 
 **parameter**: **axis**{0 or ‘index’, 1 or ‘columns’}, default 0
 

@@ -2,7 +2,7 @@
 description: Return a random sample of items from an axis of object.
 ---
 
-# danfo.DataFrame.sample
+# DataFrame.sample
 
 You can use random\_state for reproducibility.
 

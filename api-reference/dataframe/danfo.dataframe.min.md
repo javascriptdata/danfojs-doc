@@ -2,7 +2,7 @@
 description: Return the minimum of the values for the requested axis.
 ---
 
-# danfo.DataFrame.min
+# DataFrame.min
 
 If you want the _index_ of the minimum, use `idxmin`. This is the equivalent of the `numpy.ndarray` method `argmin`.
 

@@ -1,4 +1,4 @@
-# danfo.DataFrame.replace
+# DataFrame.replace
 
 This function replaces values in a dataframe with other values dynamically
 
