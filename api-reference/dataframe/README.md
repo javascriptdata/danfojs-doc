@@ -6,7 +6,7 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 
 > [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)\(data, {**columns:** \[ Array \], **dtypes:** \[ Array \], **index:** \[Array\]}\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L20)\]
 
-### Attributes and underlying data
+### Attributes
 
 | [`DataFrame.index`](dataframe.index.md) | The index \(row labels\) of the DataFrame. |
 | :--- | :--- |
@@ -57,7 +57,7 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 | [`DataFrame.apply`](danfo.dataframe.apply.md) | Apply a function along an axis of the DataFrame. |
 | :--- | :--- |
 | [`DataFrame.groupby`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html#pandas.DataFrame.groupby) | Group DataFrame using a mapper or by a Series of columns. |
-| [`DataFrame.map`](../series/danfo.series.map.md) | Map a function on Object along an axis to DataFrame |
+| [`DataFrame.map`](../series/series.map.md) | Map a function on Object along an axis to DataFrame |
 
 ### Computations / descriptive stats
 
@@ -74,7 +74,7 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 | [`DataFrame.mean`](danfo.dataframe.mean.md) | Return the mean of the values for the requested axis. |
 | [`DataFrame.median`](danfo.dataframe.median.md) | Return the median of the values for the requested axis. |
 | [`DataFrame.min`](danfo.dataframe.min.md) | Return the minimum of the values for the requested axis. |
-| [`DataFrame.mode`](../series/danfo.series.mode.md) | Get the mode\(s\) of each element along the selected axis. |
+| [`DataFrame.mode`](../series/series.mode.md) | Get the mode\(s\) of each element along the selected axis. |
 | [`DataFrame.round`](danfo.dataframe.round.md) | Round a DataFrame to a variable number of decimal places. |
 | [`DataFrame.sum`](danfo.dataframe.sum.md) | Return the sum of the values for the requested axis. |
 | [`DataFrame.std`](danfo.dataframe.std.md) | Return sample standard deviation over requested axis. |
@@ -146,6 +146,6 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 | [`DataFrame.to_csv`](dataframe.to_csv.md) | Write object to a comma-separated values \(csv\) file. |
 | [`DataFrame.to_json`](dataframe.to_json.md) | Convert the object to a JSON string. |
 | [`DataFrame.to_table`](dataframe.to_table.md) | Render a DataFrame as an HTML table. |
-| [`DataFrame.toString`](../series/danfo.series.tostring.md) | Render a DataFrame to a console-friendly tabular output. |
+| [`DataFrame.toString`](../series/series.tostring.md) | Render a DataFrame to a console-friendly tabular output. |
 | [`DataFrame.print`](dataframe.print.md) | Display a DataFrame to a console friendly output. |
 
