@@ -13,11 +13,13 @@ Generate a new Series with the index reset. This is useful when the index needs 
 **Example**
 
 ```javascript
+const dfd = require("danfojs")
+
 let data = [{ alpha: "A", count: 1 }, { alpha: "B", count: 2 }, { alpha: "C", count: 3 }]
-let df = new Series(data)
+let df = new dfd.Series(data)
 let df_new = df.set_index({ "index": ["one", "two", "three"] })
 let df_reset = df_new.reset_index()
-df_reset 
+df_reset.print()
 
 
 let data = [1,2,3,4,5,6]
