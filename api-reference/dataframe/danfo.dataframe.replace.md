@@ -4,13 +4,32 @@ description: Replaces values in a DataFrame with specified values
 
 # DataFrame.replace
 
-> danfo.DataFrame.**replace**\(callable\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1670)\]
+> danfo.DataFrame.**replace**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1670)\]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| replace | Int, Float, Str |  The value to replace. |  |
-| with | Int, Float, Str | The new value to replace with. |  |
-| in | Array | An array of column names to replace, If not specified, replace all columns. |  |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameters</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">kwargs</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left">
+        <p>{<b>replace: </b>int, float, str.<b> </b>The value to replace.</p>
+        <p> <b>with</b>: Int, float, str. The new value to replace with.</p>
+        <p> <b>in: </b>Array<b>. </b>An array of column names to replace, If not specified,
+          replace all columns.</p>
+        <p>}</p>
+      </td>
+      <td style="text-align:left"></td>
+    </tr>
+  </tbody>
+</table>
 
 **Returns:**
 

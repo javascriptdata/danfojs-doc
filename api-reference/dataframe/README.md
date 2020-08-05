@@ -115,8 +115,8 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 |  |  |
 | :--- | :--- |
 | [`DataFrame.addColumn`](danfo.dataframe.addcolumn.md) | Add new columns to a DataFrame. |
-| [`DataFrame.concat`]() | Concatenate DataFrames together. |
-| [`DataFrame.merge`]() | Merge DataFrame or named Series objects with a database-style join. |
+| [`DataFrame.concat`](danfo.dataframe.concat.md) | Concatenate DataFrames together. |
+| [`DataFrame.merge`](danfo.dataframe.merge.md) | Merge DataFrame or named Series objects with a database-style join. |
 
 
 
