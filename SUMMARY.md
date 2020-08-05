@@ -3,7 +3,6 @@
 * [Danfo.js Documentation](README.md)
 * [Getting Started](getting-started.md)
 * [API reference](api-reference/README.md)
-  * [General Functions](api-reference/general-functions.md)
   * [Input/Output](api-reference/input-output/README.md)
     * [danfo.read\_csv](api-reference/input-output/danfo.read_csv.md)
     * [danfo.read\_json](api-reference/input-output/untitled.md)
