@@ -1,3 +1,9 @@
+---
+description: >-
+  Get Less than or Equal to of DataFrame and other, element-wise (binary
+  operator eq).
+---
+
 # DataFrame.le
 
 danfo.DataFrame.le\(other, axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L718)\]

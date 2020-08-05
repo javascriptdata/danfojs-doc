@@ -1,6 +1,10 @@
+---
+description: 'Get Not Equal to of DataFrame and other, element-wise (binary operator eq).'
+---
+
 # DataFrame.ne
 
-danfo.DataFrame.ne\(other, axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L718)\]
+danfo.DataFrame.ne\(other, axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1633)\]
 
 | Parameters | Type | Description | Default |
 | :--- | :--- | :--- | :--- |

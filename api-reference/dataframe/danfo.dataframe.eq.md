@@ -1,5 +1,5 @@
 ---
-description: 'Get Equal to of dataframe and other, element-wise (binary operator eq).'
+description: 'Get Equal to of DataFrame and other, element-wise (binary operator eq).'
 ---
 
 # DataFrame.eq
