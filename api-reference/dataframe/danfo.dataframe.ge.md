@@ -24,6 +24,8 @@ danfo.DataFrame.**ge**\(other, axis\) \[[source](https://github.com/opensource9j
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+const dfd = require("danfojs")
+
 let data = [{"Col1": [10, 45, 56, 10]}, {"Col2": [23, 20, 10, 24]}]
 let df = new dfd.DataFrame(data)
 
@@ -63,6 +65,8 @@ df_rep.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+const dfd = require("danfojs")
+
 let data = [{"Col1": [10, 45, 56, 10]}, {"Col2": [23, 20, 10, 24]}]
 let df = new dfd.DataFrame(data)
 let sf = new dfd.Series([10,40])
@@ -105,6 +109,8 @@ df_rep.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+const dfd = require("danfojs")
+
 let data = [{"Col1": [10, 45, 56, 10]}, {"Col2": [23, 20, 10, 24]}]
 let data2 = [{"new_col1": [10, 45, 200, 10]}, {"new_Col2": [230, 200, 110, 24]}]
 
@@ -148,6 +154,8 @@ df_rep.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+const dfd = require("danfojs")
+
 let data = [{"Col1": [10, 45, 56, 10]}, {"Col2": [23, 20, 10, 24]}]
 let df = new dfd.DataFrame(data)
 let val = [10,40]

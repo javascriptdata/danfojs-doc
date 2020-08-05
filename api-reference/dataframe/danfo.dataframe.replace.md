@@ -23,6 +23,9 @@ description: Replaces values in a DataFrame with specified values
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+const dfd = require("danfojs")
+
+
 let data = [{"Col1": [10, 45, 56, 10]}, {"Col2": [23, 20, 10, 24]}]
 let df = new dfd.DataFrame(data)
 
@@ -64,6 +67,9 @@ By not specifying a ****column**,** the ****replace works on all columns  ****
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+const dfd = require("danfojs")
+
+
 let data = [["A", "A", "A", "B"], ["B", "C", "C", "D"]]
 let df = new dfd.DataFrame(data)
 //replace value in all column

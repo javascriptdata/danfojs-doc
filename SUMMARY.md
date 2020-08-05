@@ -152,8 +152,6 @@
     * [DataFrame.isna](api-reference/dataframe/danfo.dataframe.isna.md)
     * [DataFrame.nanindex](api-reference/dataframe/danfo.dataframe.nanindex.md)
     * [DataFrame.dropna](api-reference/dataframe/danfo.dataframe.dropna.md)
-    * [DataFrame.concat](api-reference/dataframe/danfo.dataframe.concat.md)
-    * [DataFrame.merge](api-reference/dataframe/danfo.dataframe.merge.md)
     * [DataFrame.apply](api-reference/dataframe/danfo.dataframe.apply.md)
     * [DataFrame.It](api-reference/dataframe/danfo.dataframe.it.md)
     * [DataFrame.gt](api-reference/dataframe/danfo.dataframe.gt.md)
