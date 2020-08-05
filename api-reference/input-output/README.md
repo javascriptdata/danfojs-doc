@@ -6,7 +6,7 @@ description: >-
 
 # Input/Output
 
-### Flat file
+### CSV 
 
 | \`\` |  |
 | :--- | :--- |

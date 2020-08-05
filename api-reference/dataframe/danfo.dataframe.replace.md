@@ -1,32 +1,98 @@
+---
+description: Replaces values in a DataFrame with specified values
+---
+
 # DataFrame.replace
 
-This function replaces values in a dataframe with other values dynamically
+> danfo.DataFrame.**replace**\(callable\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1670)\]
 
-            **parameter:** {kwargs} "replace": the value you want to replace, "with": the new value you      
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| replace | Int, Float, Str |  The value to replace. |  |
+| with | Int, Float, Str | The new value to replace with. |  |
+| in | Array | An array of column names to replace, If not specified, replace all columns. |  |
 
-                               want to replace the older value with, inplace: Perform operation inplace or      
+**Returns:**
 
-                                not.
+       ****return **DataFrame**
 
-            **return:** {Series}
+\*\*\*\*
 
-**Example1**
+## **Examples**
 
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
- let data1 = [[10, 45, 56, 25], [23, 20, 10, 24]]
- let sf = new DataFrame(data1)
- let expected = [[-999, 45, 56, 25], [23, 20, -999, 24]]
- let df_rep = sf.replace({ replace: 10, with: -999 })
- df_rep.values
+let data = [{"Col1": [10, 45, 56, 10]}, {"Col2": [23, 20, 10, 24]}]
+let df = new dfd.DataFrame(data)
+
+let df_rep = df.replace({ "replace": 10, "with": -999, "in": ["Col1"] })
+
+df_rep.print()
+ 
+ 
+```
+{% endtab %}
+
+{% tab title="Browser" %}
 ```
 
-**Examples2**
-
-```javascript
-let data1 = [["A", "A", "A", "B"], ["B", "C", "C", "D"]]
-let sf = new DataFrame(data1)
-let expected = [["boy", "boy", "boy", "B"], ["B", "C", "C", "D"]]
-sf.replace({ replace: "A", with: "boy", inplace: true })
-sf.values
 ```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤═══════════════════╤═══════════════════╗
+║   │ Col1              │ Col2              ║
+╟───┼───────────────────┼───────────────────╢
+║ 0 │ -999              │ 23                ║
+╟───┼───────────────────┼───────────────────╢
+║ 1 │ 45                │ 20                ║
+╟───┼───────────────────┼───────────────────╢
+║ 2 │ 56                │ 10                ║
+╟───┼───────────────────┼───────────────────╢
+║ 3 │ -999              │ 24                ║
+╚═══╧═══════════════════╧═══════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+By not specifying a ****column**,** the ****replace works on all columns  ****
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+let data = [["A", "A", "A", "B"], ["B", "C", "C", "D"]]
+let df = new dfd.DataFrame(data)
+//replace value in all column
+let df_rep = df.replace({ "replace": "A", "with": "boy" })
+
+df_rep.print()
+
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```javascript
+
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ 0                 │ 1                 │ 2                 │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ boy               │ boy               │ boy               │ B                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ B                 │ C                 │ C                 │ D                 ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 
