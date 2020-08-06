@@ -17,8 +17,11 @@ description: Obtain the hours in a time series
 ```javascript
 const dfd = require("danfojs")
 
-let data = ["06-30-02019 02:00:12", "07-29-2019 21:30:40", "08-28-2019 19:12:04"]
+let data = new dfd.date_range({"start":"2000-01-01", period:3, freq:"H"})
 let sf = new dfd.Series(data)
+// print series
+sf.print()
+// print hour series
 sf.dt.hour().print()
 ```
 {% endtab %}
@@ -36,11 +39,18 @@ sf.dt.hour().print()
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
-║ 0 │ 2                    ║
+║ 0 │ 1/1/2000, 1:00:00 AM ║
 ╟───┼──────────────────────╢
-║ 1 │ 21                   ║
+║ 1 │ 1/1/2000, 2:00:00 AM ║
+╚═══╧══════════════════════╝
+
+//print hour series
+╔═══╤══════════════════════╗
+║   │ 0                    ║
 ╟───┼──────────────────────╢
-║ 2 │ 19                   ║
+║ 0 │ 1                    ║
+╟───┼──────────────────────╢
+║ 1 │ 2                    ║
 ╚═══╧══════════════════════╝
 ```
 {% endtab %}

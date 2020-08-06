@@ -4,21 +4,120 @@ description: Return the mean of the values for the requested axis.
 
 # DataFrame.mean
 
-**parameter**: {axis} Number {0: row, 1 : column} Axis for the function to be applied on
+danfo.DataFrame.**mean**\(axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)\]
 
-                  **return**: {Series}
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| axis | Int | 0 for row and 1 for columns  | 1 |
 
+**Returns:**
 
+       ****return **Series**
 
+## **Examples**
+
+## Calculates the mean of values along default axis 1 \(column\)
+
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
-let data = [[0, 2, 4], [360, 180, 360]]
-let df = new DataFrame(data, { columns: ["col1", "col2", "col3"] })
-df.mean()
+const dfd = require("danfojs")
+
+data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+cols = ["A", "B", "C"]
+
+df.print()
+
+let df = new dfd.DataFrame(data)
+df.mean().print()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
 ```
 
-```javascript
-let data = [[0, 2, 4], [360, 180, 360]]
-let df = new DataFrame(data)
-df.mean(0)
 ```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 11                │ 20                │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 1                 │ 15                │ 6                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ 2                 │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 2                 │ 89                │ 78                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ A │ 4                    ║
+╟───┼──────────────────────╢
+║ B │ 38.5                 ║
+╟───┼──────────────────────╢
+║ C │ 31.75                ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+## Calculates the mean of values along row axis \(0\)
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs")
+
+data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+cols = ["A", "B", "C"]
+
+df.print()
+let df = new dfd.DataFrame(data)
+df.mean(axis=0).print()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 11                │ 20                │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 1                 │ 15                │ 6                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ 2                 │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 2                 │ 89                │ 78                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 0 │ 11.333333015441895   ║
+╟───┼──────────────────────╢
+║ 1 │ 7.333333492279053    ║
+╟───┼──────────────────────╢
+║ 2 │ 24                   ║
+╟───┼──────────────────────╢
+║ 3 │ 56.33333206176758    ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 

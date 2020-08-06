@@ -12,14 +12,20 @@ description: Obtain the seconds in Date series
 
 **Example**
 
+Obtain the seconds of the datetime
+
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs")
 
-let data = ["06-30-02019 00:00:12", "07-29-2019 00:30:40", "08-28-2019 00:12:04"]
+let data = new dfd.date_range({"start":"2000-01-01", period:3, freq:"s"})
 let sf = new dfd.Series(data)
-sf.dt.seconds().print()
+//print the series frame
+sf.print()
+
+//print the seconds obtained
+sf.seconds().print()
 ```
 {% endtab %}
 
@@ -33,15 +39,28 @@ sf.dt.seconds().print()
 {% tabs %}
 {% tab title="Output" %}
 ```text
+
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
-║ 0 │ 12                   ║
+║ 0 │ 1/1/2000, 1:00:00 AM ║
 ╟───┼──────────────────────╢
-║ 1 │ 40                   ║
+║ 1 │ 1/1/2000, 1:00:01 AM ║
 ╟───┼──────────────────────╢
-║ 2 │ 4                    ║
+║ 2 │ 1/1/2000, 1:00:02 AM ║
 ╚═══╧══════════════════════╝
+
+//the seconds obtained
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 0 │ 0                    ║
+╟───┼──────────────────────╢
+║ 1 │ 1                    ║
+╟───┼──────────────────────╢
+║ 2 │ 2                    ║
+╚═══╧══════════════════════╝
+
 ```
 {% endtab %}
 {% endtabs %}

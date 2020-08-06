@@ -1,18 +1,59 @@
+---
+description: Returns array of index with missing values
+---
+
 # DataFrame.nanindex
 
-Return the index of NaN index
+danfo.DataFrame.**nanindex**\(\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1410)\]
 
-**parameter:** 
+**Returns:**
 
-            **return:** Array list \(int\) 
+       ****return **Array**
 
-**Example1**
+## **Examples**
 
+### Drop rows \(axis=0\) with missing values  
+
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
-let data = [[NaN, 1, 2, 3], [3, 4, NaN, 9], [5, 6, 7, 8]]
-let column = ["A", "B", "C", "D"]
-let df = new DataFrame(data, { columns: column })
+const dfd = require("danfojs")
 
-df.nanIndex()
+let data = [[1, 2, 3], [NaN, 5, 6], [NaN, 30, 40], [39, undefined, 78]]
+let cols = ["A", "B", "C"]
+let df = new dfd.DataFrame(data, { columns: cols })
+
+df.print()
+
+console.log(df.nanIndex());
 ```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 1                 │ 2                 │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ NaN               │ 5                 │ 6                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ NaN               │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 39                │ NaN               │ 78                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+[ 1, 2, 3 ]
+```
+{% endtab %}
+{% endtabs %}
 

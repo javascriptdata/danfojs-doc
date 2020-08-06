@@ -17,8 +17,11 @@ description: Obtain the minutes in a Time Series
 ```javascript
 const dfd = require("danfojs")
 
-let data = ["06-30-02019 00:00:12", "07-29-2019 00:30:40", "08-28-2019 00:12:04"]
+let data = new dfd.date_range({"start":"2000-01-01", period:3, freq:"m"})
 let sf = new dfd.Series(data)
+//print the series
+sf.print()
+//print the minutes series
 sf.dt.minutes().print()
 ```
 {% endtab %}
@@ -36,11 +39,22 @@ sf.dt.minutes().print()
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
+║ 0 │ 1/1/2000, 1:00:00 AM ║
+╟───┼──────────────────────╢
+║ 1 │ 1/1/2000, 1:01:00 AM ║
+╟───┼──────────────────────╢
+║ 2 │ 1/1/2000, 1:02:00 AM ║
+╚═══╧══════════════════════╝
+
+//print the minutes series
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
 ║ 0 │ 0                    ║
 ╟───┼──────────────────────╢
-║ 1 │ 30                   ║
+║ 1 │ 1                    ║
 ╟───┼──────────────────────╢
-║ 2 │ 12                   ║
+║ 2 │ 2                    ║
 ╚═══╧══════════════════════╝
 ```
 {% endtab %}

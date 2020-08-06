@@ -17,8 +17,11 @@ description: obtain the month name in a Time Series
 ```javascript
 const dfd = require("danfojs")
 
-let data = ["06-30-02019 00:00:12", "07-29-2019 00:30:40", "08-28-2019 00:12:04"]
+let data = new dfd.date_range({"start":'2018-01', freq:'M', period:3})
 let sf = new dfd.Series(data)
+//print series
+sf.print()
+//print month names
 sf.dt.month_name().print()
 ```
 {% endtab %}
@@ -36,11 +39,22 @@ sf.dt.month_name().print()
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
-║ 0 │ Jun                  ║
+║ 0 │ 1/1/2018, 1:00:00 AM ║
 ╟───┼──────────────────────╢
-║ 1 │ Jul                  ║
+║ 1 │ 2/1/2018, 1:00:00 AM ║
 ╟───┼──────────────────────╢
-║ 2 │ Aug                  ║
+║ 2 │ 3/1/2018, 1:00:00 AM ║
+╚═══╧══════════════════════╝
+
+//print month name series
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 0 │ Jan                  ║
+╟───┼──────────────────────╢
+║ 1 │ Feb                  ║
+╟───┼──────────────────────╢
+║ 2 │ Mar                  ║
 ╚═══╧══════════════════════╝
 ```
 {% endtab %}
