@@ -4,25 +4,120 @@ description: Return the minimum of the values for the requested axis.
 
 # DataFrame.min
 
-If you want the _index_ of the minimum, use `idxmin`. This is the equivalent of the `numpy.ndarray` method `argmin`.
+danfo.DataFrame.**min**\(axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L499)\]
 
-**parameter**: {axis} Number {0: row, 1 : column} Axis for the function to be applied on
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| axis | Int | 0 for row and 1 for columns  | 1 |
 
-                  **return**: {Series}
+**Returns:**
 
+       ****return **Series**
 
+## **Examples**
 
+## Returns the minimum value along default axis 1 \(column\)
+
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
-let data = [[0, 2, 4], [360, 180, 360]]
-let df = new DataFrame(data)
-df.min()
+const dfd = require("danfojs")
+
+data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+cols = ["A", "B", "C"]
+
+df.print()
+
+let df = new dfd.DataFrame(data)
+df.min().print()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
 ```
 
-
-
-```javascript
-let data = [[0, 2, 4], [360, 180, 360]]
-let df = new DataFrame(data)
-df.min({ "axis": 0 })
 ```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 11                │ 20                │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 1                 │ 15                │ 6                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ 2                 │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 2                 │ 89                │ 78                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ A │ 1                    ║
+╟───┼──────────────────────╢
+║ B │ 15                   ║
+╟───┼──────────────────────╢
+║ C │ 3                    ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+## Return the minimum value along row axis \(0\)
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs")
+
+data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+cols = ["A", "B", "C"]
+
+df.print()
+let df = new dfd.DataFrame(data)
+df.min(axis=0).print()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 11                │ 20                │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 1                 │ 15                │ 6                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ 2                 │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 2                 │ 89                │ 78                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 0 │ 3                    ║
+╟───┼──────────────────────╢
+║ 1 │ 1                    ║
+╟───┼──────────────────────╢
+║ 2 │ 2                    ║
+╟───┼──────────────────────╢
+║ 3 │ 2                    ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 

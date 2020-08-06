@@ -96,6 +96,7 @@
     * [Series.tail](api-reference/series/series.tail.md)
     * [Series.head](api-reference/series/series.head.md)
   * [Dataframe](api-reference/dataframe/README.md)
+    * [DataFrame.rename](api-reference/dataframe/dataframe.rename-1.md)
     * [DataFrame.print](api-reference/dataframe/dataframe.print.md)
     * [DataFrame.to\_table](api-reference/dataframe/dataframe.to_table.md)
     * [DataFrame.to\_csv](api-reference/dataframe/dataframe.to_csv.md)

@@ -1,17 +1,124 @@
+---
+description: Return the sum of the values for the requested axis.
+---
+
 # DataFrame.sum
 
-Return the sum of the values for the requested axis.
+danfo.DataFrame.**sum**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L940)\]
 
-            **parameter:** {kwargs} {axis: 0 for row and 1 for column}
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| kwargs | Object | {**axis**: 0 for row and 1 for column} | {axis: 1} |
 
-            **return:**  {Series}, Sum of values accross axis
+**Returns:**
 
-**Example1**
+       ****return **DataFrame**
 
+## **Examples**
+
+## Sum elements along default axis \(column\)
+
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
-let data1 = [[30, 40, 3.1],[5, 5, 5.1],[5, 5, 3.2]]
-let sf = new DataFrame(data1)
+let data = [{"A": [-20.1, 30, 47.3, -20]},
+            {"B": [34, -4, 5, 6]}, 
+             {"C": [20, -20, 30, -40]}]
+let df = new dfd.DataFrame(data)
 
-sf.sum().values
+df.print()
+
+let df_sum = df.sum()
+df_sum.print()
 ```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ -20.1             │ 34                │ 20                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 30                │ -4                │ -20               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ 47.3              │ 5                 │ 30                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ -20               │ 6                 │ -40               ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+╔═══╤══════════════════════╗
+║   │ sum                  ║
+╟───┼──────────────────────╢
+║ A │ 37.2                 ║
+╟───┼──────────────────────╢
+║ B │ 41                   ║
+╟───┼──────────────────────╢
+║ C │ -10                  ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+## Sum elements along row axis \(0\)
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+let data = [{"A": [-20.1, 30, 47.3, -20]},
+            {"B": [34, -4, 5, 6]}, 
+             {"C": [20, -20, 30, -40]}]
+let df = new dfd.DataFrame(data)
+
+df.print()
+
+let df_sum = df.sum({axis: 0})
+df_sum.print()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ -20.1             │ 34                │ 20                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 30                │ -4                │ -20               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ 47.3              │ 5                 │ 30                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ -20               │ 6                 │ -40               ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+╔═══╤══════════════════════╗
+║   │ sum                  ║
+╟───┼──────────────────────╢
+║ 0 │ 33.9                 ║
+╟───┼──────────────────────╢
+║ 1 │ 6                    ║
+╟───┼──────────────────────╢
+║ 2 │ 82.3                 ║
+╟───┼──────────────────────╢
+║ 3 │ -54                  ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 

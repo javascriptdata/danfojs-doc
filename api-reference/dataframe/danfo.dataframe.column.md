@@ -1,19 +1,76 @@
+---
+description: Return the elements of the specified column in the DataFrame
+---
+
 # DataFrame.column
 
-Return the elements of the specified column in the dataframe
+danfo.DataFrame.**column**\(col\_name\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1217)\]
 
-            **parameter:** col\_name: the name of a column in the database.
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| col\_name | Str | The name of a column in the DataFrame |  |
 
-            **return:**  tensor of shape 1
+**Returns:**
 
-**Example1**
+       ****return **Series**
 
+## **Examples**
+
+## **Select a single column from a DataFrame**
+
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
-let data = [{ alpha: "A", count: 1 }, { alpha: "B", count: 2 }, { alpha: "C", count: 3 }]
-let options = { columns: ["Gender", "count"] }
-let df = new DataFrame(data, options)
-let col_data = df.column("count")
+let data = [{ "Name": ["Apples", "Mango", "Banana", undefined] },
+           { "Count": [NaN, 5, NaN, 10] },
+           { "Price": [200, 300, 40, 250] }]
 
-col_data.values
+let df = new dfd.DataFrame(data)
+
+df.column("Name").print()
+
+//Alternatively, you can retrieve columns by using the object property
+df['Name'].print() //produces the same result as above
+
 ```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤══════════════════════╗
+║   │ Name                 ║
+╟───┼──────────────────────╢
+║ 0 │ Apples               ║
+╟───┼──────────────────────╢
+║ 1 │ Mango                ║
+╟───┼──────────────────────╢
+║ 2 │ Banana               ║
+╟───┼──────────────────────╢
+║ 3 │ NaN                  ║
+╚═══╧══════════════════════╝
+
+╔═══╤══════════════════════╗
+║   │ Name                 ║
+╟───┼──────────────────────╢
+║ 0 │ Apples               ║
+╟───┼──────────────────────╢
+║ 1 │ Mango                ║
+╟───┼──────────────────────╢
+║ 2 │ Banana               ║
+╟───┼──────────────────────╢
+║ 3 │ NaN                  ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+To select more than one column with specific rows, you can use any of the following: [DataFrame.loc](danfo.dataframe.loc.md), [DataFrame.iloc](danfo.dataframe.iloc.md) or [DataFrame.query](danfo.dataframe.query.md)
 

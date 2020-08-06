@@ -4,27 +4,118 @@ description: Return the maximum of the values for the requested axis.
 
 # DataFrame.max
 
+danfo.DataFrame.**max**\(axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L519)\]
 
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| axis | Int | 0 for row and 1 for columns  | 1 |
 
-If you want the _index_ of the minimum, use `idxmin`. This is the equivalent of the `numpy.ndarray` method `argmin`.
+**Returns:**
 
-**parameter**: {axis} Number {0: row, 1 : column} Axis for the function to be applied on
+       ****return **Series**
 
-                  **return**: {Series}
+## **Examples**
 
+## Return the maximum value along default axis 1 \(column\)
 
-
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
-let data = [[0, 2, 4], [360, 180, 360]]
-let df = new DataFrame(data)
-df.max()
+const dfd = require("danfojs")
+data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+cols = ["A", "B", "C"]
+
+df.print()
+
+let df = new dfd.DataFrame(data)
+df.max().print()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
 ```
 
-
-
-```javascript
-let data = [[0, 2, 4], [360, 180, 360]]
-let df = new DataFrame(data)
-df.max({ "axis": 0 })
 ```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 11                │ 20                │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 1                 │ 15                │ 6                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ 2                 │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 2                 │ 89                │ 78                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ A │ 11                   ║
+╟───┼──────────────────────╢
+║ B │ 89                   ║
+╟───┼──────────────────────╢
+║ C │ 78                   ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+## Return the maximum value along row axis \(0\)
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs")
+data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+cols = ["A", "B", "C"]
+
+df.print()
+let df = new dfd.DataFrame(data)
+df.max(axis=0).print()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 11                │ 20                │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 1                 │ 15                │ 6                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ 2                 │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 2                 │ 89                │ 78                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 0 │ 20                   ║
+╟───┼──────────────────────╢
+║ 1 │ 15                   ║
+╟───┼──────────────────────╢
+║ 2 │ 40                   ║
+╟───┼──────────────────────╢
+║ 3 │ 89                   ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 
