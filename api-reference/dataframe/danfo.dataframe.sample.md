@@ -1,21 +1,55 @@
 ---
-description: Return a random sample of items from an axis of object.
+description: Return a random sample of rows from DataFrame.
 ---
 
 # DataFrame.sample
 
-You can use random\_state for reproducibility.
+danfo.DataFrame.**sample**\(rows\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L314)\]
 
-**parameter:** {rows}
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| rows | Int | The number of rows to return | 5 |
 
-            **return:** A new object of same type as caller containing n items randomly sampled from the caller object.
+**Returns:**
 
+       ****return **DataFrame**
+
+## **Examples**
+
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
-let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78], [100, 200, 300]]
-let cols = ["A", "B", "C"]
-let df = new DataFrame(data, { columns: cols })
-df.sample(2)
+let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
+           { "Count": [21, 5, 30, 10] },
+           { "Price": [200, 300, 40, 250] }]
+
+let df = new dfd.DataFrame(data)
+let s_df = df.sample(3)
+s_df.print()
+
+```
+{% endtab %}
+
+{% tab title="Browser" %}
 ```
 
+```
+{% endtab %}
+{% endtabs %}
 
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Count             │ Price             ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ Apples            │ 21                │ 200               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ Pear              │ 10                │ 250               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ Banana            │ 30                │ 40                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 
