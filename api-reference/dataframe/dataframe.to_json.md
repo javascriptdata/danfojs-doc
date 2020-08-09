@@ -1,20 +1,18 @@
+---
+description: Convert DataFrame to JSON format
+---
+
 # DataFrame.to\_json
 
 danfo.DataFrame.**to\_json**\(path\) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)\]
-
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| **path** | String | Any valid file path |  |
 
 **Returns:**
 
         ****returns **Promise**
 
-              ****
-
 ## **Examples**
 
-### Export DataFrame to JSON file path
+### Convert DataFrame to JSON format
 
 {% tabs %}
 {% tab title="Node" %}
@@ -22,43 +20,16 @@ danfo.DataFrame.**to\_json**\(path\) \[[source](https://github.com/opensource9ja
 const dfd = require("danfojs")
 
 let data = [{ "Abs": [20.2, 30, 47.3] },
-            { "Count": [34, 4, 5, 6] },
-            { "country code": ["NG", "FR", "GH"] }]
+{ "Count": [34, 4, 5, 6] },
+{ "country code": ["NG", "FR", "GH"] }]
 
 
 let df = new dfd.DataFrame(data)
 
-df.to_json("/home/link/to/path.csv").then(()=>{
-    console.log("Done");
-    
-}).catch((err)=>{
-
+df.to_json("/home/link/to/path.csv").then((json) => {
+    console.log(json);
+}).catch((err) => {
     console.log(err);
-})
-```
-{% endtab %}
-{% endtabs %}
-
-> If a file path  not specified, return the Json file in string format
-
-{% tabs %}
-{% tab title="Node" %}
-```javascript
-const dfd = require("danfojs")
-
-let data = [{ "Abs": [20.2, 30, 47.3] },
-            { "Count": [34, 4, 5, 6] },
-            { "country code": ["NG", "FR", "GH"] }]
-
-
-let df = new dfd.DataFrame(data)
-
-df.to_json().then((file)=>{
-
-    console.log(file)
-    
-}).catch((err)=>{
-    console.log(err)
 })
 ```
 {% endtab %}
@@ -67,7 +38,9 @@ df.to_json().then((file)=>{
 {% tabs %}
 {% tab title="Output" %}
 ```text
-
+[{"Abs":20.2,"Count":34,"country code":"NG"},
+{"Abs":30,"Count":4,"country code":"FR"},
+{"Abs":47.3,"Count":5,"country code":"GH"}]
 ```
 {% endtab %}
 {% endtabs %}

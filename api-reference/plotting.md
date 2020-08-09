@@ -1,7 +1,8 @@
 ---
 description: >-
-  The following functions are contained in the danfo.plotting module.They can be
-  called on both DataFrame and Series
+  DataFrame and Series have inbuilt support for plotting using Plotly's backend.
+  All customization can be done using Plotly's parameter passed to the config
+  object.
 ---
 
 # Plotting

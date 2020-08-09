@@ -145,7 +145,7 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 | :--- | :--- |
 | [`DataFrame.to_csv`](dataframe.to_csv.md) | Write object to a comma-separated values \(csv\) file. |
 | [`DataFrame.to_json`](dataframe.to_json.md) | Convert the object to a JSON string. |
-| [`DataFrame.to_table`](dataframe.to_table.md) | Render a DataFrame as an HTML table. |
+| [`DataFrame.to_table`]() | Render a DataFrame as an HTML table. |
 | [`DataFrame.toString`](../series/series.tostring.md) | Render a DataFrame to a console-friendly tabular output. |
 | [`DataFrame.print`](dataframe.print.md) | Display a DataFrame to a console friendly output. |
 
