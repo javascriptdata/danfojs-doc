@@ -4,7 +4,7 @@ description: Check if all the values in a series is less than or equal to a valu
 
 # Series.le
 
-> danfo.Series.ge\(other\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L865)\]
+> danfo.Series.le\(other\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L865)\]
 
 | Parameters | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
@@ -93,4 +93,6 @@ sf1.le(sf2).print()
 ```
 {% endtab %}
 {% endtabs %}
+
+
 

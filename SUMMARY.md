@@ -57,7 +57,6 @@
     * [Series.gt](api-reference/series/series.gt.md)
     * [Series.lt](api-reference/series/series.lt.md)
     * [Series.iloc](api-reference/series/series.iloc.md)
-    * [Series.loc](api-reference/series/series.loc.md)
     * [Series.astype](api-reference/series/series.astype.md)
     * [Series.size](api-reference/series/series.size.md)
     * [Series.ndim](api-reference/series/series.ndim.md)

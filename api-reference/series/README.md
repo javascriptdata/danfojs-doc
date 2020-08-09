@@ -30,7 +30,7 @@ description: One-dimensional ndarray with axis labels (including time series).
 
 |  |  |
 | :--- | :--- |
-| [`Series.loc`](series.loc.md) | Access a group of rows and columns by label\(s\) or a boolean array. |
+| [`Series.loc`]() | Access a group of rows and columns by label\(s\) or a boolean array. |
 | [`Series.iloc`](../dataframe/danfo.dataframe.iloc.md) | Purely integer-location based indexing for selection by position. |
 
 ### Binary operator functions
