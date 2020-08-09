@@ -22,7 +22,7 @@ description: One-dimensional ndarray with axis labels (including time series).
 
 ### Conversion
 
-| [`Series.astype`](series.astype.md) | Cast a Series object to a specified dtype |
+| [`Series.astype`]() | Cast a Series object to a specified dtype |
 | :--- | :--- |
 | [`Series.copy`](series.copy.md) | Make a copy of this object’s indices and data. |
 
@@ -30,7 +30,7 @@ description: One-dimensional ndarray with axis labels (including time series).
 
 |  |  |
 | :--- | :--- |
-| [`Series.loc`](series.loc.md) | Access a group of rows and columns by label\(s\) or a boolean array. |
+| [`Series.loc`]() | Access a group of rows and columns by label\(s\) or a boolean array. |
 | [`Series.iloc`](../dataframe/danfo.dataframe.iloc.md) | Purely integer-location based indexing for selection by position. |
 
 ### Binary operator functions

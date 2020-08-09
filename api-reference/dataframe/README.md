@@ -63,7 +63,7 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 
 | [`DataFrame.abs`](danfo.dataframe.abs.md) | Return a Series/DataFrame with absolute numeric value of each element. |
 | :--- | :--- |
-| [`DataFrame.corr`](dataframe.corr.md) | Compute pairwise correlation of columns, excluding NA/null values. |
+| [`DataFrame.corr`]() | Compute pairwise correlation of columns, excluding NA/null values. |
 | [`DataFrame.count`](danfo.dataframe.count.md) | Count non-NAN cells for each column or row. |
 | [`DataFrame.cummax`](danfo.dataframe.cummax.md) | Return cumulative maximum over a DataFrame or Series axis. |
 | [`DataFrame.cummin`](danfo.dataframe.cummin.md) | Return cumulative minimum over a DataFrame or Series axis. |
