@@ -45,7 +45,7 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 | [`DataFrame.div`](danfo.dataframe.div.md) | Get Floating division of dataframe and other, element-wise \(binary operator truediv\). |
 | [`DataFrame.mod`](danfo.dataframe.mod.md) | Get Modulo of dataframe and other, element-wise \(binary operator mod\). |
 | [`DataFrame.pow`](danfo.dataframe.pow.md) | Get Exponential power of dataframe and other, element-wise \(binary operator pow\). |
-| [`DataFrame.lt`](dataframe.lt.md) | Get Less than of dataframe and other, element-wise \(binary operator lt\). |
+| [`DataFrame.lt`]() | Get Less than of dataframe and other, element-wise \(binary operator lt\). |
 | [`DataFrame.gt`](danfo.dataframe.gt.md) | Get Greater than of dataframe and other, element-wise \(binary operator gt\). |
 | [`DataFrame.le`](danfo.dataframe.le.md) | Get Less than or equal to of dataframe and other, element-wise \(binary operator le\). |
 | [`DataFrame.ge`]() | Get Greater than or equal to of dataframe and other, element-wise \(binary operator ge\). |

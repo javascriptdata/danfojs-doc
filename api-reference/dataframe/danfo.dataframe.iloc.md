@@ -44,6 +44,8 @@ Allowed inputs are:
 * A list or array of integers, e.g. `[4, 3, 0]`.
 * A string slice object with ints, e.g. `"1:7"`
 
+_**Note:** both the start and the stop labels are included._
+
 `.iloc` will raise`IndexError` if a requested indexer is out-of-bounds.
 
 ### **Indexing specific rows by index and return all columns**
