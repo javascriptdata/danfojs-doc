@@ -22,7 +22,7 @@ description: One-dimensional ndarray with axis labels (including time series).
 
 ### Conversion
 
-| [`Series.astype`](series.astype.md) | Cast a Series object to a specified dtype |
+| [`Series.astype`]() | Cast a Series object to a specified dtype |
 | :--- | :--- |
 | [`Series.copy`](series.copy.md) | Make a copy of this object’s indices and data. |
 
