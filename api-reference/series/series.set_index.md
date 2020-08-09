@@ -8,8 +8,7 @@ description: Assign new Index to Series
 
 | Parameters | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
-| kwargs\["index"\] | Array | index to replace the former index  |  |
-| kwargs\["inplace"\] | Boolean | return new series or not | false |
+| kwargs | Object {} | The object contains the key **index** \[Array\] ****and **inplace** \(boolean\)**.** e.g {index: \[\], inplace:false}. key **index** must be of the same length with the orginal index of the series.  | inplace :false  |
 
 **Returns:** Series
 
