@@ -4,19 +4,34 @@ description: Return the sum of the values in a series.
 
 # Series.sum
 
-Return the sum of the values for the requested axis.
+> danfo.Series.sum\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L333)\]
 
-This is equivalent to the method numpy.sum.
+**Parameter:** None
 
-            **parameter:** 
-
-            **return:** Series
+**Return:** Number
 
 **Example**
 
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
-let data1 = [30, 40, 3, 5]
-let sf = new Series(data1)
-sf.sum()
+const dfd = require("danfojs")
+
+let data1 = [20, 30, 1, 2, 4, 57, 89, 0, 4]
+let sf1 = new dfd.Series(data1)
+
+console.log(sf1.sum())
 ```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+207
+```
+{% endtab %}
+{% endtabs %}
+
+\*\*\*\*
 

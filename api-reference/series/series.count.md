@@ -1,24 +1,37 @@
 ---
-description: Return the sum of the values in a series.
+description: Obtain the total number of values in a series
 ---
 
 # Series.count
 
-Return number of non-NA/null observations in the Series.
+> danfo.Series.count\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L350)\]
 
-This is equivalent to the method numpy.sum
+**Parameter:** None
 
-            **parameter:** 
-
-            **return:** {Number}, sum of values in Series
+**Return:** Number
 
 **Example**
 
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
-let data = ["boy", "gitl", "woman", NaN]
-let sf = new Series(data)
-sf.count()
+const dfd = require("danfojs")
+
+let data1 = [20, 30, 1, 2, 4, 57, 89, 0, 4]
+let sf1 = new dfd.Series(data1)
+
+console.log(sf1.count())
 ```
+{% endtab %}
+{% endtabs %}
 
+{% tabs %}
+{% tab title="Output" %}
+```text
+9
+```
+{% endtab %}
+{% endtabs %}
 
+\*\*\*\*
 
