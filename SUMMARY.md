@@ -188,6 +188,7 @@
     * [Groupby.col](api-reference/groupby/groupby.col.md)
     * [Groupby.max](api-reference/groupby/groupby.max.md)
     * [Groupby.min](api-reference/groupby/groupby.min.md)
+    * [Groupby.sum](api-reference/groupby/groupby.sum.md)
 * [User Guide](user-guide.md)
 * [Development](development.md)
 * [Release Notes](release-notes.md)
