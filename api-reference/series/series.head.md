@@ -1,25 +1,51 @@
 ---
-description: This function returns the first n rows for the object based on position.
+description: Obtain the first n rows for the object based on position.
 ---
 
 # Series.head
 
+> danfo.Series.head\(rows\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L76)\]
 
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| rows | Int | number of first n values | 5 |
 
-Prints the first n values in a Series
-
-            **parameter:** {rows}  Number of rows to return
-
-            **return:** Series
+ **Return:** Series
 
 **Example**
 
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
-let data = [1, 2, 3, 4, 5, 620, 30, 40, 39, 89, 78]
-let cols = ["A"]
-let sf = new Series(data, { columns: cols })
-sf.head()
+const dfd = require("danfojs")
+
+let data1 = [1, 2, 3, 4, 5, 620, 30, 40, 39, 89, 78]
+let sf1 = new dfd.Series(data1)
+
+sf1.head().print()
 ```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 0 │ 1                    ║
+╟───┼──────────────────────╢
+║ 1 │ 2                    ║
+╟───┼──────────────────────╢
+║ 2 │ 3                    ║
+╟───┼──────────────────────╢
+║ 3 │ 4                    ║
+╟───┼──────────────────────╢
+║ 4 │ 5                    ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 
 
 

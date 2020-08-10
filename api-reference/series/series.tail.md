@@ -4,19 +4,46 @@ description: Prints the last n values in a Series
 
 # Series.tail
 
-Prints the first n values in a Series
+> danfo.Series.tail\(rows\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L76)\]
 
-            **parameter:** {rows}  Number of rows to return
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| rows | Int | number of last n values | 5 |
 
-            **return:** Series
+ **Return:** Series
 
 **Example**
 
+{% tabs %}
+{% tab title="Node" %}
 ```javascript
-let data = [1, 2, 3, 4, 5, 620, 30, 40, 39, 89, 78]
-let sf = new Series(data)
-sf.tail()
+const dfd = require("danfojs")
+
+let data1 = [1, 2, 3, 4, 5, 620, 30, 40, 39, 89, 78]
+let sf1 = new dfd.Series(data1)
+
+sf1.tail().print()
 ```
+{% endtab %}
+{% endtabs %}
 
-
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔════╤══════════════════════╗
+║    │ 0                    ║
+╟────┼──────────────────────╢
+║ 6  │ 30                   ║
+╟────┼──────────────────────╢
+║ 7  │ 40                   ║
+╟────┼──────────────────────╢
+║ 8  │ 39                   ║
+╟────┼──────────────────────╢
+║ 9  │ 89                   ║
+╟────┼──────────────────────╢
+║ 10 │ 78                   ║
+╚════╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 
