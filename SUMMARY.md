@@ -187,6 +187,7 @@
     * [Groupby.get\_groups](api-reference/groupby/groupby.get_groups.md)
     * [Groupby.col](api-reference/groupby/groupby.col.md)
     * [Groupby.max](api-reference/groupby/groupby.max.md)
+    * [Groupby.min](api-reference/groupby/groupby.min.md)
 * [User Guide](user-guide.md)
 * [Development](development.md)
 * [Release Notes](release-notes.md)
