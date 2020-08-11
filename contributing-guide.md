@@ -197,25 +197,6 @@ describe("DataFrame", function(){
 });
 ```
 
-The corresponding test for the function above is:
-
-```python
-import pytest
-from datasist import feature_engineering
-import pandas as pd
-import numpy as np
-
-df = pd.DataFrame({'country': ['Nigeria', 'Ghana', 'USA', 'Germany'],
-                    'size': [280, 20, 60, np.NaN],
-                    'language': ['En', 'En', 'En', np.NaN]})
-
-
-def test_drop_redundant():
-    expected = ['country', 'size']
-    output = list(feature_engineering.drop_redundant(df).columns)
-    assert expected == output
-```
-
 **Running the test case**
 
 To run the test for the module you created,
