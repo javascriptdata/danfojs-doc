@@ -189,6 +189,7 @@
     * [Groupby.min](api-reference/groupby/groupby.min.md)
     * [Groupby.sum](api-reference/groupby/groupby.sum.md)
     * [Groupby.mean](api-reference/groupby/groupby.mean.md)
+    * [Groupby.std](api-reference/groupby/groupby.std.md)
 * [User Guide](user-guide.md)
 * [Development](development.md)
 * [Release Notes](release-notes.md)

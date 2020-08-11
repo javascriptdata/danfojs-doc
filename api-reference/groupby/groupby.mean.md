@@ -4,7 +4,7 @@ description: Obtain the mean per groups for each column(s)
 
 # Groupby.mean
 
-> danfo.Series.mean\(\)      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L280)\]
+> danfo.Series.mean\(\)      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L274)\]
 
 **Parameters**: None
 
@@ -19,14 +19,13 @@ Obtain the mean of a column for each groups, group by one column
 ```javascript
 const dfd = require("danfojs")
 
-
-let data =[{'A': ['foo', 'bar', 'foo', 'bar',
-                         'foo', 'bar', 'foo', 'foo']},
-            {'B': ['one', 'one', 'two', 'three',
-                    'two', 'two', 'one', 'three']},
-            {'C': [1,3,2,4,5,2,6,7]},
-            {'D': [3,2,4,1,5,6,7,8]}
-        ]
+let data ={'A': ['foo', 'bar', 'foo', 'bar',
+                'foo', 'bar', 'foo', 'foo'],
+           'B': ['one', 'one', 'two', 'three',
+                'two', 'two', 'one', 'three'],
+           'C': [1,3,2,4,5,2,6,7],
+           'D': [3,2,4,1,5,6,7,8]
+        }
 
 let df = new dfd.DataFrame(data)
 
@@ -58,19 +57,19 @@ Obtain the mean for two columns for each groups, group by one column
 const dfd = require("danfojs")
 
 
-let data =[{'A': ['foo', 'bar', 'foo', 'bar',
-                         'foo', 'bar', 'foo', 'foo']},
-            {'B': ['one', 'one', 'two', 'three',
-                    'two', 'two', 'one', 'three']},
-            {'C': [1,3,2,4,5,2,6,7]},
-            {'D': [3,2,4,1,5,6,7,8]}
-        ]
+let data ={'A': ['foo', 'bar', 'foo', 'bar',
+                'foo', 'bar', 'foo', 'foo'],
+           'B': ['one', 'one', 'two', 'three',
+                'two', 'two', 'one', 'three'],
+           'C': [1,3,2,4,5,2,6,7],
+           'D': [3,2,4,1,5,6,7,8]
+        }
 
 let df = new dfd.DataFrame(data)
 
 
 let grp = df.groupby(["A"])
-grp.col(["C","D"]).sum().print()
+grp.col(["C","D"]).mean().print()
 ```
 {% endtab %}
 {% endtabs %}
@@ -94,14 +93,13 @@ Obtain the mean for a column for each groups, group by two column
 ```javascript
 const dfd = require("danfojs")
 
-
-let data =[{'A': ['foo', 'bar', 'foo', 'bar',
-                         'foo', 'bar', 'foo', 'foo']},
-            {'B': ['one', 'one', 'two', 'three',
-                    'two', 'two', 'one', 'three']},
-            {'C': [1,3,2,4,5,2,6,7]},
-            {'D': [3,2,4,1,5,6,7,8]}
-        ]
+let data ={'A': ['foo', 'bar', 'foo', 'bar',
+                'foo', 'bar', 'foo', 'foo'],
+           'B': ['one', 'one', 'two', 'three',
+                'two', 'two', 'one', 'three'],
+           'C': [1,3,2,4,5,2,6,7],
+           'D': [3,2,4,1,5,6,7,8]
+        }
 
 let df = new dfd.DataFrame(data)
 
@@ -137,14 +135,13 @@ Obtain the mean for two columns for each groups, group by two columns
 ```javascript
 const dfd = require("danfojs")
 
-
-let data =[{'A': ['foo', 'bar', 'foo', 'bar',
-                         'foo', 'bar', 'foo', 'foo']},
-            {'B': ['one', 'one', 'two', 'three',
-                    'two', 'two', 'one', 'three']},
-            {'C': [1,3,2,4,5,2,6,7]},
-            {'D': [3,2,4,1,5,6,7,8]}
-        ]
+let data ={'A': ['foo', 'bar', 'foo', 'bar',
+                'foo', 'bar', 'foo', 'foo'],
+           'B': ['one', 'one', 'two', 'three',
+                'two', 'two', 'one', 'three'],
+           'C': [1,3,2,4,5,2,6,7],
+           'D': [3,2,4,1,5,6,7,8]
+        }
 
 let df = new dfd.DataFrame(data)
 

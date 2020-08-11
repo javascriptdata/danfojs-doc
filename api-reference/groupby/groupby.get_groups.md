@@ -21,14 +21,13 @@ Group the dataframe by column A and obtain the group belonging to the values in 
 ```javascript
 const dfd = require("danfojs")
 
-
-let data =[{'A': ['foo', 'bar', 'foo', 'bar',
-                         'foo', 'bar', 'foo', 'foo']},
-            {'B': ['one', 'one', 'two', 'three',
-                    'two', 'two', 'one', 'three']},
-            {'C': [1,3,2,4,5,2,6,7]},
-            {'D': [3,2,4,1,5,6,7,8]}
-        ]
+let data ={'A': ['foo', 'bar', 'foo', 'bar',
+                'foo', 'bar', 'foo', 'foo'],
+           'B': ['one', 'one', 'two', 'three',
+                'two', 'two', 'one', 'three'],
+           'C': [1,3,2,4,5,2,6,7],
+           'D': [3,2,4,1,5,6,7,8]
+        }
 
 let df = new dfd.DataFrame(data)
 
@@ -82,14 +81,13 @@ Group dataframe by two columns and obtain their groups. Since the dataframe is g
 ```javascript
 const dfd = require("danfojs")
 
-
-let data =[{'A': ['foo', 'bar', 'foo', 'bar',
-                         'foo', 'bar', 'foo', 'foo']},
-            {'B': ['one', 'one', 'two', 'three',
-                    'two', 'two', 'one', 'three']},
-            {'C': [1,3,2,4,5,2,6,7]},
-            {'D': [3,2,4,1,5,6,7,8]}
-        ]
+let data ={'A': ['foo', 'bar', 'foo', 'bar',
+                'foo', 'bar', 'foo', 'foo'],
+           'B': ['one', 'one', 'two', 'three',
+                'two', 'two', 'one', 'three'],
+           'C': [1,3,2,4,5,2,6,7],
+           'D': [3,2,4,1,5,6,7,8]
+        }
 
 let df = new dfd.DataFrame(data)
 

@@ -1,23 +1,24 @@
 ---
-description: Obtain the maximum value of columns per groups
+description: Obtain the standard deviation per groups for specified columns
 ---
 
-# Groupby.max
+# Groupby.std
 
-> danfo.Groupby.max\(\)      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L309)\]
+> danfo.Groupby.**std**\(\)      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L262)\]
 
-**Parameters:** None
+**Parameters**: None
 
-**Returns**: DataFrame
+**Return**: DataFrame
 
-**Example**
+**Examples**
 
-Obtain the maximum value for a column for each groups, group by one column
+Obtain the standard deviation of a column for each groups, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs")
+
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
@@ -31,24 +32,25 @@ let df = new dfd.DataFrame(data)
 
 
 let grp = df.groupby(["A"])
-grp.col(["C"]).max().print()
+grp.col(["C"]).std().print()
 ```
 {% endtab %}
 {% endtabs %}
 
 ```text
+
  Shape: (2,2) 
 
 ╔═══╤═══════════════════╤═══════════════════╗
-║   │ A                 │ C_max             ║
+║   │ A                 │ C_std             ║
 ╟───┼───────────────────┼───────────────────╢
-║ 0 │ foo               │ 7                 ║
+║ 0 │ foo               │ 2.58843582110...  ║
 ╟───┼───────────────────┼───────────────────╢
-║ 1 │ bar               │ 4                 ║
+║ 1 │ bar               │ 1                 ║
 ╚═══╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the maximum value for two columns for each groups, group by one column
+Obtain the std for two columns for each groups, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
@@ -66,9 +68,8 @@ let data ={'A': ['foo', 'bar', 'foo', 'bar',
 
 let df = new dfd.DataFrame(data)
 
-
 let grp = df.groupby(["A"])
-grp.col(["C","D"]).max().print()
+grp.col(["C","D"]).std().print()
 ```
 {% endtab %}
 {% endtabs %}
@@ -77,20 +78,21 @@ grp.col(["C","D"]).max().print()
  Shape: (2,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ A                 │ C_max             │ D_max             ║
+║   │ A                 │ C_std             │ D_std             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 0 │ foo               │ 7                 │ 8                 ║
+║ 0 │ foo               │ 2.58843582110...  │ 2.07364413533...  ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ bar               │ 4                 │ 6                 ║
+║ 1 │ bar               │ 1                 │ 2.64575131106...  ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the maximum value for a column for each groups, group by two column
+Obtain the std for a column for each groups, group by two column
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs")
+
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
@@ -102,37 +104,38 @@ let data ={'A': ['foo', 'bar', 'foo', 'bar',
 
 let df = new dfd.DataFrame(data)
 
-
 let grp = df.groupby(["A","B"])
-grp.col(["C"]).max().print()
+grp.col(["C"]).std().print()
+
 ```
 {% endtab %}
 {% endtabs %}
 
 ```text
- Shape: (5,3) 
+    Shape: (5,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ A                 │ B                 │ C_max             ║
+║   │ A                 │ B                 │ C_std             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 0 │ foo               │ one               │ 6                 ║
+║ 0 │ foo               │ one               │ 3.53553390593...  ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ foo               │ two               │ 5                 ║
+║ 1 │ foo               │ two               │ 2.12132034355...  ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ foo               │ three             │ 7                 ║
+║ 2 │ foo               │ three             │ 0                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ bar               │ one               │ 3                 ║
+║ 3 │ bar               │ one               │ 0                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 4 │ bar               │ two               │ 2                 ║
+║ 4 │ bar               │ two               │ 0                 ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the maximum value for two columns for each groups, group by two columns
+Obtain the std for two columns for each groups, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs")
+
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
@@ -144,28 +147,30 @@ let data ={'A': ['foo', 'bar', 'foo', 'bar',
 
 let df = new dfd.DataFrame(data)
 
-
 let grp = df.groupby(["A","B"])
-grp.col(["C","D"]).max().print()
+grp.col(["C","D"]).std().print()
 ```
 {% endtab %}
 {% endtabs %}
 
 ```text
+  
  Shape: (5,4) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ A                 │ B                 │ C_max             │ D_max             ║
+║   │ A                 │ B                 │ C_std             │ D_std             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0 │ foo               │ one               │ 6                 │ 7                 ║
+║ 0 │ foo               │ one               │ 3.53553390593...  │ 2.82842712474...  ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ foo               │ two               │ 5                 │ 5                 ║
+║ 1 │ foo               │ two               │ 2.12132034355...  │ 0.70710678118...  ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ foo               │ three             │ 7                 │ 8                 ║
+║ 2 │ foo               │ three             │ 0                 │ 0                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ bar               │ one               │ 3                 │ 2                 ║
+║ 3 │ bar               │ one               │ 0                 │ 0                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 4 │ bar               │ two               │ 2                 │ 6                 ║
+║ 4 │ bar               │ two               │ 0                 │ 0                 ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
+
+\*\*\*\*
 
