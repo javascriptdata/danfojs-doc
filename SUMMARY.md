@@ -174,7 +174,6 @@
     * [DataFrame.replace](api-reference/dataframe/danfo.dataframe.replace.md)
   * [Plotting](api-reference/plotting/README.md)
     * [Timeseries Plots](api-reference/plotting/timeseries-plots.md)
-    * [Density Plots](api-reference/plotting/density-plots.md)
     * [Violin Plots](api-reference/plotting/violin-plots.md)
     * [Box Plots](api-reference/plotting/box-plots.md)
     * [Tables](api-reference/plotting/tables.md)

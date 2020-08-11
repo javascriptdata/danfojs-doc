@@ -46,7 +46,7 @@ description: >-
   * [Tables](plotting/tables.md)
   * [Box Plots](plotting/box-plots.md)
   * [Violin Plots](plotting/violin-plots.md)
-  * [Density Plots](plotting/density-plots.md)
+  * [Density Plots]()
   * [Timeseries Plots](plotting/timeseries-plots.md)
 * [GroupBy](https://pandas.pydata.org/pandas-docs/stable/reference/groupby.html)
   * [Indexing, iteration](https://pandas.pydata.org/pandas-docs/stable/reference/groupby.html#indexing-iteration)
