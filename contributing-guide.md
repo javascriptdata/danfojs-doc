@@ -282,7 +282,26 @@ This request then goes to the repository maintainers, and they will review the c
 
 **Hooray! Youre now a contributor to danfojs. Now go bask in the euphoria!**
 
-```python
 
-```
 
+**Danfojs Internals**
+
+In other to contribute to the code base of danfojs, there are some functions  and properties provided to make implementation easy.
+
+The main exposed modules are the **Frame** and **Series** module. This module inherit from the **Generic** module.
+
+The **Generic** module consist of the following methods and properties
+
+* `.dtypes`  is used to obtain the dtype for each column
+* `.index` to obtain the index for Dataframe or Series
+* `.__set_index(label)`  to set the index value
+* `.__reset_index()`  to reset the index in DataFrame and Series
+* `.values`    Obtain the values in  DataFrame and Series per rows
+* `.col_data` Obtain the values in DataFrame and Series per columns
+* `.column_names` Obtain the list of column names
+* `.__set_col_types` set the dtype for a column or infer the dtype from it
+* `.columns` to  access the column names directly
+
+The **Frame** module consist of the following methods and properties to aid implementation.
+
+* 
