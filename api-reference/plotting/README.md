@@ -15,6 +15,5 @@ description: >-
 * [Tables](tables.md)
 * [Box Plots](box-plots.md)
 * [Violin Plots](violin-plots.md)
-* [Density Plots]()
 * [Timeseries Plots](timeseries-plots.md)
 

@@ -6,7 +6,7 @@ description: Turn DataFrame/Series in D3.js-based tables
 
 ## Examples
 
-### Create Table from DataFrame
+### Create Interactive Tables from DataFrame
 
 ```markup
 <!DOCTYPE html>
@@ -30,7 +30,8 @@ description: Turn DataFrame/Series in D3.js-based tables
         dfd.read_csv("https://raw.githubusercontent.com/pandas-dev/pandas/master/doc/data/titanic.csv")
             .then(df => {
             
-            df.plot("plot_div", { type: "table"})
+                df.plot("plot_div").table()
+              
               
             }).catch(err => {
                 console.log(err);
@@ -78,7 +79,7 @@ To configure the header and cell of a table, you can pass header/cell styles to 
                     line: { color: "black", width: 1 }
                 }
 
-                df.plot("plot_div", { type: "table", header_style: header_style, cell_style: cell_style})
+                df.plot("plot_div").table({ header_style: header_style, cell_style: cell_style })
 
             }).catch(err => {
                 console.log(err);

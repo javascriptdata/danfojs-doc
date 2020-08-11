@@ -10,7 +10,7 @@ A histogram is a representation of the distribution of data. This function group
 
 ### Histogram of a Column in a DataFrame
 
-In the example below, we use the titanic dataset, to show a close to real world use case of danfo.js
+In the example below, we use the titanic dataset, to show a close to a real-world use case of danfo.js
 
 ```markup
 <!DOCTYPE html>
@@ -32,7 +32,7 @@ In the example below, we use the titanic dataset, to show a close to real world 
          dfd.read_csv("https://raw.githubusercontent.com/pandas-dev/pandas/master/doc/data/titanic.csv")
             .then(df => {
 
-                df['Age'].plot("plot_div", {type: "histogram" })
+                df['Age'].plot("plot_div").hist()
 
             }).catch(err => {
                 console.log(err);
@@ -66,20 +66,20 @@ In the example below, we use the titanic dataset, to show a close to real world 
     <div id="plot_div"></div>
     <script>
 
-       var layout = {
-            bargap: 0,
-            bargroupgap: 0.1,
-            barmode: "stack",
-            title: "Histogram of two columns stacked",
-            xaxis: { title: "Value" },
-            yaxis: { title: "Count" }
-        }
-
         dfd.read_csv("https://raw.githubusercontent.com/pandas-dev/pandas/master/doc/data/titanic.csv")
             .then(df => {
 
-                sub_df = df.loc({ columns: ["Fare", "Parch", "Age"] })
-                sub_df.plot("plot_div", { type: "histogram", layout: layout })
+                var layout = {
+                    bargap: 0,
+                    bargroupgap: 0.1,
+                    barmode: "stack",
+                    title: "Histogram of two columns stacked",
+                    xaxis: { title: "Value" },
+                    yaxis: { title: "Count" }
+                }
+
+                sub_df = df.loc({ columns: ["Fare", "Age"] })
+                sub_df.plot("plot_div").hist({layout: layout })
 
             }).catch(err => {
                 console.log(err);
@@ -92,7 +92,27 @@ In the example below, we use the titanic dataset, to show a close to real world 
 
 ```
 
-![](../../.gitbook/assets/newplot-11-.png)
+![](../../.gitbook/assets/newplot-20-.png)
+
+### Configuring your plots
+
+danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly. 
+
+All [customization](https://plotly.com/javascript/line-charts/) on the plot can be passed as an object of key-value pairs to the config parameter. For example:
+
+```javascript
+var layout = {
+    title: 'A sample plot',
+    xaxis: {
+        title: 'X',
+    },
+    yaxis: {
+        title: 'Y',
+    }
+}
+
+df.plot("div_tag").histogram({layout: layout})
+```
 
 {% hint style="info" %}
 For more configuration options for Histograms, see the [Plotly](https://plotly.com/javascript/histograms/) style doc.

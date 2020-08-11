@@ -27,8 +27,8 @@ Make a box-and-whisker plot from DataFrame columns, optionally grouped by some o
     <div id="plot_div"></div>
     <script>
 
-         s = new dfd.Series([20, 30,40,23,40])
-         s.plot("plot_div", {type:"box"})
+        s = new dfd.Series([20, 30, 40, 23, 40, 3, 50, 34, 67])
+        s.plot("plot_div").box()
          
     </script>
 </body>
@@ -37,7 +37,7 @@ Make a box-and-whisker plot from DataFrame columns, optionally grouped by some o
 
 ```
 
-![](../../.gitbook/assets/newplot-14-.png)
+![](../../.gitbook/assets/newplot-23-.png)
 
 ### Box plots on a DataFrame
 
@@ -58,11 +58,12 @@ Make a box-and-whisker plot from DataFrame columns, optionally grouped by some o
     <div id="plot_div"></div>
     <script>
 
-         dfd.read_csv("https://raw.githubusercontent.com/pandas-dev/pandas/master/doc/data/titanic.csv")
+          dfd.read_csv("https://raw.githubusercontent.com/pandas-dev/pandas/master/doc/data/titanic.csv")
             .then(df => {
 
-                sub_df = df.loc({columns: ["Age", "Fare"]})
-                sub_df.plot("plot_div", {type: "box"})
+                sub_df = df.loc({ columns: ["Age", "Fare"] })
+                sub_df.plot("plot_div").box()
+
             }).catch(err => {
                 console.log(err);
             })
@@ -98,8 +99,8 @@ Make a box-and-whisker plot from DataFrame columns, optionally grouped by some o
          dfd.read_csv("https://raw.githubusercontent.com/pandas-dev/pandas/master/doc/data/titanic.csv")
             .then(df => {
 
-                sub_df = df.loc({columns: ["Age", "Fare"]})
-                sub_df.plot("plot_div", {type: "box"})
+                df.plot("plot_div").box({x: "Survived", y: "Age"})
+
             }).catch(err => {
                 console.log(err);
             })
@@ -111,7 +112,29 @@ Make a box-and-whisker plot from DataFrame columns, optionally grouped by some o
 
 ```
 
-![](../../.gitbook/assets/screen-shot-2020-08-11-at-1.20.42-am.png)
+![](../../.gitbook/assets/newplot-24-.png)
+
+
+
+### Configuring your plots
+
+danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly. 
+
+All [customization](https://plotly.com/javascript/line-charts/) on the plot can be passed as an object of key-value pairs to the config parameter. For example:
+
+```javascript
+var layout = {
+    title: 'A sample plot',
+    xaxis: {
+        title: 'X',
+    },
+    yaxis: {
+        title: 'Y',
+    }
+}
+
+df.plot("div_tag").box({layout: layout})
+```
 
 {% hint style="info" %}
 For more configuration options for Box Plots, see the [Plotly](https://plotly.com/javascript/box-plots/) style doc.
