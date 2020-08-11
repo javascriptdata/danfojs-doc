@@ -4,7 +4,7 @@ description: Obtain data aggregate per groups for each column
 
 # Groupby.agg
 
-> danfo.Groupby.agg\(kwargs\)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L349)\]
+> danfo.Groupby.**agg**\(kwargs\)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L349)\]
 
 | Parameters | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
