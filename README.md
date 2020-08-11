@@ -21,12 +21,6 @@ The reference guide contains a detailed description of the **danfo** API. The re
 
 {% page-ref page="api-reference/" %}
 
-## **User Guide**
-
-The user guide provides in-depth information on the key concepts of danfo with some useful background information and explanation.
-
-{% page-ref page="user-guide.md" %}
-
 ## Contributing Guide
 
 Want to help improve our documentation and existing functionalities? The contributing guidelines will guide you through the process. 

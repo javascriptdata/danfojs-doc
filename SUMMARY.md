@@ -15,7 +15,6 @@
     * [danfo.merge](api-reference/general-functions/danfo.merge.md)
   * [Input/Output](api-reference/input-output/README.md)
     * [danfo.read\_csv](api-reference/input-output/danfo.read_csv.md)
-    * [danfo.read\_json](api-reference/input-output/untitled.md)
   * [Series](api-reference/series/README.md)
     * [Series.cumsum](api-reference/series/series.cumsum.md)
     * [Series.cummax](api-reference/series/series.cummax.md)
@@ -197,8 +196,5 @@
     * [Groupby.cummin](api-reference/groupby/groupby.cummin.md)
     * [Groupby.cumprod](api-reference/groupby/groupby.cumprod.md)
     * [Groupby.agg](api-reference/groupby/groupby.agg.md)
-* [User Guide](user-guide.md)
-* [Development](development.md)
-* [Release Notes](release-notes.md)
 * [Contributing Guide](contributing-guide.md)
 
