@@ -20,6 +20,7 @@
   * Committing your code
   * Pushing your changes
   * Review your code and finally, make the pull request
+* Danfojs internal \(Brief\)
 
 #### Where to start?
 
@@ -274,13 +275,13 @@ The main exposed modules are the **Frame** and **Series** module. This module in
 The **Generic** module consist of the following methods and properties
 
 * `.dtypes`    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L213)\] is used to obtain the dtype for each column
-* `.index` to obtain the index for Dataframe or Series
-* `.__set_index(label)`  to set the index value
-* `.__reset_index()`  to reset the index in DataFrame and Series
+* `.index` \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L250)\] to obtain the index for Dataframe or Series
+* `.__set_index(label)`   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L257)\] to set the index value
+* `.__reset_index()`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L271)\] to reset the index in DataFrame and Series
 * `.values`    Obtain the values in  DataFrame and Series per rows
 * `.col_data` Obtain the values in DataFrame and Series per columns
-* `.column_names` Obtain the list of column names
-* `.__set_col_types` set the dtype for a column or infer the dtype from it
+* `.column_names`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L305)\] Obtain the list of column names
+* `.__set_col_types` \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L165)\] set the dtype for a column or infer the dtype from it
 * `.columns` to  access the column names directly
 * `row_data_tensor`  store the tensor representation of the data in DataFrame and Series
 
@@ -290,4 +291,10 @@ The **Frame** module consist of the following methods and properties to aid impl
 * `.__get_ops_tensors(tensors, axis)`   \[[source\]](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L1767) : obtain tensors from dataframes along axis 0 or 1.
 * `.__get_df_from_tensor(val, col_names)`   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L1741)\]:  Obtain dataframe from tensor.
 * `.__get_tensor_and_idx(df, axis)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L928)\]:  Obtain tensors , their index value and their axis from dataframe.
-* 
+
+The **Series** module contains mostly of Generic properties and less special internal properties.
+
+* `__check_series_op_compactibility(other)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L666)\]  check if two series are compatible for numerical operation
+
+Lastly the **Utils** module contains goto function for implementations.
+
