@@ -75,7 +75,7 @@ npm install
 
 #### Documentation Guidelines
 
-Documentation helps clarify what a function or a method is doing. It also gives insight t user of the function or methods on what parameters to pass in and know what the function will return.
+Documentation helps clarify what a function or a method is doing. It also gives insight to users of the function or methods on what parameters to pass in and know what the function will return.
 
 Sample documentation:
 
