@@ -42,10 +42,10 @@ description: Replaces values in a DataFrame with specified values
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-
-let data = [{"Col1": [10, 45, 56, 10]}, {"Col2": [23, 20, 10, 24]}]
+let data = {"Col1": [10, 45, 56, 10],
+            "Col2": [23, 20, 10, 24]}
 let df = new dfd.DataFrame(data)
 
 let df_rep = df.replace({ "replace": 10, "with": -999, "in": ["Col1"] })
@@ -86,7 +86,7 @@ By not specifying a ****column**,** the ****replace works on all columns  ****
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-js")
 
 
 let data = [["A", "A", "A", "B"], ["B", "C", "C", "D"]]

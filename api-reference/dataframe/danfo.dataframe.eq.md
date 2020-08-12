@@ -22,9 +22,10 @@ danfo.DataFrame.**eq**\(other, axis\) \[[source](https://github.com/opensource9j
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{"Col1": [10, 45, 56, 10]}, {"Col2": [23, 20, 10, 24]}]
+let data = {"Col1": [10, 45, 56, 10],
+            "Col2": [23, 20, 10, 24]}
 let df = new dfd.DataFrame(data)
 
 let df_rep = df.eq(20)
@@ -63,10 +64,10 @@ df_rep.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-
-let data = [{"Col1": [10, 45, 56, 10]}, {"Col2": [23, 20, 10, 24]}]
+let data = {"Col1": [10, 45, 56, 10],
+            "Col2": [23, 20, 10, 24]}
 let df = new dfd.DataFrame(data)
 let sf = new dfd.Series([10,40])
 
@@ -108,11 +109,12 @@ df_rep.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-
-let data = [{"Col1": [10, 45, 56, 10]}, {"Col2": [23, 20, 10, 24]}]
-let data2 = [{"new_col1": [10, 45, 200, 10]}, {"new_Col2": [230, 200, 110, 24]}]
+let data = {"Col1": [10, 45, 56, 10],
+            "Col2": [23, 20, 10, 24]}
+let data2 = {"new_col1": [10, 45, 200, 10],
+            "new_Col2": [230, 200, 110, 24]}
 
 let df = new dfd.DataFrame(data)
 let df2 = new dfd.DataFrame(data2)
@@ -153,9 +155,10 @@ df_rep.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{"Col1": [10, 45, 56, 10]}, {"Col2": [23, 20, 10, 24]}]
+let data = {"Col1": [10, 45, 56, 10],
+            "Col2": [23, 20, 10, 24]}
 let df = new dfd.DataFrame(data)
 let val = [10,40]
 
