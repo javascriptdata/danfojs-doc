@@ -19,7 +19,7 @@ Returns the length \(number of character\) of a string, and also return the leng
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ["dog", 5,"cat",["fog","mug"],"animals"]
 let sf = new dfd.Series(data)

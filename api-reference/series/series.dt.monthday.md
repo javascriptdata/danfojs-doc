@@ -15,7 +15,7 @@ description: Obtain the day of the month
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = new dfd.date_range({"start":"2000-01-01", period:4, freq:"D"})
 let sf = new dfd.Series(data)

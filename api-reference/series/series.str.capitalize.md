@@ -17,7 +17,7 @@ Convert  the first character of a string to capital letter
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower boy', 'capitals', 'sentence', 'swApCaSe']
 let sf = new dfd.Series(data)

@@ -15,7 +15,7 @@ description: Detect Missing values
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [NaN, undefined, "girl", "Man"]
 let sf = new dfd.Series(data1)

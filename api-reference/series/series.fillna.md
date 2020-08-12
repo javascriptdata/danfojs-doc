@@ -20,7 +20,7 @@ Fill nan value and then return new series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [NaN, 1, 2, 33, 4, NaN, 5, 6, 7, 8]
 let sf = new dfd.Series(data1)
@@ -62,12 +62,12 @@ sf_rep.print()
 {% endtab %}
 {% endtabs %}
 
-Fill nan value without retutning new Series
+Fill nan value without returning new Series
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [NaN, 1, 2, 33, 4, NaN, 5, 6, 7, 8]
 let sf = new dfd.Series(data1)

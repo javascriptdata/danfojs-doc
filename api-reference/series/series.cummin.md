@@ -15,7 +15,7 @@ description: Returns the cumulative min of a Series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data1 = [10, 45, 56, 5, 23, 20, 10]

@@ -22,7 +22,7 @@ description: >-
 Obtain substring\( containing 4 characters\) starting from the third character \(2nd index\).
 
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower part ', ' CAPITALS city', ' this is a sentence', '  SwAp CaSe']
 let sf = new dfd.Series(data)

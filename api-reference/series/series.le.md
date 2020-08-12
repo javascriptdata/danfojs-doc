@@ -19,7 +19,7 @@ Check if all the values in a series is less than or equal to a value
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [10, 45, 56, 25, 23, 20, 10]
 let sf1 = new dfd.Series(data1)
@@ -58,7 +58,7 @@ check if all the values in a series are less than equal to values in another ser
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [10, 45, 56, 25, 23, 20, 10]
 let data2 = [10, 450, 56, 5, 25, 2, 0]

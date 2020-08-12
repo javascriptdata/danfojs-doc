@@ -15,7 +15,7 @@ description: Returns the int position of the largest value in the series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [1,30,20,40,50,70,90,200,10,20,12]
 let sf = new dfd.Series(data)

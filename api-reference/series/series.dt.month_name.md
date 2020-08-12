@@ -15,7 +15,7 @@ description: obtain the month name in a Time Series
 {% tabs %}
 {% tab title="Output" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = new dfd.date_range({"start":'2018-01', freq:'M', period:3})
 let sf = new dfd.Series(data)

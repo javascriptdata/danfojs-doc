@@ -17,7 +17,7 @@ description: Checks whether a string ends with specified characters
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower', 'CAPITALS', 'this is a sentence', 'SwApCaSe']
 let sf = new dfd.Series(data)

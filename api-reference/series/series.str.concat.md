@@ -20,7 +20,7 @@ Add the strings from an Array to the start of each of the String element in Seri
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower boy', 'CAPITALS', 'sentence', 'SwApCaSe']
 let data2 = ['XX', 'YY', 'BB', '01']
@@ -59,7 +59,7 @@ Add the strings from an Array to the end of each of the String element in Series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower boy', 'CAPITALS', 'sentence', 'SwApCaSe']
 let data2 = ['XX', 'YY', 'BB', '01']
@@ -98,7 +98,7 @@ Add a string to the start of each string element in a Series
 {% tabs %}
 {% tab title="Output" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower boy', 'CAPITALS', 'sentence', 'SwApCaSe']
 let data2 = ['XX', 'YY', 'BB', '01']
@@ -137,7 +137,7 @@ Add a string to the end of each string element in a series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower boy', 'CAPITALS', 'sentence', 'SwApCaSe']
 let data2 = ['XX', 'YY', 'BB', '01']

@@ -18,7 +18,7 @@ description: Assign new Index to Series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [{ alpha: "A", count: 1 }, { alpha: "B", count: 2 }, { alpha: "C", count: 3 }]
 let sf = new dfd.Series(data)
@@ -34,14 +34,26 @@ sf_new.print()
 {% endtab %}
 {% endtabs %}
 
-**OUTPUT**
-
-![](../../.gitbook/assets/series.reset_index.png)
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══════╤══════════════════════╗
+║       │ 0                    ║
+╟───────┼──────────────────────╢
+║ one   │ {"alpha":"A","cou... ║
+╟───────┼──────────────────────╢
+║ two   │ {"alpha":"B","cou... ║
+╟───────┼──────────────────────╢
+║ three │ {"alpha":"C","cou... ║
+╚═══════╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ["Humans","Life","Meaning","Fact","Truth"]
 let sf = new dfd.Series(data)
@@ -57,9 +69,25 @@ sf_new.print()
 {% endtab %}
 {% endtabs %}
 
-**OUTPUT**
-
-![](../../.gitbook/assets/series_reset_index2.png)
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ H │ Humans               ║
+╟───┼──────────────────────╢
+║ L │ Life                 ║
+╟───┼──────────────────────╢
+║ M │ Meaning              ║
+╟───┼──────────────────────╢
+║ F │ Fact                 ║
+╟───┼──────────────────────╢
+║ T │ Truth                ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 
 set index without creating a new series by using `inplace = true`
 
@@ -82,7 +110,25 @@ sf.print()
 {% endtab %}
 {% endtabs %}
 
-**OUTPUT**
-
-![](../../.gitbook/assets/series_set_index.png)
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══════╤══════════════════════╗
+║       │ 0                    ║
+╟───────┼──────────────────────╢
+║ one   │ 1                    ║
+╟───────┼──────────────────────╢
+║ two   │ 2                    ║
+╟───────┼──────────────────────╢
+║ three │ 3                    ║
+╟───────┼──────────────────────╢
+║ four  │ 4                    ║
+╟───────┼──────────────────────╢
+║ five  │ 5                    ║
+╟───────┼──────────────────────╢
+║ six   │ 6                    ║
+╚═══════╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 

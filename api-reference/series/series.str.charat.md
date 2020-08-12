@@ -19,7 +19,7 @@ Obtain the character at index 2 of all string elements in the series.
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower boy', 'CAPITALS', 'sentence', 'SwApCaSe']
 let sf = new dfd.Series(data)

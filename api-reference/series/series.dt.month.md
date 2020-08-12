@@ -15,7 +15,7 @@ description: Obtain the month in a date time series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = new dfd.date_range({"start":'2016-7-31', "end":'2016-12-08', freq:"M"})
 let sf = new dfd.Series(data)

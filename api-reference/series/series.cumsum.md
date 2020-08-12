@@ -15,7 +15,7 @@ description: Return a cumulative sum of a series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data1 = [10, 45, 56, 25, 23, 20, 10]

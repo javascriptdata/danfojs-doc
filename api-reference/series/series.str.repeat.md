@@ -17,7 +17,7 @@ description: Repeat the the character(s) in a string for a specified number of t
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['a', 'b', 'c', 'd']
 let sf = new dfd.Series(data)

@@ -19,7 +19,7 @@ Compare all the values in a series to that in another series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [10, 45, 56, 25, 23, 20, 10]
 let data2 = [10, 450, 56, 5, 25, 2, 0]
@@ -60,7 +60,7 @@ Compare all the values in a Series to a value.
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [10, 45, 56, 25, 23, 20, 10]
 let sf1 = new dfd.Series(data1)

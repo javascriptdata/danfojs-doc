@@ -19,7 +19,7 @@ Drop all nan value and then return New Series.
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [10, 45, undefined, 10, 23, 20, undefined, 10]
 let sf = new dfd.Series(data1)
@@ -57,7 +57,7 @@ Drop nan values without returning new series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [10, 45, undefined, 10, 23, 20, undefined, 10]
 let sf = new dfd.Series(data1)

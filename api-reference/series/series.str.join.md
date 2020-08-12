@@ -20,7 +20,7 @@ description: Join a new string value to all string elements in a Series.
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower part', 'CAPITALS city', 'this is a sentence', 'SwAp CaSe']
 let sf = new dfd.Series(data)

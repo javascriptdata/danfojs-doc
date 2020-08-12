@@ -23,7 +23,7 @@ obtain the index position for a character
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower part ', ' CAPITALS city', ' this is a sentence', '  SwAp CaSe']
 let sf = new dfd.Series(data)
@@ -61,7 +61,7 @@ Obtain the index position for a searched word
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower city ', ' CAPITALS city', ' this is a sentence', '  SwAp CaSe']
 let sf = new dfd.Series(data)

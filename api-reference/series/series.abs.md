@@ -15,7 +15,7 @@ description: Returns the absolute value in a Series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [-10, 45, 56, -25, 23, -20, 10]
 let sf = new dfd.Series(data1)

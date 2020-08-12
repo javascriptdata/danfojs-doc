@@ -17,7 +17,7 @@ Convert all characters in each string element to capital letter
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower boy', 'CAPITALS', 'sentence', 'SwApCaSe']
 let sf = new dfd.Series(data)

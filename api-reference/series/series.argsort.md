@@ -17,7 +17,7 @@ description: Return the integer indices that would sort the Series values
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [10, 45, 20, 10, 23, 20, 30, 11]
 let sf = new dfd.Series(data)

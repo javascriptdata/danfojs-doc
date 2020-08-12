@@ -15,12 +15,12 @@ description: Remove duplicate rows
 
 **Examples**
 
-Drop duplicate by keep the first value of the duplicate value
+Drop duplicate by keeping the first value of the duplicate value
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [10, 45, 56, 10, 23, 20, 10, 10]
 let sf = new dfd.Series(data1)
@@ -56,7 +56,7 @@ Drop duplicate and keep only the last duplicated value
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [10, 45, 56, 10, 23, 20, 10, 10]
 let sf = new dfd.Series(data1)
@@ -92,7 +92,7 @@ Remove duplicate value in series without returning a new series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = ["A", "A", "A", "B", "B", "C", "C", "D"]
 let sf = new dfd.Series(data1)

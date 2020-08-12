@@ -17,7 +17,7 @@ Obtain the seconds of the datetime
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = new dfd.date_range({"start":"2000-01-01", period:3, freq:"s"})
 let sf = new dfd.Series(data)

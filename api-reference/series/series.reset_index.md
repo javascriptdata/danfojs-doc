@@ -19,7 +19,7 @@ Generate a new Series with the index reset. This is useful when the index needs 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [{ alpha: "A", count: 1 }, { alpha: "B", count: 2 }, { alpha: "C", count: 3 }]
 let sf = new dfd.Series(data)
@@ -36,14 +36,26 @@ sf_reset.print()
 {% endtab %}
 {% endtabs %}
 
-**OUTPUT**
-
-![](../../.gitbook/assets/series_reset_index3.png)
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 0 │ {"alpha":"A","cou... ║
+╟───┼──────────────────────╢
+║ 1 │ {"alpha":"B","cou... ║
+╟───┼──────────────────────╢
+║ 2 │ {"alpha":"C","cou... ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [1,2,3,4,5,6]
 let sf = new dfd.Series(data)
@@ -62,16 +74,34 @@ sf_reset.print()
 {% endtab %}
 {% endtabs %}
 
-**OUTPUT**
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 0 │ 1                    ║
+╟───┼──────────────────────╢
+║ 1 │ 2                    ║
+╟───┼──────────────────────╢
+║ 2 │ 3                    ║
+╟───┼──────────────────────╢
+║ 3 │ 4                    ║
+╟───┼──────────────────────╢
+║ 4 │ 5                    ║
+╟───┼──────────────────────╢
+║ 5 │ 6                    ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 
-![](../../.gitbook/assets/series_reset_index4.png)
-
-Reset index with out returning a new Series
+Reset index without returning a new Series
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [1,2,3,4,5,6]
 let sf = new dfd.Series(data)
@@ -89,7 +119,25 @@ sf.print()
 {% endtab %}
 {% endtabs %}
 
-**OUTPUT**
-
-![](../../.gitbook/assets/series_reset_index5.png)
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 0 │ 1                    ║
+╟───┼──────────────────────╢
+║ 1 │ 2                    ║
+╟───┼──────────────────────╢
+║ 2 │ 3                    ║
+╟───┼──────────────────────╢
+║ 3 │ 4                    ║
+╟───┼──────────────────────╢
+║ 4 │ 5                    ║
+╟───┼──────────────────────╢
+║ 5 │ 6                    ║
+╚═══╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 

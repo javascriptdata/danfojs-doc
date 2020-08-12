@@ -17,7 +17,7 @@ Convert all characters in each string element to small letter
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['LOWER BOY', 'CAPITALS', 'SENTENCE', 'SWAPCASE']
 let sf = new dfd.Series(data)

@@ -15,7 +15,7 @@ description: Obtain the numerical representation of the week day.
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = new dfd.date_range({"start":'2016-12-31', "end":'2017-01-08'})
 let sf = new dfd.Series(data)

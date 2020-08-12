@@ -15,7 +15,7 @@ description: Obtain the year in a date time series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = new dfd.date_range({"start":"2000-01-01", period:3, freq:"Y"})
 let sf = new dfd.Series(data)

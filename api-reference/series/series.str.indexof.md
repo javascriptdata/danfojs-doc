@@ -17,7 +17,7 @@ description: the position of the first found occurrence of a specified value in 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = ['lower', 'CAPITALS', 'this is a sentence', 'SwApCaSe']
 let sf = new dfd.Series(data)
