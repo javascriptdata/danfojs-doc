@@ -45,7 +45,7 @@ To query a DataFrame, you can specify the column to use, the logical operator \(
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
+const dfd = require("danfojs-node")
 let cols = ["A", "B", "C"]
 let df = new dfd.DataFrame(data, { columns: cols })
 df.print() //before query
@@ -93,7 +93,11 @@ query_df.print() //after query
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-let data = [{"A": [30, 1, 2, 3]}, {"B": [34, 4, 5, 6]}, {"C": [20, 20, 30, 40]}]
+const dfd = require("danfojs-node")
+let data = {"A": [30, 1, 2, 3],
+           "B": [34, 4, 5, 6],
+           "C": [20, 20, 30, 40]}
+           
 let df = new dfd.DataFrame(data)
 
 df.print()
@@ -144,9 +148,11 @@ The query method also works on string columns.
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-let data = [{"A": ["Ng", "Yu", "Mo", "Ng"]},
-            {"B": [34, 4, 5, 6]}, 
-             {"C": [20, 20, 30, 40]}]
+const dfd = require("danfojs-node")
+let data = {"A": ["Ng", "Yu", "Mo", "Ng"],
+            "B": [34, 4, 5, 6], 
+            "C": [20, 20, 30, 40]}
+            
 let df = new dfd.DataFrame(data)
 
 df.print()
