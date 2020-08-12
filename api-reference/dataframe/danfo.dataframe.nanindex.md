@@ -17,7 +17,7 @@ danfo.DataFrame.**nanindex**\(\) \[[source](https://github.com/opensource9ja/dan
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [[1, 2, 3], [NaN, 5, 6], [NaN, 30, 40], [39, undefined, 78]]
 let cols = ["A", "B", "C"]

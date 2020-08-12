@@ -48,7 +48,7 @@ The **apply** function calls a JavaScript function on every element of the DataF
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
 let cols = ["A", "B", "C"]
@@ -91,7 +91,7 @@ df_new.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [{ short_name: ["NG", "GH", "EGY", "SA"] },
              { long_name: ["Nigeria", "Ghana", "Eqypt", "South Africa"] }]
@@ -140,7 +140,7 @@ You can call any compatible [Tensorflow](https://js.tensorflow.org/api/latest/) 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
 let cols = ["A", "B", "C"]
@@ -186,7 +186,7 @@ df_new.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
 let cols = ["A", "B", "C"]

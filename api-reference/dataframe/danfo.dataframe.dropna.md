@@ -45,7 +45,7 @@ danfo.DataFrame.**dropna**\(kwargs\) \[[source](https://github.com/opensource9ja
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [[1, 2, 3], [NaN, 5, 6], [NaN, 30, 40], [39, undefined, 78]]
 let cols = ["A", "B", "C"]
@@ -82,7 +82,7 @@ df_drop.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [[1, 2, 3], [NaN, 5, 6], [NaN, 30, 40], [39, undefined, 78]]
 let cols = ["A", "B", "C"]
