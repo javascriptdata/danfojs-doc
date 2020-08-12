@@ -23,12 +23,12 @@ danfo.DataFrame.**unique**\(axis\) \[[source](https://github.com/opensource9ja/d
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
-let data = { "A": [-20, 30, 47.3, -20],
-             "B": [34, -4, 5, 6] ,
-             "C": [20, 20, 30, 30],
-             "D": ["a", "b", "c", "c"] }
+let data = [{ "A": [-20, 30, 47.3, -20] },
+            { "B": [34, -4, 5, 6] },
+            { "C": [20, 20, 30, 30] },
+            { "D": ["a", "b", "c", "c"] }]
 
 let df = new dfd.DataFrame(data)
 console.log(df.unique()) //defaults to axis 1
@@ -60,12 +60,12 @@ console.log(df.unique()) //defaults to axis 1
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
-let data = { "A": [-20, 30, 47.3, -20],
-             "B": [34, -4, 5, 6] ,
-             "C": [20, 20, 30, 30],
-             "D": ["a", "b", "c", "c"] }
+let data = [{ "A": [-20, 30, 47.3, -20] },
+            { "B": [34, -4, 5, 6] },
+            { "C": [20, 20, 30, 30] },
+            { "D": ["a", "b", "c", "c"] }]
 
 let df = new dfd.DataFrame(data)
 console.log(df.unique(axis=0));

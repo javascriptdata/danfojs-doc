@@ -19,6 +19,7 @@ Descriptive statistics include those that summarize the central tendency, disper
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+const dfd = require("danfojs-node")
 let data = [[0, 2, 4, "a"], [360, 180, 360, "b"], [2, 4, 6, "c"]]
 let col_names = ["col1", "col2", "col3", "col4"]
 let df = new dfd.DataFrame(data, {columns: col_names})

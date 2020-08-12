@@ -19,12 +19,13 @@ danfo.DataFrame.**tensor** \[[source](https://github.com/opensource9ja/danfojs/b
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
-let data = { "A": [-20, 30, 47.3, -20] ,
-             "B": [34, -4, 5, 6] ,
-             "C": [20, 20, 30, 30]}
-             
+let data = [{ "A": [-20, 30, 47.3] },
+            { "B": [34, -4, 5, 6] },
+            { "C": [20, 2, 30, 30] }]
+
+
 let df = new dfd.DataFrame(data)
 let tf_tensor = df.tensor
 
@@ -73,11 +74,11 @@ String values in a Tensor are represented as NaN, so ensure to transform them be
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
-let data = { "Abs": [20.2, 30, 47.3] ,
-             "Count": [34, 4, 5, 6] ,
-             "country code": ["NG", "FR", "GH"] }
+let data = [{ "Abs": [20.2, 30, 47.3] },
+            { "Count": [34, 4, 5, 6] },
+            { "country code": ["NG", "FR", "GH"] }]
 
 
 let df = new dfd.DataFrame(data)

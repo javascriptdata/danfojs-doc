@@ -21,9 +21,10 @@ danfo.DataFrame.**sum**\(kwargs\) \[[source](https://github.com/opensource9ja/da
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-let data = [{"A": [-20.1, 30, 47.3, -20]},
-            {"B": [34, -4, 5, 6]}, 
-             {"C": [20, -20, 30, -40]}]
+const dfd = require("danfojs-node")
+let data = {"A": [-20.1, 30, 47.3, -20],
+            "B": [34, -4, 5, 6], 
+             "C": [20, -20, 30, -40]}
 let df = new dfd.DataFrame(data)
 
 df.print()
@@ -73,9 +74,10 @@ df_sum.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-let data = [{"A": [-20.1, 30, 47.3, -20]},
-            {"B": [34, -4, 5, 6]}, 
-             {"C": [20, -20, 30, -40]}]
+const dfd = require("danfojs-node")
+let data = {"A": [-20.1, 30, 47.3, -20],
+            "B": [34, -4, 5, 6], 
+             "C": [20, -20, 30, -40]}
 let df = new dfd.DataFrame(data)
 
 df.print()
