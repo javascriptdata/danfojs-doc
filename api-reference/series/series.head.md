@@ -17,7 +17,7 @@ description: Obtain the first n rows for the object based on position.
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
 let data1 = [1, 2, 3, 4, 5, 620, 30, 40, 39, 89, 78]
 let sf1 = new dfd.Series(data1)

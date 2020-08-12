@@ -20,7 +20,7 @@ Sort series values using the default settings
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
 let data1 = [20, 30, 1, 2, 4, 57, 89, 0, 4]
 let sf1 = new dfd.Series(data1)
@@ -64,7 +64,7 @@ Sort series value without returning a new series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
 let data1 = [20, 30, 1, 2, 4, 57, 89, 0, 4]
 let sf1 = new dfd.Series(data1)
@@ -108,7 +108,7 @@ Sort series value in descending order
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
 let data1 = [20, 30, 1, 2, 4, 57, 89, 0, 4]
 let sf1 = new dfd.Series(data1)
