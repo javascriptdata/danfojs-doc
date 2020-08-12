@@ -1,3 +1,9 @@
+---
+description: >-
+  Installation guides for Node and Browser based environments, including a quick
+  10 minute walk through of danfo.js
+---
+
 # Getting Started
 
 ## Installation
