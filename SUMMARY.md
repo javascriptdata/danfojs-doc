@@ -106,7 +106,6 @@
     * [Series.tail](api-reference/series/series.tail.md)
     * [Series.head](api-reference/series/series.head.md)
   * [Dataframe](api-reference/dataframe/README.md)
-    * [DataFrame.plot](api-reference/dataframe/dataframe.plot.md)
     * [DataFrame.nunique](api-reference/dataframe/dataframe.nunique-1.md)
     * [DataFrame.tensor](api-reference/dataframe/dataframe.tensor.md)
     * [DataFrame.print](api-reference/dataframe/dataframe.print.md)
