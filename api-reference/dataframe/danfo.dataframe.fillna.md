@@ -43,11 +43,12 @@ danfo.DataFrame.**fillna**\(kwargs\) \[[source](https://github.com/opensource9ja
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{"Name":["Apples", "Mango", "Banana", undefined]},
-            {"Count": [NaN, 5, NaN, 10]}, 
-            {"Price": [200, 300, 40, 250]}]
+let data = {"Name":["Apples", "Mango", "Banana", undefined],
+            "Count": [NaN, 5, NaN, 10], 
+            "Price": [200, 300, 40, 250]}
+            
 let df = new dfd.DataFrame(data)
 df.print()
 
@@ -103,11 +104,11 @@ df_filled.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", undefined] },
-            { "Count": [NaN, 5, NaN, 10] },
-           { "Price": [200, 300, 40, 250] }]
+let data = {"Name":["Apples", "Mango", "Banana", undefined],
+            "Count": [NaN, 5, NaN, 10], 
+            "Price": [200, 300, 40, 250]}
 
 let df = new dfd.DataFrame(data)
 let df_filled = df.fillna({ values: ["Apples"] })

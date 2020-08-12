@@ -9,6 +9,21 @@ description: >-
 
 **danfo.js** is heavily inspired by the [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) library and provides a similar interface and API. This means users familiar with the [Pandas ](https://pandas.pydata.org/pandas-docs/stable/index.html)API can easily use **danfo.js.** 
 
+## Main Features
+
+* danfo.js is fast. It is built on[ Tensorflow.js](https://js.tensorflow.org/), and supports tensors out of the box. This means you can [convert danfo data structure](api-reference/dataframe/) to Tensors.
+* Easy handling of missing ****data \(represented as `NaN`\) in floating point as well as non-floating point data
+* Size mutability: columns can be inserted/deleted from DataFrame
+* Automatic and explicit alignment: objects can be explicitly aligned to a set of labels, or the user can simply ignore the labels and let [`Series`](api-reference/series/), [`DataFrame`](api-reference/dataframe/), etc. automatically align the data for you in computations
+* Powerful, flexible [groupby](api-reference/groupby/) functionality to perform split-apply-combine operations on data sets, for both aggregating and transforming data
+* Make it easy to convert Arrays, JSONs, List or Objects, Tensors and differently-indexed data structures into DataFrame objects
+* Intelligent label-based slicing, fancy indexing, and querying of large data sets
+* Intuitive [merging](api-reference/general-functions/danfo.merge.md) and [joining](api-reference/general-functions/danfo.concat.md) data sets
+* Robust IO tools for loading data from [flat-files](api-reference/input-output/danfo.read_csv.md) \(CSV and delimited\) and JSON data format.
+* Powerful, flexible and intutive API for [plotting](https://app.gitbook.com/@jsdata/s/danfojs/~/drafts/-MESZnq3_VBU0EW71MxS/api-reference/plotting) DataFrames and Series interactively.
+* Timeseries-specific functionality: date range generation and date and time properties.
+* Robust data preprocessing functions like [OneHotEncoders](api-reference/general-functions/danfo.onehotencoder.md), [LabelEncoders](api-reference/general-functions/danfo.labelencoder.md), and scalers like [StandardScaler](api-reference/general-functions/danfo.standardscaler.md) and [MinMaxScaler](api-reference/general-functions/danfo.minmaxscaler.md) are supported on DataFrame and Series
+
 ## Getting Started
 
 New to danfo? Check out the getting started guides. They contain an introduction to _danfo's_ main concepts and links to additional contents.

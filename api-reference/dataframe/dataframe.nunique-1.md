@@ -17,12 +17,12 @@ danfo.DataFrame.**nunique**\(axis\) \[[source](https://github.com/opensource9ja/
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "A": [-20, 30, 47.3, -20] },
-            { "B": [34, -4, 5, 6] },
-            { "C": [20, 20, 30, 30] },
-            { "D": ["a", "b", "c", "c"] }]
+let data = { "A": [-20, 30, 47.3, -20] ,
+             "B": [34, -4, 5, 6] ,
+             "C": [20, 20, 30, 30],
+             "D": ["a", "b", "c", "c"] }
 
 let df = new dfd.DataFrame(data)
 df.nunique().print()
@@ -60,12 +60,12 @@ df.nunique().print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "A": [-20, 30, 47.3, -20] },
-            { "B": [34, -4, 5, 6] },
-            { "C": [20, 20, 30, 30] },
-            { "D": ["a", "b", "c", "c"] }]
+let data = { "A": [-20, 30, 47.3, -20] ,
+             "B": [34, -4, 5, 6] ,
+             "C": [20, 20, 30, 30],
+             "D": ["a", "b", "c", "c"] }
 
 let df = new dfd.DataFrame(data)
 df.nunique(axis=0).print()

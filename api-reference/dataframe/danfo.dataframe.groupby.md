@@ -21,6 +21,7 @@ danfo.DataFrame.**groupby**\(columns\) \[[source](https://github.com/opensource9
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+const dfd = require("danfojs-node")
 let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
 let cols = ["A", "B", "C"]
 let df = new DataFrame(data, { columns: cols })
