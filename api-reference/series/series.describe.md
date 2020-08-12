@@ -18,7 +18,7 @@ description: >-
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data = [1,2,3,4,5,6]
 let sf = new dfd.Series(data)
@@ -33,7 +33,27 @@ sf.describe().print()
 {% endtab %}
 {% endtabs %}
 
-**OUTPUT:**
-
-![](../../.gitbook/assets/series_describe.png)
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔══════════╤══════════════════════╗
+║          │ 0                    ║
+╟──────────┼──────────────────────╢
+║ count    │ 6                    ║
+╟──────────┼──────────────────────╢
+║ mean     │ 3.5                  ║
+╟──────────┼──────────────────────╢
+║ std      │ 1.8708286933869707   ║
+╟──────────┼──────────────────────╢
+║ min      │ 1                    ║
+╟──────────┼──────────────────────╢
+║ median   │ 3.5                  ║
+╟──────────┼──────────────────────╢
+║ max      │ 6                    ║
+╟──────────┼──────────────────────╢
+║ variance │ 3.5                  ║
+╚══════════╧══════════════════════╝
+```
+{% endtab %}
+{% endtabs %}
 

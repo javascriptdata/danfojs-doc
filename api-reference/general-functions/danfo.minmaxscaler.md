@@ -19,8 +19,8 @@ The API is similar to sklearn's [MinMaxScaler](https://scikit-learn.org/stable/m
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-
 const dfd = require("danfojs-node")
+
 let scaler = new dfd.MinMaxScaler()
 
 let data = [[100,1000,2000, 3000] ,

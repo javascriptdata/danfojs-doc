@@ -17,7 +17,7 @@ description: Obtain the minimum value between two series (element wise)
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [30, 40, 3, 5]
 let data2 = [10, 41, 2, 0]

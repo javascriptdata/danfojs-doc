@@ -42,13 +42,37 @@ danfo.**date\_range**\(kwargs\) \[[source](https://github.com/opensource9ja/danf
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+const dfd = require("danfojs-node")
+
 let data = new dfd.date_range({"start":'1/1/2018',period:5, freq:'M'})
 console.log(data);
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
-```
+```markup
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--danfojs CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.15/dist/index.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let data = new dfd.date_range({"start":'1/1/2018',period:5, freq:'M'})
+        console.log(data);
+         
+    </script>
+</body>
+
+</html>
 
 ```
 {% endtab %}
@@ -71,6 +95,8 @@ console.log(data);
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+const dfd = require("danfojs-node")
+
 let data = new dfd.date_range({"start":'1/1/2018',period:12, freq:'Y'})
 console.log(data);
 ```

@@ -77,7 +77,6 @@
     * [Series.values](api-reference/series/series.values.md)
     * [Series.tensor](api-reference/series/series.tensor.md)
     * [Series.index](api-reference/series/series.index.md)
-    * [Series.toString](api-reference/series/series.tostring.md)
     * [Series.apply](api-reference/series/series.apply.md)
     * [Series.map](api-reference/series/series.map.md)
     * [Series.set\_index](api-reference/series/series.set_index.md)

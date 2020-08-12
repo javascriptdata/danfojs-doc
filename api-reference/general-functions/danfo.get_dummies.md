@@ -89,9 +89,9 @@ dum_df.print()
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = [{ fruits: ['pear', 'mango', "pawpaw", "mango", "bean"] },
-            {Count: [20, 30, 89, 12, 30]},
-            {Country: ["NG", "NG", "GH", "RU", "RU"]}]
+let data = { fruits: ['pear', 'mango', "pawpaw", "mango", "bean"],
+            Count: [20, 30, 89, 12, 30],
+            Country: ["NG", "NG", "GH", "RU", "RU"]}
 
 let df = new dfd.DataFrame(data)
 df.print()
@@ -152,9 +152,9 @@ dum_df.print()
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = [{ fruits: ['pear', 'mango', "pawpaw", "mango", "bean"] },
-            {Count: [20, 30, 89, 12, 30]},
-            {Country: ["NG", "NG", "GH", "RU", "RU"]}]
+let data = { fruits: ['pear', 'mango', "pawpaw", "mango", "bean"],
+            Count: [20, 30, 89, 12, 30],
+            Country: ["NG", "NG", "GH", "RU", "RU"]}
 
 let df = new dfd.DataFrame(data)
 df.print()

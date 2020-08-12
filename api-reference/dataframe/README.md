@@ -12,7 +12,7 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 | :--- | :--- |
 | [`DataFrame.columns`](danfo.dataframe.column.md) | The column labels of the DataFrame. |
 
-| [`DataFrame.dtypes`](dataframe.dtypes.md) | Return the dtypes in the DataFrame. |
+| [`DataFrame.ctypes`](dataframe.dtypes.md) | Return the data types in the DataFrame. |
 | :--- | :--- |
 | [`DataFrame.select_dtypes`](dataframe.select_dtypes.md) | Return a subset of the DataFrame’s columns based on the column dtypes. |
 | [`DataFrame.values`](dataframe.values.md) | Return a Numpy representation of the DataFrame. |
@@ -25,11 +25,11 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 
 | [`DataFrame.astype`](dataframe.astype.md) | Cast a pandas object to a specified dtype `dtype`. |
 | :--- | :--- |
-| [`DataFrame.copy`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.copy.html#pandas.DataFrame.copy) | Make a copy of this object’s indices and data. |
+| [`DataFrame.copy`](danfo.dataframe.copy.md) | Make a copy of this object’s indices and data. |
 
 ### Indexing, iteration
 
-| [`DataFrame.head`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html#pandas.DataFrame.head) | Return the first n rows |
+| [`DataFrame.head`](danfo.dataframe.head.md) | Return the first n rows |
 | :--- | :--- |
 | [`DataFrame.loc`](danfo.dataframe.loc.md) | Access a group of rows and columns by label\(s\) or a boolean array. |
 | [`DataFrame.iloc`](danfo.dataframe.iloc.md) | Purely integer-location based indexing for selection by position. |
@@ -56,7 +56,7 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 
 | [`DataFrame.apply`](danfo.dataframe.apply.md) | Apply a function along an axis of the DataFrame. |
 | :--- | :--- |
-| [`DataFrame.groupby`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.groupby.html#pandas.DataFrame.groupby) | Group DataFrame using a mapper or by a Series of columns. |
+| [`DataFrame.groupby`](../groupby/) | Group DataFrame using a mapper or by a Series of columns. |
 | [`DataFrame.map`](../series/series.map.md) | Map a function on Object along an axis to DataFrame |
 
 ### Computations / descriptive stats
@@ -86,11 +86,11 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 |  |  |
 | :--- | :--- |
 | [`DataFrame.drop`](dataframe.drop.md) | Drop specified labels from rows or columns. |
-| [`DataFrame.head`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.head.html#pandas.DataFrame.head) | Return the first n rows. |
-| [`DataFrame.rename`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.rename.html#pandas.DataFrame.rename) | Alter axes labels. |
+| [`DataFrame.head`](danfo.dataframe.head.md) | Return the first n rows. |
+| [`DataFrame.rename`](dataframe.rename.md) | Alter axes labels. |
 | [`DataFrame.reset_index`](dataframe.reset_index.md) | Reset the index of a DataFrame |
 | [`DataFrame.sample`](danfo.dataframe.sample.md) | Return a random sample of items from an axis of object. |
-| [`DataFrame.set_index`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.set_index.html#pandas.DataFrame.set_index) | Set the DataFrame index using existing columns. |
+| [`DataFrame.set_index`](dataframe.set_index.md) | Set the DataFrame index using existing columns. |
 | [`DataFrame.tail`](danfo.dataframe.tail.md) | Return the last n rows. |
 
 ### Missing data handling
@@ -108,36 +108,30 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 | :--- | :--- |
 | [`DataFrame.sort_values`](dataframe.sort_values.md) | Sort by the values along either axis. |
 | [`DataFrame.T`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.T.html#pandas.DataFrame.T) | Return transpose of DataFrame |
-| [`DataFrame.transpose`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.transpose.html#pandas.DataFrame.transpose) | Transpose index and columns. |
 
 ### Combining / comparing / joining / merging
 
 |  |  |
 | :--- | :--- |
 | [`DataFrame.addColumn`](danfo.dataframe.addcolumn.md) | Add new columns to a DataFrame. |
-| [`DataFrame.concat`]() | Concatenate DataFrames together. |
-| [`DataFrame.merge`]() | Merge DataFrame or named Series objects with a database-style join. |
-
-
+| [`DataFrame.concat`](../general-functions/danfo.concat.md) | Concatenate DataFrames together. |
+| [`DataFrame.merge`](../general-functions/danfo.merge.md) | Merge DataFrame or named Series objects with a database-style join. |
 
 ### Plotting
 
-`DataFrame.plot` exposes different plot methods that work in the browser. All plots are compatible with Plotly API. 
-
-| [`DataFrame.plot`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html#pandas.DataFrame.plot) | DataFrame plotting accessor and method |
-| :--- | :--- |
-
+`Series.plot` is both a callable method and a namespace attribute for specific plotting methods of the form `Series.plot.<kind>`.
 
 |  |  |
 | :--- | :--- |
-| [`DataFrame.plot.bar`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.bar.html#pandas.DataFrame.plot.bar) | Vertical bar plot. |
-| [`DataFrame.plot.box`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.box.html#pandas.DataFrame.plot.box) | Make a box plot of the DataFrame columns. |
-| [`DataFrame.plot.density`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.density.html#pandas.DataFrame.plot.density) | Generate Kernel Density Estimate plot using Gaussian kernels. |
-| [`DataFrame.plot.hist`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.hist.html#pandas.DataFrame.plot.hist) | Draw one histogram of the DataFrame’s columns. |
-| [`DataFrame.plot.kde`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.kde.html#pandas.DataFrame.plot.kde) | Generate Kernel Density Estimate plot using Gaussian kernels. |
-| [`DataFrame.plot.line`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.line.html#pandas.DataFrame.plot.line) | Plot Series or DataFrame as lines. |
-| [`DataFrame.plot.pie`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.pie.html#pandas.DataFrame.plot.pie) | Generate a pie plot. |
-| [`DataFrame.plot.scatter`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.scatter.html#pandas.DataFrame.plot.scatter) | Create a scatter plot with varying marker point size and color. |
+| [DataFrame.plot.bar](../plotting/bar-charts.md) | Vertical bar plot. |
+| [`DataFrame.plot.box`](../plotting/box-plots.md) | Make a box plot of the DataFrame columns. |
+| [`DataFrame.plot.violin`](../plotting/box-plots.md) | Make a violin plot of the DataFrame columns. |
+| [`DataFrame.plot.hist`](../plotting/histograms.md) | Draw one histogram of the DataFrame’s columns. |
+| [`DataFrame.plot.scatter`](../plotting/scatter-plots.md) | Generate Kernel Density Estimate plot using Gaussian kernels. |
+| [`DataFrame.plot.line`](../plotting/line-charts.md) | Plot Series or DataFrame as lines. |
+| [`DataFrame.plot.pie`](../plotting/pie-charts.md) | Generate a pie plot. |
+| [`Timeseries Plots`](../plotting/timeseries-plots.md) | Time series plots |
+| [`Table`](../plotting/tables.md) | Display Series as Interactive table in Div |
 
 ### Serialization / IO / conversion
 
@@ -145,7 +139,4 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 | :--- | :--- |
 | [`DataFrame.to_csv`](dataframe.to_csv.md) | Write object to a comma-separated values \(csv\) file. |
 | [`DataFrame.to_json`](dataframe.to_json.md) | Convert the object to a JSON string. |
-| [`DataFrame.to_table`]() | Render a DataFrame as an HTML table. |
-| [`DataFrame.toString`](../series/series.tostring.md) | Render a DataFrame to a console-friendly tabular output. |
-| [`DataFrame.print`](dataframe.print.md) | Display a DataFrame to a console friendly output. |
 

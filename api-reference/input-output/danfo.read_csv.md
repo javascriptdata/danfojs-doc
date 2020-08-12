@@ -21,14 +21,12 @@ description: >-
 
 The **read\_csv** method can read csv file from local disk, or over the internet. If the file is to be read from a local disk in Node environment, you have to prefix the full path name with a "**file://**" prefix. For instance, to read a csv file at the path **/home/Desktop/user\_names.csv**, you can do the following:
 
-Install danfo, create a file called app.js, download the titanic dataset from [here](https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv), and run the following: 
-
 {% tabs %}
 {% tab title="Node.js" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-dfd.read_csv("file:///home/Desktop/titanic.csv")
+dfd.read_csv("file:///home/Desktop/user_names.csv")
   .then(df => {
   
    df.head().print()
@@ -40,29 +38,53 @@ dfd.read_csv("file:///home/Desktop/titanic.csv")
 {% endtab %}
 
 {% tab title="Browser" %}
-```
+```markup
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--danfojs CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.15/dist/index.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="plot_div"></div>
+    <script>
+
+         dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
+            .then(df => {
+
+                //do something like display descriptive statistics
+                df.describe().print()
+                
+            }).catch(err => {
+                console.log(err);
+            })
+         
+    </script>
+</body>
+
+</html>
 
 ```
 {% endtab %}
 {% endtabs %}
 
-Output**:**
-
-![Output of head function in the console](../../.gitbook/assets/image%20%281%29.png)
-
 **Reading Large Files**
 
 For extremely large files, that cannot be fit in memory at once, you can read the top portion in chunks. For instance, this [dataset](http://eforexcel.com/wp/wp-content/uploads/2017/07/1500000%20Sales%20Records.7z) has over 1.5 million rows and will throw a memory error if you try to load everything at once. To read these type of files, you can load them in chunks using the chunks parameter in **read\_csv**
 
-Download the Titanic dataset from [here](http://eforexcel.com/wp/wp-content/uploads/2017/07/1500000%20Sales%20Records.7z)
-
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 //read the first 10000 rows
-dfd.read_csv("file:///home/Desktop/titanic.csv", chunk=10000)
+dfd.read_csv("file:///home/Desktop/bigdata.csv", chunk=10000)
   .then(df => {
   
    df.tail().print()
@@ -79,8 +101,4 @@ dfd.read_csv("file:///home/Desktop/titanic.csv", chunk=10000)
 ```
 {% endtab %}
 {% endtabs %}
-
-Output:
-
-![The last 5 rows of the big dataset](../../.gitbook/assets/image%20%283%29.png)
 

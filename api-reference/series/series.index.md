@@ -6,8 +6,6 @@ description: Obtain the index of a Series
 
 > danfo.Series.index     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L234)\]
 
-**Parameters**: None
-
 **Returns**: Array
 
 **Example**

@@ -22,7 +22,7 @@ description: One-dimensional ndarray with axis labels (including time series).
 
 ### Conversion
 
-| [`Series.astype`]() | Cast a Series object to a specified dtype |
+| [`Series.astype`](../dataframe/dataframe.astype.md) | Cast a Series object to a specified dtype |
 | :--- | :--- |
 | [`Series.copy`](series.copy.md) | Make a copy of this object’s indices and data. |
 
@@ -30,8 +30,8 @@ description: One-dimensional ndarray with axis labels (including time series).
 
 |  |  |
 | :--- | :--- |
-| [`Series.loc`]() | Access a group of rows and columns by label\(s\) or a boolean array. |
-| [`Series.iloc`](../dataframe/danfo.dataframe.iloc.md) | Purely integer-location based indexing for selection by position. |
+| \`\`[`Series.loc`](../dataframe/danfo.dataframe.loc.md)\`\` | Access a group of rows and columns by label\(s\) or a boolean array. |
+| [`Series.iloc`](series.iloc.md) | Purely integer-location based indexing for selection by position. |
 
 ### Binary operator functions
 
@@ -84,7 +84,6 @@ description: One-dimensional ndarray with axis labels (including time series).
 
 |  |  |
 | :--- | :--- |
-| [`Series.drop`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.drop.html#pandas.Series.drop) | Return Series with specified index labels removed. |
 | [`Series.drop_duplicates`](series.drop_duplicates.md) | Return Series with duplicate values removed. |
 | [`Series.head`](series.head.md) | Return the first n rows. |
 | [`Series.reset_index`](series.reset_index.md) | Generate a new DataFrame or Series with the index reset. |
@@ -114,8 +113,8 @@ Danfo provides dtype-specific methods under various accessors. These are separat
 
 | Data Type | Accessor |
 | :--- | :--- |
-| Datetime | [dt](https://pandas.pydata.org/pandas-docs/stable/reference/series.html#api-series-dt) |
-| String | [str](https://pandas.pydata.org/pandas-docs/stable/reference/series.html#api-series-str) |
+| Datetime | dt |
+| String | str |
 
 #### Datetimelike properties
 
@@ -132,7 +131,7 @@ Danfo provides dtype-specific methods under various accessors. These are separat
 | [`Series.dt.minute`](series.dt.minute.md) | The minutes of the datetime. |
 | [`Series.dt.second`](series.dt.second.md) | The seconds of the datetime. |
 | [`Series.dt.weekdays`](series.dt.weekdays.md) | The day of the week with Monday=0, Sunday=6. |
-| [`Series.dt.month_name`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.dt.month_name.html#pandas.Series.dt.month_name) | Return the month names of the DateTimeIndex with specified locale. |
+| [`Series.dt.month_name`](series.dt.month_name.md) | Return the month names of the DateTimeIndex with specified locale. |
 
 #### String handling
 
@@ -160,28 +159,26 @@ Danfo provides dtype-specific methods under various accessors. These are separat
 | [`Series.str.join`](series.str.join.md) | Joins strings to specified value. |
 | [`Series.str.replace`](series.str.replace.md) | Replace each occurrence of pattern/regex in the Series/Index. |
 
-### 
-
 ### Plotting
 
 `Series.plot` is both a callable method and a namespace attribute for specific plotting methods of the form `Series.plot.<kind>`.
 
 |  |  |
 | :--- | :--- |
-| [`Series.plot.bar`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.bar.html#pandas.Series.plot.bar) | Vertical bar plot. |
-| [`Series.plot.barh`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.barh.html#pandas.Series.plot.barh) | Make a horizontal bar plot. |
-| [`Series.plot.box`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.box.html#pandas.Series.plot.box) | Make a box plot of the DataFrame columns. |
-| [`Series.plot.density`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.density.html#pandas.Series.plot.density) | Generate Kernel Density Estimate plot using Gaussian kernels. |
-| [`Series.plot.hist`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.hist.html#pandas.Series.plot.hist) | Draw one histogram of the DataFrame’s columns. |
-| [`Series.plot.kde`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.kde.html#pandas.Series.plot.kde) | Generate Kernel Density Estimate plot using Gaussian kernels. |
-| [`Series.plot.line`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.line.html#pandas.Series.plot.line) | Plot Series or DataFrame as lines. |
-| [`Series.plot.pie`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.plot.pie.html#pandas.Series.plot.pie) | Generate a pie plot. |
+| [`Series.plot.bar`](../plotting/bar-charts.md) | Vertical bar plot. |
+| [`Series.plot.box`](../plotting/box-plots.md) | Make a box plot of the DataFrame columns. |
+| [`Series.plot.violin`](../plotting/box-plots.md) | Make a violin plot of the DataFrame columns. |
+| [`Series.plot.hist`](../plotting/histograms.md) | Draw one histogram of the DataFrame’s columns. |
+| [`Series.plot.scatter`](../plotting/scatter-plots.md) | Generate Kernel Density Estimate plot using Gaussian kernels. |
+| [`Series.plot.line`](../plotting/line-charts.md) | Plot Series or DataFrame as lines. |
+| [`Series.plot.pie`](../plotting/pie-charts.md) | Generate a pie plot. |
+| [`Timeseries Plots`](../plotting/timeseries-plots.md) | Time series plots |
+| [`Table`](../plotting/tables.md) | Display Series as Interactive table in Div |
 
 ### Serialization / IO / conversion
 
 |  |  |
 | :--- | :--- |
-| [`Series.to_csv`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.to_csv.html#pandas.Series.to_csv) | Write object to a comma-separated values \(csv\) file. |
-| [`Series.to_json`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.to_json.html#pandas.Series.to_json) | Convert the object to a JSON string. |
-| [`Series.toString`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.to_string.html#pandas.Series.to_string) | Render a string representation of the Series. |
+| [`Series.to_csv`](../dataframe/dataframe.to_csv.md) | Write object to a comma-separated values \(csv\) file. |
+| [`Series.to_json`](../dataframe/dataframe.to_json.md) | Convert the object to a JSON string. |
 
