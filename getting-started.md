@@ -2200,7 +2200,7 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 
 Convert any DataFrame to csv format. 
 
-```text
+```javascript
 const dfd = require("danfojs-node")
 
 let data = {
@@ -2249,7 +2249,7 @@ dfd.read_csv("file:///home/Desktop/titanic.csv")
 ```
 {% endtab %}
 
-{% tab title="" %}
+{% tab title="Browser" %}
 ```markup
 <!DOCTYPE html>
 <html lang="en">
