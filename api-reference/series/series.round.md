@@ -17,7 +17,7 @@ description: round off floating values in series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [30.21091, 40.190901, 3.564, 5.0212]
 let sf1 = new dfd.Series(data1)
