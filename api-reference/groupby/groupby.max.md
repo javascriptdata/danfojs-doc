@@ -12,12 +12,12 @@ description: Obtain the maximum value of columns per groups
 
 **Example**
 
-Obtain the maximum value for a column for each groups, group by one column
+Obtain the maximum value for a column for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
@@ -48,12 +48,12 @@ grp.col(["C"]).max().print()
 ╚═══╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the maximum value for two columns for each groups, group by one column
+Obtain the maximum value for two columns for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
@@ -85,12 +85,12 @@ grp.col(["C","D"]).max().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the maximum value for a column for each groups, group by two column
+Obtain the maximum value for a column for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
@@ -127,12 +127,12 @@ grp.col(["C"]).max().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the maximum value for two columns for each groups, group by two columns
+Obtain the maximum value for two columns for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],

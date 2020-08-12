@@ -19,7 +19,7 @@ Using mean and sum aggregate
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
@@ -55,7 +55,7 @@ Mean and Sum aggregate on dataframe groupby two column
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',

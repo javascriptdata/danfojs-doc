@@ -17,7 +17,7 @@ Obtain the cumulative max of a column for each groups, group by one column
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
@@ -73,12 +73,12 @@ Shape: (5,2)
 ╚═══╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cumsum for two columns for each groups, group by one column
+Obtain the cumsum for two columns for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
@@ -134,12 +134,12 @@ grp.col(["C","D"]).cummax().tail().print()
 ╚════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cummax for a column for each groups, group by two column
+Obtain the cummax for a column for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
@@ -195,12 +195,12 @@ grp.col(["C"]).cummax().tail().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cummax for two columns for each groups, group by two columns
+Obtain the cummax for two columns for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',

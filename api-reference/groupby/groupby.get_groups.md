@@ -19,7 +19,7 @@ Group the dataframe by column A and obtain the group belonging to the values in 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
@@ -74,12 +74,12 @@ grp.get_groups(["bar"]).print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Group dataframe by two columns and obtain their groups. Since the dataframe is group by two column we most specify two keys in the get\_groups belonging to this two columns
+Group dataframe by two columns and obtain their groups. Since the dataframe is grouped by two columns we most specify two keys in the get\_groups belonging to these two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],

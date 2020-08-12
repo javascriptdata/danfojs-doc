@@ -12,12 +12,12 @@ description: Obtain the sum per groups for columns
 
 **Examples**
 
-Obtain the sum of a column for each groups, group by one column
+Obtain the sum of a column for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
@@ -49,12 +49,12 @@ grp.col(["C"]).sum().print()
 ╚═══╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the sum for two columns for each groups, group by one column
+Obtain the sum for two columns for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
@@ -85,12 +85,12 @@ grp.col(["C","D"]).sum().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the sum for a column for each groups, group by two column
+Obtain the sum for a column for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
@@ -127,12 +127,12 @@ grp.col(["C"]).sum().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the sum for two columns for each groups, group by two columns
+Obtain the sum for two columns for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],

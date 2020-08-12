@@ -21,7 +21,7 @@ Obtain a column
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],

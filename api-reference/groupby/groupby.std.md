@@ -12,12 +12,12 @@ description: Obtain the standard deviation per groups for specified columns
 
 **Examples**
 
-Obtain the standard deviation of a column for each groups, group by one column
+Obtain the standard deviation of a column for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
@@ -50,12 +50,12 @@ grp.col(["C"]).std().print()
 ╚═══╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the std for two columns for each groups, group by one column
+Obtain the std for two columns for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
@@ -86,12 +86,12 @@ grp.col(["C","D"]).std().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the std for a column for each groups, group by two column
+Obtain the std for a column for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
@@ -129,12 +129,12 @@ grp.col(["C"]).std().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the std for two columns for each groups, group by two columns
+Obtain the std for two columns for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',

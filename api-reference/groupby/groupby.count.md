@@ -12,12 +12,12 @@ description: Count the occurrence of values in columns per groups
 
 **Examples**
 
-Obtain the variance of a column for each groups, group by one column
+Obtain the variance of a column for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
@@ -50,12 +50,12 @@ grp.col(["C"]).count().print()
 ╚═══╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the var for two columns for each groups, group by one column
+Obtain the var for two columns for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
@@ -86,12 +86,12 @@ grp.col(["C","D"]).count().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the count for a column for each groups, group by two column
+Obtain the count for a column for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
@@ -129,12 +129,12 @@ grp.col(["C"]).count().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the count for two columns for each groups, group by two columns
+Obtain the count for two columns for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 
 let data ={'A': ['foo', 'bar', 'foo', 'bar',
