@@ -17,7 +17,7 @@ description: Prints the last n values in a Series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [1, 2, 3, 4, 5, 620, 30, 40, 39, 89, 78]
 let sf1 = new dfd.Series(data1)

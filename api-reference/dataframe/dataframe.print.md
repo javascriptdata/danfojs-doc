@@ -15,11 +15,11 @@ danfo.DataFrame.**print\(**rows**\)** \[[source](https://github.com/opensource9j
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Abs": [20.2, 30, 47.3] },
-            { "Count": [34, 4, 5, 6] },
-            { "country code": ["NG", "FR", "GH"] }]
+let data = { "Abs": [20.2, 30, 47.3] ,
+             "Count": [34, 4, 5, 6] ,
+             "country code": ["NG", "FR", "GH"] }
 
 
 let df = new dfd.DataFrame(data)
@@ -56,11 +56,11 @@ Using JavaScript default **console.log** to display a DataFrame will return the 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Abs": [20.2, 30, 47.3] },
-            { "Count": [34, 4, 5, 6] },
-            { "country code": ["NG", "FR", "GH"] }]
+let data = { "Abs": [20.2, 30, 47.3] ,
+             "Count": [34, 4, 5, 6] ,
+             "country code": ["NG", "FR", "GH"] }
 
 
 let df = new dfd.DataFrame(data)

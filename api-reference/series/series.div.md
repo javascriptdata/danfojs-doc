@@ -22,7 +22,7 @@ divide with values of another series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [30, 40, 3, 5]
 let data2 = [1, 2, 3, 4]
@@ -56,7 +56,7 @@ divide with a value
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 let data1 = [1, 2, 3, 4, 5]
 let sf1 = new dfd.Series(data1)
