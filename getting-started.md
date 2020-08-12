@@ -121,7 +121,7 @@ s.print()
 ╚═══╧══════════════════════╝
 ```
 
-Creating a [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) by passing a JSON object, with a datetime index and labeled columns:
+Creating a [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) by passing a JSON object:
 
 {% tabs %}
 {% tab title="Node" %}
