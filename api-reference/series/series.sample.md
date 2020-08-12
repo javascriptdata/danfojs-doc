@@ -15,7 +15,7 @@ description: Return a random sample of items from an axis of object.
 **Example**
 
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
 let data1 = [1, 2, 3, 4, 5, 620, 30, 40, 39, 89, 78]
 let sf1 = new dfd.Series(data1)

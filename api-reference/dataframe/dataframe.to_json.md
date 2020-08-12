@@ -17,11 +17,11 @@ danfo.DataFrame.**to\_json**\(path\) \[[source](https://github.com/opensource9ja
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
-let data = { "Abs": [20.2, 30, 47.3] ,
-             "Count": [34, 4, 5, 6] ,
-             "country code": ["NG", "FR", "GH"] }
+let data = [{ "Abs": [20.2, 30, 47.3] },
+{ "Count": [34, 4, 5, 6] },
+{ "country code": ["NG", "FR", "GH"] }]
 
 
 let df = new dfd.DataFrame(data)

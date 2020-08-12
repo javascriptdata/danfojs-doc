@@ -19,12 +19,13 @@ danfo.DataFrame.**select\_dtypes** \[[source](https://github.com/opensource9ja/d
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{"A": [-20.1, 30, 47.3, -20]},
-            {"B": [34, -4, 5, 6]}, 
-             {"C": [20, -20, 30, -40]},
-             {"D": ["a", "b", 20, 2.5]}]
+let data = {"A": [-20.1, 30, 47.3, -20],
+            "B": [34, -4, 5, 6], 
+            "C": [20, -20, 30, -40],
+            "D": ["a", "b", 20, 2.5]}
+            
 let df = new dfd.DataFrame(data)
 
 float_df = df.select_dtypes(['float32'])

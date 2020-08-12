@@ -21,7 +21,7 @@ danfo.DataFrame.**cumprod**\(kwargs\) \[[source](https://github.com/opensource9j
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 data = [[1, 2, 3], [1, 5, 6], [2, 30, 40], [2, 89, 78]]
 cols = ["A", "B", "C"]
@@ -63,7 +63,7 @@ new_df.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 data = [[1, 2, 3], [1, 5, 6], [2, 30, 40], [2, 89, 78]]
 cols = ["A", "B", "C"]

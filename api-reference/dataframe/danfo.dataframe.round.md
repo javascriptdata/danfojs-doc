@@ -21,7 +21,7 @@ danfo.DataFrame.**round**\(dp\) \[[source](https://github.com/opensource9ja/danf
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 data = [[11.20, 20.1234, 3.567], [1, 15.1, 6.0], [2, 3.09, 40.234]]
 cols = ["A", "B", "C"]
@@ -76,7 +76,7 @@ new_df.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
 data = [[11.20, 20.1234, 3.567], [1, 15.1, 6.0], [2, 3.09, 40.234]]
 cols = ["A", "B", "C"]

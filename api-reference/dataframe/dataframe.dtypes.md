@@ -20,11 +20,12 @@ Returns auto-generated ****index of a ****DataFrame
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{"A": [-20.1, 30, 47.3, -20]},
-            {"B": [34, -4, 5, 6]}, 
-             {"C": [20, -20, 30, -40]}]
+let data = {"A": [-20.1, 30, 47.3, -20],
+            "B": [34, -4, 5, 6], 
+            "C": [20, -20, 30, -40]}
+
 let df = new dfd.DataFrame(data)
 
 df.ctypes.print()
@@ -60,12 +61,13 @@ Columns with mixed types are represented as **string.**
 {% tab title="Node" %}
 ```javascript
 
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{"A": [-20.1, 30, 47.3, -20]},
-            {"B": [34, -4, 5, 6]}, 
-             {"C": [20, -20, 30, -40]},
-             {"D": ["a", "b", 20, 2.5]}]
+let data = {"A": [-20.1, 30, 47.3, -20],
+            "B": [34, -4, 5, 6], 
+            "C": [20, -20, 30, -40],
+            "D": ["a", "b", 20, 2.5]}
+            
 let df = new dfd.DataFrame(data)
 
 df.ctypes.print()

@@ -55,11 +55,11 @@ If the row's index is specified and the columns are not, then it returns all col
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-           { "Count": [21, 5, 30, 10] },
-           { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data)
 let sub_df = df.iloc({rows: [0,1,3]})
@@ -97,11 +97,11 @@ The [**iloc**](danfo.dataframe.iloc.md) function also accepts string slices of t
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-           { "Count": [21, 5, 30, 10] },
-           { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data)
 let sub_df = df.iloc({rows: ["1:3"]})
@@ -137,11 +137,11 @@ sub_df.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-           { "Count": [21, 5, 30, 10] },
-           { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data)
 df.print()
@@ -197,11 +197,11 @@ sub_df.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-           { "Count": [21, 5, 30, 10] },
-           { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data)
 let sub_df = df.iloc({rows: [0,3], columns: [1,2]})
@@ -251,11 +251,11 @@ sub_df.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-           { "Count": [21, 5, 30, 10] },
-           { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data)
 df.print()
@@ -309,11 +309,11 @@ If you specify a slice start position, **iloc** automatically returns all values
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-           { "Count": [21, 5, 30, 10] },
-           { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data)
 df.print()

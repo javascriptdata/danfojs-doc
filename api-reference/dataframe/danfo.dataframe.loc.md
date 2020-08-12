@@ -53,11 +53,11 @@ If the row's index is specified and the columns are not, then it returns all col
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-           { "Count": [21, 5, 30, 10] },
-           { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data, {index: ["a", "b", "c", "d"]})
 df.print()
@@ -110,11 +110,11 @@ The **loc** function also accepts string slices of the form \[start: end\], e.g 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-           { "Count": [21, 5, 30, 10] },
-           { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data)
 let sub_df = df.loc({rows: ["a:c"]})
@@ -166,11 +166,11 @@ sub_df.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-           { "Count": [21, 5, 30, 10] },
-           { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data, {index: ["a", "b", "c", "d"]})
 df.print()
@@ -224,11 +224,11 @@ sub_df.print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-            { "Count": [21, 5, 30, 10] },
-            { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
 df.print()
@@ -281,11 +281,11 @@ Column axis cannot be indexed by slices. That means something like columns: \["N
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-            { "Count": [21, 5, 30, 10] },
-            { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
 df.print()
@@ -340,11 +340,11 @@ If you specify a slice start position, **loc** automatically returns all values 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-            { "Count": [21, 5, 30, 10] },
-            { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
 df.print()

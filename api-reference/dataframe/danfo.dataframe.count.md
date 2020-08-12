@@ -23,11 +23,11 @@ danfo.DataFrame.**count**\(axis\) \[[source](https://github.com/opensource9ja/da
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", undefined] },
-{ "Count": [NaN, 5, NaN, 10] },
-{ "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", undefined],
+           "Count": [NaN, 5, NaN, 10],
+           "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data)
 df.count().print()
@@ -62,11 +62,11 @@ df.count().print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 
-let data = [{ "Name": ["Apples", "Mango", "Banana", undefined] },
-{ "Count": [NaN, 5, NaN, 10] },
-{ "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "Mango", "Banana", undefined],
+           "Count": [NaN, 5, NaN, 10],
+           "Price": [200, 300, 40, 250] }]
 
 let df = new dfd.DataFrame(data)
 df.count({axis: 0).print()

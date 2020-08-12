@@ -19,7 +19,7 @@ Modulus with values of another series
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
 let data1 = [2, 30, 4, 5]
 let data2 = [1.1, 2.2, 3.3, 2.4]
@@ -53,7 +53,7 @@ Modulo with a value
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require("danfojs")
 
 let data1 = [1, 2, 3, 4, 5]
 let sf1 = new dfd.Series(data1)

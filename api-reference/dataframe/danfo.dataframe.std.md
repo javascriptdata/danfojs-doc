@@ -21,7 +21,7 @@ danfo.DataFrame.**var**\(axis\) \[[source](https://github.com/opensource9ja/danf
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
 cols = ["A", "B", "C"]
 
@@ -58,7 +58,7 @@ df.std().print()
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-const dfd = require("danfojs")
+const dfd = require("danfojs-node")
 data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
 cols = ["A", "B", "C"]
 

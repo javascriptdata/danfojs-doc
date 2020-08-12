@@ -19,9 +19,11 @@ danfo.DataFrame.**sample**\(rows\) \[[source](https://github.com/opensource9ja/d
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-let data = [{ "Name": ["Apples", "Mango", "Banana", "Pear"] },
-           { "Count": [21, 5, 30, 10] },
-           { "Price": [200, 300, 40, 250] }]
+const dfd = require("danfojs-node")
+
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data)
 let s_df = df.sample(3)
