@@ -52,7 +52,7 @@ By setting **inplace** to _true_, the original DataFrame is modified and nothing
 const dfd = require("danfojs-node")
 
 let data = { "A": [-20, 30, 47.3],
-             "B": [34, -4, 5, 6],
+             "B": [34, -4, 5],
              "C": [20, 2, 3, 30] }
 
 
@@ -85,7 +85,7 @@ df.print()
 {% endtab %}
 {% endtabs %}
 
-### Rename more the one column at at time
+### Rename more the one column at time
 
 {% tabs %}
 {% tab title="Node" %}
