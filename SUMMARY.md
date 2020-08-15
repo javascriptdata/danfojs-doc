@@ -197,4 +197,5 @@
 * [Contributing Guide](contributing-guide.md)
 * [Examples](examples/README.md)
   * [Titanic Survival Prediction using Danfo.js and Tensorflow.js](examples/titanic-survival-prediction-using-danfo.js-and-tensorflow.js.md)
+* [Release Notes](release-notes.md)
 
