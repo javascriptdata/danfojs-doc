@@ -4,7 +4,7 @@ description: Curation of examples on different domains leveraging Danfo.js
 
 # Examples
 
-* End to End Regression task using Danfo.js and Tensorflow.js
+* [Titanic Survival Prediction with Danfo.js and Tensorflow.js](titanic-survival-prediction-using-danfo.js-and-tensorflow.js.md)
 
 
 
