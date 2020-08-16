@@ -194,8 +194,8 @@
     * [Groupby.cummin](api-reference/groupby/groupby.cummin.md)
     * [Groupby.cumprod](api-reference/groupby/groupby.cumprod.md)
     * [Groupby.agg](api-reference/groupby/groupby.agg.md)
-* [Contributing Guide](contributing-guide.md)
-* [Examples](examples/README.md)
+* [User Guides](examples/README.md)
   * [Titanic Survival Prediction using Danfo.js and Tensorflow.js](examples/titanic-survival-prediction-using-danfo.js-and-tensorflow.js.md)
+* [Contributing Guide](contributing-guide.md)
 * [Release Notes](release-notes.md)
 
