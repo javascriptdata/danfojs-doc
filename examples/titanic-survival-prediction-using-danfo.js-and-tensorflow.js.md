@@ -13,7 +13,6 @@ description: >-
 const dfd = require("danfojs-node")
 const tf = require("@tensorflow/tfjs-node")
 
-
 async function load_process_data() {
     let df = await dfd.read_csv("https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv")
     //A feature engineering: Extract all titles from names columns
@@ -25,9 +24,9 @@ async function load_process_data() {
     let encoder = new dfd.LabelEncoder()
     let cols = ["Sex", "Name"]
     cols.forEach(col => {
-        encoder.fit(df[col].values)
-        enc_val = encoder.transform(df[col].values)
-        df.addColumn({ column: col, value: enc_val.values })
+        encoder.fit(df[col])
+        enc_val = encoder.transform(df[col])
+        df.addColumn({ column: col, value: enc_val })
     })
    
     let Xtrain,ytrain;
@@ -36,8 +35,8 @@ async function load_process_data() {
 
     // Standardize the data with MinMaxScaler
     let scaler = new dfd.MinMaxScaler()
-    scaler.fit(Xtrain.values)
-    Xtrain = scaler.transform(Xtrain.values)
+    scaler.fit(Xtrain)
+    Xtrain = scaler.transform(Xtrain)
     return [Xtrain.tensor, ytrain.tensor]
 
 
@@ -52,7 +51,6 @@ async function get_model() {
     model.summary();
     return model
 }
-
 
 async function train() {
     const model = await get_model()
@@ -81,6 +79,5 @@ async function train() {
 };
 
 train()
-
 ```
 
