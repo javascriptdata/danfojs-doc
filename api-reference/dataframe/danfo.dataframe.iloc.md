@@ -4,7 +4,7 @@ description: Purely integer-location based indexing for selection by position.
 
 # DataFrame.iloc
 
-danfo.DataFrame.**iloc**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
+danfo.DataFrame.**iloc**\(axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
 
 <table>
   <thead>
@@ -44,7 +44,7 @@ Allowed inputs are:
 * A list or array of integers, e.g. `[4, 3, 0]`.
 * A string slice object with ints, e.g. `"1:7"`
 
-_**Note:** only the start index is included._
+_**Note:** both the start and the stop labels are included._
 
 `.iloc` will raise`IndexError` if a requested indexer is out-of-bounds.
 
@@ -92,7 +92,7 @@ sub_df.print()
 
 ### **Index by a slice of row and return all columns**
 
-The [**iloc**](danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end\], e.g "\[1: 4\]". This will return all values between index position 1 and 3.  The end index is not included. 
+The [**iloc**](danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end\], e.g "\[1: 4\]". This will return all values between index position 1 and 4 inclusively. 
 
 {% tabs %}
 {% tab title="Node" %}
@@ -125,6 +125,8 @@ sub_df.print()
 ║ 1 │ Mango             │ 5                 │ 300               ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ 2 │ Banana            │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ Pear              │ 10                │ 250               ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 {% endtab %}
@@ -287,13 +289,15 @@ sub_df.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
- Shape: (1,1) 
+ //after slice
 
-╔═══╤═══════════════════╗
-║   │ Count             ║
-╟───┼───────────────────╢
-║ 2 │ 30                ║
-╚═══╧═══════════════════╝
+╔═══╤═══════════════════╤═══════════════════╗
+║   │ Count             │ Price             ║
+╟───┼───────────────────┼───────────────────╢
+║ 2 │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────╢
+║ 3 │ 10                │ 250               ║
+╚═══╧═══════════════════╧═══════════════════╝
 ```
 {% endtab %}
 {% endtabs %}
@@ -343,7 +347,7 @@ sub_df.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
- Shape: (2,2) 
+ //After slicing
 
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ Count             │ Price             ║

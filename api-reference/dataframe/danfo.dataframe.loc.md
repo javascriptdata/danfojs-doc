@@ -4,7 +4,7 @@ description: Access a group of rows and columns by label(s)
 
 # DataFrame.loc
 
-danfo.DataFrame.**loc**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)\]
+danfo.DataFrame.**loc**\(axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)\]
 
 <table>
   <thead>
@@ -42,6 +42,9 @@ Allowed inputs are:
 
 * A single label, e.g. `5` or `'a'`, \(note that `5` is interpreted as a _label_ of the index, and **not** as an integer position along the index\).
 * A list or array of labels, e.g. `['a', 'b', 'c']`.
+* A slice object with labels, e.g. `'a:f'`.
+
+  _**Note:** both the start and the stop labels are included._
 
 ### **Index by specific rows and return all columns**
 
@@ -93,6 +96,64 @@ sub_df.print()
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ a │ Apples            │ 21                │ 200               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ c │ Banana            │ 30                │ 40                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+### **Index by a slice of the row and return all columns**
+
+The **loc** function also accepts string slices of the form \[start: end\], e.g "a: c". This will return all values between the first occurrence of label "a" and the last occurrence of the label "c".
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
+
+let df = new dfd.DataFrame(data)
+let sub_df = df.loc({rows: ["a:c"]})
+sub_df.print()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Count             │ Price             ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ a │ Apples            │ 21                │ 200               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ b │ Mango             │ 5                 │ 300               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ c │ Banana            │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ d │ Pear              │ 10                │ 250               ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+
+ //after slicing 
+
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Count             │ Price             ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ a │ Apples            │ 21                │ 200               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ b │ Mango             │ 5                 │ 300               ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ c │ Banana            │ 30                │ 40                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
@@ -204,6 +265,124 @@ sub_df.print()
 
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Price             ║
+╟───┼───────────────────┼───────────────────╢
+║ c │ Banana            │ 40                ║
+╟───┼───────────────────┼───────────────────╢
+║ d │ Pear              │ 250               ║
+╚═══╧═══════════════════╧═══════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+### Indexing row axes by slices
+
+Column axis cannot be indexed by slices. That means something like columns: \["Name: Count"\] will not work. You can, however, slice the row axis, and list the names of columns you want. 
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
+
+let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
+df.print()
+let sub_df = df.loc({ rows: ["b:d"], columns: ["Name", "Price"] })
+sub_df.print()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Count             │ Price             ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ a │ Apples            │ 21                │ 200               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ b │ Mango             │ 5                 │ 300               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ c │ Banana            │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ d │ Pear              │ 10                │ 250               ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+
+ //after slicing
+
+╔═══╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Price             ║
+╟───┼───────────────────┼───────────────────╢
+║ b │ Mango             │ 300               ║
+╟───┼───────────────────┼───────────────────╢
+║ c │ Banana            │ 40                ║
+╟───┼───────────────────┼───────────────────╢
+║ d │ Pear              │ 250               ║
+╚═══╧═══════════════════╧═══════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+### More default slicing behaviour
+
+If you specify a slice start position, **loc** automatically returns all values after that position. For instance:
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
+
+let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
+df.print()
+let sub_df = df.loc({ rows: ["b:"], columns: ["Name", "Price"] })
+sub_df.print()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Count             │ Price             ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ a │ Apples            │ 21                │ 200               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ b │ Mango             │ 5                 │ 300               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ c │ Banana            │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ d │ Pear              │ 10                │ 250               ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+
+ //after slicing
+
+╔═══╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Price             ║
+╟───┼───────────────────┼───────────────────╢
+║ b │ Mango             │ 300               ║
 ╟───┼───────────────────┼───────────────────╢
 ║ c │ Banana            │ 40                ║
 ╟───┼───────────────────┼───────────────────╢

@@ -25,9 +25,12 @@ danfo.DataFrame.**query**\(kwargs\) \[[source](https://github.com/opensource9ja/
         <p>{<b>column</b> : str, name of the column</p>
         <p><b> is: </b>Logical operator, one of &quot;&gt;&quot;, &quot;&lt;&quot;,
           &quot;&gt;=&quot;, &quot;&lt;=&quot;, and. &quot;==&quot;</p>
-        <p><b>to</b>: Int, Float, Str. Value to compare against}</p>
+        <p><b>to</b>: Int, Float, Str. Value to compare against,</p>
+        <p><b>inplace</b>: boolean. true | false. Whether to perform operation to
+          the original Object or create a new one.</p>
+        <p>}</p>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">{<b>inplace</b>: false}</td>
     </tr>
   </tbody>
 </table>
@@ -46,6 +49,11 @@ To query a DataFrame, you can specify the column to use, the logical operator \(
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
+
+let data = {"A": [30, 1, 2, 3],
+           "B": [34, 4, 5, 6],
+           "C": [20, 20, 30, 40]}
+           
 let cols = ["A", "B", "C"]
 let df = new dfd.DataFrame(data, { columns: cols })
 df.print() //before query
@@ -194,6 +202,52 @@ query_df.print() //after query
 ║ 0 │ Ng                │ 34                │ 20                ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ 3 │ Ng                │ 6                 │ 40                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+## **Query a DataFrame inplace**
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+
+let data = {"A": [30, 1, 2, 3],
+           "B": [34, 4, 5, 6],
+           "C": [20, 20, 30, 40]}
+           
+let cols = ["A", "B", "C"]
+let df = new dfd.DataFrame(data, { columns: cols })
+
+df.query({
+    column: "B",
+    is: ">",
+    to: 5,
+    inplace: true
+})
+df.print()
+
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 30                │ 34                │ 20                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 3                 │ 6                 │ 40                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 {% endtab %}

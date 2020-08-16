@@ -21,7 +21,7 @@ danfo.DataFrame.**addColumn**\(kwargs\) \[[source](https://github.com/opensource
       <td style="text-align:left">Object</td>
       <td style="text-align:left">
         <p>{<b>column</b> : str, name of the column to add</p>
-        <p><b> value: </b>Array, values to add }</p>
+        <p><b> value: </b>Series<b>, </b>Array. New values to add }</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
@@ -34,7 +34,7 @@ danfo.DataFrame.**addColumn**\(kwargs\) \[[source](https://github.com/opensource
 
 ## **Examples**
 
-## **Add new column to DataFrame**
+## **Add Array as a new column to DataFrame**
 
 New columns get added at the end of the DataFrame, and this happens  so returns nothing,
 
@@ -81,6 +81,51 @@ df.print()
 
 
  Shape: (4,3) 
+
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 │ D                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 30                │ 34                │ 20                │ 1                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 1                 │ 4                 │ 20                │ 2                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ 2                 │ 5                 │ 30                │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 3                 │ 6                 │ 40                │ 4                 ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+## **Add Series as a new column to DataFrame**
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+let data = {"A": [30, 1, 2, 3], 
+            "B": [34, 4, 5, 6], 
+            "C": [20, 20, 30, 40]}
+
+let df = new dfd.DataFrame(data)
+let s = new dfd.Series([1, 2, 3, 4])
+df.addColumn({ "column": "D", "value": s });
+
+df.print()
+
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║

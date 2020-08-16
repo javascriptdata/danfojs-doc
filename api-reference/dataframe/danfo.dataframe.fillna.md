@@ -25,6 +25,8 @@ danfo.DataFrame.**fillna**\(kwargs\) \[[source](https://github.com/opensource9ja
         <p>{<b>columns</b>:Array of column name(s) to fill. If undefined fill all
           columns</p>
         <p><b>values</b>: Array | Scalar of value(s) to fill with.</p>
+        <p><b>inplace</b>: boolean. true | false. Whether to perform operation to
+          the original Object or create a new one.</p>
         <p>}</p>
       </td>
       <td style="text-align:left"></td>
@@ -115,6 +117,55 @@ let df_filled = df.fillna({ values: ["Apples"] })
 
 df_filled.print()
 
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```text
+
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Count             │ Price             ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ Apples            │ Apples            │ 200               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ Mango             │ 5                 │ 300               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ Banana            │ Apples            │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ Apples            │ 10                │ 250               ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+### Fill NaNs inplace 
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+
+let data = {
+    "Name": ["Apples", "Mango", "Banana", undefined],
+    "Count": [NaN, 5, NaN, 10],
+    "Price": [200, 300, 40, 250]
+}
+
+let df = new dfd.DataFrame(data)
+df.fillna({
+    columns: ["Name", "Count"],
+    values: ["Apples", df["Count"].mean()],
+    inplace: true
+})
+df.print()
 ```
 {% endtab %}
 
