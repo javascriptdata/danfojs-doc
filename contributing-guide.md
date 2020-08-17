@@ -1,6 +1,10 @@
+---
+description: >-
+  Contributing guide to danfo.js including set up guide, and a brief intro to
+  danfo internals.
+---
+
 # Contributing Guide
-
-
 
 ### Contributing to danfojs
 

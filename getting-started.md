@@ -17,7 +17,7 @@ npm install danfojs-node
 You can also install and use it in the browsers by using the CDN below:
 
 ```markup
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.15/dist/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.0/dist/index.min.js"></script>
 
 ```
 
@@ -42,7 +42,7 @@ const dfd = require("danfojs-node")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.14/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.0/dist/index.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -121,6 +121,67 @@ s.print()
 ╚═══╧══════════════════════╝
 ```
 
+Creating a [`Series`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series) from a tensor
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+const tf = require("@tensorflow/tfjs-node")
+
+
+let tensor_arr = tf.tensor([12,34,56,2])
+let s = new dfd.Series(tensor_arr)
+s.print()
+
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```markup
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.0/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+        let tensor_arr = tf.tensor([12,34,56,2])
+        let s = new dfd.Series(tensor_arr)
+        s.print()
+
+    </script>
+
+</body>
+
+</html>
+```
+{% endtab %}
+{% endtabs %}
+
+```text
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 0 │ 12                   ║
+╟───┼──────────────────────╢
+║ 1 │ 34                   ║
+╟───┼──────────────────────╢
+║ 2 │ 56                   ║
+╟───┼──────────────────────╢
+║ 3 │ 2                    ║
+╚═══╧══════════════════════╝
+```
+
 Creating a [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) by passing a JSON object:
 
 {% tabs %}
@@ -173,6 +234,80 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
+
+Creating a [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) from a 2D tensor
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+const tf = require("@tensorflow/tfjs-node")
+
+
+let tensor_arr = tf.tensor2d([[12, 34, 2.2, 2], [30, 30, 2.1, 7]])
+let df = new dfd.DataFrame(tensor_arr, {columns: ["A", "B", "C", "D"]})
+df.print()
+df.ctypes.print()
+
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```markup
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <!--danfojs CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.15/dist/index.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+         json_data = [{ A: 0.4612, B: 4.28283, C: -1.509, D: -1.1352 },
+            { A: 0.5112, B: -0.22863, C: -3.39059, D: 1.1632 },
+            { A: 0.6911, B: -0.82863, C: -1.5059, D: 2.1352 },
+            { A: 0.4692, B: -1.28863, C: 4.5059, D: 4.1632 }]
+
+        df = new dfd.DataFrame(json_data)
+        df.print()
+         
+    </script>
+</body>
+
+</html>
+
+```
+{% endtab %}
+{% endtabs %}
+
+```text
+
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 │ D                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 12                │ 34                │ 2.20000004768...  │ 2                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 30                │ 30                │ 2.09999990463...  │ 7                 ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ A │ int32                ║
+╟───┼──────────────────────╢
+║ B │ int32                ║
+╟───┼──────────────────────╢
+║ C │ float32              ║
+╟───┼──────────────────────╢
+║ D │ int32                ║
+╚═══╧══════════════════════╝
+```
 
 Creating a [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) by passing a dict of objects with the same length
 

@@ -24,6 +24,33 @@ let sf1 = new dfd.Series(data1)
 sf1.cumsum().print()
 ```
 {% endtab %}
+
+{% tab title="Browser" %}
+```markup
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.0/dist/index.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+      
+      //danfo is exposed on dfd namespace 
+      s = new dfd.Series([1,2,3,4,5]) 
+
+    </script>
+
+</body>
+
+</html>
+```
+{% endtab %}
 {% endtabs %}
 
 ```text
