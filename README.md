@@ -1,17 +1,17 @@
 ---
 description: >-
-  danfo.js is an open-source, JavaScript library providing high-performance,
+  Danfo.js is an open-source, JavaScript library providing high-performance,
   intuitive, and easy-to-use data structures for manipulating and processing
   structured data.
 ---
 
 # Danfo.js Documentation
 
-**danfo.js** is heavily inspired by the [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) library and provides a similar interface and API. This means users familiar with the [Pandas ](https://pandas.pydata.org/pandas-docs/stable/index.html)API can easily use **danfo.js.** 
+D**anfo.js** is heavily inspired by the [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) library and provides a similar interface and API. This means users familiar with the [Pandas ](https://pandas.pydata.org/pandas-docs/stable/index.html)API can easily use D**anfo.js.** 
 
 ## Main Features
 
-* danfo.js is fast. It is built on[ Tensorflow.js](https://js.tensorflow.org/), and supports tensors out of the box. This means you can [convert danfo data structure](api-reference/dataframe/) to Tensors.
+* Danfo.js is fast. It is built on[ Tensorflow.js](https://js.tensorflow.org/), and supports tensors out of the box. This means you can [convert danfo data structure](api-reference/dataframe/) to Tensors.
 * Easy handling of missing ****data \(represented as `NaN`\) in floating point as well as non-floating point data
 * Size mutability: columns can be inserted/deleted from DataFrame
 * Automatic and explicit alignment: objects can be explicitly aligned to a set of labels, or the user can simply ignore the labels and let [`Series`](api-reference/series/), [`DataFrame`](api-reference/dataframe/), etc. automatically align the data for you in computations
