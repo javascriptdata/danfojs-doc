@@ -21,6 +21,10 @@ You can also install and use it in the browsers by using the CDN below:
 
 ```
 
+{% hint style="info" %}
+To play with Danfo.js in a Notebook-like environment without doing an installation, use [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
+{% endhint %}
+
 ## 10 minutes to danfo.js
 
 This is a short introduction to danfo.js, and its flow is adapted from the official [10 minutes to Pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html#min)
