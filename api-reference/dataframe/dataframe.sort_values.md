@@ -23,7 +23,7 @@ danfo.DataFrame.**sort\_values**\(kwargs\) \[[source](https://github.com/opensou
         <p>{</p>
         <p><b>by</b>: This key can be either a single column name or a single array
           of the same length as the calling DataFrame,</p>
-        <p><b>ascending</b>: Delete columns to be used as the new index.</p>
+        <p><b>ascending: </b>Order of sorting</p>
         <p><b>inplace</b>: specify whether to perform the operation to the row/column
           with/without creating a new DataFrame</p>
         <p>}</p>
