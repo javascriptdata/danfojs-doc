@@ -2,9 +2,9 @@
 description: Returns array of index with missing values
 ---
 
-# DataFrame.nanindex
+# DataFrame.nanIndex
 
-danfo.DataFrame.**nanindex**\(\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1410)\]
+danfo.DataFrame.**nanIndex**\(\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1410)\]
 
 **Returns:**
 
