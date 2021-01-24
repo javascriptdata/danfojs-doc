@@ -17,7 +17,7 @@ npm install danfojs-node
 You can also install and use it in the browsers by using the CDN below:
 
 ```markup
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.1/dist/index.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
 
 ```
 
@@ -46,7 +46,7 @@ const dfd = require("danfojs-node")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -86,7 +86,7 @@ s.print()
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -149,7 +149,7 @@ s.print()
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/@tensorflow/tfjs@latest"> </script>
 
     <title>Document</title>
@@ -214,7 +214,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -265,7 +265,7 @@ df.ctypes.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -313,7 +313,7 @@ df.ctypes.print()
 ╚═══╧══════════════════════╝
 ```
 
-Creating a [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) by passing a dict of objects with the same length
+Creating a [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) by passing a dictionary of objects with the same length
 
 {% tabs %}
 {% tab title="Node" %}
@@ -347,7 +347,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -443,7 +443,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -549,7 +549,7 @@ console.log(df.columns);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -619,7 +619,7 @@ df.tensor.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -702,7 +702,7 @@ df.describe().print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -773,7 +773,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -845,7 +845,7 @@ df['A'].print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -1182,7 +1182,7 @@ query_df.print() //after query
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -1305,7 +1305,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -1396,7 +1396,7 @@ df_drop.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -1618,7 +1618,7 @@ df.mean().print() //defaults to column axis
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -2257,7 +2257,7 @@ We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -2293,7 +2293,7 @@ We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. 
 
 ```
 
-![](.gitbook/assets/newplot-29-.png)
+![](.gitbook/assets/newplot-29-%20%281%29.png)
 
 On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html#pandas.DataFrame.plot)method exposes various [plot types](api-reference/plotting/). And by default, all columns are plotted unless specified otherwise.  
 
@@ -2305,7 +2305,7 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 
@@ -2325,7 +2325,7 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 
 ```
 
-![](.gitbook/assets/newplot-30-.png)
+![](.gitbook/assets/newplot-2-.png)
 
 ### Getting data in/out
 
@@ -2393,7 +2393,7 @@ dfd.read_csv("file:///home/Desktop/titanic.csv")
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.1.1/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
     <title>Document</title>
 </head>
 

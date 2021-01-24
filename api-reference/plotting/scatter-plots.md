@@ -20,7 +20,7 @@ In the example below, we use the titanic dataset, to show a close to real-world 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.15/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.2/dist/index.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -45,7 +45,7 @@ In the example below, we use the titanic dataset, to show a close to real-world 
 
 ```
 
-![](../../.gitbook/assets/newplot-18-.png)
+![](../../.gitbook/assets/newplot-8-.png)
 
 ### More Examples
 
@@ -57,7 +57,7 @@ In the example below, we use the titanic dataset, to show a close to real-world 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.0.15/dist/index.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.1.2/dist/index.min.js"></script>
     <title>Document</title>
 </head>
 

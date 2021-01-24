@@ -2,17 +2,19 @@
 description: Returns array of index with missing values
 ---
 
-# DataFrame.nanIndex
+# DataFrame.nanindex
 
 danfo.DataFrame.**nanIndex**\(\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1410)\]
 
 **Returns:**
 
-       ****return **Array**
+```text
+   ****return **Array**
+```
 
 ## **Examples**
 
-### Drop rows \(axis=0\) with missing values  
+### Drop rows \(axis=0\) with missing values
 
 {% tabs %}
 {% tab title="Node" %}
@@ -30,7 +32,7 @@ console.log(df.nanIndex());
 {% endtab %}
 
 {% tab title="Browser" %}
-```
+```text
 
 ```
 {% endtab %}
@@ -39,7 +41,6 @@ console.log(df.nanIndex());
 {% tabs %}
 {% tab title="Output" %}
 ```text
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
