@@ -121,11 +121,11 @@ function join_df(kwargs){
 
 **Writing tests**
 
-We strongly encourages contributors to write test for their code. Like many packages, danfojs uses mocha
+We strongly encourages contributors to write tests for their code. Like many packages, danfojs uses mocha
 
 All tests should go into the tests subdirectory and placed in the corresponding module. The tests folder contains some current examples of tests, and we suggest looking to these for inspiration.
 
-Below is the general Framework to write test for each module.
+Below is the general Framework to write a test for each module.
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -146,7 +146,7 @@ describe("Name of the class|module", function(){
 {% endtab %}
 {% endtabs %}
 
-For class with lots of method.
+For a class with lots of methods.
 
 ```python
 import { assert } from "chai"
@@ -215,7 +215,7 @@ To run the test for the module you created,
     "test": "....... danfojs/tests/sub_directory_name/filename",
 ```
 
-For now the test directory is  splitted into  Four sub directory; **config, core,io, preprocessing.**
+For now, the test directory is splitted into  Four sub directory; **config, core,io, preprocessing.**
 
 **3\)**  run the test, in the danfojs directory terminal
 
@@ -266,7 +266,7 @@ If everything looks good, you are ready to make a pull request. A pull request i
 
 This request then goes to the repository maintainers, and they will review the code and everything looks good, merge it with the master.
 
-**Hooray! Youre now a contributor to danfojs. Now go bask in the euphoria!**
+**Hooray! You're now a contributor to danfojs. Now go bask in the euphoria!**
 
 
 
@@ -276,7 +276,7 @@ In other to contribute to the code base of danfojs, there are some functions  an
 
 The main exposed modules are the **Frame** and **Series** module. This module inherit from the **Generic** module.
 
-The **Generic** module consist of the following methods and properties
+The **Generic** module consists of the following methods and properties
 
 * `.dtypes`    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L213)\] is used to obtain the dtype for each column
 * `.index` \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L250)\] to obtain the index for Dataframe or Series
@@ -300,5 +300,5 @@ The **Series** module contains mostly of Generic properties and less special int
 
 * `__check_series_op_compactibility(other)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L666)\]  check if two series are compatible for numerical operation
 
-Lastly the **Utils** module contains goto function for implementations.
+Lastly, the **Utils** module contains goto function for implementations.
 
