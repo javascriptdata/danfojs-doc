@@ -60,6 +60,12 @@ git clone https://github.com/opensource9ja/danfojs.git
 
 This creates the directory danfojs and connects your repository to the upstream \(main project\) repository.
 
+> **All development are done in two main branches. The** [**danfojs-browser**](https://github.com/opensource9ja/danfojs/tree/danfojs-browser) **and the** [**danfojs-node**](https://github.com/opensource9ja/danfojs/tree/danfojs-node) **branches. The two branches are similar and it is always recommended to pull latest changes from master before development in any of the branches.**
+
+Some features are supported both in browser and node environment, and it is recommended to add these in the danfojs-browser version first, as this branch is merged always merged to master before every release. 
+
+For features that work only in NodeJs environment, especially file related issues, these should be developed and tested in the danfojs-node branch, and the corresponding test written there.   
+
 **Creating a development environment**
 
 To test out code changes, you’ll need to build danfojs from source, which requires a Nodejs environment.
