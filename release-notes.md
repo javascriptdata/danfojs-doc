@@ -1,13 +1,13 @@
 # Release Notes
 
-### \[LATEST\] Release [Danfojs-node \(v0.2.2\)](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.2)
+### \[LATEST\] Release [ \(v0.2.2\)](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.2)
 
 **Date:** 14th February 2021
 
 We added/updated the following features:
 
-* Fix runtime issue regarding @babel/runtime
-* Smaller size in this version. From ~8mb to about ~5mb
+* Fix babel runtime issue in node version 
+* Smaller size in browser version in this version. From ~8mb to about ~5mb
 * Fix browser tag issue and returns back to specific versioning instead of @latest
 * Danfojs now ships with an exported version of tensorflowjs-node \(2.8.5\). This fixes the double dependency issue when building ML models, as you no longer need to install/import tensorflowjs separately.
 
