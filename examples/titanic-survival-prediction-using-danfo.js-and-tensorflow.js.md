@@ -29,17 +29,21 @@ In this tutorial, you're going to use the Node.js build. If you do not have Node
 npm init
 ```
 
-Fill in the necessary details to create your app. Next, in your terminal, install danfo.js and tensorflow.js:
+Fill in the necessary details to create your app. Next, in your terminal, install danfo.js:
+
+**Update \(14th Feb 2021\):** 
+
+Danfo now ships with an exported version of tensorflow \(v2.8.5\). This is exported under the namespace `tf`. This fixes the **double registration of runtime** issue many users have faced in the past. 
 
 ```javascript
-npm install danfojs-node @tensorflow/tfjs-node
+npm install danfojs-node
 ```
 
 When you're done, create a file called app.js and import the packages:
 
 ```javascript
 const dfd = require("danfojs-node")
-const tf = require("@tensorflow/tfjs-node")
+const tf = dfd.tf //Reference to the exported tensorflowjs library
 ```
 
 ### Loading and processing your data

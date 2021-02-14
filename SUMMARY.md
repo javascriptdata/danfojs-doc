@@ -200,6 +200,7 @@
     * [Groupby.cumprod](api-reference/groupby/groupby.cumprod.md)
     * [Groupby.agg](api-reference/groupby/groupby.agg.md)
 * [User Guides](examples/README.md)
+  * [Using Danfojs in React](examples/using-danfojs-in-react.md)
   * [Titanic Survival Prediction using Danfo.js and Tensorflow.js](examples/titanic-survival-prediction-using-danfo.js-and-tensorflow.js.md)
 * [Contributing Guide](contributing-guide.md)
 * [Release Notes](release-notes.md)
