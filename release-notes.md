@@ -1,6 +1,27 @@
 # Release Notes
 
-### \[LATEST\] Release \(v0.1.5\)
+### \[LATEST\] Release [Danfojs-node \(v0.2.2\)](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.2)
+
+**Date:** 14th February 2021
+
+We added/updated the following features:
+
+* Fix runtime issue regarding @babel/runtime
+* Danfojs now ships with an exported version of tensorflowjs-node \(2.8.5\). This fixes the double dependency issue when building ML models, as you no longer need to install/import tensorflowjs separately.
+
+To use tensoflowjs-node, you can reference it from danfo as shown below:
+
+```javascript
+const dfd = require("danfojs-node")
+const tf = dfd.tf //contains a reference to the tensorflowjs-node library
+
+const model = tf.sequential();
+model.add(tf.layers.dense({ inputShape: [7], units: 124, activation: 'relu', kernelInitializer: 'leCunNormal' }));
+model.add(tf.layers.dense({ units: 64, activation: 'relu' }));
+model.summary();
+```
+
+### Release \(v0.1.5\)
 
 **Date:** 25th September 2020
 
