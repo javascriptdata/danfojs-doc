@@ -182,7 +182,7 @@ describe("Name of the class|module", function(){
 });
 ```
 
-**Example**: Let's write a test to test if the values in a dataframe are off by a certain length. Assuming the method to obtain length is values\_len\(\)
+**Example**: Let's write a test to check if the values in a dataframe are off by a certain length. Assuming the method to obtain length is values\_len\(\)
 
 ```javascript
 import { assert } from "chai"
