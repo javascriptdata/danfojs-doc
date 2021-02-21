@@ -159,5 +159,4 @@ df.print()
 {% endtab %}
 {% endtabs %}
 
-**Note:** To reset an index to the default values, use the [DataFrame.reset\_index](dataframe.reset_index.md). 
-
+**Note:** To reset an index to the default values, use the [DataFrame.reset\_index](dataframe.reset_index.md).

@@ -4,7 +4,7 @@ description: Create a scatter plot of columns in a DataFrame
 
 # Scatter Plots
 
-The coordinates of each point are defined by two DataFrame columns and filled circles are used to represent each point. Scatter plot is useful for visualizing complex correlations between two variables. 
+The coordinates of each point are defined by two DataFrame columns and filled circles are used to represent each point. Scatter plot is useful for visualizing complex correlations between two variables.
 
 ## Examples
 
@@ -31,7 +31,7 @@ In the example below, we use the titanic dataset, to show a close to real-world 
 
          dfd.read_csv("https://raw.githubusercontent.com/pandas-dev/pandas/master/doc/data/titanic.csv")
             .then(df => {
-            
+
                 df.plot("plot_div").scatter({ x: "Age", y: "Fare" })
 
             }).catch(err => {
@@ -68,7 +68,7 @@ In the example below, we use the titanic dataset, to show a close to real-world 
 
        dfd.read_csv("https://raw.githubusercontent.com/pandas-dev/pandas/master/doc/data/titanic.csv")
             .then(df => {
-            
+
                 sub_df = df.loc({columns: ["Age", "Fare", "Parch", "SibSp"]})
                 sub_df.plot("plot_div").scatter()
 
@@ -87,7 +87,7 @@ In the example below, we use the titanic dataset, to show a close to real-world 
 
 ### Configuring your plots
 
-danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly. 
+danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly.
 
 All [customization](https://plotly.com/javascript/line-charts/) on the plot can be passed as an object of key-value pairs to the config parameter. For example:
 
@@ -108,4 +108,3 @@ df.plot("div_tag").scatter({x= "col1", y: "col2", layout: layout})
 {% hint style="info" %}
 For more configuration options for Scatter plots, see the [Plotly](https://plotly.com/javascript/line-and-scatter/) style doc.
 {% endhint %}
-

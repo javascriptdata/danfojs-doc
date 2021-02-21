@@ -43,7 +43,7 @@ danfo.DataFrame.**drop**\(kwargs\) \[[source](https://github.com/opensource9ja/d
 
 ### Drop columns by specifying the names
 
-By setting **inplace** to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default. 
+By setting **inplace** to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -165,4 +165,3 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
-

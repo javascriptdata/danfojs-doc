@@ -6,7 +6,7 @@ Prints the data in a Series as a grid of row and columns
 
 
 
-**parameter:** 
+**parameter:**
 
             **return:** {frame}
 
@@ -15,4 +15,3 @@ Prints the data in a Series as a grid of row and columns
 ```javascript
 
 ```
-

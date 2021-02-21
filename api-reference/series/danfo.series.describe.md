@@ -6,7 +6,7 @@ Generate descriptive statistics. Descriptive statistics include those that summa
 
 
 
-**parameter:** 
+**parameter:**
 
             **return:** {frame}
 
@@ -23,4 +23,3 @@ let df = new Series(data)
 df.set_index({ "index": ["one", "two", "three", "four", "five", "six"], "inplace": true })
 df.reset_index()
 ```
-

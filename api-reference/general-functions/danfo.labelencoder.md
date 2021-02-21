@@ -6,9 +6,9 @@ description: Encode target labels with value between 0 and n_classes-1.
 
 class danfo.**LabelEncoder** \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
 
-danfo.js provides the LabelEncoder class for encoding Series and Arrays to integer between 0 and n\_classes -1. This is mostly used as a preprocessing step before most machine learning tasks. 
+danfo.js provides the LabelEncoder class for encoding Series and Arrays to integer between 0 and n\_classes -1. This is mostly used as a preprocessing step before most machine learning tasks.
 
-The API is similar to sklearn's [LabelEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html?highlight=labelencoder#sklearn.preprocessing.LabelEncoder), and provides a fit and transform method. 
+The API is similar to sklearn's [LabelEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.LabelEncoder.html?highlight=labelencoder#sklearn.preprocessing.LabelEncoder), and provides a fit and transform method.
 
 ## **Examples**
 
@@ -139,5 +139,4 @@ LabelEncoder { label: [ 'pear', 'mango', 'pawpaw', 'bean' ] }
 {% endtab %}
 {% endtabs %}
 
-See also [OneHotEncoder](danfo.onehotencoder.md) and[ danfo.get\_dummies](danfo.get_dummies.md)
-
+See also [OneHotEncoder](danfo.onehotencoder.md) and[danfo.get_dummies](danfo.get_dummies.md)

@@ -29,7 +29,7 @@ Make a box-and-whisker plot from DataFrame columns, optionally grouped by some o
 
         s = new dfd.Series([20, 30, 40, 23, 40, 3, 50, 34, 67])
         s.plot("plot_div").box()
-         
+
     </script>
 </body>
 
@@ -118,7 +118,7 @@ Make a box-and-whisker plot from DataFrame columns, optionally grouped by some o
 
 ### Configuring your plots
 
-danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly. 
+danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly.
 
 All [customization](https://plotly.com/javascript/line-charts/) on the plot can be passed as an object of key-value pairs to the config parameter. For example:
 
@@ -139,4 +139,3 @@ df.plot("div_tag").box({layout: layout})
 {% hint style="info" %}
 For more configuration options for Box Plots, see the [Plotly](https://plotly.com/javascript/box-plots/) style doc.
 {% endhint %}
-

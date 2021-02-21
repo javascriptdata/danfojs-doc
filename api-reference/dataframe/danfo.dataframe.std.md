@@ -91,8 +91,3 @@ df.std(axis=0).print()
 ```
 {% endtab %}
 {% endtabs %}
-
-## 
-
-
-

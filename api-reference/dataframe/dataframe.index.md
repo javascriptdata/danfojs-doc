@@ -12,7 +12,7 @@ danfo.DataFrame.**index** \[[source](https://github.com/opensource9ja/danfojs/bl
 
 ## **Examples**
 
-Returns auto-generated ****index of a ****DataFrame
+Returns auto-generated ****index of a****DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -20,7 +20,7 @@ Returns auto-generated ****index of a ****DataFrame
 const dfd = require("danfojs-node")
 
 let data = {"A": [-20.1, 30, 47.3, -20],
-            "B": [34, -4, 5, 6], 
+            "B": [34, -4, 5, 6],
             "C": [20, -20, 30, -40]}
 let df = new dfd.DataFrame(data)
 
@@ -43,7 +43,7 @@ console.log(df.index);
 {% endtab %}
 {% endtabs %}
 
-Returns set ****index of a ****DataFrame
+Returns set ****index of a****DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -51,7 +51,7 @@ Returns set ****index of a ****DataFrame
 const dfd = require("danfojs-node")
 
 let data = {"A": [-20.1, 30, 47.3, -20],
-            "B": [34, -4, 5, 6], 
+            "B": [34, -4, 5, 6],
             "C": [20, -20, 30, -40]}
 let df = new dfd.DataFrame(data, {index: ["r1", "r2", "r3", "r4"])
 
@@ -73,4 +73,3 @@ console.log(df.index);
 ```
 {% endtab %}
 {% endtabs %}
-

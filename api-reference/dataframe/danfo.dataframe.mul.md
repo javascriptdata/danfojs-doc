@@ -17,7 +17,7 @@ danfo.DataFrame.**mul**\(axis\) \[[source](https://github.com/opensource9ja/danf
 
 ## **Examples**
 
-### Multiplication of ****DataFrame with a scalar value:
+### Multiplication of ****DataFrame with a scalar value
 
 {% tabs %}
 {% tab title="Node" %}
@@ -59,7 +59,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Multiplication of  ****DataFrame with a Series along the column axis:
+### Multiplication of  ****DataFrame with a Series along the column axis
 
 {% tabs %}
 {% tab title="Node" %}
@@ -69,7 +69,7 @@ const dfd = require("danfojs-node")
 
 let data = { "Col1": [1, 4, 5, 1],
              "Col2": [3, 2, 0, 4] }
-             
+
 let df = new dfd.DataFrame(data)
 let sf = new dfd.Series([4, 5])
 
@@ -112,7 +112,7 @@ df_new.print()
 const dfd = require("danfojs-node")
 let data = {"Col1": [1, 4, 5, 0],
             "Col2": [2, 0, 1, 4]}
-            
+
 let data2 = {"new_col1": [1, 5, 20, 10],
              "new_Col2": [20, 2, 1, 2]}
 
@@ -160,7 +160,7 @@ const dfd = require("danfojs-node")
 
 let data = {"Col1": [10, 45, 56, 10],
             "Col2": [23, 20, 10, 24]}
-            
+
 let df = new dfd.DataFrame(data)
 let val = [2,2]
 
@@ -194,6 +194,3 @@ df_new.print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
-

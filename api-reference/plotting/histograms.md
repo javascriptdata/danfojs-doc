@@ -96,7 +96,7 @@ In the example below, we use the titanic dataset, to show a close to a real-worl
 
 ### Configuring your plots
 
-danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly. 
+danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly.
 
 All [customization](https://plotly.com/javascript/line-charts/) on the plot can be passed as an object of key-value pairs to the config parameter. For example:
 
@@ -117,4 +117,3 @@ df.plot("div_tag").histogram({layout: layout})
 {% hint style="info" %}
 For more configuration options for Histograms, see the [Plotly](https://plotly.com/javascript/histograms/) style doc.
 {% endhint %}
-

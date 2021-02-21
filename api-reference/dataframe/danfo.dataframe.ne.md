@@ -17,7 +17,7 @@ danfo.DataFrame.ne\(other, axis\) \[[source](https://github.com/opensource9ja/da
 
 ## **Examples**
 
-### Comparing ****DataFrame with a scalar value:
+### Comparing ****DataFrame with a scalar value
 
 {% tabs %}
 {% tab title="Node" %}
@@ -59,7 +59,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Comparing ****DataFrame with a Series along the column axis:
+### Comparing ****DataFrame with a Series along the column axis
 
 {% tabs %}
 {% tab title="Node" %}
@@ -189,4 +189,3 @@ df_rep.print()
 ```
 {% endtab %}
 {% endtabs %}
-

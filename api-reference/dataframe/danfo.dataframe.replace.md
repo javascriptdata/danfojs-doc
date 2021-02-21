@@ -51,8 +51,8 @@ let df = new dfd.DataFrame(data)
 let df_rep = df.replace({ "replace": 10, "with": -999, "in": ["Col1"] })
 
 df_rep.print()
- 
- 
+
+
 ```
 {% endtab %}
 
@@ -81,7 +81,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-By not specifying a ****column**,** the ****replace works on all columns  ****
+By not specifying a ****column**,** the****replace works on all columns  ****
 
 {% tabs %}
 {% tab title="Node" %}
@@ -120,4 +120,3 @@ df_rep.print()
 ```
 {% endtab %}
 {% endtabs %}
-

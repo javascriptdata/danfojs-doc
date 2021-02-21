@@ -15,7 +15,7 @@ danfo.DataFrame.**dtypes** \[[source](https://github.com/opensource9ja/danfojs/b
 
 ## **Examples**
 
-Returns auto-generated ****index of a ****DataFrame
+Returns auto-generated ****index of a****DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -23,7 +23,7 @@ Returns auto-generated ****index of a ****DataFrame
 const dfd = require("danfojs-node")
 
 let data = {"A": [-20.1, 30, 47.3, -20],
-            "B": [34, -4, 5, 6], 
+            "B": [34, -4, 5, 6],
             "C": [20, -20, 30, -40]}
 
 let df = new dfd.DataFrame(data)
@@ -64,10 +64,10 @@ Columns with mixed types are represented as **string.**
 const dfd = require("danfojs-node")
 
 let data = {"A": [-20.1, 30, 47.3, -20],
-            "B": [34, -4, 5, 6], 
+            "B": [34, -4, 5, 6],
             "C": [20, -20, 30, -40],
             "D": ["a", "b", 20, 2.5]}
-            
+
 let df = new dfd.DataFrame(data)
 
 df.ctypes.print()
@@ -99,5 +99,4 @@ df.ctypes.print()
 {% endtab %}
 {% endtabs %}
 
-**Note**: To cast a type, use the [astype](dataframe.astype.md) method. 
-
+**Note**: To cast a type, use the [astype](dataframe.astype.md) method.

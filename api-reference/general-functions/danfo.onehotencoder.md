@@ -6,9 +6,9 @@ description: Encode categorical features as a one-hot numeric array.
 
 class danfo.**OneHotEncoder** \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
 
-danfo.js provides the OneHotEncoder class for encoding values in Series and Arrays to one-hot numeric arrays. This is mostly used as a preprocessing step before most machine learning tasks. 
+danfo.js provides the OneHotEncoder class for encoding values in Series and Arrays to one-hot numeric arrays. This is mostly used as a preprocessing step before most machine learning tasks.
 
-The API is similar to sklearn's [OneHotEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html?highlight=onehotencoder#sklearn.preprocessing.OneHotEncoder), and provides a fit and transform method. 
+The API is similar to sklearn's [OneHotEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html?highlight=onehotencoder#sklearn.preprocessing.OneHotEncoder), and provides a fit and transform method.
 
 ## **Examples**
 
@@ -64,7 +64,7 @@ new_sf.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
- Shape: (2,4) 
+ Shape: (2,4)
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ pear              │ mango             │ pawpaw            │ bean              ║
@@ -131,7 +131,7 @@ new_sf.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
- Shape: (3,4) 
+ Shape: (3,4)
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ pear              │ mango             │ pawpaw            │ bean              ║
@@ -147,5 +147,4 @@ new_sf.print()
 {% endtab %}
 {% endtabs %}
 
-See also [LabelEncoder](danfo.labelencoder.md) and[ danfo.get\_dummies](danfo.get_dummies.md)
-
+See also [LabelEncoder](danfo.labelencoder.md) and[danfo.get_dummies](danfo.get_dummies.md)

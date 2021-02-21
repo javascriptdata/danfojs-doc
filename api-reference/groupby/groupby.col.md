@@ -43,7 +43,7 @@ grp.col(["C","D"])
 {% endtab %}
 {% endtabs %}
 
-Apparently the output are not that useful unless you perform some operations like max\(\), count\(\) and the likes. 
+Apparently the output are not that useful unless you perform some operations like max\(\), count\(\) and the likes.
 
 ```text
 //it returns the groupby data structure
@@ -100,6 +100,3 @@ GroupBy {
   group_col: { foo: [ [Series] ], bar: [ [Series] ] }
 }
 ```
-
-
-

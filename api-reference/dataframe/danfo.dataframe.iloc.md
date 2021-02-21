@@ -92,7 +92,7 @@ sub_df.print()
 
 ### **Index by a slice of row and return all columns**
 
-The [**iloc**](danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end\], e.g "\[1: 4\]". This will return all values between index position 1 and 3.  The end index is not included. 
+The [**iloc**](danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end\], e.g "\[1: 4\]". This will return all values between index position 1 and 3.  The end index is not included.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -173,7 +173,7 @@ sub_df.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
- Shape: (4,2) 
+ Shape: (4,2)
 
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ Count             │ Price             ║
@@ -287,7 +287,7 @@ sub_df.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
- Shape: (1,1) 
+ Shape: (1,1)
 
 ╔═══╤═══════════════════╗
 ║   │ Count             ║
@@ -343,7 +343,7 @@ sub_df.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
- Shape: (2,2) 
+ Shape: (2,2)
 
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ Count             │ Price             ║
@@ -355,6 +355,3 @@ sub_df.print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
-

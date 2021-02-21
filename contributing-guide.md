@@ -62,9 +62,9 @@ This creates the directory danfojs and connects your repository to the upstream 
 
 > **All development are done in two main branches. The** [**danfojs-browser**](https://github.com/opensource9ja/danfojs/tree/danfojs-browser) **and the** [**danfojs-node**](https://github.com/opensource9ja/danfojs/tree/danfojs-node) **branches. The two branches are similar and it is always recommended to pull latest changes from master before development in any of the branches.**
 
-Some features are supported both in browser and node environment, and it is recommended to add these in the danfojs-browser version first, as this branch is merged always merged to master before every release. 
+Some features are supported both in browser and node environment, and it is recommended to add these in the danfojs-browser version first, as this branch is merged always merged to master before every release.
 
-For features that work only in NodeJs environment, especially file related issues, these should be developed and tested in the danfojs-node branch, and the corresponding test written there.   
+For features that work only in NodeJs environment, especially file related issues, these should be developed and tested in the danfojs-node branch, and the corresponding test written there.
 
 **Creating a development environment**
 
@@ -116,7 +116,7 @@ And for functions that contains more than two argument, keyword argument should 
  *                      axis : int {0 or 1},
  *                      by_column : String {name of a column},
  *                    }
- * @returns DataFrame 
+ * @returns DataFrame
  */
 function join_df(kwargs){
         ........
@@ -140,9 +140,9 @@ import { assert } from "chai"
 import { DataFrame } from '../../src/core/frame'
 
 describe("Name of the class|module", function(){
- 
+
   it("name of the methods| expected result",function(){
-    
+
        //write your test code here
        //use assert.{proprty} to test your code
    })
@@ -159,20 +159,20 @@ import { assert } from "chai"
 import { DataFrame } from '../../src/core/frame'
 
 describe("Name of the class|module", function(){
- 
+
  describe("method name 1", function(){
- 
+
    it("expected result",function(){
-     
+
         //write your test code here
         //use assert.{proprty} to test your code
     })
   })
-  
+
   describe("method name 2", function(){
- 
+
    it("expected result",function(){
-     
+
         //write your test code here
         //use assert.{proprty} to test your code
     })
@@ -188,20 +188,20 @@ import { assert } from "chai"
 import { DataFrame } from '../../src/core/frame'
 
 describe("DataFrame", function(){
-    
+
   describe("value_len", function(){
- 
+
    it("check dataframe length",function(){
-     
+
        let data = [[1,2],[4,5]]
        let columns = ["A","B"]
        let df = new DataFrame(data,{columns: columns})
-       
+
        let expected_result = 2
-       
+
        assert.deepEqual(sf.value_len(), expected_result))
-       
-       
+
+
     })
   })
 
@@ -212,7 +212,7 @@ describe("DataFrame", function(){
 
 To run the test for the module you created,
 
-**1\)** Open the package.json 
+**1\)** Open the package.json
 
 **2\)** change the name of the test file to the file name you want. and don't forget the file is in the test folder
 
@@ -307,4 +307,3 @@ The **Series** module contains mostly of Generic properties and less special int
 * `__check_series_op_compactibility(other)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L666)\]  check if two series are compatible for numerical operation
 
 Lastly, the **Utils** module contains goto function for implementations.
-

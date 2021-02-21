@@ -40,7 +40,7 @@ danfo.DataFrame.**fillna**\(kwargs\) \[[source](https://github.com/opensource9ja
 
 ## **Examples**
 
-### Fill NaNs in specified columns with specified values 
+### Fill NaNs in specified columns with specified values
 
 {% tabs %}
 {% tab title="Node" %}
@@ -48,9 +48,9 @@ danfo.DataFrame.**fillna**\(kwargs\) \[[source](https://github.com/opensource9ja
 const dfd = require("danfojs-node")
 
 let data = {"Name":["Apples", "Mango", "Banana", undefined],
-            "Count": [NaN, 5, NaN, 10], 
+            "Count": [NaN, 5, NaN, 10],
             "Price": [200, 300, 40, 250]}
-            
+
 let df = new dfd.DataFrame(data)
 df.print()
 
@@ -101,7 +101,7 @@ df_filled.print()
 {% endtab %}
 {% endtabs %}
 
-### Fill all columns with NaNs with a specified value 
+### Fill all columns with NaNs with a specified value
 
 {% tabs %}
 {% tab title="Node" %}
@@ -109,7 +109,7 @@ df_filled.print()
 const dfd = require("danfojs-node")
 
 let data = {"Name":["Apples", "Mango", "Banana", undefined],
-            "Count": [NaN, 5, NaN, 10], 
+            "Count": [NaN, 5, NaN, 10],
             "Price": [200, 300, 40, 250]}
 
 let df = new dfd.DataFrame(data)
@@ -146,7 +146,7 @@ df_filled.print()
 {% endtab %}
 {% endtabs %}
 
-### Fill NaNs inplace 
+### Fill NaNs inplace
 
 {% tabs %}
 {% tab title="Node" %}
@@ -194,4 +194,3 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
-

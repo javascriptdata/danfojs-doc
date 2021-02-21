@@ -24,7 +24,7 @@ const dfd = require("danfojs-node")
 let data = { "A": [-20, 30, 47.3, -20] ,
              "B": [34, -4, 5, 6] ,
              "C": [20, 20, 30, 30]}
-             
+
 let df = new dfd.DataFrame(data)
 let tf_tensor = df.tensor
 
@@ -68,7 +68,7 @@ Tensor
 {% endtab %}
 {% endtabs %}
 
-String values in a Tensor are represented as NaN, so ensure to transform them before working with tensor representations. 
+String values in a Tensor are represented as NaN, so ensure to transform them before working with tensor representations.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -101,7 +101,7 @@ tf_tensor.print()
 {% tabs %}
 {% tab title="Output" %}
 ```text
-float32 
+float32
 
 Tensor {
   kept: false,
@@ -122,4 +122,3 @@ Tensor
 ```
 {% endtab %}
 {% endtabs %}
-

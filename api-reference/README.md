@@ -26,7 +26,7 @@ description: >-
   * [Accessors](series/#accessors)
   * [Serialization / IO / conversion](series/#serialization-io-conversion)
 * [DataFrame](dataframe/)
-  * [Attributes ](dataframe/#attributes)
+  * [Attributes](dataframe/#attributes)
   * [Conversion](dataframe/#conversion)
   * [Indexing, iteration](dataframe/#indexing-iteration)
   * [Binary operator functions](dataframe/#binary-operator-functions)
@@ -51,6 +51,3 @@ description: >-
   * [Indexing, iteration](groupby/#indexing-iteration)
   * [Function application](groupby/#function-application)
   * [Computations / descriptive stats](groupby/#computations-descriptive-stats)
-
-
-

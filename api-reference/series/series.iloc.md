@@ -62,7 +62,7 @@ s.iloc([0,5]).print()
 
 ### **Index by a slice of row**
 
-The [**iloc**](../dataframe/danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end\], e.g "\[1: 4\]". This will return all values between index position 1 and 3. 
+The [**iloc**](../dataframe/danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end\], e.g "\[1: 4\]". This will return all values between index position 1 and 3.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -101,7 +101,7 @@ s.iloc(["0:5"]).print()
 {% endtab %}
 {% endtabs %}
 
-By specifying a start index in a slice, all values after that index are returned. 
+By specifying a start index in a slice, all values after that index are returned.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -135,6 +135,3 @@ s.iloc(["5:"]).print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
-

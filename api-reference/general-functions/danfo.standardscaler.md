@@ -12,7 +12,7 @@ danfo.js provides the StandardScaler class for standardization of DataFrame and 
 
 where `u` is the mean of the training samples or zero if `with_mean=False`, and `s` is the standard deviation of the training samples or one if `with_std=False`.
 
-The API is similar to sklearn's [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html?highlight=standardscaler#sklearn.preprocessing.StandardScaler), and provides a fit and transform method. 
+The API is similar to sklearn's [StandardScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.StandardScaler.html?highlight=standardscaler#sklearn.preprocessing.StandardScaler), and provides a fit and transform method.
 
 ## **Examples**
 
@@ -116,7 +116,7 @@ df_enc.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
- Shape: (3,4) 
+ Shape: (3,4)
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ 0                 │ 1                 │ 2                 │ 3                 ║
@@ -132,4 +132,3 @@ df_enc.print()
 {% endtabs %}
 
 See also [MinMaxScaler](danfo.minmaxscaler.md)
-

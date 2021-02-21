@@ -6,7 +6,7 @@ description: Make a new copy of a Series
 
 > danfo.Series.copy\(\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L569)\]
 
-**parameter:** 
+**parameter:**
 
 **Return:** Series
 
@@ -43,4 +43,3 @@ sf2.print()
 ```
 {% endtab %}
 {% endtabs %}
-

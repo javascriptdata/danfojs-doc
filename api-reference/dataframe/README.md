@@ -48,7 +48,7 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 | [`DataFrame.lt`]() | Get Less than of dataframe and other, element-wise \(binary operator lt\). |
 | [`DataFrame.gt`](danfo.dataframe.gt.md) | Get Greater than of dataframe and other, element-wise \(binary operator gt\). |
 | [`DataFrame.le`](danfo.dataframe.le.md) | Get Less than or equal to of dataframe and other, element-wise \(binary operator le\). |
-| [`DataFrame.ge`]() | Get Greater than or equal to of dataframe and other, element-wise \(binary operator ge\). |
+| [`DataFrame.ge`](danfo.dataframe.ge.md) | Get Greater than or equal to of dataframe and other, element-wise \(binary operator ge\). |
 | [`DataFrame.ne`](danfo.dataframe.ne.md) | Get Not equal to of dataframe and other, element-wise \(binary operator ne\). |
 | [`DataFrame.eq`](danfo.dataframe.eq.md) | Get Equal to of dataframe and other, element-wise \(binary operator eq\). |
 
@@ -139,4 +139,3 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 | :--- | :--- |
 | [`DataFrame.to_csv`](dataframe.to_csv.md) | Write object to a comma-separated values \(csv\) file. |
 | [`DataFrame.to_json`](dataframe.to_json.md) | Convert the object to a JSON string. |
-

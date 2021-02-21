@@ -5,7 +5,6 @@ description: Reads an excel file into DataFrame.
 # danfo.read\_excel
 
 > danfo.**read\_excel**\(kwargs\) [\[source](https://github.com/opensource9ja/danfojs/blob/849d14c8e7fa79bce4ffa9d0d177639047313520/danfojs/src/io/reader.js#L89)\]
-
 > <table>
 >   <thead>
 >     <tr>
@@ -81,7 +80,7 @@ load_process_data()
             df.head().plot("plot_div").table()
         })
 
-         
+
     </script>
 </body>
 
@@ -90,4 +89,3 @@ load_process_data()
 ```
 {% endtab %}
 {% endtabs %}
-

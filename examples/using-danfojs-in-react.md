@@ -1,13 +1,13 @@
 # Using Danfojs in React
 
-Danfojs works for both browser and NodeJs environment, and as such is available to frontend frameworks like React and Vue. 
+Danfojs works for both browser and NodeJs environment, and as such is available to frontend frameworks like React and Vue.
 
-In order to use Danfojs in a library like React, you must install the [browser side version ](https://www.npmjs.com/package/danfojs)from npm. 
+In order to use Danfojs in a library like React, you must install the [browser side version](https://www.npmjs.com/package/danfojs)from npm.
 
 ```bash
 npm install danfojs
 
-or 
+or
 
 yarn add danfojs
 ```
@@ -43,7 +43,7 @@ function App() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Learn Danfojs 
+          Learn Danfojs
         </a>
       </header>
     </div>
@@ -64,5 +64,4 @@ Note that you can also import specific modules. For instance, in the code below 
 import { DataFrame } from "danfojs/danfojs/src/index";
 ```
 
-Following these steps, you can use danfojs in any client-side library. 
-
+Following these steps, you can use danfojs in any client-side library.

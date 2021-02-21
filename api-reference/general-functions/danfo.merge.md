@@ -161,7 +161,7 @@ let df2 = new dfd.DataFrame(data2, { columns: colum2 })
 df1.print()
 df2.print()
 
-let merge_df = dfd.merge({ left: df1, right: df2, 
+let merge_df = dfd.merge({ left: df1, right: df2,
                             on: ["Key1", 'Key2'], how: "inner"})
 merge_df.print()
 ```
@@ -246,7 +246,7 @@ let df2 = new dfd.DataFrame(data2, { columns: colum2 })
 df1.print()
 df2.print()
 
-let merge_df = dfd.merge({ left: df1, right: df2, 
+let merge_df = dfd.merge({ left: df1, right: df2,
                             on: ["Key1"], how: "outer"})
 merge_df.print()
 ```
@@ -331,7 +331,7 @@ let df2 = new dfd.DataFrame(data2, { columns: colum2 })
 df1.print()
 df2.print()
 
-let merge_df = dfd.merge({ left: df1, right: df2, 
+let merge_df = dfd.merge({ left: df1, right: df2,
                             on: ["Key1", "Key2"], how: "left"})
 merge_df.print()
 ```
@@ -416,7 +416,7 @@ let df2 = new dfd.DataFrame(data2, { columns: colum2 })
 df1.print()
 df2.print()
 
-let merge_df = dfd.merge({ left: df1, right: df2, 
+let merge_df = dfd.merge({ left: df1, right: df2,
                             on: ["Key1", "Key2"], how: "right"})
 merge_df.print()
 ```
@@ -479,6 +479,5 @@ merge_df.print()
 {% endtabs %}
 
 {% hint style="info" %}
-See also [danfo.concat ](danfo.concat.md)for joining objects based on axis.
+See also [danfo.concat](danfo.concat.md)for joining objects based on axis.
 {% endhint %}
-

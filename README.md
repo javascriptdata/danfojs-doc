@@ -7,11 +7,11 @@ description: >-
 
 # Danfo.js Documentation
 
-D**anfo.js** is heavily inspired by the [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) library and provides a similar interface and API. This means users familiar with the [Pandas ](https://pandas.pydata.org/pandas-docs/stable/index.html)API can easily use D**anfo.js.** 
+D**anfo.js** is heavily inspired by the [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) library and provides a similar interface and API. This means users familiar with the [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html)API can easily use D**anfo.js.**
 
 ## Main Features
 
-* Danfo.js is fast. It is built on[ Tensorflow.js](https://js.tensorflow.org/), and supports tensors out of the box. This means you can [convert danfo data structure](api-reference/dataframe/) to Tensors.
+* Danfo.js is fast. It is built on[Tensorflow.js](https://js.tensorflow.org/), and supports tensors out of the box. This means you can [convert danfo data structure](api-reference/dataframe/) to Tensors.
 * Easy handling of missing ****data \(represented as `NaN`\) in floating point as well as non-floating point data
 * Size mutability: columns can be inserted/deleted from DataFrame
 * Automatic and explicit alignment: objects can be explicitly aligned to a set of labels, or the user can simply ignore the labels and let [`Series`](api-reference/series/), [`DataFrame`](api-reference/dataframe/), etc. automatically align the data for you in computations
@@ -32,13 +32,12 @@ New to danfo? Check out the getting started guides. They contain an introduction
 
 ## **API Reference**
 
-The reference guide contains a detailed description of the **danfo** API. The reference describes how each function works and which parameters can be used. 
+The reference guide contains a detailed description of the **danfo** API. The reference describes how each function works and which parameters can be used.
 
 {% page-ref page="api-reference/" %}
 
 ## Contributing Guide
 
-Want to help improve our documentation and existing functionalities? The contributing guidelines will guide you through the process. 
+Want to help improve our documentation and existing functionalities? The contributing guidelines will guide you through the process.
 
 {% page-ref page="contributing-guide.md" %}
-

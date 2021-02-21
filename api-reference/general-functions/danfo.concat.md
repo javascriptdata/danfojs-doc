@@ -38,7 +38,7 @@ danfo.**concat**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/b
 
 ## **Examples**
 
-### **Concatenate two DataFrames along column axis \(1\)** 
+### **Concatenate two DataFrames along column axis \(1\)**
 
 {% tabs %}
 {% tab title="Node" %}
@@ -89,7 +89,7 @@ com_df.print()
 {% endtab %}
 {% endtabs %}
 
-### **Concatenate two DataFrames along row axis \(0\)** 
+### **Concatenate two DataFrames along row axis \(0\)**
 
 {% tabs %}
 {% tab title="Node" %}
@@ -149,7 +149,7 @@ com_df.print(10)
 {% endtab %}
 {% endtabs %}
 
-### **Concatenate two Series along row axis \(0\)** 
+### **Concatenate two Series along row axis \(0\)**
 
 {% tabs %}
 {% tab title="Node" %}
@@ -209,5 +209,4 @@ com_df.print(10)
 {% endtab %}
 {% endtabs %}
 
-See also [danfo.concat ](danfo.concat.md)for joining objects based on axis.
-
+See also [danfo.concat](danfo.concat.md)for joining objects based on axis.

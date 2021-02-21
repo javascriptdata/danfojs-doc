@@ -10,7 +10,7 @@ danfo.js provides the MinMaxScaler class for standardization of DataFrame and Se
 
 This transformation is often used as an alternative to zero mean, unit variance scaling like [Standardscaler](danfo.standardscaler.md).
 
-The API is similar to sklearn's [MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html?highlight=minmaxscaler#sklearn.preprocessing.MinMaxScaler), and provides a fit and transform method. 
+The API is similar to sklearn's [MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html?highlight=minmaxscaler#sklearn.preprocessing.MinMaxScaler), and provides a fit and transform method.
 
 ## **Examples**
 
@@ -60,7 +60,7 @@ df_enc.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
- Shape: (3,4) 
+ Shape: (3,4)
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ 0                 │ 1                 │ 2                 │ 3                 ║
@@ -109,7 +109,7 @@ df_enc.print()
 {% tab title="Output" %}
 ```text
 
- Shape: (3,1) 
+ Shape: (3,1)
 
 ╔═══╤═══════════════════╗
 ║   │ 0                 ║
@@ -125,4 +125,3 @@ df_enc.print()
 {% endtabs %}
 
 See also [MinMaxScaler](danfo.minmaxscaler.md)
-

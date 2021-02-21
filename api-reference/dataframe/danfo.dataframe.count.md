@@ -97,8 +97,3 @@ df.count({axis: 0).print()
 ```
 {% endtab %}
 {% endtabs %}
-
-## 
-
-
-

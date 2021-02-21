@@ -43,7 +43,7 @@ danfo.DataFrame.**query**\(kwargs\) \[[source](https://github.com/opensource9ja/
 
 ## **Query a DataFrame using logical operators**
 
-To query a DataFrame, you can specify the column to use, the logical operator \("&gt;", "&lt;", "&gt;=", "&lt;=", and. "=="\), and the value to compare against. 
+To query a DataFrame, you can specify the column to use, the logical operator \("&gt;", "&lt;", "&gt;=", "&lt;=", and. "=="\), and the value to compare against.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -53,7 +53,7 @@ const dfd = require("danfojs-node")
 let data = {"A": [30, 1, 2, 3],
            "B": [34, 4, 5, 6],
            "C": [20, 20, 30, 40]}
-           
+
 let cols = ["A", "B", "C"]
 let df = new dfd.DataFrame(data, { columns: cols })
 df.print() //before query
@@ -105,7 +105,7 @@ const dfd = require("danfojs-node")
 let data = {"A": [30, 1, 2, 3],
            "B": [34, 4, 5, 6],
            "C": [20, 20, 30, 40]}
-           
+
 let df = new dfd.DataFrame(data)
 
 df.print()
@@ -151,16 +151,16 @@ query_df.print() //after query
 
 ## **Query by a string column in a DataFrame**
 
-The query method also works on string columns. 
+The query method also works on string columns.
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
 let data = {"A": ["Ng", "Yu", "Mo", "Ng"],
-            "B": [34, 4, 5, 6], 
+            "B": [34, 4, 5, 6],
             "C": [20, 20, 30, 40]}
-            
+
 let df = new dfd.DataFrame(data)
 
 df.print()
@@ -217,7 +217,7 @@ const dfd = require("danfojs-node")
 let data = {"A": [30, 1, 2, 3],
            "B": [34, 4, 5, 6],
            "C": [20, 20, 30, 40]}
-           
+
 let cols = ["A", "B", "C"]
 let df = new dfd.DataFrame(data, { columns: cols })
 
@@ -252,4 +252,3 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
-

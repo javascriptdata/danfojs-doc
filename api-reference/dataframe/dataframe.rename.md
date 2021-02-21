@@ -42,9 +42,9 @@ danfo.DataFrame.**rename**\(kwargs\) \[[source](https://github.com/opensource9ja
 
 ## **Examples**
 
-### Rename columns 
+### Rename columns
 
-By setting **inplace** to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default. 
+By setting **inplace** to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -170,4 +170,3 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
-
