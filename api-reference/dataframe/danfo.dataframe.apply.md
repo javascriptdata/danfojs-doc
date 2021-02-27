@@ -98,7 +98,7 @@ let data = [{ short_name: ["NG", "GH", "EGY", "SA"] },
 let df = new dfd.DataFrame(data)
 
 function lower(x) {
-    return x.toLowerCase()
+    return `${x}`.toLowerCase()
 }
 
 let df_new = df.apply({ callable: lower })
