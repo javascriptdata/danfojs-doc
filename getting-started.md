@@ -17,11 +17,11 @@ npm install danfojs-node
 You can also install and use it in the browsers by using the CDN below:
 
 ```markup
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
 ```
 
 {% hint style="info" %}
-To play with Danfo.js in a Notebook-like environment without doing an installation, use [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
+To play with Danfo.js in a Notebook-like environment without doing an local installation, use [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
 {% endhint %}
 
 ## 10 minutes to danfo.js
@@ -45,7 +45,7 @@ const dfd = require("danfojs-node")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
 </head>
 
 <body>
@@ -84,7 +84,7 @@ s.print()
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -146,7 +146,7 @@ s.print()
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
 
     <title>Document</title>
 </head>
@@ -260,7 +260,7 @@ df.ctypes.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -341,7 +341,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -436,7 +436,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -541,7 +541,7 @@ console.log(df.columns);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -610,7 +610,7 @@ df.tensor.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -692,7 +692,7 @@ df.describe().print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -762,7 +762,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -833,7 +833,7 @@ df['A'].print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -1169,7 +1169,7 @@ query_df.print() //after query
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -1291,7 +1291,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -1381,7 +1381,7 @@ df_drop.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -1602,7 +1602,7 @@ df.mean().print() //defaults to column axis
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -2230,7 +2230,7 @@ See the [Plotting](api-reference/plotting/) docs.
 
 We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. This gives you the ability to make interactive plots from DataFrame and Series. Plotting only works in the browser version of danfo.js, and requires an HTML div to show plots. 
 
-**Note**: All plot configuration and parameters from Plotly.js are supported.
+**Update**: As of  `v0.2.3`, we stopped bundling Danfojs with Plotly. This has greatly reduced bundle size by about 80%. See more details in the release notes here. In order to make Plots, you must explicitly add the Plotly CDN to your file as we show in the updated examples:
 
 ```markup
 <!DOCTYPE html>
@@ -2239,8 +2239,9 @@ We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+     <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
+     <title>Document</title>
 </head>
 
 <body>
@@ -2286,8 +2287,9 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.2/lib/bundle.min.js"></script>    <title>Document</title>
+      <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
+    <title>Document</title>
 </head>
 
 <body>
@@ -2373,14 +2375,12 @@ dfd.read_csv("file:///home/Desktop/titanic.csv")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 
 <body>
 
-    <div id="plot_div"></div>
     <script>
 
          dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
@@ -2401,8 +2401,6 @@ dfd.read_csv("file:///home/Desktop/titanic.csv")
 ```
 {% endtab %}
 {% endtabs %}
-
-#### [See how to read large files in chunks](https://jsdata.gitbook.io/danfojs/api-reference/input-output/danfo.read_csv)
 
 #### JSON
 
