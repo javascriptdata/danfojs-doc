@@ -1,5 +1,58 @@
 # Release Notes
 
+### LATEST\] Release [ \(v0.2.3\)](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.3)
+
+**Date:** 6th March 2021
+
+We added/updated the following features:
+
+* Fix error thrown when danfojs CDN is placed in an HTML header
+* Smaller bundle size for browser: From ~1.7mb to about ~550kb
+* Stopped bundling Danfojs with Plotly. This means that as of v0.2.3, we no longer ship with Plotly distribution due to the huge size. Plotly plots are still supported, but in order to make them, you have to explicitly add the Plotly CDN or package. 
+
+A simple example:
+
+```markup
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script> 
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+    <script>
+
+        dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
+            .then(df => {
+
+                df['AAPL.Open'].plot("div1").box() //makes a box plot
+
+                df.plot("div2").table() //display csv as table
+
+                new_df = df.set_index({ key: "Date" }) //resets the index to Date column
+                new_df.plot("div3").line({ columns: ["AAPL.Open", "AAPL.High"] })  //makes a timeseries plot
+
+            }).catch(err => {
+                console.log(err);
+            })
+
+    </script>
+    
+</body>
+
+</html>
+```
+
 ### \[LATEST\] Release [ \(v0.2.2\)](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.2)
 
 **Date:** 14th February 2021
