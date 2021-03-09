@@ -18,7 +18,7 @@ danfo.DataFrame.**print\(**rows**\)** \[[source](https://github.com/opensource9j
 const dfd = require("danfojs-node")
 
 let data = { "Abs": [20.2, 30, 47.3] ,
-             "Count": [34, 4, 5, 6] ,
+             "Count": [34, 4, 5] ,
              "country code": ["NG", "FR", "GH"] }
 
 
