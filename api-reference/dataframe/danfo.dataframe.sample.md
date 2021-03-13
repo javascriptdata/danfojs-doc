@@ -4,16 +4,15 @@ description: Return a random sample of rows from DataFrame.
 
 # DataFrame.sample
 
-danfo.DataFrame.**sample**\(num, seed\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L314)\]
+danfo.DataFrame.**sample**\(rows\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L314)\]
 
 | Parameters | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
-| num | Int | The number of rows to return. Defaults to -1, which shuffles and return all rows.  | -1 |
-| seed | int | An integer specifying the random seed that will be used to create the distribution. Ensures reproducibility of generated samples.  | 1 |
+| rows | Int | The number of rows to return | 5 |
 
 **Returns:**
 
-       ****return **{Promies} resolves to DataFrame**
+       ****return **DataFrame**
 
 ## **Examples**
 
@@ -22,20 +21,14 @@ danfo.DataFrame.**sample**\(num, seed\) \[[source](https://github.com/opensource
 ```javascript
 const dfd = require("danfojs-node")
 
-async function load_data() {
-  let data = {
-    Name: ["Apples", "Mango", "Banana", "Pear"],
-    Count: [21, 5, 30, 10],
-    Price: [200, 300, 40, 250],
-  };
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
 
-  let df = new dfd.DataFrame(data);
-  let s_df = await df.sample(2);
-  s_df.print();
-  
-}
+let df = new dfd.DataFrame(data)
+let s_df = df.sample(3)
+s_df.print()
 
-load_data()
 ```
 {% endtab %}
 
@@ -53,6 +46,8 @@ load_data()
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ 0 │ Apples            │ 21                │ 200               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ Pear              │ 10                │ 250               ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ 2 │ Banana            │ 30                │ 40                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝

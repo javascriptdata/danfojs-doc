@@ -8,19 +8,26 @@ description: Return a random sample of items from an axis of object.
 
 | Parameters | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
-| num | Int | number of random samples to obtain | 5 |
+| num | Int | The number of rows to return. Defaults to -1, which shuffles and return all rows.  | -1 |
+| seed | int | An integer specifying the random seed that will be used to create the distribution. Ensures reproducibility of generated samples.  | 1 |
 
-**Returns:** Series
+**Returns:**
+
+       ****return **{Promies} resolves to Series**
 
 **Example**
 
 ```javascript
 const dfd = require("danfojs-node")
 
-let data1 = [1, 2, 3, 4, 5, 620, 30, 40, 39, 89, 78]
-let sf1 = new dfd.Series(data1)
-
-sf1.sample(5).print()
+async function load_data() {
+  let data1 = [1, 2, 3, 4, 5, 620, 30, 40, 39, 89, 78];
+  let sf1 = new dfd.Series(data1);
+  let sample = await sf1.sample(5)
+  sample.print()
+  
+}
+load_data()
 ```
 
 {% tabs %}
@@ -29,15 +36,15 @@ sf1.sample(5).print()
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
-║ 4 │ 39                   ║
+║ 2 │ 3                    ║
 ╟───┼──────────────────────╢
-║ 7 │ 89                   ║
+║ 4 │ 5                    ║
 ╟───┼──────────────────────╢
-║ 0 │ 78                   ║
+║ 0 │ 1                    ║
 ╟───┼──────────────────────╢
-║ 1 │ 620                  ║
+║ 7 │ 40                   ║
 ╟───┼──────────────────────╢
-║ 5 │ 4                    ║
+║ 6 │ 30                   ║
 ╚═══╧══════════════════════╝
 ```
 {% endtab %}
