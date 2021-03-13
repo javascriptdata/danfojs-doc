@@ -16,7 +16,7 @@ description: Reads a JSON file into DataFrame.
 
 ### Example
 
-The **read\_json** method can read JSON file from local disk, or over the internet. For instance, in the example below, _**user\_names.json**_ is a JSON file in this same directory as our script. To read it into DataFrame, you can specify the relative path:
+The **read\_json** method can read JSON file from local disk, or over the internet. For instance, in the example below, user\_names.json is a JSON file in this same directory as our script. To read it into danfo DataFrame, you can specify the relative path:
 
 {% tabs %}
 {% tab title="Node.js" %}

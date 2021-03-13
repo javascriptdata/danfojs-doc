@@ -14,6 +14,7 @@
     * [danfo.concat](api-reference/general-functions/danfo.concat.md)
     * [danfo.merge](api-reference/general-functions/danfo.merge.md)
   * [Input/Output](api-reference/input-output/README.md)
+    * [read](api-reference/input-output/read.md)
     * [danfo.read\_excel](api-reference/input-output/danfo.read_excel.md)
     * [danfo.read\_json](api-reference/input-output/danfo.read_json.md)
     * [danfo.read\_csv](api-reference/input-output/danfo.read_csv.md)
