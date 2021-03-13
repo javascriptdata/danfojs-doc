@@ -149,7 +149,7 @@ let encoder = new dfd.LabelEncoder()
 let cols = ["Sex", "Name"]
 cols.forEach(col => {
   encoder.fit(df[col])
-  enc_val = encoder.transform(df[col])
+  let enc_val = encoder.transform(df[col])
   df.addColumn({ column: col, value: enc_val })
 })
 
@@ -230,7 +230,7 @@ async function load_process_data() {
     let cols = ["Sex", "Name"]
     cols.forEach(col => {
         encoder.fit(df[col])
-        enc_val = encoder.transform(df[col])
+        let enc_val = encoder.transform(df[col])
         df.addColumn({ column: col, value: enc_val })
     })
 
@@ -325,7 +325,7 @@ async function load_process_data() {
     let cols = ["Sex", "Name"]
     cols.forEach(col => {
         encoder.fit(df[col])
-        enc_val = encoder.transform(df[col])
+        let enc_val = encoder.transform(df[col])
         df.addColumn({ column: col, value: enc_val })
     })
 
