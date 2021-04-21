@@ -45,22 +45,22 @@ For instance, if I want to do some bug fixes in danfojs-node. I can do the follo
 
 ```text
 cd danfojs-node 
-yarn //install all packages 
+yarn ##install all packages 
 ```
 
 Add my bug fixes and ensure test passes:
 
 ```text
-yarn test //run test 
+yarn test ## run test 
 ```
 
 ## Where to start?
 
 For first time contributors, you can find pending issues on the GitHub “issues” page. There are a number of issues listed and "good first issue" where you could start out. Once you’ve found an interesting issue, and have an improvement in mind, next thing is to set up your development environment.
 
-### Working with the code
+## Working with the code
 
-Now that you have an issue you want to fix, enhancement to add, or documentation to improve, you need to learn how to work with GitHub and the danfojs code base.
+Now that you have an issue you want to fix, an enhancement to add, or documentation to improve, you need to learn how to work with GitHub and the danfojs code base.
 
 ### **Version control, Git, and GitHub**
 
@@ -74,7 +74,7 @@ Some great resources for learning Git:
 
 Find [Instructions](http://help.github.com/set-up-git-redirect) for installing git, setting up your SSH key, and configuring git. These steps need to be completed before you can work seamlessly between your local repository and GitHub.
 
-### **Forking the danfojs repo**
+## **Forking the danfojs repo**
 
 You will need your own fork to work on the code. Go to the danfojs [project page](https://github.com/opensource9ja/danfojs) and hit the Fork button.
 
@@ -93,7 +93,7 @@ Some Javascript features are supported both in the browser and node environment,
 
 For features that work only in NodeJs environment, especially file related issues, these should be developed and tested in the danfojs-node folder, and the corresponding tests are written there.   
 
-**Creating a development environment**
+## **Creating a development environment**
 
 To test out code changes, you’ll need to build danfojs, which requires a Nodejs environment.
 
