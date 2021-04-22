@@ -22,9 +22,9 @@ danfo.DataFrame.**column**\(col\_name\) \[[source](https://github.com/opensource
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
-let data = [{ "Name": ["Apples", "Mango", "Banana", undefined] },
-           { "Count": [NaN, 5, NaN, 10] },
-           { "Price": [200, 300, 40, 250] }]
+let data = { "Name": ["Apples", "App", "Banana", undefined],
+            "Count": [NaN, 5, NaN, 10] ,
+            "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data)
 
