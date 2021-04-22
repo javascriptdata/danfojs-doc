@@ -1,7 +1,7 @@
 ---
 description: >-
   Query the DataFrame by the result of a logical comparison. Supports logical
-  operations like (">", "<", ">=", "<=", and. "==")
+  operations like (">", "<", ">=", "<=", "==" and "!=")
 ---
 
 # DataFrame.query
@@ -24,7 +24,7 @@ danfo.DataFrame.**query**\(kwargs\) \[[source](https://github.com/opensource9ja/
       <td style="text-align:left">
         <p>{<b>column</b> : str, name of the column</p>
         <p><b> is: </b>Logical operator, one of &quot;&gt;&quot;, &quot;&lt;&quot;,
-          &quot;&gt;=&quot;, &quot;&lt;=&quot;, and. &quot;==&quot;</p>
+          &quot;&gt;=&quot;, &quot;&lt;=&quot;, &quot;==&quot; and &quot;!=&quot;</p>
         <p><b>to</b>: Int, Float, Str. Value to compare against,</p>
         <p><b>inplace</b>: boolean. true | false. Whether to perform operation to
           the original Object or create a new one.</p>
@@ -43,7 +43,7 @@ danfo.DataFrame.**query**\(kwargs\) \[[source](https://github.com/opensource9ja/
 
 ## **Query a DataFrame using logical operators**
 
-To query a DataFrame, you can specify the column to use, the logical operator \("&gt;", "&lt;", "&gt;=", "&lt;=", and. "=="\), and the value to compare against. 
+To query a DataFrame, you can specify the column to use, the logical operator \("&gt;", "&lt;", "&gt;=", "&lt;=", "==" and "!="\), and the value to compare against. 
 
 {% tabs %}
 {% tab title="Node" %}
