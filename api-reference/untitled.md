@@ -1,10 +1,4 @@
----
-description: >-
-  Plot Series or DataFrame as lines. This function is useful to plot lines using
-  DataFrame’s values as coordinates.
----
-
-# Line Charts
+# Untitled
 
 ## Examples
 
@@ -39,7 +33,7 @@ The **line** plot is exposed by the .**plot\(\)** function called on a Series or
 
 ```
 
-![](../../.gitbook/assets/newplot-4-.png)
+![](../.gitbook/assets/newplot-4-.png)
 
 ### Line plots on DataFrame
 
@@ -73,7 +67,7 @@ The example below shows the plot of column values against a common x-axis \(inde
 
 ```
 
-![](../../.gitbook/assets/newplot-2-%20%281%29%20%281%29.png)
+![](../.gitbook/assets/newplot-2-%20%281%29%20%281%29.png)
 
 The example below shows how to plot two columns in a DataFrame against each other.
 
@@ -105,10 +99,10 @@ The example below shows how to plot two columns in a DataFrame against each othe
 
 ```
 
-![](../../.gitbook/assets/newplot-3-.png)
+![](../.gitbook/assets/newplot-3-.png)
 
 {% hint style="info" %}
-To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
+To set configuration for your plots, see the [Configuring your plot page]()
 {% endhint %}
 
 
