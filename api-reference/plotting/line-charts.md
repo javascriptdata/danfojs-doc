@@ -111,5 +111,3 @@ The example below shows how to plot two columns in a DataFrame against each othe
 To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
 {% endhint %}
 
-
-

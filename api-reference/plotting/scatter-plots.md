@@ -85,27 +85,7 @@ In the example below, we use the titanic dataset, to show a close to real-world 
 
 ![](../../.gitbook/assets/newplot-19-.png)
 
-### Configuring your plots
-
-danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly. 
-
-All [customization](https://plotly.com/javascript/line-charts/) on the plot can be passed as an object of key-value pairs to the config parameter. For example:
-
-```javascript
-var layout = {
-    title: 'A sample plot',
-    xaxis: {
-        title: 'X',
-    },
-    yaxis: {
-        title: 'Y',
-    }
-}
-
-df.plot("div_tag").scatter({x= "col1", y: "col2", layout: layout})
-```
-
 {% hint style="info" %}
-For more configuration options for Scatter plots, see the [Plotly](https://plotly.com/javascript/line-and-scatter/) style doc.
+To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
 {% endhint %}
 
