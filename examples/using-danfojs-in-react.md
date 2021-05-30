@@ -1,5 +1,7 @@
 # Using Danfojs in React
 
+**TL:DR** See Example react application using danfojs [here](https://github.com/opensource9ja/Data-aRT)
+
 Danfojs works for both browser and NodeJs environment, and as such is available to frontend frameworks like React and Vue. 
 
 In order to use Danfojs in a library like React, you must install the [browser side version ](https://www.npmjs.com/package/danfojs)from npm. 
