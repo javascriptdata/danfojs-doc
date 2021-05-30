@@ -1,5 +1,14 @@
 # Release Notes
 
+### \[LATEST\] Release [ ](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.3)Node \(v0.2.7\), Browser \(0.2.6\)
+
+**Date:** 30th May 2021
+
+Bug Fix\]: [\#206](https://github.com/opensource9ja/danfojs/issues/206) [\#203](https://github.com/opensource9ja/danfojs/issues/203) [\#200](https://github.com/opensource9ja/danfojs/issues/200) [\#198](https://github.com/opensource9ja/danfojs/issues/198) [\#198](https://github.com/opensource9ja/danfojs/issues/198) [\#188](https://github.com/opensource9ja/danfojs/issues/188) [\#181](https://github.com/opensource9ja/danfojs/issues/181) [\#175](https://github.com/opensource9ja/danfojs/issues/175) [\#183](https://github.com/opensource9ja/danfojs/issues/183) [\#168](https://github.com/opensource9ja/danfojs/issues/168)  
+\[Patch\] [\#191](https://github.com/opensource9ja/danfojs/issues/191) [\#161](https://github.com/opensource9ja/danfojs/issues/161) [\#206](https://github.com/opensource9ja/danfojs/issues/206)
+
+Contributors [@risenW](https://github.com/risenW) [@steveoni](https://github.com/steveoni) [@jpjagt](https://github.com/jpjagt) [@sponsfreixes](https://github.com/sponsfreixes) [@bherbruck](https://github.com/bherbruck) [@woosuk288](https://github.com/woosuk288) and [@adithyaakrishna](https://github.com/adithyaakrishna)
+
 ### \[LATEST\] Release [ ](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.3)Node \(v0.2.6\), Browser \(0.2.5\)
 
 **Date:** 29th March 2021
