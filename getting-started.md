@@ -17,11 +17,11 @@ npm install danfojs-node
 You can also install and use it in the browsers by using the CDN below:
 
 ```markup
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.4/lib/bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.7/lib/bundle.min.js"></script>
 ```
 
 {% hint style="info" %}
-To play with Danfo.js in a Notebook-like environment without doing an local installation, use [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
+To play with Danfo.js in a Notebook-like environment , see [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
 {% endhint %}
 
 ## 10 minutes to danfo.js
@@ -2232,7 +2232,7 @@ We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. 
 </html>
 ```
 
-![](.gitbook/assets/newplot-29-%20%281%29.png)
+![](.gitbook/assets/newplot-29-%20%282%29.png)
 
 On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html#pandas.DataFrame.plot)method exposes various [plot types](api-reference/plotting/). And by default, all columns are plotted unless specified otherwise.
 
@@ -2263,7 +2263,7 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 </html>
 ```
 
-![](.gitbook/assets/newplot-2-.png)
+![](.gitbook/assets/newplot-2-%20%281%29%20%281%29.png)
 
 ### Getting data in/out
 

@@ -52,7 +52,7 @@ In the example below, we plot the yearly trend of a financial dataset. First, we
 
 ```
 
-![](../../.gitbook/assets/newplot-29-.png)
+![](../../.gitbook/assets/newplot-29-%20%282%29%20%281%29.png)
 
 {% hint style="info" %}
 To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
