@@ -205,6 +205,7 @@
 * [User Guides](examples/README.md)
   * [Using Danfojs in React](examples/using-danfojs-in-react.md)
   * [Titanic Survival Prediction using Danfo.js and Tensorflow.js](examples/titanic-survival-prediction-using-danfo.js-and-tensorflow.js.md)
+* [Building Data Driven Applications with Danfo.js - Book](building-data-driven-applications-with-danfo.js-book.md)
 * [Contributing Guide](contributing-guide.md)
 * [Release Notes](release-notes.md)
 
