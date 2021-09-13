@@ -36,9 +36,23 @@ The reference guide contains a detailed description of the **danfo** API. The re
 
 {% page-ref page="api-reference/" %}
 
+## User Guides/Tutorials
+
+{% page-ref page="examples/" %}
+
+## Building Data Driven Applications with Danfo.js - Book
+
+{% page-ref page="building-data-driven-applications-with-danfo.js-book.md" %}
+
 ## Contributing Guide
 
 Want to help improve our documentation and existing functionalities? The contributing guidelines will guide you through the process. 
 
 {% page-ref page="contributing-guide.md" %}
+
+## Release Notes
+
+{% page-ref page="release-notes.md" %}
+
+
 
