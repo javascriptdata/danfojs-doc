@@ -1,6 +1,87 @@
 # Release Notes
 
-### \[LATEST\] Release [ \(v0.2.2\)](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.2)
+### \[LATEST\] Release [ ](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.3)Node \(v0.2.7\), Browser \(0.2.6\)
+
+**Date:** 30th May 2021
+
+\[Bug Fixes\]: [\#206](https://github.com/opensource9ja/danfojs/issues/206) [\#203](https://github.com/opensource9ja/danfojs/issues/203) [\#200](https://github.com/opensource9ja/danfojs/issues/200) [\#198](https://github.com/opensource9ja/danfojs/issues/198) [\#198](https://github.com/opensource9ja/danfojs/issues/198) [\#188](https://github.com/opensource9ja/danfojs/issues/188) [\#181](https://github.com/opensource9ja/danfojs/issues/181) [\#175](https://github.com/opensource9ja/danfojs/issues/175) [\#183](https://github.com/opensource9ja/danfojs/issues/183) [\#168](https://github.com/opensource9ja/danfojs/issues/168)  
+\[Patches\] [\#191](https://github.com/opensource9ja/danfojs/issues/191) [\#161](https://github.com/opensource9ja/danfojs/issues/161) [\#206](https://github.com/opensource9ja/danfojs/issues/206)
+
+Contributors [@risenW](https://github.com/risenW) [@steveoni](https://github.com/steveoni) [@jpjagt](https://github.com/jpjagt) [@sponsfreixes](https://github.com/sponsfreixes) [@bherbruck](https://github.com/bherbruck) [@woosuk288](https://github.com/woosuk288) and [@adithyaakrishna](https://github.com/adithyaakrishna)
+
+### Release [ ](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.3)Node \(v0.2.6\), Browser \(0.2.5\)
+
+**Date:** 29th March 2021
+
+* \[Bug Fixes\]: [\#150](https://github.com/opensource9ja/danfojs/pull/150) [\#152 ](https://github.com/opensource9ja/danfojs/pull/152)
+* \[Patches\] [\#159](https://github.com/opensource9ja/danfojs/pull/159) , [\#158 ](https://github.com/opensource9ja/danfojs/pull/158)
+* \[Feature\] [\#154](https://github.com/opensource9ja/danfojs/pull/154) Perform groupby operation on grouped columns directly:
+
+```javascript
+group = df.groupby(['A"])
+group.min()
+
+
+groupby.apply((x) => x.add(2))
+groupby.col(["C"]).apply((x) => x.min())
+```
+
+**Contributors**: @steveoni @PrawiraGenestonlia @woosuk288 @risenW
+
+### Release Node \(v0.2.5\), Browser \(0.2.4\)
+
+**Date:** 6th March 2021
+
+We added/updated the following features:
+
+* Fix error thrown when danfojs CDN is placed in an HTML header
+* Smaller bundle size for browser: From ~1.7mb to about ~550kb
+* Stopped bundling Danfojs with Plotly. This means that as of v0.2.3, we no longer ship with Plotly distribution due to the huge size. Plotly plots are still supported, but in order to make them, you have to explicitly add the Plotly CDN or package. 
+
+A simple example:
+
+```markup
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script> 
+
+    <title>Document</title>
+</head>
+
+<body>
+
+    <div id="div1"></div>
+    <div id="div2"></div>
+    <div id="div3"></div>
+
+    <script>
+
+        dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
+            .then(df => {
+
+                df['AAPL.Open'].plot("div1").box() //makes a box plot
+
+                df.plot("div2").table() //display csv as table
+
+                new_df = df.set_index({ key: "Date" }) //resets the index to Date column
+                new_df.plot("div3").line({ columns: ["AAPL.Open", "AAPL.High"] })  //makes a timeseries plot
+
+            }).catch(err => {
+                console.log(err);
+            })
+
+    </script>
+    
+</body>
+
+</html>
+```
+
+### Release [ \(v0.2.2\)](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.2)
 
 **Date:** 14th February 2021
 

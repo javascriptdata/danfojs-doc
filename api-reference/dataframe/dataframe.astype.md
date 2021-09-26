@@ -134,7 +134,7 @@ const dfd = require("danfojs-node")
 let data = { "A": [-20.1, 30, 47.3, -20] ,
              "B": [34, -4, 5, 6],
              "C": [20.1, -20.23, 30.3, 40.11],
-             "D": ["a", "b", "c", "c"] }
+             "D": ["20", "13", "45", "90"] }
 
 let df = new dfd.DataFrame(data)
 let df_new = df.astype({column: "D", dtype: "int32"})

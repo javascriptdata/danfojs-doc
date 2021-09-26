@@ -15,8 +15,8 @@ In the example below, we plot the yearly trend of a financial dataset. First, we
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -52,5 +52,9 @@ In the example below, we plot the yearly trend of a financial dataset. First, we
 
 ```
 
-![](../../.gitbook/assets/newplot-29-.png)
+![](../../.gitbook/assets/newplot-29-%20%282%29%20%281%29.png)
+
+{% hint style="info" %}
+To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
+{% endhint %}
 

@@ -21,14 +21,14 @@ You can also install and use it in the browsers by using the CDN below:
 ```
 
 {% hint style="info" %}
-To play with Danfo.js in a Notebook-like environment without doing an local installation, use [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
+To play with Danfo.js in a Notebook-like environment , see [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
 {% endhint %}
 
 ## 10 minutes to danfo.js
 
 This is a short introduction to danfo.js, and its flow is adapted from the official [10 minutes to Pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html#min)
 
-We will show you how to use danfo.js in both browser environment and Node.js environment. Most functions except [plotting](https://jsdata.gitbook.io/danfojs/api-reference/plotting) which require a DOM works the same way in both environments. 
+We will show you how to use danfo.js in both browser environment and Node.js environment. Most functions except [plotting](https://jsdata.gitbook.io/danfojs/api-reference/plotting) which require a DOM works the same way in both environments.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -51,7 +51,7 @@ const dfd = require("danfojs-node")
 <body>
 
     <script>
-      
+
       //danfo is exposed on dfd namespace 
       s = new dfd.Series([1,2,3,4,5]) 
 
@@ -134,7 +134,6 @@ const tf = require("@tensorflow/tfjs-node")
 let tensor_arr = tf.tensor([12,34,56,2])
 let s = new dfd.Series(tensor_arr)
 s.print()
-
 ```
 {% endtab %}
 
@@ -197,7 +196,6 @@ json_data = [{ A: 0.4612, B: 4.28283, C: -1.509, D: -1.1352 },
 
 df = new dfd.DataFrame(json_data)
 df.print()
-
 ```
 {% endtab %}
 
@@ -224,12 +222,11 @@ df.print()
 
         df = new dfd.DataFrame(json_data)
         df.print()
-         
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -247,7 +244,6 @@ let tensor_arr = tf.tensor2d([[12, 34, 2.2, 2], [30, 30, 2.1, 7]])
 let df = new dfd.DataFrame(tensor_arr, {columns: ["A", "B", "C", "D"]})
 df.print()
 df.ctypes.print()
-
 ```
 {% endtab %}
 
@@ -274,18 +270,16 @@ df.ctypes.print()
 
         df = new dfd.DataFrame(json_data)
         df.print()
-         
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
 
 ```text
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -328,7 +322,6 @@ obj_data = {'A': dates,
 
 df = new dfd.DataFrame(obj_data)
 df.print()
-
 ```
 {% endtab %}
 
@@ -351,22 +344,21 @@ df.print()
         dates = new dfd.date_range({ start: '2017-01-01', end: "2020-01-01", period: 4, freq: "Y" })
 
         console.log(dates);
-        
+
         obj_data = {'A': dates,
                     'B': ["bval1", "bval2", "bval3", "bval4"],
                     'C': [10, 20, 30, 40],
                     'D': [1.2, 3.45, 60.1, 45],
                     'E': ["test", "train", "test", "train"]
                     }
-        
+
         df = new dfd.DataFrame(obj_data)
         df.print()
-         
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -384,7 +376,6 @@ df.print()
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 3 │ 1/1/2020, 1:0...  │ bval4             │ 40                │ 45                │ train             ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-
 ```
 
 The columns of the resulting [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) have different [dtypes](https://pandas.pydata.org/pandas-docs/stable/user_guide/basics.html#basics-dtypes).
@@ -450,12 +441,11 @@ df.print()
 
         df = new dfd.DataFrame(arr_data)
         df.print()
-         
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -474,7 +464,6 @@ df.print()
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 3 │ bval4             │ 35                │ 3.2               │ test              ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-
 ```
 
 ### Viewing data
@@ -557,17 +546,16 @@ console.log(df.columns);
                     'D': [1.2, 3.45, 60.1, 45],
                     'E': ["test", "train", "test", "train"]
                     }
-        
+
         df = new dfd.DataFrame(obj_data)
-        
+
         console.log(df.index);
         console.log(df.columns);
-         
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -578,7 +566,7 @@ console.log(df.columns);
 [ 'A', 'B', 'C', 'D', 'E' ]
 ```
 
-[`DataFrame.tensor`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_numpy.html#pandas.DataFrame.to_numpy) returns a Tensorflow tensor representation of the underlying data. Note that **Tensorflow tensors have one dtype for the entire array, while danfo DataFrames have one dtype per column**. 
+[`DataFrame.tensor`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_numpy.html#pandas.DataFrame.to_numpy) returns a Tensorflow tensor representation of the underlying data. Note that **Tensorflow tensors have one dtype for the entire array, while danfo DataFrames have one dtype per column**.
 
 For `df`, our [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) of all floating-point values, [`DataFrame.tensor`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_numpy.html#pandas.DataFrame.to_numpy)is fast and doesn’t require copying data.
 
@@ -616,23 +604,22 @@ df.tensor.print()
 <body>
 
     <script>
-    
+
         json_data = [{ A: 0.4612, B: 4.28283, C: -1.509, D: -1.1352 },
         { A: 0.5112, B: -0.22863, C: -3.39059, D: 1.1632 },
         { A: 0.6911, B: -0.82863, C: -1.5059, D: 2.1352 },
         { A: 0.4692, B: -1.28863, C: 4.5059, D: 4.1632 }]
-        
+
         df = new dfd.DataFrame(json_data)
-        
+
         console.log(df.tensor);
         //or
         df.tensor.print()
-        
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -679,7 +666,6 @@ json_data = [{ A: 0.4612, B: 4.28283, C: -1.509, D: -1.1352 },
 df = new dfd.DataFrame(json_data)
 
 df.describe().print()
-
 ```
 {% endtab %}
 
@@ -698,21 +684,20 @@ df.describe().print()
 <body>
 
     <script>
-    
+
         json_data = [{ A: 0.4612, B: 4.28283, C: -1.509, D: -1.1352 },
                     { A: 0.5112, B: -0.22863, C: -3.39059, D: 1.1632 },
                     { A: 0.6911, B: -0.82863, C: -1.5059, D: 2.1352 },
                     { A: 0.4692, B: -1.28863, C: 4.5059, D: 4.1632 }]
-        
+
         df = new dfd.DataFrame(json_data)
-        
+
         df.describe().print()
-        
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -768,7 +753,7 @@ df.print()
 <body>
 
     <script>
-    
+
         let data = {"A": [-20, 30, 47.3, NaN],
              "B": [34, -4, 5, 6] ,
              "C": [20, 2, 3, 30] }
@@ -777,18 +762,16 @@ df.print()
         let df = new dfd.DataFrame(data)
         df.sort_values({by: "C", inplace: true})
         df.print()
-        
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
 
 ```text
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -820,7 +803,6 @@ json_data = [{ A: 0.4612, B: 4.28283, C: -1.509, D: -1.1352 },
 df = new dfd.DataFrame(json_data)
 
 df['A'].print()
-
 ```
 {% endtab %}
 
@@ -839,22 +821,21 @@ df['A'].print()
 <body>
 
     <script>
-    
-       
+
+
         json_data = [{ A: 0.4612, B: 4.28283, C: -1.509, D: -1.1352 },
                     { A: 0.5112, B: -0.22863, C: -3.39059, D: 1.1632 },
                     { A: 0.6911, B: -0.82863, C: -1.5059, D: 2.1352 },
                     { A: 0.4692, B: -1.28863, C: 4.5059, D: 4.1632 }]
-                    
+
         df = new dfd.DataFrame(json_data)
-        
+
         df['A'].print()
-        
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -931,7 +912,6 @@ df.print()
 
 let sub_df = df.loc({ rows: [0,1], columns: ["Name", "Price"] })
 sub_df.print()
-
 ```
 
 ```text
@@ -973,7 +953,6 @@ df.print()
 
 let sub_df = df.loc({ rows: ["0:2"], columns: ["Name", "Price"] })
 sub_df.print()
-
 ```
 
 ```text
@@ -1019,7 +998,6 @@ let df = new dfd.DataFrame(data)
 
 let sub_df = df.iloc({rows: [1,3]})
 sub_df.print()
-
 ```
 
 ```text
@@ -1072,7 +1050,6 @@ let df = new dfd.DataFrame(data)
 
 let sub_df = df.iloc({rows: [1,3], columns: [0,2]})
 sub_df.print()
-
 ```
 
 ```text
@@ -1123,7 +1100,6 @@ let df = new dfd.DataFrame(data)
 
 let sub_df = df.iloc({rows: [":"], columns: ["1:2"]})
 sub_df.print()
-
 ```
 
 ```text
@@ -1175,22 +1151,21 @@ query_df.print() //after query
 <body>
 
     <script>
-    
-       
+
+
        let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
         let cols = ["A", "B", "C"]
-        
+
         let df = new dfd.DataFrame(data, { columns: cols })
         df.print() //before query
-        
+
         let query_df = df.query({ "column": "B", "is": ">", "to": 5 })
         query_df.print() //after query
-        
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -1231,11 +1206,9 @@ df.print()
 
 let query_df = df.query({ column: "A", is: "==", to: "Ng"})
 query_df.print() //after query
-
 ```
 
 ```text
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -1297,25 +1270,24 @@ df.print()
 <body>
 
     <script>
-    
-       
+
+
         let data = { "A": [30, 1, 2, 3] ,
              "B": [34, 4, 5, 6] ,
              "C": [20, 20, 30, 40] }
 
         let df = new dfd.DataFrame(data)
         df.print()
-        
+
         let new_col = [1, 2, 3, 4]
         df.addColumn({ "column": "D", "values": new_col, inplace: true }); //happens inplace
         
         df.print()
-                
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -1352,7 +1324,7 @@ df.print()
 
 ### Missing data
 
-danfo primarily uses the value **NaN** to represent missing data. It converts  **undefined** type to **NaN** by default when creating DataFrames/Series with missing values.
+danfo primarily uses the value **NaN** to represent missing data. It converts **undefined** type to **NaN** by default when creating DataFrames/Series with missing values.
 
 To drop any rows that have missing data:
 
@@ -1387,22 +1359,21 @@ df_drop.print()
 <body>
 
     <script>
-    
-       
+
+
         let data = [[1, 2, 3], [NaN, 5, 6], [NaN, 30, 40], [39, undefined, 78]]
         let cols = ["A", "B", "C"]
         let df = new dfd.DataFrame(data, { columns: cols })
-        
+
         df.print()
-        
+
         let df_drop = df.dropna({axis: 0})
         df_drop.print()
-                        
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -1496,7 +1467,6 @@ df_filled.print()
 ```
 
 ```text
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -1518,13 +1488,12 @@ const dfd = require("danfojs-node")
 let data = {"Name":["Apples", "Mango", "Banana", undefined],
             "Count": [NaN, 5, NaN, 10], 
             "Price": [200, 300, 40, 250]}
-            
+
 let df = new dfd.DataFrame(data)
 df.print()
 
 let df_filled = df.fillna({columns: ["Name", "Count"], values: ["Apples", df["Count"].mean()]})
 df_filled.print()
-
 ```
 
 ```text
@@ -1552,11 +1521,9 @@ let data = {"Name":["Apples", "Mango", "Banana", undefined],
 
 let df = new dfd.DataFrame(data)
 df.isna().print()
-
 ```
 
 ```text
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -1608,20 +1575,19 @@ df.mean().print() //defaults to column axis
 <body>
 
     <script> 
-    
+
     data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
     cols = ["A", "B", "C"]
-    
-    
+
+
     let df = new dfd.DataFrame(data)
     df.print()
     df.mean().print() //defaults to column axis
-                            
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -1662,11 +1628,9 @@ cols = ["A", "B", "C"]
 let df = new dfd.DataFrame(data)
 df.print()
 df.mean(0).print() //row axis=0, column=1
-
 ```
 
 ```text
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ 0                 │ 1                 │ 2                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -1690,7 +1654,6 @@ df.mean(0).print() //row axis=0, column=1
 ╟───┼──────────────────────╢
 ║ 3 │ 56.33333206176758    ║
 ╚═══╧══════════════════════╝
-
 ```
 
 Operations on objects with different dimensionality and need alignment. danfo automatically broadcasts along the specified dimension.
@@ -1832,7 +1795,6 @@ const dfd = require("danfojs-node")
 s = new dfd.Series(['A', 'B', 'C', 'Aaba', 'Baca', 'CABA', 'dog', 'cat'])
 lower_s = s.str.toLowerCase()
 lower_s.print()
-
 ```
 
 ```text
@@ -1865,7 +1827,7 @@ See more string [accessors](https://jsdata.gitbook.io/danfojs/api-reference/seri
 
 danfo provides various methods for easily combining together Series and DataFrame objects with various kinds of set logic for the indexes and relational algebra functionality in the case of join / merge-type operations.
 
-Concatenating  DataFrame together with [`concat()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.concat.html#pandas.concat):
+Concatenating DataFrame together with [`concat()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.concat.html#pandas.concat):
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -1886,7 +1848,6 @@ let df2 = new dfd.DataFrame(data2, { columns: colum2 })
 
 let com_df = dfd.concat({ df_list: [df1, df2], axis: 1 }) //along column axis
 com_df.print()
-
 ```
 
 ```text
@@ -1903,7 +1864,7 @@ com_df.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Concatenate along row axis \(0\). 
+Concatenate along row axis \(0\).
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -1924,7 +1885,6 @@ let df2 = new dfd.DataFrame(data2, { columns: colum2 })
 
 let com_df = dfd.concat({ df_list: [df1, df2], axis: 0 }) //along row axis
 com_df.print()
-
 ```
 
 ```text
@@ -1975,7 +1935,6 @@ merge_df.print()
 ```
 
 ```text
-
  //first DataFrame
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Key1              │ Key2              │ A                 │ B                 ║
@@ -2018,7 +1977,6 @@ merge_df.print()
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 3 │ K2                │ K2                │ A3                │ B3                │ K0                │ C3                │ D3                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-
 ```
 
 See the [merge](https://jsdata.gitbook.io/danfojs/api-reference/general-functions/danfo.merge) section for more examples
@@ -2104,7 +2062,6 @@ grp.col(["C"]).sum().print()
 ```
 
 ```text
-
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ C_sum             ║
 ╟───┼───────────────────┼───────────────────╢
@@ -2228,9 +2185,9 @@ sf.dt.weekdays().print()
 
 See the [Plotting](api-reference/plotting/) docs.
 
-We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. This gives you the ability to make interactive plots from DataFrame and Series. Plotting only works in the browser version of danfo.js, and requires an HTML div to show plots. 
+We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. This gives you the ability to make interactive plots from DataFrame and Series. Plotting only works in the browser version of danfo.js, and requires an HTML div to show plots.
 
-**Update**: As of  `v0.2.3`, we stopped bundling Danfojs with Plotly. This has greatly reduced bundle size by about 80%. See more details in the release notes here. In order to make Plots, you must explicitly add the Plotly CDN to your file as we show in the updated examples:
+**Update**: As of `v0.2.3`, we stopped bundling Danfojs with Plotly. This has greatly reduced bundle size by about 80%. See more details in the release notes here. In order to make Plots, you must explicitly add the Plotly CDN to your file as we show in the updated examples:
 
 ```markup
 <!DOCTYPE html>
@@ -2268,17 +2225,16 @@ We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. 
             }).catch(err => {
                 console.log(err);
             })
-         
+
     </script>
 </body>
 
 </html>
-
 ```
 
-![](.gitbook/assets/newplot-29-%20%281%29.png)
+![](.gitbook/assets/newplot-29-%20%282%29.png)
 
-On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html#pandas.DataFrame.plot)method exposes various [plot types](api-reference/plotting/). And by default, all columns are plotted unless specified otherwise.  
+On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html#pandas.DataFrame.plot)method exposes various [plot types](api-reference/plotting/). And by default, all columns are plotted unless specified otherwise.
 
 ```markup
 <!DOCTYPE html>
@@ -2305,10 +2261,9 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 </body>
 
 </html>
-
 ```
 
-![](.gitbook/assets/newplot-2-.png)
+![](.gitbook/assets/newplot-2-%20%281%29%20%281%29.png)
 
 ### Getting data in/out
 
@@ -2316,7 +2271,7 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 
 [Writing to a csv file.](api-reference/dataframe/dataframe.to_csv.md)
 
-Convert any DataFrame to csv format. 
+Convert any DataFrame to csv format.
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -2348,7 +2303,7 @@ Abs,Count,country code
 
 [Reading from a CSV file.](https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#io-read-csv-table)
 
-The **read\_csv** method can read CSV file from local disk, or over the internet. If the file is to be read from a local disk in Node environment, you have to prefix the full path name with a "**file://**" prefix. For instance, to read a CSV file at the path **/home/Desktop/titanic.csv**, you can do the following: 
+The **read\_csv** method can read CSV file from local disk, or over the internet. If the file is to be read from a local disk in Node environment, you have to prefix the full path name with a "**file://**" prefix. For instance, to read a CSV file at the path **/home/Desktop/titanic.csv**, you can do the following:
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -2357,7 +2312,7 @@ const dfd = require("danfojs")
 
 dfd.read_csv("file:///home/Desktop/titanic.csv")
   .then(df => {
-  
+
    //do something with the CSV file
    df.head().print()
 
@@ -2388,16 +2343,15 @@ dfd.read_csv("file:///home/Desktop/titanic.csv")
 
                 //do something like display descriptive statistics
                 df.describe().print()
-                
+
             }).catch(err => {
                 console.log(err);
             })
-         
+
     </script>
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -2427,7 +2381,7 @@ df.to_json().then((json) => {
 })
 ```
 
-```
+```text
 [{"Abs":20.2,"Count":34,"country code":"NG"},
 {"Abs":30,"Count":4,"country code":"FR"},
 {"Abs":47.3,"Count":5,"country code":"GH"}]

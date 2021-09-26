@@ -215,7 +215,7 @@ The full code for the load\_process\_data function becomes:
 
 ```javascript
 const dfd = require("danfojs-node")
-const tf = require("@tensorflow/tfjs-node")
+const tf = dfd.tf;
 
 async function load_process_data() {
     let df = await dfd.read_csv("https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv")
@@ -310,7 +310,7 @@ The training progress is printed to the console at the end of each Epoch.  Below
 
 ```javascript
 const dfd = require("danfojs-node")
-const tf = require("@tensorflow/tfjs-node")
+const tf = dfd.tf;
 
 async function load_process_data() {
     let df = await dfd.read_csv("https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv")

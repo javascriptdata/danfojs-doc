@@ -4,7 +4,7 @@ description: Return a cumulative sum of a series
 
 # Series.cumsum
 
-> danfo.Series.**cumsum**\(\)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L807)\]
+> danfo.Series.**cumsum**\(\) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L807)\]
 
 **Parameters:** None
 
@@ -40,7 +40,7 @@ sf1.cumsum().print()
 <body>
 
     <script>
-      
+
       //danfo is exposed on dfd namespace 
       s = new dfd.Series([1,2,3,4,5]) 
 

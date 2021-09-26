@@ -13,8 +13,8 @@ Make a violin plot from DataFrame columns, optionally grouped by some other colu
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -44,8 +44,8 @@ Make a violin plot from DataFrame columns, optionally grouped by some other colu
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -82,8 +82,8 @@ Make a violin plot from DataFrame columns, optionally grouped by some other colu
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--danfojs CDN -->
-    <script src="https://cdn.jsdelivr.net/gh/opensource9ja/danfojs@latest/lib/bundle.js"></script>
+    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -110,29 +110,7 @@ Make a violin plot from DataFrame columns, optionally grouped by some other colu
 
 ![](../../.gitbook/assets/newplot-27-.png)
 
-
-
-### Configuring your plots
-
-danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly. 
-
-All [customization](https://plotly.com/javascript/line-charts/) on the plot can be passed as an object of key-value pairs to the config parameter. For example:
-
-```javascript
-var layout = {
-    title: 'A sample plot',
-    xaxis: {
-        title: 'X',
-    },
-    yaxis: {
-        title: 'Y',
-    }
-}
-
-df.plot("div_tag").violin({layout: layout})
-```
-
 {% hint style="info" %}
-For more configuration options for Violin Plots, see the [Plotly](https://plotly.com/javascript/violin/) style doc.
+To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
 {% endhint %}
 
