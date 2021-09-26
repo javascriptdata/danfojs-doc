@@ -185,7 +185,6 @@
     * [Bar Charts](api-reference/plotting/bar-charts.md)
     * [Line Charts](api-reference/plotting/line-charts.md)
     * [Configuring your plots](api-reference/plotting/configuring-your-plots.md)
-  * [Untitled](api-reference/untitled.md)
   * [Groupby](api-reference/groupby/README.md)
     * [Groupby.get\_groups](api-reference/groupby/groupby.get_groups.md)
     * [Groupby.col](api-reference/groupby/groupby.col.md)
