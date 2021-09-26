@@ -21,7 +21,9 @@ danfo.DataFrame.**addColumn**\(kwargs\) \[[source](https://github.com/opensource
       <td style="text-align:left">Object</td>
       <td style="text-align:left">
         <p>{<b>column</b> : str, name of the column to add</p>
-        <p> <b>value:</b> Series<b>,</b> Array. New values to add }</p>
+        <p> <b>values:</b> Series<b>,</b> Array of new values to add
+          <br /> <b>inplace</b>: Default to false.</p>
+        <p>}</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
@@ -29,10 +31,6 @@ danfo.DataFrame.**addColumn**\(kwargs\) \[[source](https://github.com/opensource
 </table>
 
 **Returns:**
-
-```text
-   ****return **Null**
-```
 
 ## **Examples**
 
