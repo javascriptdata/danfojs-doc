@@ -21,7 +21,7 @@ danfo.DataFrame.**addColumn**\(kwargs\) \[[source](https://github.com/opensource
       <td style="text-align:left">Object</td>
       <td style="text-align:left">
         <p>{<b>column</b> : str, name of the column to add</p>
-        <p><b> value: </b>Series<b>, </b>Array. New values to add }</p>
+        <p> <b>value:</b> Series<b>,</b> Array. New values to add }</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
@@ -30,13 +30,15 @@ danfo.DataFrame.**addColumn**\(kwargs\) \[[source](https://github.com/opensource
 
 **Returns:**
 
-       ****return **Null**
+```text
+   ****return **Null**
+```
 
 ## **Examples**
 
 ## **Add Array as a new column to DataFrame**
 
-New columns get added at the end of the DataFrame, and this happens  so returns nothing,
+New columns get added at the end of the DataFrame, and this happens so returns nothing,
 
 {% tabs %}
 {% tab title="Node" %}
@@ -53,12 +55,11 @@ let new_col = [1, 2, 3, 4]
 df.addColumn({ "column": "D", "values": new_col, inplace: true });
 
 df.print()
-
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
-```
+```text
 
 ```
 {% endtab %}
@@ -112,12 +113,11 @@ let s = new dfd.Series([1, 2, 3, 4])
 df.addColumn({ "column": "D", "values": s, inplace: true });
 
 df.print()
-
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
-```
+```text
 
 ```
 {% endtab %}
@@ -126,7 +126,6 @@ df.print()
 {% tabs %}
 {% tab title="Output" %}
 ```text
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢

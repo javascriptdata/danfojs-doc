@@ -73,7 +73,7 @@ The example below shows the plot of column values against a common x-axis \(inde
 
 ```
 
-![](../../.gitbook/assets/newplot-2-%20%281%29%20%281%29%20%282%29.png)
+![](../../.gitbook/assets/newplot-2-%20%281%29%20%281%29%20%282%29%20%282%29.png)
 
 The example below shows how to plot two columns in a DataFrame against each other.
 
