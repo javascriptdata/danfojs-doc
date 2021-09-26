@@ -57,7 +57,7 @@ let data = { "A": [-20, 30, 47.3],
 let df = new dfd.DataFrame(data, {index: ["a", "b", "a"]})
 df.print()
 
-df.set_index({key: "A", inplace: true})
+df.set_index({column: "A", inplace: true})
 df.print()
 
 ```
@@ -116,7 +116,7 @@ let df = new dfd.DataFrame(data)
 df.print()
 
 let new_index = ["a", "b", "a"]
-df.set_index({key: new_index, inplace: true})
+df.set_index({column: new_index, inplace: true})
 df.print()
 
 ```

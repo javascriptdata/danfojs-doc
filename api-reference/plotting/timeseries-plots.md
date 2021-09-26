@@ -38,7 +38,7 @@ In the example below, we plot the yearly trend of a financial dataset. First, we
                     }
                 }
 
-                new_df = df.set_index({ key: "Date" })
+                new_df = df.set_index({ column: "Date" })
                 new_df.plot("plot_div").line({ columns: ["AAPL.Open", "AAPL.High"], layout: layout })
 
             }).catch(err => {

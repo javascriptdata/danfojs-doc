@@ -50,7 +50,7 @@ let df = new dfd.DataFrame(data)
 df.print()
 
 let new_col = [1, 2, 3, 4]
-df.addColumn({ "column": "D", "value": new_col });
+df.addColumn({ "column": "D", "values": new_col, inplace: true });
 
 df.print()
 
@@ -109,7 +109,7 @@ let data = {"A": [30, 1, 2, 3],
 
 let df = new dfd.DataFrame(data)
 let s = new dfd.Series([1, 2, 3, 4])
-df.addColumn({ "column": "D", "value": s });
+df.addColumn({ "column": "D", "values": s, inplace: true });
 
 df.print()
 

@@ -117,7 +117,7 @@ From the data types table above, you'll notice that there are two strong columns
 let title = df['Name'].apply((x) => { return x.split(".")[0] }).values
 
 //replace in df
-df.addColumn({ column: "Name", value: title })
+df.addColumn({ column: "Name", values: title, inplace: true })
 ```
 
 In the code above, you are calling the [apply](../api-reference/series/series.apply.md) function on the _**Name**_ column. The parameter to the [apply](../api-reference/series/series.apply.md) function is a function that gets called on each element of the column. This function can be any JavaScript function. 
@@ -150,7 +150,7 @@ let cols = ["Sex", "Name"]
 cols.forEach(col => {
   encoder.fit(df[col])
   enc_val = encoder.transform(df[col])
-  df.addColumn({ column: col, value: enc_val })
+  df.addColumn({ column: col, values: enc_val, inplace: true })
 })
 
 df.head().print()
@@ -223,7 +223,7 @@ async function load_process_data() {
     //A feature engineering: Extract all titles from names columns
     let title = df['Name'].apply((x) => { return x.split(".")[0] }).values
     //replace in df
-    df.addColumn({ column: "Name", value: title })
+    df.addColumn({ column: "Name", values: title, inplace: true })
 
     //label Encode Name feature
     let encoder = new dfd.LabelEncoder()
@@ -231,7 +231,7 @@ async function load_process_data() {
     cols.forEach(col => {
         encoder.fit(df[col])
         enc_val = encoder.transform(df[col])
-        df.addColumn({ column: col, value: enc_val })
+        df.addColumn({ column: col, values: enc_val, inplace: true })
     })
 
 
@@ -318,7 +318,7 @@ async function load_process_data() {
     //A feature engineering: Extract all titles from names columns
     let title = df['Name'].apply((x) => { return x.split(".")[0] }).values
     //replace in df
-    df.addColumn({ column: "Name", value: title })
+    df.addColumn({ column: "Name", values: title, inplace: true })
 
     //label Encode Name feature
     let encoder = new dfd.LabelEncoder()
@@ -326,7 +326,7 @@ async function load_process_data() {
     cols.forEach(col => {
         encoder.fit(df[col])
         enc_val = encoder.transform(df[col])
-        df.addColumn({ column: col, value: enc_val })
+        df.addColumn({ column: col, values: enc_val, inplace: true })
     })
 
 
