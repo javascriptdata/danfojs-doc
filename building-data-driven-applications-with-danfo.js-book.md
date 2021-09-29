@@ -1,6 +1,6 @@
 # Building Data Driven Applications with Danfo.js - Book
 
-## Purchase on [Amazon](https://www.amazon.in/Building-Data-Driven-Applications-Danfo-js-ebook/dp/B096T13R7P) using _**25Danfo**_ discount code before  31st December 2020 and get 25% discount. 
+## Purchase on [Packt](https://www.packtpub.com/product/building-data-driven-applications-with-danfo-js/9781801070850) using _25Danfo_  code before  31st December 2020 and get 25% discount. 
 
 ## What this book is about
 

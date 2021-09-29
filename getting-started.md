@@ -1281,7 +1281,7 @@ df.print()
 
         let new_col = [1, 2, 3, 4]
         df.addColumn({ "column": "D", "values": new_col, inplace: true }); //happens inplace
-
+        
         df.print()
 
     </script>
