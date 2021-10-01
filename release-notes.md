@@ -1,5 +1,38 @@
 # Release Notes
 
+### \[LATEST\] Release [ ](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.3)Node \(v0.3.1\), Browser \(0.3.1\)
+
+**Date:** 1st Oct 2021
+
+**New Features**
+
+* Ability to create empty frames
+* Flag for toggling between low/high memory mode
+* Inplace support for all mutating operations
+* Ability to set Configuration values on frame creation
+* Support boolean mask for subsetting with `iloc` and `loc`. E.g `df.iloc({rows: df["count"].gt(5), columns: [0, 1]})`
+* Update an existing column value via subsetting. E.g `df["count"] = [1,3,4,5]`
+* Add loc indexing support for Series
+* Add configuration support for formating DataFrame display in the console
+* New DataFrame `applyMap` function for element-wise apply function
+* `and` and `or` logical comparison support. E.g       `df.loc({`        `rows: df['Salary_in_1000'].gte(100)).and(df['Age'].gt(60)) })`
+* `read_csv` now uses [Papaparse](https://www.papaparse.com/) and supports config values for headers, separator, etc.
+* `to_csv` , `to_json` and `to_excel` functions now support saving to local disk in Node and downloadable in the browser. Also, supports config parameters for output. 
+* `read_json` now supports config values for headers, authentication, separator, etc.
+* `read_excel` now uses [XLSX](https://www.npmjs.com/package/xlsx) parser, hence supports all XLSX config options. 
+* DataFrame `query` function now accepts boolean masks with single or multiple conditions. E.g  `df.query({`   `rows: df['Salary_in_1000'].gte(100)).and(df['Age'].gt(60))  })`
+
+**Bug Fixes**
+
+* Column data not being updated when mutating internal data array
+* Str class error for non-string type
+* Better error message
+* Fix support for all JS Date format
+* Fix loc slicing bug for row index with string labels
+* DataFrame apply function now works only across a specified axis
+
+Contributors [@risenW](https://github.com/risenW) 
+
 ### \[LATEST\] Release [ ](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.3)Node \(v0.2.7\), Browser \(0.2.6\)
 
 **Date:** 30th May 2021
