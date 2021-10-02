@@ -2325,29 +2325,36 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 
 #### CSV
 
-[Writing to a csv file.](api-reference/dataframe/dataframe.to_csv.md)
+[Writing to a  CSV file.](api-reference/dataframe/dataframe.to_csv.md)
 
-Convert any DataFrame to csv format.
+Convert any DataFrame to csv format. If a file path is specified, then the CSV is saved to the path, else it is returned as a string. 
 
 ```javascript
 const dfd = require("danfojs-node")
-
 let data = {
-          "Abs": [20.2, 30, 47.3],
-          "Count": [34, 4, 5],
-          "country code": ["NG", "FR", "GH"]
-        }
+    "Abs": [20.2, 30, 47.3],
+    "Count": [34, 4, 5],
+    "country code": ["NG", "FR", "GH"]
+}
 
 
 let df = new dfd.DataFrame(data)
 
-df.to_csv().then((csv) => {
-  console.log(csv);
+const csv = df.to_csv()
+console.log(csv);
+//output
+Abs,Count,country code
+20.2,34,NG
+30,4,FR
+47.3,5,GH
 
-}).catch((err) => {
 
-  console.log(err);
-})
+df.to_csv({filePath: "testOut.csv" }) //writes to file in Nodejs
+
+
+df.to_csv({fileName: "testOut", download: true }) //downloads the file in browser version
+
+
 ```
 
 ```text
@@ -2428,18 +2435,24 @@ let data = {
 
 let df = new dfd.DataFrame(data)
 
-df.to_json().then((json) => {
-  console.log(json);
+const json = df.to_json()
+console.log(json);
+//output
+[
+  { Abs: 20.2, Count: 34, 'country code': 'NG' },
+  { Abs: 30, Count: 4, 'country code': 'FR' },
+  { Abs: 47.3, Count: 5, 'country code': 'GH' }
+]
 
-}).catch((err) => {
 
-  console.log(err);
-})
-```
+const json = df.to_json({format: "row"})
+console.log(json);
+//output
+{
+  Abs: [ 20.2, 30, 47.3 ],
+  Count: [ 34, 4, 5 ],
+  'country code': [ 'NG', 'FR', 'GH' ]
+}
 
-```text
-[{"Abs":20.2,"Count":34,"country code":"NG"},
-{"Abs":30,"Count":4,"country code":"FR"},
-{"Abs":47.3,"Count":5,"country code":"GH"}]
 ```
 
