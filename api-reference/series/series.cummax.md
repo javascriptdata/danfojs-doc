@@ -4,11 +4,24 @@ description: Returns cumulative maximum over a series
 
 # Series.cummax
 
-> danfo.Series.**cummax**\(\)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L825)\]
+> danfo.Series.**cummax**\(options\)\[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/core/series.js#L730)\]
 
-**Parameters:** None
-
-**Return**: Series
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">options</th>
+      <th style="text-align:left">Object</th>
+      <th style="text-align:left">
+        <p><b>inplace</b>: Whether to perform operation in-place or not.</p>
+        <p></p>
+      </th>
+      <th style="text-align:left">{
+        <br /><b>inplace</b>: false
+        <br />}</th>
+    </tr>
+  </thead>
+  <tbody></tbody>
+</table>
 
 **Example**
 
