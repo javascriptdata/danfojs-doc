@@ -8,7 +8,7 @@ description: Check if all the values in a series is greater than or equal a valu
 
 | Parameters | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
-| other | Series, Array or number | value\(s\) to compare |  |
+| other | Series**\|** int\|float | value\(s\) to compare |  |
 
 **Returns:** Series \(Boolean element\)
 

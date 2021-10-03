@@ -112,6 +112,7 @@
     * [Series.and](api-reference/series/series.and.md)
     * [Series.or](api-reference/series/series.or.md)
   * [Dataframe](api-reference/dataframe/README.md)
+    * [Creating a DataFrame](api-reference/dataframe/creating-a-dataframe.md)
     * [DataFrame.sort\_index](api-reference/dataframe/dataframe.sort_index.md)
     * [DataFrame.append](api-reference/dataframe/dataframe.append.md)
     * [DataFrame.nunique](api-reference/dataframe/dataframe.nunique-1.md)

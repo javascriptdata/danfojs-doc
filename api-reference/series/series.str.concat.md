@@ -4,46 +4,12 @@ description: Joins two or more strings/arrays
 
 # Series.str.concat
 
-> danfo.Series.str.**concat**\(other, position, options\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L80)\]
+> danfo.Series.str.**concat**\(other, position\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L80)\]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">other</td>
-      <td style="text-align:left">string or Array</td>
-      <td style="text-align:left">string or list of strings to add to each string element of the series</td>
-      <td
-      style="text-align:left">&quot;&quot;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">position</td>
-      <td style="text-align:left">Int</td>
-      <td style="text-align:left">The position to add the <b>other </b>(string or array) is either 0 or 1.
-        0 is to add the other at the beginning of each of the string element, and
-        1 is to add to the end of the string element</td>
-      <td style="text-align:left">1</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left"><b>inplace</b>: Whether to perform the operation in-place or not.</td>
-      <td
-      style="text-align:left">
-        <p>{</p>
-        <p><b>inplace</b>: false</p>
-        <p>}</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| other | string or Array | string or list of strings to add to each string element of the series | "" |
+| position | Int | The position to add the **other** \(string or array\) is either 0 or 1. 0 is to add the other at the beginning of each of the string element, and 1 is to add to the end of the string element | 1  |
 
 **Returns:** Series \(String element\)
 

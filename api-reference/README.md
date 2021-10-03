@@ -9,7 +9,7 @@ description: >-
 * [General Functions](general-functions/)
   * [Data manipulations](general-functions/#data-manipulations)
   * [Data Processing/Normalization](general-functions/#data-processing-normalization)
-  * [Top-level dealing with datetime like](general-functions/#top-level-dealing-with-datetime)
+  * [Top-level dealing with datetimelike](general-functions/#top-level-dealing-with-datetime)
 * [Input/output](input-output/)
   * [CSV](input-output/#csv)
   * [JSON](input-output/#json)

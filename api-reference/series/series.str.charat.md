@@ -6,35 +6,9 @@ description: Obtain the character at the specified index (position)
 
 > danfo.Series.str.**charAt**\(index\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L64)\]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">index</td>
-      <td style="text-align:left">int</td>
-      <td style="text-align:left">the index at which to obtain the character</td>
-      <td style="text-align:left">0</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left"><b>inplace</b>: Whether to perform the operation in-place or not.</td>
-      <td
-      style="text-align:left">
-        <p>{</p>
-        <p><b>inplace</b>: false</p>
-        <p>}</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| index | int | the index at which to obtain the character | 0 |
 
 **Returns**:  Series \(Character element\)
 

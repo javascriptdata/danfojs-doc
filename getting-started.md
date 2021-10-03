@@ -80,9 +80,9 @@ const dfd = require("danfojs-node")
 {% endtab %}
 {% endtabs %}
 
-### Object creation
+### Creating a DataFrame/Series
 
-Creating a [`Series`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series) by passing a list of values, letting danfo.js create a default integer index:
+You can create a [`Series`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series) by passing a list of values, letting Danfo.js create a default integer index:
 
 {% tabs %}
 {% tab title="Node" %}

@@ -4,37 +4,11 @@ description: 'Return Multiplication of series and other, element-wise (binary op
 
 # Series.mul
 
-> danfo.Series.mul\(other, options\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L168)\]
+> danfo.Series.mul\(other\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L168)\]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">other</td>
-      <td style="text-align:left">Series|int|</td>
-      <td style="text-align:left">values</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">inplace: Boolean indicating whether to perform the operation inplace or
-        not. Defaults to false</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p>inplace: false</p>
-        <p>}</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| other | Series\|int\| | values  |  |
 
 **Return:** Series
 

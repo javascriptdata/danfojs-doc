@@ -1,43 +1,21 @@
 ---
-description: Sorts a Series in ascending or descending order
+description: Sort a Series in ascending or descending order
 ---
 
 # Series.sort\_values
 
-> danfo.Series.sort\_values\(options\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L511)\]
+> danfo.Series.sort\_values\(kwargs\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L511)\]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p><b>inplace</b>: Boolean indicating whether to perform the operation in-place
-          or not. Defaults to false</p>
-        <p><b>ascending</b>: Whether to return sorted values in ascending order or
-          not. Defaults to true</p>
-      </td>
-      <td style="text-align:left">
-        <p>{
-          <br />ascending: true,</p>
-        <p>inplace: false</p>
-        <p>}</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| kwargs\["inplace"\] | Boolean | return new series or not | false |
+| kwargs\["ascending"\] | Boolean | select if to sort by ascending or descending | true |
 
   **Return:** Series
 
-### Sort values in a Series 
+**Examples**
+
+Sort series values using the default settings
 
 {% tabs %}
 {% tab title="Node" %}
@@ -56,30 +34,32 @@ sf2.print()
 {% tabs %}
 {% tab title="Output" %}
 ```text
-╔═══╤════╗
-║ 7 │ 0  ║
-╟───┼────╢
-║ 2 │ 1  ║
-╟───┼────╢
-║ 3 │ 2  ║
-╟───┼────╢
-║ 8 │ 4  ║
-╟───┼────╢
-║ 4 │ 4  ║
-╟───┼────╢
-║ 0 │ 20 ║
-╟───┼────╢
-║ 1 │ 30 ║
-╟───┼────╢
-║ 5 │ 57 ║
-╟───┼────╢
-║ 6 │ 89 ║
-╚═══╧════╝
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 7 │ 0                    ║
+╟───┼──────────────────────╢
+║ 2 │ 1                    ║
+╟───┼──────────────────────╢
+║ 3 │ 2                    ║
+╟───┼──────────────────────╢
+║ 4 │ 4                    ║
+╟───┼──────────────────────╢
+║ 8 │ 4                    ║
+╟───┼──────────────────────╢
+║ 0 │ 20                   ║
+╟───┼──────────────────────╢
+║ 1 │ 30                   ║
+╟───┼──────────────────────╢
+║ 5 │ 57                   ║
+╟───┼──────────────────────╢
+║ 6 │ 89                   ║
+╚═══╧══════════════════════╝
 ```
 {% endtab %}
 {% endtabs %}
 
-### Sort Series in-place
+Sort series value without returning a new series
 
 {% tabs %}
 {% tab title="Node" %}
@@ -88,7 +68,7 @@ const dfd = require("danfojs-node")
 
 let data1 = [20, 30, 1, 2, 4, 57, 89, 0, 4]
 let sf1 = new dfd.Series(data1)
-sf1.sort_values({ inplace: true })
+sf1.sort_values({ "inplace": true })
 
 sf1.print()
 ```
@@ -98,31 +78,32 @@ sf1.print()
 {% tabs %}
 {% tab title="Output" %}
 ```text
-╔═══╤════╗
-║ 7 │ 0  ║
-╟───┼────╢
-║ 2 │ 1  ║
-╟───┼────╢
-║ 3 │ 2  ║
-╟───┼────╢
-║ 8 │ 4  ║
-╟───┼────╢
-║ 4 │ 4  ║
-╟───┼────╢
-║ 0 │ 20 ║
-╟───┼────╢
-║ 1 │ 30 ║
-╟───┼────╢
-║ 5 │ 57 ║
-╟───┼────╢
-║ 6 │ 89 ║
-╚═══╧════╝
-
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 7 │ 0                    ║
+╟───┼──────────────────────╢
+║ 2 │ 1                    ║
+╟───┼──────────────────────╢
+║ 3 │ 2                    ║
+╟───┼──────────────────────╢
+║ 4 │ 4                    ║
+╟───┼──────────────────────╢
+║ 8 │ 4                    ║
+╟───┼──────────────────────╢
+║ 0 │ 20                   ║
+╟───┼──────────────────────╢
+║ 1 │ 30                   ║
+╟───┼──────────────────────╢
+║ 5 │ 57                   ║
+╟───┼──────────────────────╢
+║ 6 │ 89                   ║
+╚═══╧══════════════════════╝
 ```
 {% endtab %}
 {% endtabs %}
 
-Sort Series values in descending order
+Sort series value in descending order
 
 {% tabs %}
 {% tab title="Node" %}
@@ -141,25 +122,27 @@ sf1.print()
 {% tabs %}
 {% tab title="Output" %}
 ```text
-╔═══╤════╗
-║ 6 │ 89 ║
-╟───┼────╢
-║ 5 │ 57 ║
-╟───┼────╢
-║ 1 │ 30 ║
-╟───┼────╢
-║ 0 │ 20 ║
-╟───┼────╢
-║ 4 │ 4  ║
-╟───┼────╢
-║ 8 │ 4  ║
-╟───┼────╢
-║ 3 │ 2  ║
-╟───┼────╢
-║ 2 │ 1  ║
-╟───┼────╢
-║ 7 │ 0  ║
-╚═══╧════╝
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 6 │ 89                   ║
+╟───┼──────────────────────╢
+║ 5 │ 57                   ║
+╟───┼──────────────────────╢
+║ 1 │ 30                   ║
+╟───┼──────────────────────╢
+║ 0 │ 20                   ║
+╟───┼──────────────────────╢
+║ 8 │ 4                    ║
+╟───┼──────────────────────╢
+║ 4 │ 4                    ║
+╟───┼──────────────────────╢
+║ 3 │ 2                    ║
+╟───┼──────────────────────╢
+║ 2 │ 1                    ║
+╟───┼──────────────────────╢
+║ 7 │ 0                    ║
+╚═══╧══════════════════════╝
 ```
 {% endtab %}
 {% endtabs %}

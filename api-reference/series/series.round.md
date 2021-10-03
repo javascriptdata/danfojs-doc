@@ -4,37 +4,11 @@ description: round off floating values in series
 
 # Series.round
 
-> danfo.Series.round\(dp, options\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L404)\]
+> danfo.Series.round\(dp\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L404)\]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">dp</td>
-      <td style="text-align:left">int</td>
-      <td style="text-align:left">decimal place to round off to</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">inplace: Boolean indicating whether to perform the operation inplace or
-        not. Defaults to false</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p>inplace: false</p>
-        <p>}</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| dp | int | decimal place to round off to |  |
 
 **Returns:** Series
 

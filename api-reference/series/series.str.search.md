@@ -4,39 +4,13 @@ description: Obtain the index position of a searched  character in a String
 
 # Series.str.search
 
-> danfo.Series.str.**search**\(str, options\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L220)\]
+> danfo.Series.str.**search**\(str\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L220)\]
 
 
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">str</td>
-      <td style="text-align:left">String</td>
-      <td style="text-align:left">the string to search for</td>
-      <td style="text-align:left">&quot;&quot;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left"><b>inplace</b>: Whether to perform the operation in-place or not.</td>
-      <td
-      style="text-align:left">
-        <p>{</p>
-        <p><b>inplace</b>: false</p>
-        <p>}</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| str | String | the string to search for | "" |
 
 **Returns:**
 

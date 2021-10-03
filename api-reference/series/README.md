@@ -18,7 +18,7 @@ description: One-dimensional ndarray with axis labels (including time series).
 | [`Series.dtype`](series.dtype.md) | Return the dtype object of the underlying data. |
 | [`Series.shape`](series.shape.md) | Return a tuple of the shape of the underlying data. |
 | [`Series.ndim`](series.ndim.md) | Number of dimensions of the underlying data, by definition 1. |
-| [`Series.size`]() | Return the number of elements in the underlying data. |
+| [`Series.size`](series.size.md) | Return the number of elements in the underlying data. |
 
 ### Conversion
 
@@ -49,7 +49,7 @@ description: One-dimensional ndarray with axis labels (including time series).
 | [`Series.ge`](series.ge.md) | Return Greater than or equal to of series and other, element-wise \(binary operator ge\). |
 | [`Series.ne`](series.ne.md) | Return Not equal to of series and other, element-wise \(binary operator ne\). |
 | [`Series.eq`](series.eq.md) | Return Equal to of series and other, element-wise \(binary operator eq\). |
-| [`Series.dot`]() | Compute the dot product between the Series and the columns of other. |
+| [`Series.dot`](series.dot.md) | Compute the dot product between the Series and the columns of other. |
 
 ### Function application & GroupBy
 
@@ -61,7 +61,7 @@ description: One-dimensional ndarray with axis labels (including time series).
 
 | [`Series.abs`](series.abs.md) | Return a Series with absolute numeric value of each element. |
 | :--- | :--- |
-| [`Series.corr`]() | Compute correlation with other Series, excluding missing values. |
+| [`Series.corr`](series.corr.md) | Compute correlation with other Series, excluding missing values. |
 | [`Series.count`](series.count.md) | Return number of non-NaN observations in the Series. |
 | [`Series.cummax`](../dataframe/danfo.dataframe.cummax.md) | Return cumulative maximum over a DataFrame or Series axis. |
 | [`Series.cummin`](../dataframe/danfo.dataframe.cummin.md) | Return cumulative minimum over a DataFrame or Series axis. |
