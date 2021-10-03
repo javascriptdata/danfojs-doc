@@ -22,7 +22,7 @@ description: Top level functions that can be called from the Danfo namespace
 
 ### Top-level dealing with datetime
 
-| [`toDateTime`](danfo.to_datetime.md) | Convert argument to datetime. |
+| [`to_datetime`](danfo.to_datetime.md) | Convert argument to datetime. |
 | :--- | :--- |
 | [`date_range`](danfo.date_range.md) | Return a fixed frequency DatetimeIndex. |
 
