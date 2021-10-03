@@ -112,6 +112,7 @@
     * [Series.tail](api-reference/series/series.tail.md)
     * [Series.head](api-reference/series/series.head.md)
     * [Series.and](api-reference/series/series.and.md)
+    * [Series.or](api-reference/series/series.or.md)
   * [Dataframe](api-reference/dataframe/README.md)
     * [DataFrame.sort\_index](api-reference/dataframe/dataframe.sort_index.md)
     * [DataFrame.append](api-reference/dataframe/dataframe.append.md)
