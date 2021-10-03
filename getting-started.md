@@ -8,43 +8,27 @@ description: >-
 
 ## Installation
 
-There are three ways to install and use Danfo.js in your application
-
-For Nodejs applications, you can install the [danfojs-node](https://www.npmjs.com/package/danfojs-node) version via package managers like yarn and npm:
+There are two ways to get danfo.js. We built an optimized and fast version for node.js and its available under the [danfojs-node](https://www.npmjs.com/package/danfojs-node) namespace. To install it via npm, you can do the following:
 
 ```text
 npm install danfojs-node
-
-or
-
-yarn add danfojs-node
 ```
 
-For client-side applications built with frameworks like React, Vue, Next.js, etc, you can install the [danfojs](https://www.npmjs.com/package/danfojs) version:
-
-```text
-npm install danfojs
-
-or
-
-yarn add danfojs
-```
-
-For use directly in HTML files, you can add the latest script tag from [JsDelivr](https://www.jsdelivr.com/package/npm/danfojs?version=0.3.1&path=lib):
+You can also install and use it in the browsers by using the CDN below:
 
 ```markup
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.1/lib/bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>
 ```
 
 {% hint style="info" %}
-To play with Danfo.js in a Notebook-like environment, see [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
+To play with Danfo.js in a Notebook-like environment , see [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
 {% endhint %}
 
 ## 10 minutes to danfo.js
 
-This is a short introduction to Danfo.js, and its flow is adapted from the official [10 minutes to Pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html#min)
+This is a short introduction to danfo.js, and its flow is adapted from the official [10 minutes to Pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html#min)
 
-We will show you how to use danfo.js in both browser environments and Node.js environments. Most functions except [plotting](https://jsdata.gitbook.io/danfojs/api-reference/plotting) which require a DOM work the same way in both environments.
+We will show you how to use danfo.js in both browser environment and Node.js environment. Most functions except [plotting](https://jsdata.gitbook.io/danfojs/api-reference/plotting) which require a DOM works the same way in both environments.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -61,7 +45,7 @@ const dfd = require("danfojs-node")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.1/lib/bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>
 </head>
 
 <body>
@@ -80,9 +64,9 @@ const dfd = require("danfojs-node")
 {% endtab %}
 {% endtabs %}
 
-### Creating a DataFrame/Series
+### Object creation
 
-You can create a [`Series`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series) by passing a list of values, letting Danfo.js create a default integer index:
+Creating a [`Series`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.Series.html#pandas.Series) by passing a list of values, letting danfo.js create a default integer index:
 
 {% tabs %}
 {% tab title="Node" %}
@@ -130,7 +114,7 @@ s.print()
 ╟───┼──────────────────────╢
 ║ 2 │ 5                    ║
 ╟───┼──────────────────────╢
-║ 3 │ undefined            ║
+║ 3 │ NaN                  ║
 ╟───┼──────────────────────╢
 ║ 4 │ 6                    ║
 ╟───┼──────────────────────╢
@@ -184,15 +168,17 @@ s.print()
 {% endtabs %}
 
 ```text
-╔═══╤════╗
-║ 0 │ 12 ║
-╟───┼────╢
-║ 1 │ 34 ║
-╟───┼────╢
-║ 2 │ 56 ║
-╟───┼────╢
-║ 3 │ 2  ║
-╚═══╧════╝
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ 0 │ 12                   ║
+╟───┼──────────────────────╢
+║ 1 │ 34                   ║
+╟───┼──────────────────────╢
+║ 2 │ 56                   ║
+╟───┼──────────────────────╢
+║ 3 │ 2                    ║
+╚═══╧══════════════════════╝
 ```
 
 Creating a [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) by passing a JSON object:
@@ -400,17 +386,19 @@ df.ctypes.print()
 
 ```text
 //output
-╔═══╤═════════╗
-║ A │ string  ║
-╟───┼─────────╢
-║ B │ string  ║
-╟───┼─────────╢
-║ C │ int32   ║
-╟───┼─────────╢
-║ D │ float32 ║
-╟───┼─────────╢
-║ E │ string  ║
-╚═══╧═════════╝
+╔═══╤══════════════════════╗
+║   │ 0                    ║
+╟───┼──────────────────────╢
+║ A │ string               ║
+╟───┼──────────────────────╢
+║ B │ string               ║
+╟───┼──────────────────────╢
+║ C │ int32                ║
+╟───┼──────────────────────╢
+║ D │ float32              ║
+╟───┼──────────────────────╢
+║ E │ string               ║
+╚═══╧══════════════════════╝
 ```
 
 Creating a [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) by passing an array of arrays. Index and column labels are automatically generated for you.
@@ -717,23 +705,19 @@ df.describe().print()
 ```text
 //output in console
 
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ A                 │ B                 │ C                 │ D                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ count      │ 4                 │ 4                 │ 4                 │ 4                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ mean       │ 0.533175          │ 0.4842349999999…  │ -0.474897500000…  │ 1.5816            ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ std        │ 0.1075428712963…  │ 2.5693167249095…  │ 3.4371471031498…  │ 2.2005448052698…  ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ min        │ 0.4612            │ -1.28863          │ -3.39059          │ -1.1352           ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ median     │ 0.4901999999999…  │ -0.528629999999…  │ -1.50745          │ 1.6492            ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ max        │ 0.6911            │ 4.28283           │ 4.5059            │ 4.1632            ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ variance   │ 0.0115654691666…  │ 6.6013884328999…  │ 11.813980208691…  │ 4.84239744        ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║        │ A                 │ B                 │ C                 │ D                 ║
+╟────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ count  │ 4                 │ 4                 │ 4                 │ 4                 ║
+╟────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ mean   │ 0.533175          │ 0.484235          │ -0.474898         │ 1.5816            ║
+╟────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ std    │ 0.107543          │ 2.569317          │ 3.437147          │ 2.200545          ║
+╟────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ min    │ 0.4612            │ -1.28863          │ -3.39059          │ -1.1352           ║
+╟────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ median │ 0.4902            │ -0.52863          │ -1.50745          │ 1.6492            ║
+╚════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
 Sorting by values \(Defaults to ascending\):
@@ -788,17 +772,15 @@ df.print()
 {% endtabs %}
 
 ```text
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ A                 │ B                 │ C                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1          │ 30                │ -4                │ 2                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ 47.3              │ 5                 │ 3                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0          │ -20               │ 34                │ 20                ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3          │ NaN               │ 6                 │ 30                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 30                │ -4                │ 2                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 47.3              │ 5                 │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ -20               │ 34                │ 20                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
 ### Selection
@@ -957,7 +939,7 @@ sub_df.print()
 ╚═══╧═══════════════════╧═══════════════════╝
 ```
 
-Showing label slicing:
+Showing label slicing, both endpoints are _included_:
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -988,15 +970,17 @@ sub_df.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 //after slicing
- 
+ Shape: (3,2) 
 
-╔════════════╤═══════════════════╤═══════════════════╗
-║            │ Name              │ Price             ║
-╟────────────┼───────────────────┼───────────────────╢
-║ 0          │ Apples            │ 200               ║
-╟────────────┼───────────────────┼───────────────────╢
-║ 1          │ Mango             │ 300               ║
-╚════════════╧═══════════════════╧═══════════════════╝
+╔═══╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Price             ║
+╟───┼───────────────────┼───────────────────╢
+║ 0 │ Apples            │ 200               ║
+╟───┼───────────────────┼───────────────────╢
+║ 1 │ Mango             │ 300               ║
+╟───┼───────────────────┼───────────────────╢
+║ 2 │ Banana            │ 40                ║
+╚═══╧═══════════════════╧═══════════════════╝
 ```
 
 #### Selection by position
@@ -1042,13 +1026,15 @@ sub_df.print()
 ```
 
 ```text
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ Name              │ Count             │ Price             ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1          │ Mango             │ 5                 │ 300               ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ Banana            │ 30                │ 40                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Count             │ Price             ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ Mango             │ 5                 │ 300               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ Banana            │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ Pear              │ 10                │ 250               ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
 By lists of integer position locations:
@@ -1092,11 +1078,13 @@ sub_df.print()
 ```
 
 ```text
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ Name              │ Count             │ Price             ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ Banana            │ 30                │ 40                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Count             │ Price             ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ Banana            │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ Pear              │ 10                │ 250               ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
 For slicing columns explicitly:
@@ -1115,62 +1103,17 @@ sub_df.print()
 ```
 
 ```text
-╔════════════╤═══════════════════╗
-║            │ Count             ║
-╟────────────┼───────────────────╢
-║ 0          │ 21                ║
-╟────────────┼───────────────────╢
-║ 1          │ 5                 ║
-╟────────────┼───────────────────╢
-║ 2          │ 30                ║
-╟────────────┼───────────────────╢
-║ 3          │ 10                ║
-╚════════════╧═══════════════════╝
-```
-
-#### Selection with Boolean Mask
-
-You can select subsections from a DataFrame by a booelan condition mask. E.g. In the following code, we select and return only rows where the column `Count` is greater than 10. 
-
-```javascript
-let data = {
-    "Name": ["Apples", "Mango", "Banana", "Pear"],
-    "Count": [21, 5, 30, 10],
-    "Price": [200, 300, 40, 250]
-}
-
-let df = new dfd.DataFrame(data)
-
-let sub_df = df.iloc({ rows: df["Count"].gt(10) })
-sub_df.print()
-```
-
-```text
-//output
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ Name              │ Count             │ Price             ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0          │ Apples            │ 21                │ 200               ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ Banana            │ 30                │ 40                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-```
-
-A Boolean mask for filtering also works for multiple conditions using `and` & `or` functions. E.g, In the following code, we select and return only rows where the column `Count` is greater than 10 and column `Name` is equal to `Apples`. 
-
-```javascript
-let sub_df = df.iloc({
-    rows: df["Count"].gt(10).and(df["Name"].eq("Apples")),
-    columns: [0]
-})
-sub_df.print()
-
-//output
-╔════════════╤═══════════════════╗
-║            │ Name              ║
-╟────────────┼───────────────────╢
-║ 0          │ Apples            ║
-╚════════════╧═══════════════════╝
+╔═══╤═══════════════════╤═══════════════════╗
+║   │ Count             │ Price             ║
+╟───┼───────────────────┼───────────────────╢
+║ 0 │ 21                │ 200               ║
+╟───┼───────────────────┼───────────────────╢
+║ 1 │ 5                 │ 300               ║
+╟───┼───────────────────┼───────────────────╢
+║ 2 │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────╢
+║ 3 │ 10                │ 250               ║
+╚═══╧═══════════════════╧═══════════════════╝
 ```
 
 #### Boolean Querying/Filtering
@@ -1251,7 +1194,7 @@ query_df.print() //after query
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-The best way to query data is to use a boolean mask just as we demonstrated above with iloc and locs. For example, in the following code, we pass a condition parameter instead:
+Selecting values from a DataFrame works on string columns:
 
 ```javascript
 let data = [{"A": ["Ng", "Yu", "Mo", "Ng"]},
@@ -1259,36 +1202,34 @@ let data = [{"A": ["Ng", "Yu", "Mo", "Ng"]},
              {"C": [20, 20, 30, 40]}]
 let df = new dfd.DataFrame(data)
 
-let query_df = df.query({ condition: df["B"].gt(5) })
+df.print()
+
+let query_df = df.query({ column: "A", is: "==", to: "Ng"})
 query_df.print() //after query
 ```
 
 ```text
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ A                 │ B                 │ C                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ 20                │ 30                │ 40                ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3          │ 39                │ 89                │ 78                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-```
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ Ng                │ 34                │ 20                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ Yu                │ 4                 │ 20                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ Mo                │ 5                 │ 30                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ Ng                │ 6                 │ 40                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-Querying by a boolean condition is supported from v0.3.0 and above. It also supports condition chaining as long as the final boolean mask is the same lenght as the DataFrame rows. For example in the following code, we use multiple chaining conditions:
+//after query
 
-```javascript
-let query_df = df.query({
-    condition:
-        df["B"].gt(5).and(df["A"].lt(30))
-})
-query_df.print() //after query
-
-//output
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ A                 │ B                 │ C                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ 20                │ 30                │ 40                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ Ng                │ 34                │ 20                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ Ng                │ 6                 │ 40                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
 #### Adding a new column
@@ -1308,7 +1249,7 @@ let df = new dfd.DataFrame(data)
 df.print()
 
 let new_col = [1, 2, 3, 4]
-df.addColumn({ column: "D", values: new_col, inplace: true }); //happens inplace
+df.addColumn({ "column": "D", "values": new_col, inplace: true }); //happens inplace
 
 df.print()
 ```
@@ -1340,7 +1281,7 @@ df.print()
 
         let new_col = [1, 2, 3, 4]
         df.addColumn({ "column": "D", "values": new_col, inplace: true }); //happens inplace
-
+        
         df.print()
 
     </script>
@@ -1368,22 +1309,22 @@ df.print()
 //after adding column
  Shape: (4,3) 
 
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ A                 │ B                 │ C                 │ D                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0          │ 1                 │ 2                 │ 3                 │ 25                ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1          │ 4                 │ 5                 │ 6                 │ 35                ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ 20                │ 30                │ 40                │ 45                ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3          │ 39                │ 89                │ 78                │ 55                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 │ D                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 30                │ 34                │ 20                │ 1                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 1                 │ 4                 │ 20                │ 2                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ 2                 │ 5                 │ 30                │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 3                 │ 6                 │ 40                │ 4                 ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
 ### Missing data
 
- **NaN** represent missing data in Danfo.js. These values can be dropped or filled using some functions available in Danfo.js. 
+danfo primarily uses the value **NaN** to represent missing data. It converts **undefined** type to **NaN** by default when creating DataFrames/Series with missing values.
 
 To drop any rows that have missing data:
 
@@ -1392,13 +1333,13 @@ To drop any rows that have missing data:
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = [[1, 2, 3], [NaN, 5, 6], [NaN, 30, 40], [39, 20, 78]]
+let data = [[1, 2, 3], [NaN, 5, 6], [NaN, 30, 40], [39, undefined, 78]]
 let cols = ["A", "B", "C"]
 let df = new dfd.DataFrame(data, { columns: cols })
 
 df.print()
 
-let df_drop = df.dropna(0)
+let df_drop = df.dropna({axis: 0})
 df_drop.print()
 ```
 {% endtab %}
@@ -1439,27 +1380,27 @@ df_drop.print()
 
 ```text
 //Before dropping
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ A                 │ B                 │ C                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0          │ 1                 │ 2                 │ 3                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1          │ NaN               │ 5                 │ 6                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ NaN               │ 30                │ 40                ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3          │ 39                │ 20                │ 78                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 1                 │ 2                 │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ NaN               │ 5                 │ 6                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ NaN               │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 39                │ NaN               │ 78                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
 //after droppping
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ A                 │ B                 │ C                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0          │ 1                 │ 2                 │ 3                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3          │ 39                │ 20                │ 78                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+ Shape: (1,3) 
+
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 1                 │ 2                 │ 3                 ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
 To drop any columns with have missing data, set the axis to 1:
@@ -1467,45 +1408,44 @@ To drop any columns with have missing data, set the axis to 1:
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = [[1, 2, 3], [NaN, 5, 6], [20, NaN, 40], [39, 34, 78]]
+let data = [[1, 2, 3], [NaN, 5, 6], [NaN, 30, 40], [39, undefined, 78]]
 let cols = ["A", "B", "C"]
 let df = new dfd.DataFrame(data, { columns: cols })
 
 df.print()
 
-let df_drop = df.dropna(1)
+let df_drop = df.dropna({axis: 1})
 df_drop.print()
 ```
 
 ```text
 //Before dropping
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ A                 │ B                 │ C                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0          │ 1                 │ 2                 │ 3                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1          │ NaN               │ 5                 │ 6                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ 20                │ NaN               │ 40                ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3          │ 39                │ 34                │ 78                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 1                 │ 2                 │ 3                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ NaN               │ 5                 │ 6                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ NaN               │ 30                │ 40                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 39                │ NaN               │ 78                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
 //after droppping
 
-╔════════════╤═══════════════════╗
-║            │ C                 ║
-╟────────────┼───────────────────╢
-║ 0          │ 3                 ║
-╟────────────┼───────────────────╢
-║ 1          │ 6                 ║
-╟────────────┼───────────────────╢
-║ 2          │ 40                ║
-╟────────────┼───────────────────╢
-║ 3          │ 78                ║
-╚════════════╧═══════════════════╝
-
+╔═══╤═══════════════════╗
+║   │ C                 ║
+╟───┼───────────────────╢
+║ 0 │ 3                 ║
+╟───┼───────────────────╢
+║ 1 │ 6                 ║
+╟───┼───────────────────╢
+║ 2 │ 40                ║
+╟───┼───────────────────╢
+║ 3 │ 78                ║
+╚═══╧═══════════════════╝
 ```
 
 Filling missing data:
@@ -1515,13 +1455,13 @@ const dfd = require("danfojs-node")
 
 
 let data = {
-    "Name": ["Apples", "Mango", "Banana", NaN],
-    "Count": [NaN, 5, NaN, 10],
-    "Price": [200, 300, 40, 250]
-  }
+            "Name": ["Apples", "Mango", "Banana", undefined],
+            "Count": [NaN, 5, NaN, 10],
+            "Price": [200, 300, 40, 250]
+          }
 
 let df = new dfd.DataFrame(data)
-let df_filled = df.fillna("Apples")
+let df_filled = df.fillna({ values: ["Apples"] })
 
 df_filled.print()
 ```
@@ -1545,16 +1485,14 @@ Filling missing values in specific columns with specific values:
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = {
-    "Name": ["Apples", "Mango", "Banana", NaN],
-    "Count": [NaN, 5, NaN, 10],
-    "Price": [200, 300, 40, 250]
-}
+let data = {"Name":["Apples", "Mango", "Banana", undefined],
+            "Count": [NaN, 5, NaN, 10], 
+            "Price": [200, 300, 40, 250]}
 
 let df = new dfd.DataFrame(data)
 df.print()
 
-let df_filled = df.fillna(["Apples", df["Count"].mean()], { columns: ["Name", "Count"] })
+let df_filled = df.fillna({columns: ["Name", "Count"], values: ["Apples", df["Count"].mean()]})
 df_filled.print()
 ```
 
@@ -1616,7 +1554,7 @@ data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
 cols = ["A", "B", "C"]
 
 
-let df = new dfd.DataFrame(data, { columns: cols })
+let df = new dfd.DataFrame(data)
 df.print()
 df.mean().print() //defaults to column axis
 ```
@@ -1670,11 +1608,11 @@ df.mean().print() //defaults to column axis
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
-║ A │ 4                    ║
+║ 0 │ 4                    ║
 ╟───┼──────────────────────╢
-║ B │ 38.5                 ║
+║ 1 │ 38.5                 ║
 ╟───┼──────────────────────╢
-║ C │ 31.75                ║
+║ 2 │ 31.75                ║
 ╚═══╧══════════════════════╝
 ```
 
@@ -1728,7 +1666,7 @@ let data = { "Col1": [1, 4, 5, 1], "Col2": [3, 2, 0, 4] }
 let df = new dfd.DataFrame(data)
 let sf = new dfd.Series([4, 5])
 
-let df_new = df.sub(sf, { axis: 1 })
+let df_new = df.sub(sf, axis = 1)
 
 df_new.print()
 ```
@@ -1749,7 +1687,7 @@ df_new.print()
 
 #### Apply
 
-Applying functions to the data along specified axis. If axis = 1 \(default\), then the specified function \(`callable)` will be called with each column data, and vice versa:
+Applying JavaScript functions to the data:
 
 ```javascript
 const dfd = require("danfojs")
@@ -1758,11 +1696,11 @@ let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
 let cols = ["A", "B", "C"]
 let df = new dfd.DataFrame(data, { columns: cols })
 
-function sum_vals(col) {
-    return col.reduce((a, b) => a + b, 0);
+function sum_vals(x) {
+    return x + 20
 }
 
-let df_new = df.apply(sum_vals, { axis: 1 })
+let df_new = df.apply({callable: sum_vals })
 df_new.print()
 ```
 
@@ -1783,18 +1721,22 @@ df_new.print()
 
 //after applying
 
-╔═══╤═════╗
-║ A │ 64  ║
-╟───┼─────╢
-║ B │ 126 ║
-╟───┼─────╢
-║ C │ 127 ║
-╚═══╧═════╝
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ 21                │ 22                │ 23                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ 24                │ 25                │ 26                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ 40                │ 50                │ 60                ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ 59                │ 109               │ 98                ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Applying Element wise operations to the data:
+Applying Tensorflow functions to the data:
 
-You can use the `apply_map` function if you need to apply a function to each element in the DataFrame. `apply_map` works element-wise. 
+You can call any compatible [Tensorflow](https://js.tensorflow.org/api/latest/) function on a DataFrame across a specified axis. For functions that operate _**element-wise**_ and returns the same shape as the original DataFrame, you must specify an axis of 0.
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -1803,11 +1745,13 @@ let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
 let cols = ["A", "B", "C"]
 let df = new dfd.DataFrame(data, { columns: cols })
 
-function sum_vals(x) {
-    return x + 10
+df.print()
+
+function log_sig(x) {
+    return x.logSigmoid()
 }
 
-let df_new = df.apply_map(sum_vals)
+let df_new = df.apply({axis: 0, callable: log_sig })
 df_new.print()
 ```
 
@@ -1826,19 +1770,19 @@ df_new.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
- //after apply_map
+ //after applying
 
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ A                 │ B                 │ C                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0          │ 11                │ 12                │ 13                ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1          │ 14                │ 15                │ 16                ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ 30                │ 40                │ 50                ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3          │ 49                │ 99                │ 88                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ A                 │ B                 │ C                 ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ -0.3132616579...  │ -0.1269280463...  │ -0.0485873296...  ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 1 │ -0.0181499607...  │ -0.0067153489...  │ -0.0024756519...  ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ -2.0611536921...  │ -9.3576229122...  │ -4.2483541311...  ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 3 │ -1.1548223864...  │ -2.2273639090...  │ -1.3336148713...  ║
+╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
 #### String Methods
@@ -2325,36 +2269,29 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 
 #### CSV
 
-[Writing to a  CSV file.](api-reference/dataframe/dataframe.to_csv.md)
+[Writing to a csv file.](api-reference/dataframe/dataframe.to_csv.md)
 
-Convert any DataFrame to csv format. If a file path is specified, then the CSV is saved to the path, else it is returned as a string. 
+Convert any DataFrame to csv format.
 
 ```javascript
 const dfd = require("danfojs-node")
+
 let data = {
-    "Abs": [20.2, 30, 47.3],
-    "Count": [34, 4, 5],
-    "country code": ["NG", "FR", "GH"]
-}
+          "Abs": [20.2, 30, 47.3],
+          "Count": [34, 4, 5],
+          "country code": ["NG", "FR", "GH"]
+        }
 
 
 let df = new dfd.DataFrame(data)
 
-const csv = df.to_csv()
-console.log(csv);
-//output
-Abs,Count,country code
-20.2,34,NG
-30,4,FR
-47.3,5,GH
+df.to_csv().then((csv) => {
+  console.log(csv);
 
+}).catch((err) => {
 
-df.to_csv({filePath: "testOut.csv" }) //writes to file in Nodejs
-
-
-df.to_csv({fileName: "testOut", download: true }) //downloads the file in browser version
-
-
+  console.log(err);
+})
 ```
 
 ```text
@@ -2435,24 +2372,18 @@ let data = {
 
 let df = new dfd.DataFrame(data)
 
-const json = df.to_json()
-console.log(json);
-//output
-[
-  { Abs: 20.2, Count: 34, 'country code': 'NG' },
-  { Abs: 30, Count: 4, 'country code': 'FR' },
-  { Abs: 47.3, Count: 5, 'country code': 'GH' }
-]
+df.to_json().then((json) => {
+  console.log(json);
 
+}).catch((err) => {
 
-const json = df.to_json({format: "row"})
-console.log(json);
-//output
-{
-  Abs: [ 20.2, 30, 47.3 ],
-  Count: [ 34, 4, 5 ],
-  'country code': [ 'NG', 'FR', 'GH' ]
-}
+  console.log(err);
+})
+```
 
+```text
+[{"Abs":20.2,"Count":34,"country code":"NG"},
+{"Abs":30,"Count":4,"country code":"FR"},
+{"Abs":47.3,"Count":5,"country code":"GH"}]
 ```
 

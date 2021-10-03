@@ -21,6 +21,7 @@
     * [danfo.to\_excel](api-reference/input-output/danfo.to_excel.md)
     * [danfo.to\_json](api-reference/input-output/danfo.to_json.md)
   * [Series](api-reference/series/README.md)
+    * [Creating a Series](api-reference/series/creating-a-series.md)
     * [Series.append](api-reference/series/series.append.md)
     * [Series.cumsum](api-reference/series/series.cumsum.md)
     * [Series.cummax](api-reference/series/series.cummax.md)
