@@ -20,10 +20,15 @@ description: >-
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><em><b>source</b></em>:</td>
-      <td style="text-align:left">str, path or URL</td>
-      <td style="text-align:left">Any valid string path is acceptable. The string could be a URL or a valid
-        local file path.</td>
+      <td style="text-align:left"><em><b>source</b></em>
+      </td>
+      <td style="text-align:left">File object, File path, URL</td>
+      <td style="text-align:left">
+        <p>Any valid string path is acceptable. The string could be a URL or a valid
+          local file path.</p>
+        <p>A browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/File">input file object</a> is
+          also supported.</p>
+      </td>
       <td style="text-align:left"></td>
     </tr>
     <tr>
@@ -32,14 +37,15 @@ description: >-
       <td style="text-align:left">
         <p></p>
         <p>Supports all Papaparse config parameters. See <a href="https://www.papaparse.com/docs#config">https://www.papaparse.com/docs#config</a>.</p>
-        <p></p>
-        <p>We set the following params by default:</p>
-        <p><b>dynamicTyping: true</b>
-        </p>
-        <p><b>header: true</b>
-        </p>
+        <p>&lt;b&gt;&lt;/b&gt;</p>
       </td>
-      <td style="text-align:left"></td>
+      <td style="text-align:left">
+        <p><b>{</b>
+        </p>
+        <p><b>dynamicTyping: </b>true,</p>
+        <p><b>header: </b>true</p>
+        <p>}</p>
+      </td>
     </tr>
   </tbody>
 </table>
@@ -48,16 +54,18 @@ description: >-
 
      ****_**Promise**_. Resolves to DataFrame
 
-### Example
+The **read\_csv** method can read a CSV file from a local disk, or over the internet \(URL\). Reading of local files is only supported in Nodejs, while reading of input file objects is only supported in the browser. 
 
-The **read\_csv** method can read a csv file from local disk, or over the internet \(URL\). Reading of local files are only supported in danfojs-node. 
+### **Reading files from local disk**
+
+By specifying a valid file path, you can load CSV files from local disk:
 
 {% tabs %}
 {% tab title="Node.js" %}
 ```javascript
 const dfd = require("danfojs-node")
 
-dfd.read_csv("user_names.csv") //assumes file is in CWD
+dfd.read_csv("./user_names.csv") //assumes file is in CWD
   .then(df => {
   
    df.head().print()
@@ -67,45 +75,9 @@ dfd.read_csv("user_names.csv") //assumes file is in CWD
   })
 ```
 {% endtab %}
-
-{% tab title="Browser" %}
-```markup
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
-     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.4/lib/bundle.min.js"></script>
-    <title>Document</title>
-</head>
-
-<body>
-
-    <div id="plot_div"></div>
-    <script>
-
-         dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
-            .then(df => {
-
-                //do something like display descriptive statistics
-                df.describe().print()
-                
-            }).catch(err => {
-                console.log(err);
-            })
-         
-    </script>
-</body>
-
-</html>
-
-```
-{% endtab %}
 {% endtabs %}
 
-**Loading Files from URL**
+### **Reading files from a URL**
 
 By specifying a valid URL, you can load CSV files from any location into Danfo**'**s data structure:
 
@@ -133,8 +105,8 @@ dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-c
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
-     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.4/lib/bundle.min.js"></script>
+    <script src="https://cdn.plot.ly/plotly-2.2.0.min.js"></script> 
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.2/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -162,5 +134,40 @@ dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-c
 {% endtab %}
 {% endtabs %}
 
+### **Reading an input file object in the browser**
 
+By specifying a valid [file object](https://developer.mozilla.org/en-US/docs/Web/API/File), you can load CSV files in the browser in DataFrames/Series
+
+{% tabs %}
+{% tab title="Browser" %}
+```markup
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.2/lib/bundle.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+    <input type="file" id="file" name="file">
+    <script>
+            
+        inputFile.addEventListener("change", async () => {
+            const csvFile = inputFile.files[0]
+            dfd.read_csv(csvFile).then((df) => {
+                df.print()
+            })
+        })
+         
+    </script>
+</body>
+
+</html>
+
+```
+{% endtab %}
+{% endtabs %}
 

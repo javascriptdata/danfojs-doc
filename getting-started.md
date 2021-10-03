@@ -20,7 +20,7 @@ or
 yarn add danfojs-node
 ```
 
-For client side applications built with frameworks like React, Vue, Next.js, etc, you can install the [danfojs](https://www.npmjs.com/package/danfojs) version:
+For client-side applications built with frameworks like React, Vue, Next.js, etc, you can install the [danfojs](https://www.npmjs.com/package/danfojs) version:
 
 ```text
 npm install danfojs
@@ -37,7 +37,7 @@ For use directly in HTML files, you can add the latest script tag from [JsDelivr
 ```
 
 {% hint style="info" %}
-To play with Danfo.js in a Notebook-like environment , see [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
+To play with Danfo.js in a Notebook-like environment, see [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
 {% endhint %}
 
 ## 10 minutes to danfo.js

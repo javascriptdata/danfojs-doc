@@ -1,10 +1,10 @@
 ---
-description: Convert Object to datetime format
+description: Converts an array of Date time string to Date object.
 ---
 
 # danfo.to\_datetime
 
-danfo.**to\_datetime**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
+danfo.**to\_datetime**\(data\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
 
 <table>
   <thead>
@@ -17,15 +17,12 @@ danfo.**to\_datetime**\(kwargs\) \[[source](https://github.com/opensource9ja/dan
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>kwargs</b>
+      <td style="text-align:left"><b>data</b>
       </td>
-      <td style="text-align:left">Object</td>
+      <td style="text-align:left">Array, Series</td>
       <td style="text-align:left">
-        <p>{</p>
-        <p><b>data</b>: Array | Series, the object to convert.</p>
-        <p><b>format</b>: The strftime to parse time, eg &quot;%Y-m-d%&quot;, &quot;%m-d-Y%&quot;,
-          and &quot;%m-d-Y H%M%S%&quot;</p>
-        <p>}</p>
+        <p><b>data</b>: Array | Series with Date strings to convert to Date time.</p>
+        <p>&lt;b&gt;&lt;/b&gt;</p>
       </td>
       <td style="text-align:left"></td>
     </tr>
@@ -38,14 +35,16 @@ danfo.**to\_datetime**\(kwargs\) \[[source](https://github.com/opensource9ja/dan
 
 ## **Examples**
 
-### **Convert Series to Dummy codes**
+Converts a **Series** of Date strings to Date time and get time properties
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 let data = new dfd.date_range({"start":'1/1/2018',period:12, freq:'M'})
 let sf = new dfd.Series(data)
-let dt = dfd.to_datetime({data:sf})
+sf.print()
+
+let dt = dfd.toDateTime({data:sf})
 
 dt.month().print()
 dt.month_name().print()
@@ -65,85 +64,99 @@ dt.seconds().print()
 {% tabs %}
 {% tab title="Output" %}
 ```text
+  0
+0	1/1/2018, 12:00:00 AM
+1	2/1/2018, 12:00:00 AM
+2	3/1/2018, 12:00:00 AM
+3	4/1/2018, 12:00:00 AM
+4	5/1/2018, 12:00:00 AM
+5	6/1/2018, 12:00:00 AM
+6	7/1/2018, 12:00:00 AM
+7	8/1/2018, 12:00:00 AM
+8	9/1/2018, 12:00:00 AM
+9	10/1/2018, 12:00:00 AM
+10	11/1/2018, 12:00:00 AM
+11	12/1/2018, 12:00:00 AM
+
 //Int representation for month
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 0                    ║
-╟───┼──────────────────────╢
-║ 1 │ 1                    ║
-╟───┼──────────────────────╢
-║ 2 │ 2                    ║
-╟───┼──────────────────────╢
-║ 3 │ 3                    ║
-╟───┼──────────────────────╢
-║ 4 │ 4                    ║
-╚═══╧══════════════════════╝
+	0
+0	0
+1	1
+2	2
+3	3
+4	4
+5	5
+6	6
+7	7
+8	8
+9	9
+10	10
+11	11
 
 //string representation for month
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ Jan                  ║
-╟───┼──────────────────────╢
-║ 1 │ Feb                  ║
-╟───┼──────────────────────╢
-║ 2 │ Mar                  ║
-╟───┼──────────────────────╢
-║ 3 │ Apr                  ║
-╟───┼──────────────────────╢
-║ 4 │ May                  ║
-╚═══╧══════════════════════╝
+0
+0	Jan
+1	Feb
+2	Mar
+3	Apr
+4	May
+5	Jun
+6	Jul
+7	Aug
+8	Sep
+9	Oct
+10	Nov
+11	Dec
 
 //string representation for day of the week
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ Mon                  ║
-╟───┼──────────────────────╢
-║ 1 │ Thu                  ║
-╟───┼──────────────────────╢
-║ 2 │ Thu                  ║
-╟───┼──────────────────────╢
-║ 3 │ Sun                  ║
-╟───┼──────────────────────╢
-║ 4 │ Tue                  ║
-╚═══╧══════════════════════╝
+0
+0	Mon
+1	Thur
+2	Thur
+3	Sun
+4	Tue
+5	Fri
+6	Sun
+7	Wed
+8	Sat
+9	Mon
+10	Thur
+11	Sat
 
-//Int representation for day of the week
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 1                    ║
-╟───┼──────────────────────╢
-║ 1 │ 4                    ║
-╟───┼──────────────────────╢
-║ 2 │ 4                    ║
-╟───┼──────────────────────╢
-║ 3 │ 0                    ║
-╟───┼──────────────────────╢
-║ 4 │ 2                    ║
-╚═══╧══════════════════════╝
+0
+0	1
+1	4
+2	4
+3	0
+4	2
+5	5
+6	0
+7	3
+8	6
+9	1
+10	4
+11	6
+
 //Hour of the day
+0
+0	0
+1	0
+2	0
+3	0
+4	0
+5	0
+6	0
+7	0
+8	0
+9	0
+10	0
+11	0
 
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 0                    ║
-╟───┼──────────────────────╢
-║ 1 │ 0                    ║
-╟───┼──────────────────────╢
-║ 2 │ 0                    ║
-╟───┼──────────────────────╢
-║ 3 │ 0                    ║
-╟───┼──────────────────────╢
-║ 4 │ 0                    ║
-╚═══╧══════════════════════╝
 ```
 {% endtab %}
 {% endtabs %}
 
 {% hint style="info" %}
-datetime properties of Series or datetime-like columns in DataFrame can be accessed via accessors in the **dt** name space. See  [Accessors](https://app.gitbook.com/@jsdata/s/danfojs/~/drafts/-MEMaWwva1cjt8CxnG-b/api-reference/series#accessors)
+Date time properties of Series or datetime-like columns in DataFrame can be accessed via accessors in the **dt** name-space. See  [Accessors](https://app.gitbook.com/@jsdata/s/danfojs/~/drafts/-MEMaWwva1cjt8CxnG-b/api-reference/series#accessors)
 {% endhint %}
 
