@@ -6,7 +6,7 @@ description: Timeseries plot are based on date index
 
 ## Examples
 
-In the example below, we plot the yearly trend of a financial dataset. First, we reset the index to the Date column. 
+In the example below, we plot the yearly trend of a financial dataset. First, we reset the index to the Date column.
 
 ```markup
 <!DOCTYPE html>
@@ -44,12 +44,11 @@ In the example below, we plot the yearly trend of a financial dataset. First, we
             }).catch(err => {
                 console.log(err);
             })
-         
+
     </script>
 </body>
 
 </html>
-
 ```
 
 ![](../../.gitbook/assets/newplot-29-%20%282%29%20%281%29.png)

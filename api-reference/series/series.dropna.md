@@ -4,17 +4,37 @@ description: Remove missing values from Series
 
 # Series.dropna
 
-> danfo.Series.**dropna**\(kwargs\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L931)\]
+> danfo.Series.**dropna**\(options\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L931)\]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| kwargs\["**inplace**"\] | bool | return a new series or not.  | false |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameters</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">options</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left">inplace: Boolean indicating whether to perform the operation inplace or
+        not. Defaults to false</td>
+      <td style="text-align:left">
+        <p>{
+          <br />inplace: false</p>
+        <p>}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 **Returns**: Series
 
 **Examples**
 
-Drop all nan value and then return New Series.
+### Drop all nan value and then return New Series.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -52,7 +72,7 @@ sf_rep.print()
 {% endtab %}
 {% endtabs %}
 
-Drop nan values without returning new series
+### Drop nan values in-place
 
 {% tabs %}
 {% tab title="Node" %}

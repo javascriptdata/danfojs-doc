@@ -4,9 +4,31 @@ description: Returns the absolute value in a Series
 
 # Series.abs
 
-> danfo.Series.**abs**\(\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L793)\]
+> danfo.Series.**abs**\(options\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L793)\]
 
-**Parameters**: None
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameters</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">options</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left"><b>inplace</b>: Boolean indicating whether to perform the operation in-place
+        or not. Defaults to false</td>
+      <td style="text-align:left">
+        <p>{</p>
+        <p>inplace: false</p>
+        <p>}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 **Returns:** Series
 
