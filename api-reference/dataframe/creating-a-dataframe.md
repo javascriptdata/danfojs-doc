@@ -1,4 +1,50 @@
+---
+description: Creates a DataFrame object from flat structure
+---
+
 # Creating a DataFrame
+
+new danfo.**DataFrame**\(data, options\)
+
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameters</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">data</td>
+      <td style="text-align:left">2D Array, 2D Tensor, JSON object.</td>
+      <td style="text-align:left">Flat data structure to load into DataFrame</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">options</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left">
+        <p>Optional configuration object. Supported properties are:
+          <br />
+        </p>
+        <p><b>index:</b> Array of numeric or string names for subseting array. If
+          not specified, indexes are auto-generated.
+          <br />
+        </p>
+        <p><b>columns:</b> Array of column names. If not specified, column names are
+          auto generated.
+          <br />
+        </p>
+        <p><b>dtypes:</b> Array of data types for each the column. If not specified,
+          dtypes are/is inferred.
+          <br />
+        </p>
+        <p><b>config</b>: General configuration object for extending or setting NDframe
+          behavior. See full options here</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 In order to create a DataFrame, you new to call the new Keyword and pass in a flat data structure. In the following examples, we show you how to create DataFrames by specifying different config options. 
 
