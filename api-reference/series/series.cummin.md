@@ -9,18 +9,25 @@ description: Returns the cumulative min of a Series
 <table>
   <thead>
     <tr>
-      <th style="text-align:left">options</th>
-      <th style="text-align:left">Object</th>
-      <th style="text-align:left">
-        <p><b>inplace</b>: Whether to perform operation in-place or not.</p>
-        <p></p>
-      </th>
-      <th style="text-align:left">{
-        <br /><b>inplace</b>: false
-        <br />}</th>
+      <th style="text-align:left">Parameters</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Default</th>
     </tr>
   </thead>
-  <tbody></tbody>
+  <tbody>
+    <tr>
+      <td style="text-align:left">options</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left"><b>inplace</b>: Whether to perform the operation in-place or not.</td>
+      <td
+      style="text-align:left">
+        <p>{</p>
+        <p><b>inplace</b>: false</p>
+        <p>}</p>
+        </td>
+    </tr>
+  </tbody>
 </table>
 
 **Example**
