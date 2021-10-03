@@ -1,14 +1,40 @@
 ---
-description: invoke a function on Series Value
+description: Invoke a function on each value in a Series.
 ---
 
 # Series.apply
 
-> danfo.series.**apply**\(callable\) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L718)\]
+> danfo.series.**apply**\(callable, options\) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L718)\]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| callable | Function | Function \(can be anonymous\) to apply |  |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameters</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">callable</td>
+      <td style="text-align:left">Function</td>
+      <td style="text-align:left">Function (can be anonymous) to apply</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">options</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left">inplace: Boolean indicating whether to perform the operation inplace or
+        not. Defaults to false</td>
+      <td style="text-align:left">
+        <p>{</p>
+        <p>inplace: false</p>
+        <p>}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 **Returns:**
 

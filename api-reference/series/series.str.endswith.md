@@ -4,11 +4,37 @@ description: Checks whether a string ends with specified characters
 
 # Series.str.endsWith
 
-> danfo.Series.str.**endsWith**\(str\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L133)\]
+> danfo.Series.str.**endsWith**\(str, options\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L133)\]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| str | string | the character\(s\) to check | "" |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameters</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">str</td>
+      <td style="text-align:left">string</td>
+      <td style="text-align:left">the character(s) to check</td>
+      <td style="text-align:left">&quot;&quot;</td>
+    </tr>
+    <tr>
+      <td style="text-align:left">options</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left"><b>inplace</b>: Whether to perform the operation in-place or not.</td>
+      <td
+      style="text-align:left">
+        <p>{</p>
+        <p><b>inplace</b>: false</p>
+        <p>}</p>
+        </td>
+    </tr>
+  </tbody>
+</table>
 
 **Returns**: Series \(Boolean element\)
 

@@ -6,12 +6,37 @@ description: >-
 
 # Series.div
 
-> danfo.Series.div\(other\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L188)\]
+> danfo.Series.div\(other, options\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L188)\]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series\|int\| | values  |  |
-| round | bool | specify if to round off the floating number | true |
+<table>
+  <thead>
+    <tr>
+      <th style="text-align:left">Parameters</th>
+      <th style="text-align:left">Type</th>
+      <th style="text-align:left">Description</th>
+      <th style="text-align:left">Default</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td style="text-align:left">other</td>
+      <td style="text-align:left">Series|int|</td>
+      <td style="text-align:left">values</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left">options</td>
+      <td style="text-align:left">Object</td>
+      <td style="text-align:left">inplace: Boolean indicating whether to perform the operation inplace or
+        not. Defaults to false</td>
+      <td style="text-align:left">
+        <p>{</p>
+        <p>inplace: false</p>
+        <p>}</p>
+      </td>
+    </tr>
+  </tbody>
+</table>
 
 **Return:** Series
 
@@ -51,7 +76,7 @@ sf1.div(sf2).print()
 {% endtab %}
 {% endtabs %}
 
-divide with a value
+### divide with a value
 
 {% tabs %}
 {% tab title="Node" %}

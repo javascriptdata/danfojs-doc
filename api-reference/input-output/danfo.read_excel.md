@@ -26,14 +26,11 @@ description: Reads an excel file into DataFrame.
 >       <td style="text-align:left">
 >         <p>{</p>
 >         <p><b>sheet</b> : string, (Optional) Name of the sheet which u want to parse.
->           Default will be the first sheet.</p>
->         <p><b>header_index</b> : int, (Optional) Only used in browser environment.
->           The Index of the row which represents the header(columns) of the data.
->           Default will be the first non empty row.</p>
->         <p><b>data_index</b> : int, (Optional) Only used in browser environment. The
->           index of the row from which actual data(content) starts. Default will be
->           the next row of <code>header_index</code>
->         </p>
+>           Default will be the first sheet.
+>           <br /><b>method</b>: The HTTP method to use.</p>
+>         <p><b>headers</b>: Additional headers to send with the request if reading
+>           JSON from remote url. Supports all the node-fetch options in Nodejs, and
+>           all fetch options in browsers.</p>
 >         <p>}</p>
 >       </td>
 >     </tr>
@@ -46,14 +43,15 @@ description: Reads an excel file into DataFrame.
 
 ### Example
 
-The **read\_excel** method can read excel files saved from local disk, or over the internet.
+The **read\_excel** method can read excel files saved on a local disk, or over the internet.
 
 {% tabs %}
 {% tab title="Node.js" %}
 ```javascript
 const dfd = require("danfojs-node")
+const path = require("path")
 
-local_xcel = 'testexcel.xls'
+let local_xcel = path.join(process.cwd(), "data", "testexcel.xlxs")
 
 async function load_process_data() {
     let df = await dfd.read_excel(local_xcel)

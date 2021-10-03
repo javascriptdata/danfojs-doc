@@ -1,5 +1,5 @@
 ---
-description: Obtain the number of unique values in a series
+description: Returns the number of unique values in a series
 ---
 
 # Series.nunique

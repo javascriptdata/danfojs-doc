@@ -17,18 +17,24 @@ danfo.**get\_dummies**\(kwargs\) \[[source](https://github.com/opensource9ja/dan
   </thead>
   <tbody>
     <tr>
-      <td style="text-align:left"><b>kwargs</b>
+      <td style="text-align:left">data</td>
+      <td style="text-align:left">Series or Dataframe</td>
+      <td style="text-align:left">The data to dummify</td>
+      <td style="text-align:left"></td>
+    </tr>
+    <tr>
+      <td style="text-align:left"><b>options</b>
       </td>
       <td style="text-align:left">Object</td>
       <td style="text-align:left">
         <p>{</p>
-        <p><b>data</b>: Array | Series | DataFrame</p>
-        <p><b>prefix_sep</b>: String separator for created columns e.g &quot;_&quot;,</p>
+        <p><b>columns</b>: Array of column names to dummify. If not specified, all
+          categorical columns are encoded.</p>
+        <p><b>prefixSeparator</b>: String separator for created columns e.g &quot;_&quot;,</p>
         <p><b>prefix</b>: String | Array of String, of column names</p>
-        <p><b>columns</b>: [Array] columns to be encoded in DataFrame.</p>
         <p>}</p>
       </td>
-      <td style="text-align:left">{<b>prefix_sep</b>: &quot;_&quot;}</td>
+      <td style="text-align:left">{<b>prefixSeparator</b>: &quot;_&quot;}</td>
     </tr>
   </tbody>
 </table>
@@ -49,7 +55,7 @@ const dfd = require("danfojs-node")
 let datasf = ['pear', 'mango', "pawpaw", "mango", "bean"]
 let sf1 = new dfd.Series(datasf)
 
-let dum_df = dfd.get_dummies({data: sf1, prefix:"fruit"})
+let dum_df = dfd.get_dummies(sf1, { prefix: "fruit" })
 dum_df.print()
 ```
 {% endtab %}
@@ -65,19 +71,19 @@ dum_df.print()
 {% tab title="Output" %}
 ```text
 
-╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ fruit_pear        │ fruit_mango       │ fruit_pawpaw      │ fruit_bean        ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0 │ 1                 │ 0                 │ 0                 │ 0                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ 0                 │ 1                 │ 0                 │ 0                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ 0                 │ 0                 │ 1                 │ 0                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ 0                 │ 1                 │ 0                 │ 0                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 4 │ 0                 │ 0                 │ 0                 │ 1                 ║
-╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ fruit_pear        │ fruit_mango       │ fruit_pawpaw      │ fruit_bean        ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0          │ 1                 │ 0                 │ 0                 │ 0                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1          │ 0                 │ 1                 │ 0                 │ 0                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2          │ 0                 │ 0                 │ 1                 │ 0                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3          │ 0                 │ 1                 │ 0                 │ 0                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 4          │ 0                 │ 0                 │ 0                 │ 1                 ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 {% endtab %}
 {% endtabs %}
@@ -96,7 +102,7 @@ let data = { fruits: ['pear', 'mango', "pawpaw", "mango", "bean"],
 let df = new dfd.DataFrame(data)
 df.print()
 
-let dum_df = dfd.get_dummies({ data: df })
+let dum_df = dfd.get_dummies(df)
 dum_df.print()
 ```
 {% endtab %}
@@ -159,7 +165,7 @@ let data = { fruits: ['pear', 'mango', "pawpaw", "mango", "bean"],
 let df = new dfd.DataFrame(data)
 df.print()
 
-let dum_df = dfd.get_dummies({ data: df, columns: ['fruits']})
+let dum_df = dfd.get_dummies(df, { columns: ['fruits']})
 dum_df.print()
 ```
 {% endtab %}

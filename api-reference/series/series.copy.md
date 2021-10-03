@@ -1,5 +1,5 @@
 ---
-description: Make a new copy of a Series
+description: Makes a deep copy of a Series
 ---
 
 # Series.copy

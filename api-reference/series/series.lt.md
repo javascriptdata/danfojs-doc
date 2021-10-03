@@ -8,7 +8,7 @@ description: Check if all values in a Series are less than a value.
 
 | Parameters | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
-| other | Series**\|** int\|float | value\(s\) to compare |  |
+| other | Series, Array or number | value\(s\) to compare |  |
 
 **Returns**: Series \(boolean element\)
 
