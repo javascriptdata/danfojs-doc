@@ -35,11 +35,13 @@ description: Reads a JSON file into DataFrame.
       <td style="text-align:left">Object</td>
       <td style="text-align:left">
         <p>Configuration options for reading JSON files. Supported options:</p>
-        <p> <code>method</code>: The HTTP method to use.</p>
+        <p>{
+          <br /><code>method</code>: The HTTP method to use.</p>
         <p><code>headers</code>: Additional headers to send with the request if reading
           JSON from remote url. Supports all the <a href="https://github.com/node-fetch/node-fetch#options">node-fetch options</a> in
           Nodejs, and all <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch options</a> in
           browsers.</p>
+        <p>}</p>
       </td>
       <td style="text-align:left">{
         <br /><b>method</b>: &quot;GET&quot;
