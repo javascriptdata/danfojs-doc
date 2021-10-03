@@ -4,11 +4,7 @@ description: 'Two-dimensional, size-mutable, potentially heterogeneous tabular d
 
 # Dataframe
 
-> `DataFrame`\(data, {  
->                                 **columns:** \[ Array \],  
->                                  **dtypes:** \[ Array \],   
->                                  **index:** \[Array\],   
->                                  **options**: Object}\)
+> [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame)\(data, {**columns:** \[ Array \], **dtypes:** \[ Array \], **index:** \[Array\]}\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L20)\]
 
 ### Attributes
 

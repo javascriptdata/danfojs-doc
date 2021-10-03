@@ -179,6 +179,7 @@
     * [DataFrame.ne](api-reference/dataframe/danfo.dataframe.ne.md)
     * [DataFrame.eq](api-reference/dataframe/danfo.dataframe.eq.md)
     * [DataFrame.replace](api-reference/dataframe/danfo.dataframe.replace.md)
+  * [Configuration Options](api-reference/configuration-options.md)
   * [Plotting](api-reference/plotting/README.md)
     * [Timeseries Plots](api-reference/plotting/timeseries-plots.md)
     * [Violin Plots](api-reference/plotting/violin-plots.md)
