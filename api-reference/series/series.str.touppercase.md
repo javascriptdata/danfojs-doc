@@ -4,31 +4,9 @@ description: Converts all characters to uppercase.
 
 # Series.str.toUpperCase
 
-> danfo.Series.str.toUpperCase\(options\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L33)\]
+> danfo.Series.str.toUpperCase\(\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L33)\]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left"><b>inplace</b>: Whether to perform the operation in-place or not.</td>
-      <td
-      style="text-align:left">
-        <p>{</p>
-        <p><b>inplace</b>: false</p>
-        <p>}</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+**Parameters:** None
 
 **Returns**:  Series \(String element\)
 

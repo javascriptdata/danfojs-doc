@@ -4,37 +4,11 @@ description: the position of the first found occurrence of a specified value in 
 
 # Series.str.indexOf
 
-> danfo.Series.str.indexOf\(str, options\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L161)\]
+> danfo.Series.str.indexOf\(str\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L161)\]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">str</td>
-      <td style="text-align:left">string</td>
-      <td style="text-align:left">the string to obtain its index</td>
-      <td style="text-align:left">&quot;&quot;</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left"><b>inplace</b>: Whether to perform the operation in-place or not.</td>
-      <td
-      style="text-align:left">
-        <p>{</p>
-        <p><b>inplace</b>: false</p>
-        <p>}</p>
-        </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| str | string | the string to obtain its index | "" |
 
 **Returns:** Series
 

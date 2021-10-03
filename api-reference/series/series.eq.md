@@ -8,7 +8,7 @@ description: Check all the values in a series is equal to another value
 
 | Parameters | Type | Description | Default |
 | :--- | :--- | :--- | :--- |
-| other | Series, Array or number |  value to compare |  |
+| other | Series**\|** int\|String\|float |  value to compare |  |
 
 **Returns**: Series \(Boolean element\)
 

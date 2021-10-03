@@ -4,38 +4,18 @@ description: Replace all NaN value with specified value
 
 # Series.fillna
 
-> danfo.Series.**fillna**\(options\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L470)\]
+> danfo.Series.**fillna**\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L470)\]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p><b>value</b>: The value to replace all missing value with.</p>
-        <p><b>inplace</b>: Boolean indicating whether to perform the operation inplace
-          or not. Defaults to false</p>
-      </td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p>inplace: false</p>
-        <p>}</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| kwargs\["**value**"\] | int \| String\| bool | value to replace the NaN values |  |
+| kwargs\["**inplace**"\] | bool | return a new series or not.  | false |
+
+**Returns:**  Series
 
 **Examples**
 
-### Fill nan value and then return new series
+Fill nan value and then return new series
 
 {% tabs %}
 {% tab title="Node" %}
@@ -82,7 +62,7 @@ sf_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Fill nan value in-place
+Fill nan value without returning new Series
 
 {% tabs %}
 {% tab title="Node" %}

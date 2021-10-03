@@ -37,9 +37,7 @@ danfo.DataFrame.**set\_index**\(kwargs\) \[[source](https://github.com/opensourc
 
 **Returns:**
 
-```text
-   ****return **DataFrame**
-```
+       ****return **DataFrame**
 
 ## **Examples**
 
@@ -48,6 +46,7 @@ danfo.DataFrame.**set\_index**\(kwargs\) \[[source](https://github.com/opensourc
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+
 const dfd = require("danfojs-node")
 
 let data = { "A": [-20, 30, 47.3],
@@ -60,11 +59,12 @@ df.print()
 
 df.set_index({column: "A", inplace: true})
 df.print()
+
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
-```text
+```
 
 ```
 {% endtab %}
@@ -73,6 +73,7 @@ df.print()
 {% tabs %}
 {% tab title="Output" %}
 ```text
+
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -117,11 +118,12 @@ df.print()
 let new_index = ["a", "b", "a"]
 df.set_index({column: new_index, inplace: true})
 df.print()
+
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
-```text
+```
 
 ```
 {% endtab %}
@@ -130,6 +132,7 @@ df.print()
 {% tabs %}
 {% tab title="Output" %}
 ```text
+
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -156,5 +159,5 @@ df.print()
 {% endtab %}
 {% endtabs %}
 
-**Note:** To reset an index to the default values, use the [DataFrame.reset\_index](dataframe.reset_index.md).
+**Note:** To reset an index to the default values, use the [DataFrame.reset\_index](dataframe.reset_index.md). 
 

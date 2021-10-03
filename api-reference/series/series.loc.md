@@ -1,3 +1,7 @@
+---
+description: Access a group of rows by label(s) or a boolean array.
+---
+
 # Series.loc
 
 danfo.Series.**loc**\(\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
@@ -19,7 +23,7 @@ Allowed inputs are:
 * An integer, e.g. `"r1"`.
 * A list or array of integers, e.g. `["a", "b", "d"]`.
 * A boolean mask. E.g \[ true, false, false \]
-* A string slice object with ints, e.g. `[`'`"a":"d"']`
+* A string slice object with ints, e.g. `[`'`"a":"d"'], ["1:4"]`
 
 _**Note:** only ****the start label is included, and the end label is ignored._ 
 

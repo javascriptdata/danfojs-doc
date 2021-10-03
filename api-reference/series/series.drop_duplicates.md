@@ -4,39 +4,18 @@ description: Remove duplicate rows
 
 # Series.drop\_duplicates
 
-> danfo.Series.**drop\_duplicates**\(options\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L1007)\]
+> danfo.Series.**drop\_duplicates**\(kwargs\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L1007)\]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left"><b>keep</b>: &quot;first&quot; | &quot;last&quot;, which duplicate value
-        to keep. Defaults to &quot;first&quot;.
-        <br /><b>inplace</b>: Boolean indicating whether to perform the operation in-place
-        or not. Defaults to false</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p>inplace: false</p>
-        <p>}</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type | Description | Default |
+| :--- | :--- | :--- | :--- |
+| kwargs\["**inplace**"\] | bool | return a new series or not.  | false |
+| kwargs\["**keep**"\] | String | {"**first**"or "**last**"}. Specify if to keep the last or the first duplicate value  | first |
 
 **Returns:** Series
 
 **Examples**
 
-### Drop duplicate by keeping the first occurrence of the duplicate value
+Drop duplicate by keeping the first value of the duplicate value
 
 {% tabs %}
 {% tab title="Node" %}
@@ -72,7 +51,7 @@ sf_drop.print()
 {% endtab %}
 {% endtabs %}
 
-### Drop duplicate and keep only the last duplicated value
+Drop duplicate and keep only the last duplicated value
 
 {% tabs %}
 {% tab title="Node" %}
@@ -108,7 +87,7 @@ sf_drop.print()
 {% endtab %}
 {% endtabs %}
 
-### Remove duplicate value in-place
+Remove duplicate value in series without returning a new series
 
 {% tabs %}
 {% tab title="Node" %}

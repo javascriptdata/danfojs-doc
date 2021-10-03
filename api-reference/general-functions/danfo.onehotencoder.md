@@ -4,11 +4,11 @@ description: Encode categorical features as a one-hot numeric array.
 
 # danfo.OneHotEncoder
 
-class danfo.**OneHotEncoder** \[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/preprocessing/encodings.js#L6)\]
+class danfo.**OneHotEncoder** \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
 
 danfo.js provides the OneHotEncoder class for encoding values in Series and Arrays to one-hot numeric arrays. This is mostly used as a preprocessing step before most machine learning tasks. 
 
-The API is similar to scikit-learn's [OneHotEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html?highlight=onehotencoder#sklearn.preprocessing.OneHotEncoder), and provides a fit and transform method. 
+The API is similar to sklearn's [OneHotEncoder](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.OneHotEncoder.html?highlight=onehotencoder#sklearn.preprocessing.OneHotEncoder), and provides a fit and transform method. 
 
 ## **Examples**
 
