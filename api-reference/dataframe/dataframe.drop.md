@@ -116,7 +116,7 @@ let data = { "A": [-20, 30, 47.3, -20],
              "D": ["a", "b", "c", "c"] }
 
 let df = new dfd.DataFrame(data, {index: ["a", "b", "c", "d"]})
-df.drop({ index: ["a", "c"], axis: 0, inplace: true });
+df.drop({ index: ["a", "c"], inplace: true });
 df.print()
 
 ```
