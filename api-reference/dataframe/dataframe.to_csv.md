@@ -11,44 +11,104 @@ DataFrame.**to_csv**(options) \[[source](https://github.com/opensource9ja/danfoj
 
 The **to_csv** function can be used to write out a DataFrame or Series to CSV file. The output is configurable and will depend on the environment. In the following examples, we show you how to write/download a CSV file from Node and Browser environments.
 
-## **Examples**
+****
 
-### Convert DataFrame to CSV format
+### Convert DataFrame to CSV string and return value
 
 {% tabs %}
-{% tab title="Node" %}
+{% tab title="Node.js" %}
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = { "Abs": [20.2, 30, 47.3] ,
-             "Count": [34, 4, 5, 6] ,
-             "country code": ["NG", "FR", "GH"] }
+let data = {
+  Abs: [20.2, 30, 47.3],
+  Count: [34, 4, 5],
+  "country code": ["NG", "FR", "GH"],
+};
 
+let df = new dfd.DataFrame(data);
 
-let df = new dfd.DataFrame(data)
+const csv = df.to_csv({ download: false });
+console.log(csv);
 
-df.to_csv("/home/link/to/path.csv").then((csv) => {
-    console.log(csv);
-
-}).catch((err) => {
-
-    console.log(err);
-})
-```
-{% endtab %}
-{% endtabs %}
-
-{% tabs %}
-{% tab title="Output" %}
-```
+//output
 Abs,Count,country code
 20.2,34,NG
 30,4,FR
 47.3,5,GH
 ```
 {% endtab %}
+
+{% tab title="Browser" %}
+```markup
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.2/lib/bundle.min.js"></script>
+    <title>Document</title>
+</head>
+
+<body>
+
+    <script>
+
+       let data = {
+          Abs: [20.2, 30, 47.3],
+          Count: [34, 4, 5],
+          "country code": ["NG", "FR", "GH"],
+        };
+        
+        let df = new dfd.DataFrame(data);
+        
+        const csv = df.to_csv({ download: false });
+        console.log(csv);
+    </script>
+</body>
+
+</html>
+
+```
+{% endtab %}
 {% endtabs %}
 
-{% hint style="info" %}
-To export DataFrame as Json, use [DataFrame.to_json](dataframe.to_json.md)
-{% endhint %}
+### Convert DataFrame to CSV string and write to file path
+
+Writing a CSV file to a local file path is only supported in the Nodejs environment
+
+{% tabs %}
+{% tab title="Node.js" %}
+```javascript
+const dfd = require("danfojs-node")
+
+let data = {
+    Abs: [20.2, 30, 47.3],
+    Count: [34, 4, 5],
+    "country code": ["NG", "FR", "GH"],
+};
+
+let df = new dfd.DataFrame(data);
+
+df.to_csv({ filePath: "testOut.csv"});
+```
+{% endtab %}
+{% endtabs %}
+
+### Convert DataFrame to CSV string and download file in browser
+
+You can automatically convert and download a CSV file in a browser environment, by specifying a `fileName` and setting `download` to **true**. 
+
+```javascript
+let data = {
+    Abs: [20.2, 30, 47.3],
+    Count: [34, 4, 5],
+    "country code": ["NG", "FR", "GH"],
+};
+
+let df = new dfd.DataFrame(data);
+
+df.to_csv({ fileName: "testOut.csv", download: true});
+```
+
