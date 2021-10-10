@@ -43,23 +43,11 @@ tf_tensor.print()
 {% tab title="Output" %}
 ```
 float32
-
-Tensor {
-  kept: false,
-  isDisposedInternal: false,
-  shape: [ 3, 3 ],
-  dtype: 'float32',
-  size: 9,
-  strides: [ 3 ],
-  dataId: {},
-  id: 0,
-  rankType: '2'
-}
-
 Tensor
     [[-20       , 34, 20],
-     [30        , -4, 2 ],
-     [47.2999992, 5 , 30]]
+     [30        , -4, 20],
+     [47.2999992, 5 , 30],
+     [-20       , 6 , 30]]
 ```
 {% endtab %}
 {% endtabs %}
@@ -72,7 +60,7 @@ String values in a Tensor are represented as NaN, so ensure to transform them be
 const dfd = require("danfojs-node")
 
 let data = { "Abs": [20.2, 30, 47.3] ,
-             "Count": [34, 4, 5, 6] ,
+             "Count": [34, 5, 6] ,
              "country code": ["NG", "FR", "GH"] }
 
 
