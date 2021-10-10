@@ -96,12 +96,13 @@ dfd.to_csv(df, { filePath: "testOut.csv"});
 {% endtab %}
 {% endtabs %}
 
-### Convert DataFrame to CSV string and download file in browser
+### Convert DataFrame to CSV string and download file in Client-side lib
 
 You can automatically convert and download a CSV file in a browser environment, by specifying a `fileName` and setting `download` to **true**. 
 
 ```javascript
 const dfd = require("danfojs")
+
 let data = {
     Abs: [20.2, 30, 47.3],
     Count: [34, 4, 5],
