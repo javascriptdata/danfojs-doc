@@ -272,7 +272,7 @@ sub_df.print()
 {% endtab %}
 {% endtabs %}
 
-### More default slicing behaviour
+### More default slicing behavior
 
 If you specify a slice start position, **iloc** automatically returns all values after that position. For instance:
 
