@@ -196,9 +196,9 @@ sub_df.print()
 {% endtab %}
 {% endtabs %}
 
-### **Index by a slice of row**
+## **Index by a slice of row**
 
-The **loc** function also accepts string slices of the form \[start: end], e.g **\[\`"a":"e"\`]**. This will return all values from label positions `a` to `e`. 
+The **loc** function also accepts string slices of the form \[start: end], e.g **\[\`"a":"c"\`]**. This will return all values from label positions `a` to c. 
 
 {% tabs %}
 {% tab title="Node" %}
@@ -256,3 +256,27 @@ df``.loc({ row: [`"a":"e"`]}).print()``\
 \
 _**Inner**_ _**quotes are not needed for numeric indices!**_
 {% endhint %}
+
+### Slice DataFrame rby boolean condition 
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+
+
+let s = new dfd.Series([12, 34, 2.2, 2, 30, 30, 2.1, 7])
+s.loc(s.gt(20)).print()
+```
+{% endtab %}
+{% endtabs %}
+
+```
+╔═══╤════╗
+║ 1 │ 34 ║
+╟───┼────╢
+║ 4 │ 30 ║
+╟───┼────╢
+║ 5 │ 30 ║
+╚═══╧════╝
+```
