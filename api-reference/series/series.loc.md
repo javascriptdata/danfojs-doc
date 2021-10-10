@@ -4,28 +4,28 @@ description: Access a group of rows by label(s) or a boolean array.
 
 # Series.loc
 
-danfo.Series.**loc**\(\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
+danfo.Series.**loc**() \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| rows | Array, String  | Array, string slice, index of row positions boolean mask to filter by.  |  |
+| Parameters | Type           | Description                                                             | Default |
+| ---------- | -------------- | ----------------------------------------------------------------------- | ------- |
+| rows       | Array, String  | Array, string slice, index of row positions boolean mask to filter by.  |         |
 
 **Returns:**
 
-       ****return **Series**
+**       **return** Series**
 
 ## **Examples**
 
-`.loc()` is  label position based \(from `0` to `length-1` of the row axis\).
+`.loc()` is  label position based (from `0` to `length-1` of the row axis).
 
 Allowed inputs are:
 
 * An integer, e.g. `"r1"`.
 * A list or array of integers, e.g. `["a", "b", "d"]`.
-* A boolean mask. E.g \[ true, false, false \]
+* A boolean mask. E.g \[ true, false, false ]
 * A string slice object with ints, e.g. `[`'`"a":"d"'], ["1:4"]`
 
-_**Note:** only ****the start label is included, and the end label is ignored._ 
+_**Note: **only** **the start label is included, and the end label is ignored. _
 
 `.loc` will raise a `ValueEror` if a requested label is not found.
 
@@ -49,14 +49,13 @@ s.loc(["a", "g"]).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═════╗
 ║ a │ 12  ║
 ╟───┼─────╢
@@ -86,7 +85,7 @@ s.loc(["a", "g"]).print()
 
 ### **Index by a slice of row**
 
-The **loc** function also accepts string slices of the form \[start: end\], e.g **\[\`"a":"e"\`\]**. This will return all values from label positions `a` to `e`. 
+The **loc** function also accepts string slices of the form \[start: end], e.g **\[\`"a":"e"\`]**. This will return all values from label positions `a` to `e`. 
 
 {% tabs %}
 {% tab title="Node" %}
@@ -104,14 +103,13 @@ s.loc([`"a":"e"`]).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═════╗
 ║ a │ 12  ║
 ╟───┼─────╢
@@ -126,12 +124,12 @@ s.loc([`"a":"e"`]).print()
 {% endtabs %}
 
 {% hint style="info" %}
-Note that when using loc. We expect you to pass labels in the correct format. That is, string labels must be explicitly quoted. For example, the following loc slice will throw an error:  
-`s.loc([a:e]).print()`  
-For the slice above to work, you must quote each slice, e.g:  
-`s.loc(["a":"e"]).print()`  
-  
-_**Quotes are not needed for numeric indices!**_
+Note that when using loc. We expect you to pass labels in the correct format. That is, string labels must be explicitly quoted. For example, the following loc slice will throw an error:\
+`s.loc([a:e]).print()`\
+For the slice above to work, you must quote each slice, e.g:\
+`s.loc(["a":"e"]).print()`\
+\
+_**Inner quotes are not needed for numeric indices!**_
 {% endhint %}
 
 ### By specifying a start index in a slice, all values after that index are returned. 
@@ -148,14 +146,13 @@ s.loc([`1:`]).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═════╗
 ║ 1 │ 34  ║
 ╟───┼─────╢
@@ -190,7 +187,7 @@ s.loc(s.gt(20)).print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 ╔═══╤════╗
 ║ 1 │ 34 ║
 ╟───┼────╢
@@ -199,4 +196,3 @@ s.loc(s.gt(20)).print()
 ║ 5 │ 30 ║
 ╚═══╧════╝
 ```
-
