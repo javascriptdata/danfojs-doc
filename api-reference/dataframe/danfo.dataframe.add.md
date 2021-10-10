@@ -6,10 +6,10 @@ description: Get Addition of DataFrame and other, element-wise (binary operator 
 
 danfo.DataFrame.**add**(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L347)]
 
-| Parameters | Type                               | Description                                                           | Default      |
-| ---------- | ---------------------------------- | --------------------------------------------------------------------- | ------------ |
-| other      | DataFrame, Series, Array or Scalar | Object to ad with                                                     |              |
-| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column</p><p>}</p> | { axis: 1 }  |
+| Parameters | Type                               | Description                                                                                                                                                                                  | Default                      |
+| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
+| other      | DataFrame, Series, Array or Scalar | Object to add with                                                                                                                                                                           |                              |
+| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false }  |
 
 **Returns:**
 
@@ -17,7 +17,7 @@ danfo.DataFrame.**add**(other, option) \[[source](https://github.com/opensource9
 
 ## **Examples**
 
-### Addition of** scalar to **DataFrame:
+### Addition of** scalar to **DataFrame al
 
 {% tabs %}
 {% tab title="Node" %}
