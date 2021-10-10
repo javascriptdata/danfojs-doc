@@ -5,11 +5,11 @@ description: Adds new row to the end of a DataFrame
 
 danfo.DataFrame.**append**(val) \[[source](https://github.com/opensource9ja/danfojs/blob/2696f1d8420dd364464aae7c5c175c6cd0ef4c93/danfojs/src/core/frame.js#L2059)]
 
-| Parameters | Type                        | Description                                                                                                                | Default |
-| ---------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------- | ------- |
-| newValues  | Array, Series or DataFrame  | Value to append to the DataFrame                                                                                           |         |
-| index      | Array                       | The new index value(s) to append to the Series. Must contain the same number of values as`newValues`  as they map `1 - 1`. |         |
-| options    | Object                      | Con                                                                                                                        |         |
+| Parameters | Type                        | Description                                                                                                                                      | Default                                                 |
+| ---------- | --------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------------------------- |
+| newValues  | Array, Series or DataFrame  | Value to append to the DataFrame                                                                                                                 |                                                         |
+| index      | Array                       | The new index value(s) to append to the Series. Must contain the same number of values as`newValues`  as they map `1 - 1`.                       |                                                         |
+| options    | Object                      | <p>Optional parameters</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p> | <p>{</p><p><strong>inplace</strong> : false</p><p>}</p> |
 
 **Returns:**
 
