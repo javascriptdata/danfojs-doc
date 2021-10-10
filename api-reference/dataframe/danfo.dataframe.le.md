@@ -6,12 +6,12 @@ description: >-
 
 # DataFrame.le
 
-danfo.DataFrame.le(other, axis) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L718)]
+danfo.DataFrame.le(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1566)]
 
-| Parameters | Type                             | Description                                             | Default |
-| ---------- | -------------------------------- | ------------------------------------------------------- | ------- |
-| other      | DataFrame, Series, Array, Scalar | Data structure, or array-like object to compare against |         |
-| axis       | Int                              | Whether to compare by the index (0) or columns (1).     | 0       |
+| Parameters | Type                             | Description                                                 | Default   |
+| ---------- | -------------------------------- | ----------------------------------------------------------- | --------- |
+| other      | DataFrame, Series, Array, Scalar | Data structure, or array-like object to compare against     |           |
+| option     | Object                           | **axis**: 0 or 1. If 0, add column-wise, if 1, add row-wise | {axis: 1} |
 
 **Returns:**
 
@@ -74,7 +74,7 @@ let data = {"Col1": [10, 45, 56, 10],
 let df = new dfd.DataFrame(data)
 let sf = new dfd.Series([10,40])
 
-let df_rep = df.le(sf, axis=1)
+let df_rep = df.le(sf, {axis:1})
 
 df_rep.print()
 
@@ -151,7 +151,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Comparing** **DataFrame with a JavaScript Array
+### Comparing** **DataFrame with an Array
 
 {% tabs %}
 {% tab title="Node" %}
@@ -163,7 +163,7 @@ let data = {"Col1": [10, 45, 56, 10],
 let df = new dfd.DataFrame(data)
 let val = [10,40]
 
-let df_rep = df.le(val, axis=1)
+let df_rep = df.le(val, {axis:1})
 
 df_rep.print()
 ```

@@ -4,11 +4,11 @@ description: Return the elements of the specified column in the DataFrame
 
 # DataFrame.column
 
-danfo.DataFrame.**column**(col_name) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1217)]
+danfo.DataFrame.**column**(column) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1217)]
 
-| Parameters | Type | Description                           | Default |
-| ---------- | ---- | ------------------------------------- | ------- |
-| col_name   | Str  | The name of a column in the DataFrame |         |
+| Parameters | Type   | Description                           | Default |
+| ---------- | ------ | ------------------------------------- | ------- |
+| column     | String | The name of a column in the DataFrame |         |
 
 **Returns:**
 
@@ -45,29 +45,26 @@ df['Name'].print() //produces the same result as above
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══╤══════════════════════╗
-║   │ Name                 ║
-╟───┼──────────────────────╢
-║ 0 │ Apples               ║
-╟───┼──────────────────────╢
-║ 1 │ Mango                ║
-╟───┼──────────────────────╢
-║ 2 │ Banana               ║
-╟───┼──────────────────────╢
-║ 3 │ NaN                  ║
-╚═══╧══════════════════════╝
+╔═══╤═══════════╗
+║ 0 │ Apples    ║
+╟───┼───────────╢
+║ 1 │ App       ║
+╟───┼───────────╢
+║ 2 │ Banana    ║
+╟───┼───────────╢
+║ 3 │ undefined ║
+╚═══╧═══════════╝
 
-╔═══╤══════════════════════╗
-║   │ Name                 ║
-╟───┼──────────────────────╢
-║ 0 │ Apples               ║
-╟───┼──────────────────────╢
-║ 1 │ Mango                ║
-╟───┼──────────────────────╢
-║ 2 │ Banana               ║
-╟───┼──────────────────────╢
-║ 3 │ NaN                  ║
-╚═══╧══════════════════════╝
+╔═══╤═══════════╗
+║ 0 │ Apples    ║
+╟───┼───────────╢
+║ 1 │ App       ║
+╟───┼───────────╢
+║ 2 │ Banana    ║
+╟───┼───────────╢
+║ 3 │ undefined ║
+╚═══╧═══════════╝
+
 ```
 {% endtab %}
 {% endtabs %}

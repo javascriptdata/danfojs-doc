@@ -6,11 +6,12 @@ description: >-
 
 # DataFrame.fillna
 
-danfo.DataFrame.**fillna**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1235)]
+danfo.DataFrame.**fillna**(values, options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1235)]
 
-| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                        | Default |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| kwargs     | Object | <p>{<strong>columns</strong>:Array of column name(s) to fill. If undefined fill all columns</p><p><strong>values</strong>: Array | Scalar of value(s) to fill with. </p><p><strong>inplace</strong>: boolean. true | false. Whether to perform operation to the original Object or create a new one. </p><p> }</p> |         |
+| Parameters | Type            | Description                                                                                                                                                                                                                      | Default          |
+| ---------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| values     | Array \| Scalar | The list of value(s) to use for replacement.                                                                                                                                                                                     |                  |
+| options    | Object          | <p>{<strong>columns</strong>:Array of column name(s) to fill. If undefined fill all columns </p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false </p><p> }</p> | {inplace: false} |
 
 **Returns:**
 
@@ -18,21 +19,26 @@ danfo.DataFrame.**fillna**(kwargs) \[[source](https://github.com/opensource9ja/d
 
 ## **Examples**
 
-### Fill NaNs in specified columns with specified values 
+### Fill missing values in specified columns with specified values 
+
+Missing values are NaN, undefined or null values
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = {"Name":["Apples", "Mango", "Banana", undefined],
-            "Count": [NaN, 5, NaN, 10], 
-            "Price": [200, 300, 40, 250]}
-            
+let data = {
+    "Name": ["Apples", "Mango", "Banana", undefined],
+    "Count": [NaN, 5, NaN, 10],
+    "Price": [200, 300, 40, 250]
+}
+
 let df = new dfd.DataFrame(data)
 df.print()
 
-let df_filled = df.fillna({columns: ["Name", "Count"], values: ["Apples", df["Count"].mean()]})
+let values = ["Apples", df["Count"].mean()]
+let df_filled = df.fillna(values, { columns: ["Name", "Count"] })
 df_filled.print()
 
 ```
@@ -85,12 +91,14 @@ df_filled.print()
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = {"Name":["Apples", "Mango", "Banana", undefined],
-            "Count": [NaN, 5, NaN, 10], 
-            "Price": [200, 300, 40, 250]}
+let data = {
+    "Name": ["Apples", "Mango", "Banana", undefined],
+    "Count": [NaN, 5, NaN, 10],
+    "Price": [200, 300, 40, 250]
+}
 
 let df = new dfd.DataFrame(data)
-let df_filled = df.fillna({ values: ["Apples"] })
+let df_filled = df.fillna("Apples")
 
 df_filled.print()
 
@@ -128,7 +136,6 @@ df_filled.print()
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
-
 let data = {
     "Name": ["Apples", "Mango", "Banana", undefined],
     "Count": [NaN, 5, NaN, 10],
@@ -136,9 +143,9 @@ let data = {
 }
 
 let df = new dfd.DataFrame(data)
-df.fillna({
+let values = ["Apples", df["Count"].mean()]
+df.fillna(values, {
     columns: ["Name", "Count"],
-    values: ["Apples", df["Count"].mean()],
     inplace: true
 })
 df.print()

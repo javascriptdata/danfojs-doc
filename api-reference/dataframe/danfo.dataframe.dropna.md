@@ -1,14 +1,15 @@
 ---
-description: Remove missing values (NaNs, undefined) for DataFrame
+description: Remove missing values (NaNs, undefined, null) for DataFrame
 ---
 
 # DataFrame.dropna
 
-danfo.DataFrame.**dropna**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1430)]
+danfo.DataFrame.**dropna**(axis, options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1430)]
 
-| Parameters | Type   | Description                                                                                                                                                                                                                                                                       | Default                                                                    |
-| ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
-| kwargs     | Object | <p>{<strong>axis</strong>: <em>0<strong>: </strong>Apply along</em> row/index axis</p><p><em><strong>             </strong>1</em>: Apply across columns axis</p><p><strong>inplace</strong>:If true, perform operation inplace </p><p>              and return None.</p><p> }</p> | <p>{<strong>axis</strong>: 0, </p><p> <strong>inplace: </strong>false}</p> |
+| Parameters | Type   | Description                                                                                                                   | Default              |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| axis       | Int    | 0 or 1. If 0, drop columns with NaNs, if 1, drop rows with NaNs                                                               | 1                    |
+| options    | Object | <p></p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p> | {**inplace: **false} |
 
 **Returns:**
 
@@ -29,7 +30,7 @@ let df = new dfd.DataFrame(data, { columns: cols })
 
 df.print()
 
-let df_drop = df.dropna({axis: 0})
+let df_drop = df.dropna(0)
 df_drop.print()
 ```
 {% endtab %}
