@@ -2,59 +2,16 @@
 description: Writes a DataFrame or Series to CSV format.
 ---
 
-# danfo.to\_csv
+# danfo.to_csv
 
-> danfo.**to\_csv**\(source, configs\) [\[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/io/io.csv.js#L106)\]
+> danfo.**to_csv**(source, configs) [\[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/io/io.csv.js#L106)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>Parameters</b>
-      </th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><em><b>data</b></em>
-      </td>
-      <td style="text-align:left">Series or DataFrame</td>
-      <td style="text-align:left">The Series or DataFrame to write to CSV</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>options</b>
-      </td>
-      <td style="text-align:left">object, optional</td>
-      <td style="text-align:left">
-        <p>Configuration object:</p>
-        <p>{</p>
-        <p> <b><code>filePath</code></b>: Local file path to write the CSV file to.
-          If not specified, the CSV will be returned as a string. Only needed in
-          Nodejs version
-          <br /><b><code>fileName</code></b>: The name of the file to download as. Only
-          needed in browser environment.
-          <br /><b><code>download</code></b>: Boolean indicating whether to automatically
-          download the CSV file in the browser. Only needed in the browser environment.</p>
-        <p><b><code>header</code></b>: Boolean indicating whether to include a header
-          row in the CSV file.</p>
-        <p> <b><code>sep</code></b>: Character to be used as a separator in the CSV
-          file.</p>
-        <p></p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">{
-        <br /><b>download</b>: true,
-        <br /><b>sep</b>: &quot;,&quot;
-        <br />
-        <br />}</td>
-    </tr>
-  </tbody>
-</table>
+| **Parameters** | Type                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    | Default                                                                            |
+| -------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
+| _**data**_     | Series or DataFrame | The Series or DataFrame to write to CSV                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        |                                                                                    |
+| **options**    |  object, optional   | <p> Configuration object: </p><p>{</p><p> <strong><code>filePath</code></strong>: Local file path to write the CSV file to. If not specified, the CSV will be returned as a string. Only needed in Nodejs version<br><strong><code>fileName</code></strong>: The name of the file to download as. Only needed in browser environment. <br><strong><code>download</code></strong>: Boolean indicating whether to automatically download the CSV file in the browser. Only needed in the browser environment. </p><p><strong><code>header</code></strong>: Boolean indicating whether to include a header row in the CSV file.</p><p> <strong><code>sep</code></strong>: Character to be used as a separator in the CSV file.</p><p></p><p>}</p> | <p>{<br><strong>download</strong>: true,<br><strong>sep</strong>: ","<br><br>}</p> |
 
-The **to\_csv** function can be used to write out a DataFrame or Series to CSV file. The output is configurable and will depend on the environment. In the following examples, we show you how to write/download a CSV file from Node and Browser environments.
+The **to_csv** function can be used to write out a DataFrame or Series to CSV file. The output is configurable and will depend on the environment. In the following examples, we show you how to write/download a CSV file from Node and Browser environments.
 
 ### Convert DataFrame to CSV string and return value
 
@@ -71,7 +28,7 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-const csv = df.to_csv({ download: false });
+const csv = dfd.to_csv(df, { download: false });
 console.log(csv);
 
 //output
@@ -134,7 +91,7 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-df.to_csv({ filePath: "testOut.csv"});
+dfd.to_csv(df, { filePath: "testOut.csv"});
 ```
 {% endtab %}
 {% endtabs %}
@@ -144,6 +101,7 @@ df.to_csv({ filePath: "testOut.csv"});
 You can automatically convert and download a CSV file in a browser environment, by specifying a `fileName` and setting `download` to **true**. 
 
 ```javascript
+const dfd = require("danfojs")
 let data = {
     Abs: [20.2, 30, 47.3],
     Count: [34, 4, 5],
@@ -152,6 +110,5 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-df.to_csv({ fileName: "testOut.csv", download: true});
+dfd.to_csv(df, { fileName: "testOut.csv", download: true});
 ```
-
