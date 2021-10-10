@@ -119,7 +119,7 @@ let df = new dfd.DataFrame(data)
 let df_new = df.astype({column: "D", dtype: "int32"})
 df_new.print()
 
-df.ctypes.print()
+df_new.ctypes.print()
 
 
 ```
@@ -178,7 +178,7 @@ let df = new dfd.DataFrame(data)
 let df_new = df.astype({column: "D", dtype: "int32"})
 df_new.print()
 
-df.ctypes.print()
+df_new.ctypes.print()
 
 
 ```
