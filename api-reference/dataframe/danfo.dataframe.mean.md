@@ -16,7 +16,7 @@ danfo.DataFrame.**mean**(options) \[[source](https://github.com/opensource9ja/da
 
 ## **Examples**
 
-## Calculates the mean of values along default axis 1 (column)
+## Computes the mean of values along default axis 1 (column)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -67,7 +67,7 @@ df.mean().print()
 {% endtab %}
 {% endtabs %}
 
-## Calculates the mean of values along row axis (0)
+## Computes the mean of values along row axis (0)
 
 {% tabs %}
 {% tab title="Node" %}
