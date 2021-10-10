@@ -6,13 +6,13 @@
 
 Minor patch update
 
-### \[LATEST] ReleaseNode (v0.3.2), Browser (0.3.2)
+### Release- Node (v0.3.2), Browser (0.3.2)
 
 **Date:** 2nd Oct 2021
 
 Minor patch update for column name display after aggregation functions like sum, mean, var, are applied to a column axis.
 
-### ReleaseNode (v0.3.1), Browser (0.3.1)
+### Release Node (v0.3.1), Browser (0.3.1)
 
 **Date:** 1st Oct 2021
 
