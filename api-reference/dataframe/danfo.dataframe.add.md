@@ -1,23 +1,23 @@
 ---
-description: 'Get Addition of DataFrame and other, element-wise (binary operator add).'
+description: Get Addition of DataFrame and other, element-wise (binary operator add).
 ---
 
 # DataFrame.add
 
-danfo.DataFrame.**add**\(axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L347)\]
+danfo.DataFrame.**add**(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L347)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | DataFrame, Series, Array or Scalar | Object to modulo with |  |
-| axis | Int | 0 for row, 1 for column | 0 |
+| Parameters | Type                               | Description                                                           | Default      |
+| ---------- | ---------------------------------- | --------------------------------------------------------------------- | ------------ |
+| other      | DataFrame, Series, Array or Scalar | Object to ad with                                                     |              |
+| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column</p><p>}</p> | { axis: 1 }  |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
-### Addition of **scalar to** DataFrame:
+### Addition of** scalar to **DataFrame:
 
 {% tabs %}
 {% tab title="Node" %}
@@ -36,14 +36,13 @@ df_new.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ Col1              │ Col2              ║
 ╟───┼───────────────────┼───────────────────╢
@@ -59,7 +58,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of  **Series to** DataFrame along the column axis:
+### Addition of**  Series to **DataFrame along the column axis:
 
 {% tabs %}
 {% tab title="Node" %}
@@ -81,14 +80,13 @@ df_new.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ Col1              │ Col2              ║
 ╟───┼───────────────────┼───────────────────╢
@@ -104,7 +102,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of  ****DataFrame to a DataFrame
+### Addition of**  **DataFrame to a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -129,14 +127,13 @@ df_new.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ Col1              │ Col2              ║
 ╟───┼───────────────────┼───────────────────╢
@@ -152,7 +149,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of ****JavaScript Array to DataFrame
+### Addition of** **JavaScript Array to DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -173,14 +170,13 @@ df_new.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ Col1              │ Col2              ║
 ╟───┼───────────────────┼───────────────────╢
@@ -195,6 +191,4 @@ df_new.print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
