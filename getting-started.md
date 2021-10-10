@@ -33,7 +33,7 @@ yarn add danfojs
 For use directly in HTML files, you can add the latest script tag from [JsDelivr](https://www.jsdelivr.com/package/npm/danfojs?version=0.3.1\&path=lib):
 
 ```markup
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.1/lib/bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
 ```
 
 {% hint style="info" %}
@@ -61,7 +61,7 @@ const dfd = require("danfojs-node")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.1/lib/bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
 </head>
 
 <body>
@@ -100,7 +100,7 @@ s.print()
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -161,7 +161,7 @@ s.print()
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
 
     <title>Document</title>
 </head>
@@ -222,7 +222,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -270,7 +270,7 @@ df.ctypes.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -348,7 +348,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -439,7 +439,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -542,7 +542,7 @@ console.log(df.columns);
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -610,7 +610,7 @@ df.tensor.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -690,7 +690,7 @@ df.describe().print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -763,7 +763,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -833,7 +833,7 @@ df['A'].print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -1202,7 +1202,7 @@ query_df.print() //after query
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -1254,31 +1254,38 @@ query_df.print() //after query
 The best way to query data is to use a boolean mask just as we demonstrated above with iloc and locs. For example, in the following code, we pass a condition parameter instead:
 
 ```javascript
-let data = [{"A": ["Ng", "Yu", "Mo", "Ng"]},
-            {"B": [34, 4, 5, 6]}, 
-             {"C": [20, 20, 30, 40]}]
+let data = {
+    "A": ["Ng", "Yu", "Mo", "Ng"],
+    "B": [34, 4, 5, 6],
+    "C": [20, 20, 30, 40]
+}
 let df = new dfd.DataFrame(data)
 
 let query_df = df.query({ condition: df["B"].gt(5) })
-query_df.print() //after query
+query_df.print()
 ```
 
 ```
 ╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║            │ A                 │ B                 │ C                 ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ 20                │ 30                │ 40                ║
+║ 0          │ Ng                │ 34                │ 20                ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3          │ 39                │ 89                │ 78                ║
+║ 3          │ Ng                │ 6                 │ 40                ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
 Querying by a boolean condition is supported from v0.3.0 and above. It also supports condition chaining as long as the final boolean mask is the same lenght as the DataFrame rows. For example in the following code, we use multiple chaining conditions:
 
 ```javascript
+let data = {
+    "A": ["Ng", "Yu", "Mo", "Ng"],
+    "B": [34, 4, 5, 6],
+    "C": [20, 20, 30, 40]
+}
 let query_df = df.query({
     condition:
-        df["B"].gt(5).and(df["A"].lt(30))
+        df["B"].gt(5).and(df["C"].lt(30))
 })
 query_df.print() //after query
 
@@ -1286,8 +1293,9 @@ query_df.print() //after query
 ╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║            │ A                 │ B                 │ C                 ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ 20                │ 30                │ 40                ║
+║ 0          │ Ng                │ 34                │ 20                ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+
 
 ```
 
@@ -1323,7 +1331,7 @@ df.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -1412,7 +1420,7 @@ df_drop.print()
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -1631,7 +1639,7 @@ df.mean().print() //defaults to column axis
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>    <title>Document</title>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
 </head>
 
 <body>
@@ -2253,7 +2261,7 @@ We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
-     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
      <title>Document</title>
 </head>
 
@@ -2300,7 +2308,7 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
       <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
-     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -2393,7 +2401,7 @@ dfd.read_csv("file:///home/Desktop/titanic.csv")
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.0/lib/bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 

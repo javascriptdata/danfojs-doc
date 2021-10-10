@@ -16,7 +16,7 @@ description: Turn DataFrame/Series in D3.js-based tables
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
      <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
-     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
      <title>Document</title>
 </head>
 
@@ -57,7 +57,7 @@ To configure the header and cell of a table, you can pass header/cell styles to 
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
-     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.3/lib/bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 

@@ -64,7 +64,7 @@ dfd.read_json("https://raw.githubusercontentdatasets/master/finance-charts-apple
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.2/lib/bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 
@@ -103,7 +103,7 @@ By specifying a valid [file object](https://developer.mozilla.org/en-US/docs/Web
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.2/lib/bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 

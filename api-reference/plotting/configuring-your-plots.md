@@ -12,7 +12,7 @@ For example in the following code, we show how to set some basic configuration a
 
 <head>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.2.5/lib/bundle.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
 
 </head>
 
