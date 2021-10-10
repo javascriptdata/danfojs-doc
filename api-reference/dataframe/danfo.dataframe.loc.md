@@ -257,26 +257,33 @@ df``.loc({ row: [`"a":"e"`]}).print()``\
 _**Inner**_ _**quotes are not needed for numeric indices!**_
 {% endhint %}
 
-### Slice DataFrame rby boolean condition 
+### Slice DataFrame rows by boolean condition 
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
 
+let data = {
+    "Name": ["Apples", "Mango", "Banana", "Pear"],
+    "Count": [21, 5, 30, 10],
+    "Price": [200, 300, 40, 250]
+}
 
-let s = new dfd.Series([12, 34, 2.2, 2, 30, 30, 2.1, 7])
-s.loc(s.gt(20)).print()
+let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
+let sub_df = df.loc({ rows: df["Count"].gt(10) })
+sub_df.print()
 ```
 {% endtab %}
 {% endtabs %}
 
 ```
-╔═══╤════╗
-║ 1 │ 34 ║
-╟───┼────╢
-║ 4 │ 30 ║
-╟───┼────╢
-║ 5 │ 30 ║
-╚═══╧════╝
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ Name              │ Count             │ Price             ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ a          │ Apples            │ 21                │ 200               ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ c          │ Banana            │ 30                │ 40                ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+
 ```
