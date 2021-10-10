@@ -60,21 +60,22 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of**  Series to **DataFrame along the row axis 0
+### Addition of**  Series to **DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
 
+let data = {
+    "Col1": [1, 4, 5, 1],
+    "Col2": [3, 2, 0, 4]
+}
 
-let data = { "Col1": [1, 4, 5, 1],
-             "Col2": [3, 2, 0, 4] }
-             
 let df = new dfd.DataFrame(data)
 let sf = new dfd.Series([4, 5])
 
-let df_new = df.add(sf, axis = 1)
+let df_new = df.add(sf, { axis: 1 })
 
 df_new.print()
 ```
@@ -151,7 +152,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of** **JavaScript Array to DataFrame
+### Addition of** ** Array to DataFrame along 
 
 {% tabs %}
 {% tab title="Node" %}
