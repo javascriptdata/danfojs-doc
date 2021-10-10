@@ -74,12 +74,12 @@ df.mean().print()
 ```javascript
 const dfd = require("danfojs-node")
 
-data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
-cols = ["A", "B", "C"]
+let data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+let cols = ["A", "B", "C"]
 
 df.print()
 let df = new dfd.DataFrame(data)
-df.mean(axis=0).print()
+df.mean({ axis: 0 }).print()
 ```
 {% endtab %}
 
