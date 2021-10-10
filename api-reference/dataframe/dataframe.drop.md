@@ -33,7 +33,7 @@ let data = { "A": [-20, 30, 47.3, -20],
              "D": ["a", "b", "c", "c"] }
 
 let df = new dfd.DataFrame(data)
-df.drop({ columns: ["C", "B"], axis: 1, inplace: true });
+df.drop({ columns: ["C", "B"], inplace: true });
 df.print()
 ```
 {% endtab %}
@@ -69,13 +69,15 @@ df.print()
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = { "A": [-20, 30, 47.3, -20],
-             "B": [34, -4, 5, 6] ,
-             "C": [20, 20, 30, 30],
-             "D": ["a", "b", "c", "c"] }
+let data = {
+    "A": [-20, 30, 47.3, -20],
+    "B": [34, -4, 5, 6],
+    "C": [20, 20, 30, 30],
+    "D": ["a", "b", "c", "c"]
+}
 
 let df = new dfd.DataFrame(data)
-df.drop({ index: [0, 2], axis: 0, inplace: true });
+df.drop({ index: [0, 2], inplace: true });
 df.print()
 
 ```
