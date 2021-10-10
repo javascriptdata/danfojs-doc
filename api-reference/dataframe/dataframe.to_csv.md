@@ -1,14 +1,11 @@
 ---
 description: Convert DataFrame data to a comma-separated values (csv)
 ---
+# DataFrame.to_csv
 
-# DataFrame.to\_csv
+danfo.DataFrame.**to_csv**(configs) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
 
-danfo.DataFrame.**to\_csv**\(path\) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)\]
-
-**Returns:**
-
-        ****returns **Promise**
+****
 
 ## **Examples**
 
@@ -39,7 +36,7 @@ df.to_csv("/home/link/to/path.csv").then((csv) => {
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 Abs,Count,country code
 20.2,34,NG
 30,4,FR
@@ -49,6 +46,5 @@ Abs,Count,country code
 {% endtabs %}
 
 {% hint style="info" %}
-To export DataFrame as Json, use [DataFrame.to\_json](dataframe.to_json.md)
+To export DataFrame as Json, use [DataFrame.to_json](dataframe.to_json.md)
 {% endhint %}
-
