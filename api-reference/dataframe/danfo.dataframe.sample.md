@@ -4,18 +4,20 @@ description: Return a random sample of rows from DataFrame.
 
 # DataFrame.sample
 
-danfo.DataFrame.**sample**\(num, seed\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L314)\]
+danfo.DataFrame.**sample**(num, seed) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L314)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| num | Int | The number of rows to return. Defaults to -1, which shuffles and return all rows.  | -1 |
-| seed | int | An integer specifying the random seed that will be used to create the distribution. Ensures reproducibility of generated samples.  | 1 |
+| Parameters | Type | Description                                                                                                                        | Default |
+| ---------- | ---- | ---------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| num        | Int  | The number of rows to return. Defaults to -1, which shuffles and return all rows.                                                  | -1      |
+| seed       | int  | An integer specifying the random seed that will be used to create the distribution. Ensures reproducibility of generated samples.  | 1       |
 
 **Returns:**
 
-       ****return **{Promies} resolves to DataFrame**
+**       **return** {Promies} resolves to DataFrame**
 
 ## **Examples**
+
+**Sam**
 
 {% tabs %}
 {% tab title="Node" %}
@@ -41,14 +43,13 @@ load_data()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -59,4 +60,3 @@ load_data()
 ```
 {% endtab %}
 {% endtabs %}
-
