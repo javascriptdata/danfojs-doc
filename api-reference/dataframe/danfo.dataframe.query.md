@@ -18,6 +18,57 @@ danfo.DataFrame.**query**(kwargs) \[[source](https://github.com/opensource9ja/da
 
 ## **Examples**
 
+## **Query a DataFrame using boolean mask**
+
+{% hint style="info" %}
+Querying by a boolean condition is supported from v0.3.0 and above.
+{% endhint %}
+
+```javascript
+let data = {
+    "A": ["Ng", "Yu", "Mo", "Ng"],
+    "B": [34, 4, 5, 6],
+    "C": [20, 20, 30, 40]
+}
+let df = new dfd.DataFrame(data)
+
+let query_df = df.query({ condition: df["B"].gt(5) })
+query_df.print() //after query
+```
+
+```
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ A                 │ B                 │ C                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2          │ 20                │ 30                │ 40                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3          │ 39                │ 89                │ 78                ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+```
+
+It also supports condition chaining as long as the final boolean mask is the same lenght as the DataFrame rows. For example in the following code, we use multiple chaining conditions:
+
+```javascript
+let data = {
+    "A": ["Ng", "Yu", "Mo", "Ng"],
+    "B": [34, 4, 5, 6],
+    "C": [20, 20, 30, 40]
+}
+let df = new dfd.DataFrame(data)
+
+let query_df = df.query({ condition: df["B"].gt(5).and(df["C"].lt(40)) })
+query_df.print() //after query
+
+//output
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ A                 │ B                 │ C                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0          │ Ng                │ 34                │ 20                ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+
+```
+
 ## **Query a DataFrame using logical operators**
 
 To query a DataFrame, you can specify the column to use, the logical operator (">", "<", ">=", "<=", and. "=="), and the value to compare against. 

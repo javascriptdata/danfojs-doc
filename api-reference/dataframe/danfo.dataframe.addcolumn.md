@@ -4,11 +4,11 @@ description: Add new column to a DataFrame
 
 # DataFrame.addColumn
 
-danfo.DataFrame.**addColumn**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1083)]
+danfo.DataFrame.**addColumn**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1083)]
 
 | Parameters | Type   | Description                                                                                                                                                                                                    | Default |
 | ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| kwargs     | Object | <p>{<strong>column</strong> : str, name of the column to add</p><p> <strong>values:</strong> Series<strong>,</strong> Array of new values to add <br> <strong>inplace</strong>: Default to false. </p><p>}</p> |         |
+| options    | Object | <p>{<strong>column</strong> : str, name of the column to add</p><p> <strong>values:</strong> Series<strong>,</strong> Array of new values to add <br> <strong>inplace</strong>: Default to false. </p><p>}</p> |         |
 
 **Returns:**
 
