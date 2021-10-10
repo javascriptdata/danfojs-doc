@@ -4,19 +4,19 @@ description: Return the maximum of the values for the requested axis.
 
 # DataFrame.max
 
-danfo.DataFrame.**max**\(axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L519)\]
+danfo.DataFrame.**max**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| axis | Int | 0 for row and 1 for columns  | 1 |
+| Parameters | Type   | Description                                                                         | Default     |
+| ---------- | ------ | ----------------------------------------------------------------------------------- | ----------- |
+| options    | Object | **axis:** 0 or 1. If 0, compute the mean column-wise, if 1, row-wise. Defaults to 1 | { axis: 1 } |
 
 **Returns:**
 
-       ****return **Series**
+**       **return** Series**
 
 ## **Examples**
 
-## Return the maximum value along default axis 1 \(column\)
+## Return the maximum value along default axis 1 (column)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -34,14 +34,13 @@ df.max().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -67,7 +66,7 @@ df.max().print()
 {% endtab %}
 {% endtabs %}
 
-## Return the maximum value along row axis \(0\)
+## Return the maximum value along row axis (0)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -78,20 +77,19 @@ cols = ["A", "B", "C"]
 
 df.print()
 let df = new dfd.DataFrame(data)
-df.max(axis=0).print()
+df.max({axis:0}).print()
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -118,4 +116,3 @@ df.max(axis=0).print()
 ```
 {% endtab %}
 {% endtabs %}
-
