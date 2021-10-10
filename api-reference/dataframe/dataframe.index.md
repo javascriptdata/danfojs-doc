@@ -4,15 +4,11 @@ description: The index (row labels) of the DataFrame.
 
 # DataFrame.index
 
-danfo.DataFrame.**index** \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L940)\]
-
-**Returns:**
-
-       ****return **new DataFrame**
+danfo.DataFrame.**index** \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L940)]
 
 ## **Examples**
 
-Returns auto-generated ****index of a ****DataFrame
+Returns auto-generated** **index of a** **DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -30,20 +26,19 @@ console.log(df.index);
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 [0, 1, 2, 3]
 ```
 {% endtab %}
 {% endtabs %}
 
-Returns set ****index of a ****DataFrame
+Returns set** **index of a** **DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -61,16 +56,14 @@ console.log(df.index);
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 [ 'r1', 'r2', 'r3', 'r4' ]
 ```
 {% endtab %}
 {% endtabs %}
-
