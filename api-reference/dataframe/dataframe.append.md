@@ -17,7 +17,7 @@ danfo.DataFrame.**append**(val) \[[source](https://github.com/opensource9ja/danf
 
 ## **Examples**
 
-### **Sort DataFrame by a column in ascending order**
+### **Appends a new row to the end of a DataFrame**
 
 {% tabs %}
 {% tab title="Node" %}
@@ -29,7 +29,7 @@ let data = [[0, 2, 4, "b"],
 let df = new dfd.DataFrame(data)
 df.print()
 
-let new_df = df.append([[20, 40, 60, "d"]])
+let new_df = df.append([[20, 40, 60, "d"]], [3])
 new_df.print()
 
 ```
