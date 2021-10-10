@@ -4,7 +4,7 @@ description: Get Subtraction of dataframe and other, element-wise (binary operat
 
 # DataFrame.sub
 
-danfo.DataFrame.**add**(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L347)]
+danfo.DataFrame.sub(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L347)]
 
 | Parameters | Type                               | Description                                                                                                                                                                                  | Default                      |
 | ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |

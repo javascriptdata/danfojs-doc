@@ -17,7 +17,7 @@ danfo.DataFrame.mul(other, option) \[[source](https://github.com/opensource9ja/d
 
 ## **Examples**
 
-### Subtraction of** scalar to **DataFrame along default axis 1
+### Multiplication of** scalar to **DataFrame along default axis 1
 
 {% tabs %}
 {% tab title="Node" %}
@@ -30,7 +30,7 @@ let data = {
 }
 let df = new dfd.DataFrame(data)
 
-let df_new = df.sub(2)
+let df_new = df.mul(2)
 
 df_new.print()
 ```
@@ -60,7 +60,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Subtraction of**  Series to **DataFrame along axis 0
+### Multiplication of**  Series to **DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -75,7 +75,7 @@ let data = {
 let df = new dfd.DataFrame(data)
 let sf = new dfd.Series([4, 5])
 
-let df_new = df.sub(sf, { axis: 1 })
+let df_new = df.mul(sf, { axis: 1 })
 
 df_new.print()
 ```
@@ -106,7 +106,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Subtraction of**  **DataFrame to a DataFrame
+### Multiplication of**  **DataFrame to a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -122,7 +122,7 @@ let data2 = {"new_col1": [1, 5, 20, 10],
 let df = new dfd.DataFrame(data)
 let df2 = new dfd.DataFrame(data2)
 
-let df_new = df.sub(df2)
+let df_new = df.mul(df2)
 
 df_new.print()
 
@@ -154,7 +154,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Subtraction of** ** Array to DataFrame along axis 0
+### Multiplication of** ** Array to DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -169,7 +169,7 @@ let data = {
 let df = new dfd.DataFrame(data)
 let val = [2, 2, 2, 2]
 
-let df_new = df.sub(val, { axis: 0 })
+let df_new = df.mul(val, { axis: 0 })
 
 df_new.print()
 ```
@@ -201,7 +201,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Subtraction works inplace
+### Multiplication works inplace
 
 {% tabs %}
 {% tab title="Node" %}
@@ -216,7 +216,7 @@ let data = {
 let df = new dfd.DataFrame(data)
 let val = [2, 2, 2, 2]
 
-df.sub(val, { axis: 0, inplace: true })
+df.mul(val, { axis: 0, inplace: true })
 
 df.print()
 ```
