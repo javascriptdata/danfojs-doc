@@ -24,7 +24,7 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-const jsonObj = df.to_json({ download: false }); //column format
+const jsonObj = dfd.to_json(df, { download: false }); //column format
 console.log(jsonObj);
 
 //output
@@ -35,7 +35,7 @@ console.log(jsonObj);
 ]
 
 //row format
-const jsonObj = df.to_json({
+const jsonObj = dfd.to_json(df, {
     download: false,
     format: "row"
 });
@@ -102,7 +102,7 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-df.to_json({ filePath: "./testOutput.json" });
+dfd.to_json(df, { filePath: "./testOutput.json" });
 ```
 {% endtab %}
 {% endtabs %}
@@ -120,5 +120,5 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-df.to_json({ fileName: "test_out.json" });
+dfd.to_json(df, { fileName: "test_out.json" });
 ```
