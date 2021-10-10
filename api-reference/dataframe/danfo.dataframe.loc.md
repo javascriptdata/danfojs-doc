@@ -4,35 +4,15 @@ description: Access a group of rows and columns by label(s)
 
 # DataFrame.loc
 
-danfo.DataFrame.**loc**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)\]
+danfo.DataFrame.**loc**(args) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p><b>rows</b>: Array, labels of row index</p>
-        <p><b>columns</b>: Array, labels of column names</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left"></td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                            | Default |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| args       | Object | <p>{</p><p><strong>rows</strong>:  Array, labels, Boolean mask of row index</p><p><strong>columns</strong>:  Array, labels of column names</p><p>}</p> |         |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -40,7 +20,7 @@ danfo.DataFrame.**loc**\(kwargs\) \[[source](https://github.com/opensource9ja/da
 
 Allowed inputs are:
 
-* A single label, e.g. `5` or `'a'`, \(note that `5` is interpreted as a _label_ of the index, and **not** as an integer position along the index\).
+* A single label, e.g. `5` or `'a'`, (note that `5` is interpreted as a _label_ of the index, and **not** as an integer position along the index).
 * A list or array of labels, e.g. `['a', 'b', 'c']`.
 
 ### **Index by specific rows and return all columns**
@@ -65,14 +45,13 @@ sub_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
@@ -120,14 +99,13 @@ sub_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -178,14 +156,13 @@ sub_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
@@ -212,6 +189,4 @@ sub_df.print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
