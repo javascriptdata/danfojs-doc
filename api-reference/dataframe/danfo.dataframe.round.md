@@ -4,19 +4,20 @@ description: Round elements in a DataFrame to a specified number of decimal plac
 
 # DataFrame.round
 
-danfo.DataFrame.**round**\(dp\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L706)\]
+danfo.DataFrame.**round**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| dp | Int | Number of decimal places to round to | 1 |
+| Parameters | Type   | Description                                                                         | Default         |
+| ---------- | ------ | ----------------------------------------------------------------------------------- | --------------- |
+| dp         | Int    | Number of decimal places to round to. Defaults to 1                                 | 1               |
+| options    | Object | **axis:** 0 or 1. If 0, compute the mean column-wise, if 1, row-wise. Defaults to 1 | { inplace: fa } |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** Series**
 
 ## **Examples**
 
-## Round elements to 1dp \(Default\)
+## Round elements to 1dp (Default)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -37,14 +38,13 @@ new_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -92,14 +92,13 @@ new_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -126,5 +125,4 @@ new_df.print()
 {% endtab %}
 {% endtabs %}
 
-## 
-
+##
