@@ -18,7 +18,7 @@ danfo.DataFrame.**loc**(args) \[[source](https://github.com/opensource9ja/danfoj
 
 `.loc()` is  label position based-from `0` to `length-1` of the row axis.
 
-Allowed inputs fare:
+Allowed inputs for are:
 
 * An integer, e.g. `"r1"`.
 * A list or array of integers, e.g. `["a", "b", "d"]`.
