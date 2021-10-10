@@ -1,48 +1,13 @@
-# danfo.to\_json
+# danfo.to_json
 
-> danfo.**to\_json**\(source, configs\) [\[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/io/io.json.js#L92)\]
+> danfo.**to_json**(data, configs) [\[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/io/io.json.js#L92)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left"><b>Parameters</b>
-      </th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><em><b>data</b></em>
-      </td>
-      <td style="text-align:left">Series or DataFrame</td>
-      <td style="text-align:left">The Series or DataFrame to write to CSV</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left"><b>options</b>
-      </td>
-      <td style="text-align:left">object, optional</td>
-      <td style="text-align:left">
-        <p>Configuration object:</p>
-        <p>{</p>
-        <p> <b><code>filePath</code></b>: Local file path to write the CSV file to.
-          If not specified, the CSV will be returned as a string. Only needed in
-          Nodejs version
-          <br /><b><code>fileName</code></b>: The name of the file to download as. Only
-          needed in browser environment.
-          <br /><b><code>format</code></b>: The format of the JSON. Can be one of <b><code>row</code></b> or <b><code>column</code></b>.</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">{
-        <br /><b><code>format</code></b>: &quot;column&quot;
-        <br />}</td>
-    </tr>
-  </tbody>
-</table>
+| **Parameters** | Type                | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Default                                                         |
+| -------------- | ------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
+| _**data**_     | Series or DataFrame | The Series or DataFrame to write to CSV                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |                                                                 |
+| **options**    |  object, optional   | <p> Configuration object: </p><p>{</p><p> <strong><code>filePath</code></strong>: Local file path to write the CSV file to. If not specified, the CSV will be returned as a string. Only needed in Nodejs version<br><strong><code>fileName</code></strong>: The name of the file to download as. Only needed in browser environment. <br><strong><code>format</code></strong>: The format of the JSON. Can be one of <strong><code>row</code></strong> or <strong><code>column</code></strong>.</p><p>}</p> | <p>{<br><strong><code>format</code></strong>: "column"<br>}</p> |
 
-The **to\_json** function can be used to write out a DataFrame or Series to JSON format/file. The output is configurable and will depend on the environment. In the following examples, we show you how to write/download a JSON file from Node and Browser environments.
+The **to_json** function can be used to write out a DataFrame or Series to JSON format/file. The output is configurable and will depend on the environment. In the following examples, we show you how to write/download a JSON file from Node and Browser environments.
 
 ### Convert DataFrame/Series to JSON and return value
 
@@ -157,4 +122,3 @@ let df = new dfd.DataFrame(data);
 
 df.to_json({ fileName: "test_out.json" });
 ```
-
