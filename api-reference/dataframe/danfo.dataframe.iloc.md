@@ -23,7 +23,7 @@ Allowed inputs are:
 * An integer, e.g. `5`.
 * A list or array of integers, e.g. `[4, 3, 0]`.
 * A string slice object with ints, e.g. `"1:7"`
-* A `callable` function with one argument (the calling Series or DataFrame) and that returns valid output for indexing (one of the above). This is useful in method chains, when you don't have a reference to the calling object, but would like to base your selection on some value.
+* A boolean array.
 
 _**Note:** only the start index is included._
 
