@@ -290,7 +290,9 @@ sub_df.print()
 
 ### Slice DataFrame rows by multiple boolean conditions
 
-By design, you can chain as many boolean logic as possible, as long as they resolve to a B 
+{% hint style="info" %}
+_By design, you can chain as many boolean logic as possible, as long as they resolve to a Boolean array of the same length as the DataFrame. _
+{% endhint %}
 
 {% tabs %}
 {% tab title="Node" %}
@@ -304,7 +306,8 @@ let data = {
 }
 
 let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
-let sub_df = df.loc({ rows: df["Count"].gt(10) })
+let condition = df["Count"].gt(6).and(df["Price"].lt(250))
+let sub_df = df.loc({ rows: condition })
 sub_df.print()
 ```
 {% endtab %}
