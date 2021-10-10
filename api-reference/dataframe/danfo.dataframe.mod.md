@@ -30,7 +30,7 @@ let data = {
 }
 let df = new dfd.DataFrame(data)
 
-let df_new = df.pow(2)
+let df_new = df.mod(2)
 
 df_new.print()
 ```
@@ -48,13 +48,13 @@ df_new.print()
 ╔════════════╤═══════════════════╤═══════════════════╗
 ║            │ Col1              │ Col2              ║
 ╟────────────┼───────────────────┼───────────────────╢
-║ 0          │ 100               │ 529               ║
+║ 0          │ 0                 │ 1                 ║
 ╟────────────┼───────────────────┼───────────────────╢
-║ 1          │ 2025              │ 400               ║
+║ 1          │ 1                 │ 0                 ║
 ╟────────────┼───────────────────┼───────────────────╢
-║ 2          │ 3136              │ 100               ║
+║ 2          │ 0                 │ 0                 ║
 ╟────────────┼───────────────────┼───────────────────╢
-║ 3          │ 100               │ 576               ║
+║ 3          │ 0                 │ 0                 ║
 ╚════════════╧═══════════════════╧═══════════════════╝
 
 
@@ -78,7 +78,7 @@ let data = {
 let df = new dfd.DataFrame(data)
 let sf = new dfd.Series([4, 5])
 
-let df_new = df.pow(sf, { axis: 1 })
+let df_new = df.mod(sf, { axis: 1 })
 
 df_new.print()
 ```
@@ -111,7 +111,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Exponential of**  **DataFrame with a DataFrame
+### Modulo of**  **DataFrame with a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -127,7 +127,7 @@ let data2 = {"new_col1": [1, 5, 20, 10],
 let df = new dfd.DataFrame(data)
 let df2 = new dfd.DataFrame(data2)
 
-let df_new = df.pow(df2)
+let df_new = df.mod(df2)
 
 df_new.print()
 
@@ -161,7 +161,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Exponential of** ** Array with DataFrame along axis 0
+### Modulo of** ** Array with DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -176,7 +176,7 @@ let data = {
 let df = new dfd.DataFrame(data)
 let val = [2, 2, 2, 2]
 
-let df_new = df.pow(val, { axis: 0 })
+let df_new = df.mod(val, { axis: 0 })
 
 df_new.print()
 ```
@@ -208,7 +208,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Exponential works inplace
+### Modulo works inplace
 
 {% tabs %}
 {% tab title="Node" %}
@@ -223,7 +223,7 @@ let data = {
 let df = new dfd.DataFrame(data)
 let val = [2, 2, 2, 2]
 
-df.pow(val, { axis: 0, inplace: true })
+df.mod(val, { axis: 0, inplace: true })
 
 df.print()
 ```
