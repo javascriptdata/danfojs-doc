@@ -4,19 +4,19 @@ description: Return the mean of the values for the requested axis.
 
 # DataFrame.mean
 
-danfo.DataFrame.**mean**\(axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)\]
+danfo.DataFrame.**mean**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| axis | Int | 0 for row and 1 for columns  | 1 |
+| Parameters | Type   | Description                                                                         | Default     |
+| ---------- | ------ | ----------------------------------------------------------------------------------- | ----------- |
+| options    | Object | **axis:** 0 or 1. If 0, compute the mean column-wise, if 1, row-wise. Defaults to 1 | { axis: 1 } |
 
 **Returns:**
 
-       ****return **Series**
+**       **return** Series**
 
 ## **Examples**
 
-## Calculates the mean of values along default axis 1 \(column\)
+## Calculates the mean of values along default axis 1 (column)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -35,14 +35,13 @@ df.mean().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -68,7 +67,7 @@ df.mean().print()
 {% endtab %}
 {% endtabs %}
 
-## Calculates the mean of values along row axis \(0\)
+## Calculates the mean of values along row axis (0)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -86,14 +85,13 @@ df.mean(axis=0).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -120,4 +118,3 @@ df.mean(axis=0).print()
 ```
 {% endtab %}
 {% endtabs %}
-
