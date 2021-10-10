@@ -7,44 +7,21 @@ description: >-
 
 # DataFrame.rename
 
-danfo.DataFrame.**rename**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)\]
+danfo.DataFrame.**rename**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p><b>mapper</b>: Object of labels and transformations to apply to that axis&#x2019;
-          values.</p>
-        <p><b>axis</b>: row=0, columns=1.</p>
-        <p><b>inplace</b>: specify whether to perform the operation to the row/column
-          with/without creating a new DataFrame</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">{<b>axis</b>: 1, <b>inplace:</b>false}</td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                | Default                          |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------------------- |
+| options    | Object | <p>{</p><p><strong>mapper</strong>:  Object of labels and transformations to apply to that axis’ values.</p><p><strong>axis</strong>:  row=0, columns=1.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | {**axis**: 1, **inplace:**false} |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
 ### Rename columns 
 
-By setting **inplace** to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default. 
+By setting **inplace **to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default. 
 
 {% tabs %}
 {% tab title="Node" %}
@@ -64,14 +41,13 @@ df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ new_name          │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -106,14 +82,13 @@ df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ new_name          │ B                 │ new_c             ║
@@ -149,14 +124,13 @@ df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
@@ -170,4 +144,3 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
-
