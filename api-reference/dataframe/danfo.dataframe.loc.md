@@ -327,10 +327,10 @@ sub_df.print()
 
 ```
 
-### Slice DataFrame with 
+### Slice DataFrame with boolean mask
 
 {% hint style="info" %}
-_By design, you can chain as many boolean logic as possible, as long as they resolve to a Boolean array of the same length as the DataFrame. _
+_You can index a DataFrame with an array of boolean values as long as they resolve to a Boolean array of the same length as the DataFrame. _
 {% endhint %}
 
 {% tabs %}
