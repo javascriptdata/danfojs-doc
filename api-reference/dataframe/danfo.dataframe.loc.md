@@ -271,7 +271,46 @@ let data = {
 }
 
 let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
-let sub_df = df.loc({ rows: df["Count"].gt(10) })
+let sub_df = df.loc({ rows: df["Count"].gt(6) })
+sub_df.print()
+```
+{% endtab %}
+{% endtabs %}
+
+```
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ Name              │ Count             │ Price             ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ a          │ Apples            │ 21                │ 200               ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ c          │ Banana            │ 30                │ 40                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ d          │ Pear              │ 10                │ 250               ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+
+```
+
+### Slice DataFrame rows by multiple boolean conditions
+
+{% hint style="info" %}
+_By design, you can chain as many boolean logic as possible, as long as they resolve to a Boolean array of the same length as the DataFrame. _
+{% endhint %}
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+
+let data = {
+    "Name": ["Apples", "Mango", "Banana", "Pear"],
+    "Count": [21, 5, 30, 10],
+    "Price": [200, 300, 40, 250]
+}
+
+let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
+let condition = df["Count"].gt(6).and(df["Price"].lt(250))
+let sub_df = df.loc({ rows: condition })
 sub_df.print()
 ```
 {% endtab %}
@@ -288,7 +327,7 @@ sub_df.print()
 
 ```
 
-### Slice DataFrame rows by multiple boolean conditions
+### Slice DataFrame with 
 
 {% hint style="info" %}
 _By design, you can chain as many boolean logic as possible, as long as they resolve to a Boolean array of the same length as the DataFrame. _
