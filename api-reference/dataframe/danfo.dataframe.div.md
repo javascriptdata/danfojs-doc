@@ -19,7 +19,7 @@ danfo.DataFrame.div(other, option) \[[source](https://github.com/opensource9ja/d
 
 ## **Examples**
 
-### Division of** scalar to **DataFrame along default axis 1
+### Division of** scalar with **DataFrame along default axis 1
 
 {% tabs %}
 {% tab title="Node" %}
@@ -63,7 +63,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Division of**  Series to **DataFrame along axis 0
+### Division of**  Series with **DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -110,7 +110,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Division of**  **DataFrame to a DataFrame
+### Division of**  **DataFrame **with** a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -159,7 +159,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Division of** ** Array to DataFrame along axis 0
+### Division of** ** Array **with** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
