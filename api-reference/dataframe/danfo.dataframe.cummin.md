@@ -4,19 +4,19 @@ description: Return cumulative minimum over a DataFrame or Series axis.
 
 # DataFrame.cummin
 
-danfo.DataFrame.**cummin**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L717)\]
+danfo.DataFrame.**cummin**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L706)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| kwargs | Object | {**axis**: 0 for row and 1 for column} | {axis: 1} |
+| Parameters | Type   | Description                                                                                                                                                                           | Default                   |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| options    | Object | <p><strong>axis</strong>: 0 for row and 1 for column</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p></p> | {axis: 1, inplace: false} |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
-## Cumulative minimum of elements along default axis \(row\)
+## Cumulative minimum of elements along default axis (row)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -35,14 +35,13 @@ new_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -58,7 +57,7 @@ new_df.print()
 {% endtab %}
 {% endtabs %}
 
-## Cumulative minimum of elements along column axis \(1\)
+## Cumulative minimum of elements along column axis (1)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -77,14 +76,13 @@ new_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -99,4 +97,3 @@ new_df.print()
 ```
 {% endtab %}
 {% endtabs %}
-
