@@ -16,12 +16,18 @@ danfo.DataFrame.**loc**(args) \[[source](https://github.com/opensource9ja/danfoj
 
 ## **Examples**
 
-`.loc()` is primarily label based, but row index also accepts numeric slices
+`.loc()` is  label position based-from `0` to `length-1` of the row axis.
 
-Allowed inputs are:
+Allowed inputs fare:
 
-* A single label, e.g. `5` or `'a'`, (note that `5` is interpreted as a _label_ of the index, and **not** as an integer position along the index).
-* A list or array of labels, e.g. `['a', 'b', 'c']`.
+* An integer, e.g. `"r1"`.
+* A list or array of integers, e.g. `["a", "b", "d"]`.
+* A boolean mask. E.g \[ true, false, false ]
+* A string slice object with ints, e.g. `[`'`"a":"d"'], ["1:4"]`
+
+_**Note: **only** **the start label is included, and the end label is ignored. _
+
+`.loc` will raise a `ValueEror` if a requested label is not found.
 
 ### **Index by specific rows and return all columns**
 
