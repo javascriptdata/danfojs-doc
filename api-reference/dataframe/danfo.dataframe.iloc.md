@@ -4,45 +4,26 @@ description: Purely integer-location based indexing for selection by position.
 
 # DataFrame.iloc
 
-danfo.DataFrame.**iloc**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
+danfo.DataFrame.**iloc**(args) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p><b>rows</b>: Array, index of row position</p>
-        <p><b>columns</b>: Array, index of position along columns</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left"></td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                         | Default |
+| ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| args       | Object | <p>{</p><p><strong>rows</strong>:  Array, index of row position</p><p><strong>columns</strong>:  Array, index of position along columns</p><p>}</p> |         |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
-`.iloc()` is primarily integer position based \(from `0` to `length-1` of the axis\).
+`.iloc()` is primarily integer position based (from `0` to `length-1` of the axis).
 
 Allowed inputs are:
 
 * An integer, e.g. `5`.
 * A list or array of integers, e.g. `[4, 3, 0]`.
 * A string slice object with ints, e.g. `"1:7"`
+* A `callable` function with one argument (the calling Series or DataFrame) and that returns valid output for indexing (one of the above). This is useful in method chains, when you don't have a reference to the calling object, but would like to base your selection on some value.
 
 _**Note:** only the start index is included._
 
@@ -69,14 +50,13 @@ sub_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -92,7 +72,7 @@ sub_df.print()
 
 ### **Index by a slice of row and return all columns**
 
-The [**iloc**](danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end\], e.g "\[1: 4\]". This will return all values between index position 1 and 3.  The end index is not included. 
+The [**iloc**](danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end], e.g "\[1: 4]". This will return all values between index position 1 and 3.  The end index is not included. 
 
 {% tabs %}
 {% tab title="Node" %}
@@ -111,14 +91,13 @@ sub_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -152,14 +131,13 @@ sub_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -209,14 +187,13 @@ sub_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
@@ -266,14 +243,13 @@ sub_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -322,14 +298,13 @@ sub_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -355,6 +330,4 @@ sub_df.print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
