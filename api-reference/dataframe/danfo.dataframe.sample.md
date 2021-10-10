@@ -61,7 +61,9 @@ load_data()
 {% endtab %}
 {% endtabs %}
 
-## Sample a DataFrame randomly wit
+## Sample a DataFrame randomly with seed
+
+By setting a seed when using `sample`, you can ensure that the random-sampling is reproduc
 
 {% tabs %}
 {% tab title="Node" %}
@@ -69,16 +71,16 @@ load_data()
 const dfd = require("danfojs-node")
 
 async function load_data() {
-  let data = {
-    Name: ["Apples", "Mango", "Banana", "Pear"],
-    Count: [21, 5, 30, 10],
-    Price: [200, 300, 40, 250],
-  };
+    let data = {
+        Name: ["Apples", "Mango", "Banana", "Pear"],
+        Count: [21, 5, 30, 10],
+        Price: [200, 300, 40, 250],
+    };
 
-  let df = new dfd.DataFrame(data);
-  let s_df = await df.sample(2);
-  s_df.print();
-  
+    let df = new dfd.DataFrame(data);
+    let s_df = await df.sample(3, { seed: 2 });
+    s_df.print();
+
 }
 
 load_data()
