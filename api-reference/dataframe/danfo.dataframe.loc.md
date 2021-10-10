@@ -196,3 +196,63 @@ sub_df.print()
 {% endtab %}
 {% endtabs %}
 
+### **Index by a slice of row**
+
+The **loc** function also accepts string slices of the form \[start: end], e.g **\[\`"a":"e"\`]**. This will return all values from label positions `a` to `e`. 
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+
+let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
+            "Count": [21, 5, 30, 10],
+            "Price": [200, 300, 40, 250] }
+
+let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
+df.print()
+let sub_df = df.loc({ rows: [`"a":"c"`], columns: ["Name", "Price"] })
+sub_df.print()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ Name              │ Count             │ Price             ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ a          │ Apples            │ 21                │ 200               ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ b          │ Mango             │ 5                 │ 300               ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ c          │ Banana            │ 30                │ 40                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ d          │ Pear              │ 10                │ 250               ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+╔════════════╤═══════════════════╤═══════════════════╗
+║            │ Name              │ Price             ║
+╟────────────┼───────────────────┼───────────────────╢
+║ a          │ Apples            │ 200               ║
+╟────────────┼───────────────────┼───────────────────╢
+║ b          │ Mango             │ 300               ║
+╚════════════╧═══════════════════╧═══════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+{% hint style="info" %}
+Note that when using loc. We expect you to pass labels in the correct format. That is, string labels must be explicitly quoted. For example, the following loc slice will throw an error:\
+`s.loc([a:e]).print()`\
+For the slice above to work, you must quote each slice, e.g:\
+`s.loc(["a":"e"]).print()`\
+\
+_**Quotes are not needed for numeric indices!**_
+{% endhint %}
