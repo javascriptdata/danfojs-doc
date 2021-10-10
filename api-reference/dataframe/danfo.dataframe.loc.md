@@ -330,7 +330,7 @@ sub_df.print()
 ### Slice DataFrame with boolean mask
 
 {% hint style="info" %}
-_You can index a DataFrame with an array of boolean values as long as they resolve to a Boolean array of the same length as the DataFrame. _
+_You can index a DataFrame with an array of boolean values as long as they resolve to an array of the same length as the DataFrame. _
 {% endhint %}
 
 {% tabs %}
@@ -345,8 +345,8 @@ let data = {
 }
 
 let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
-let condition = df["Count"].gt(6).and(df["Price"].lt(250))
-let sub_df = df.loc({ rows: condition })
+
+let sub_df = df.loc({ rows: [false, true, true, true] })
 sub_df.print()
 ```
 {% endtab %}
@@ -356,9 +356,12 @@ sub_df.print()
 ╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║            │ Name              │ Count             │ Price             ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ a          │ Apples            │ 21                │ 200               ║
+║ b          │ Mango             │ 5                 │ 300               ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ c          │ Banana            │ 30                │ 40                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ d          │ Pear              │ 10                │ 250               ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+
 
 ```
