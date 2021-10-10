@@ -17,15 +17,17 @@ danfo.DataFrame.**add**(other, option) \[[source](https://github.com/opensource9
 
 ## **Examples**
 
-### Addition of** scalar to **DataFrame al
+### Addition of** scalar to **DataFrame along default axis 1
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = {"Col1": [10, 45, 56, 10], 
-            {"Col2": [23, 20, 10, 24]}
+let data = {
+    "Col1": [10, 45, 56, 10],
+    "Col2": [23, 20, 10, 24]
+}
 let df = new dfd.DataFrame(data)
 
 let df_new = df.add(2)
@@ -58,7 +60,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of**  Series to **DataFrame along the column axis:
+### Addition of**  Series to **DataFrame along the row axis
 
 {% tabs %}
 {% tab title="Node" %}
