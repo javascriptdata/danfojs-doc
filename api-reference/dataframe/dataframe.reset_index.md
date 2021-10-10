@@ -1,18 +1,18 @@
 ---
-description: 'Reset the index of the DataFrame, and use the default one instead.'
+description: Reset the index of the DataFrame, and use the default one instead.
 ---
 
-# DataFrame.reset\_index
+# DataFrame.reset_index
 
-danfo.DataFrame.**reset\_index**\(inplace\) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)\]
+danfo.DataFrame.**reset_index**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| inplace | Boolean | **inplace**: specify whether to perform the operation to the row/column with/without creating a new DataFrame | false |
+| Parameters | Type   | Description                                                                                                                                                                | Default          |
+| ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| options    | Object | <p><strong>{ </strong></p><p><strong>inplace</strong>: sBoolean indicating whether to perform the operation inplace or not. Defaults to false</p><p><strong>}</strong></p> | {inplace: false} |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -39,14 +39,13 @@ df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
@@ -73,4 +72,3 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
-
