@@ -1,39 +1,17 @@
 ---
 description: Sort DataFrame by index
 ---
+# DataFrame.sort_index
 
-# DataFrame.sort\_index
+DataFrame.**sort_index**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/core/frame.js#L2094)]
 
-danfo.DataFrame.**sort\_index**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/2696f1d8420dd364464aae7c5c175c6cd0ef4c93/danfojs/src/core/frame.js#L2059)\]
-
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p><b>ascending</b>: Order of sorting</p>
-        <p><b>inplace</b>: specify whether to perform the operation to the row/column
-          with/without creating a new DataFrame</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">{<b>ascending</b>: true, <b>inplace:</b>false}</td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                           | Default                                  |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| kwargs     | Object | <p>{</p><p><strong>ascending</strong>:  Order of sorting</p><p><strong>inplace</strong>: specify whether to perform the operation to the row/column with/without creating a new DataFrame</p><p>}</p> | {**ascending**: true, **inplace:**false} |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -59,14 +37,13 @@ df2.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ col1              │ col2              │ col3              │ col4              ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -93,5 +70,4 @@ df2.print()
 {% endtab %}
 {% endtabs %}
 
-\*\*\*\*
-
+****
