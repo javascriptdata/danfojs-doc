@@ -1,18 +1,19 @@
 ---
 description: Adds new row to the end of a DataFrame
 ---
-
 # DataFrame.append
 
-danfo.DataFrame.**append**\(val\) \[[source](https://github.com/opensource9ja/danfojs/blob/2696f1d8420dd364464aae7c5c175c6cd0ef4c93/danfojs/src/core/frame.js#L2059)\]
+danfo.DataFrame.**append**(val) \[[source](https://github.com/opensource9ja/danfojs/blob/2696f1d8420dd364464aae7c5c175c6cd0ef4c93/danfojs/src/core/frame.js#L2059)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| val | Array \| Series | Object to append |  |
+| Parameters | Type            | Description      | Default |
+| ---------- | --------------- | ---------------- | ------- |
+| newValues  |                 |                  |         |
+| newValues  |                 |                  |         |
+| newValues  | Array \| Series | Object to append |         |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -36,14 +37,13 @@ new_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ 0                 │ 1                 │ 2                 │ 3                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -72,5 +72,4 @@ new_df.print()
 {% endtab %}
 {% endtabs %}
 
-\*\*\*\*
-
+****
