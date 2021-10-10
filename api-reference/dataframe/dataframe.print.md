@@ -1,14 +1,9 @@
 ---
 description: Pretty prints n number of rows in a DataFrame or Series to the console
 ---
-
 # DataFrame.print
 
-danfo.DataFrame.**print\(**rows**\)** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)\]
-
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| **rows** | Int | Number of rows to display. | 5 |
+danfo.DataFrame.**print()** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]
 
 ## **Examples**
 
@@ -29,14 +24,13 @@ df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Abs               │ Count             │ country code      ║
@@ -72,14 +66,13 @@ console.log(String(df));
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 DataFrame {
   kwargs: { columns: [ 'Abs', 'Count', 'country code' ] },
   series: false,
@@ -129,4 +122,3 @@ DataFrame {
 ```
 {% endtab %}
 {% endtabs %}
-
