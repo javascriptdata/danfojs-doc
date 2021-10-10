@@ -6,44 +6,21 @@ description: >-
 
 # DataFrame.drop
 
-danfo.DataFrame.**drop**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)\]
+danfo.DataFrame.**drop**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p><b>columns</b>: [Array(Columns| Index)] array of column names to drop</p>
-        <p><b>index</b>: [Array(Columns| Index)] index labels to drop</p>
-        <p><b>axis</b>: row=0, columns=1</p>
-        <p><b>inplace</b>: specify whether to drop the row/column with/without creating
-          a new DataFrame</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">{<b>axis</b>: 1, <b>inplace:</b>false}</td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                                                                        | Default                          |
+| ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------- |
+| options    | Object | <p>{</p><p><strong>columns</strong>:  Array of column names to drop</p><p><strong>index</strong>:  Arindex labels to drop</p><p><strong>inplace</strong>: specify whether to drop the row/column with/without creating a new DataFrame</p><p>}</p> | {**axis**: 1, **inplace:**false} |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
 ### Drop columns by specifying the names
 
-By setting **inplace** to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default. 
+By setting **inplace **to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default. 
 
 {% tabs %}
 {% tab title="Node" %}
@@ -63,14 +40,13 @@ df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ D                 ║
 ╟───┼───────────────────┼───────────────────╢
@@ -107,14 +83,13 @@ df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -147,14 +122,13 @@ df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -165,4 +139,3 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
-
