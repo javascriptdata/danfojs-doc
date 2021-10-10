@@ -74,51 +74,29 @@ console.log(String(df));
 {% tab title="Output" %}
 ```
 DataFrame {
-  kwargs: { columns: [ 'Abs', 'Count', 'country code' ] },
-  series: false,
-  data: [ [ 20.2, 34, 'NG' ], [ 30, 4, 'FR' ], [ 47.3, 5, 'GH' ] ],
-  row_data_tensor: Tensor {
-    kept: false,
-    isDisposedInternal: false,
-    shape: [ 3, 3 ],
-    dtype: 'float32',
-    size: 9,
-    strides: [ 3 ],
-    dataId: {},
-    id: 0,
-    rankType: '2'
+  '$isSeries': false,
+  '$config': Configs {
+    tableDisplayConfig: {},
+    tableMaxRow: 10,
+    tableMaxColInConsole: 21,
+    dtypeTestLim: 7,
+    lowMemoryMode: false
   },
-  index_arr: [ 0, 1, 2 ],
-  columns: [ 'Abs', 'Count', 'country code' ],
-  col_data: [ [ 20.2, 30, 47.3 ], [ 34, 4, 5 ], [ 'NG', 'FR', 'GH' ] ],
-  col_data_tensor: Tensor {
-    kept: false,
-    isDisposedInternal: false,
-    shape: [ 3, 3 ],
-    dtype: 'float32',
-    size: 9,
-    strides: [ 3 ],
-    dataId: {},
-    id: 1,
-    rankType: '2'
-  },
-  col_types: [ 'float32', 'int32', 'string' ],
-  Abs: [Getter/Setter],
-  Count: [Getter/Setter],
-  'country code': [Getter/Setter]
+  '$data': [ [ 20.2, 34, 'NG' ], [ 30, 5, 'FR' ], [ 47.3, 6, 'GH' ] ],
+  '$dataIncolumnFormat': [ [ 20.2, 30, 47.3 ], [ 34, 5, 6 ], [ 'NG', 'FR', 'GH' ] ],
+  '$index': [ 0, 1, 2 ],
+  '$dtypes': [ 'float32', 'int32', 'string' ],
+  '$columns': [ 'Abs', 'Count', 'country code' ]
 }
-
- //after casting to string
-
-╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ Abs               │ Count             │ country code      ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 0 │ 20.2              │ 34                │ NG                ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ 30                │ 4                 │ FR                ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ 47.3              │ 5                 │ GH                ║
-╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ Abs               │ Count             │ country code      ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0          │ 20.2              │ 34                │ NG                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1          │ 30                │ 5                 │ FR                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2          │ 47.3              │ 6                 │ GH                ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 {% endtab %}
 {% endtabs %}
