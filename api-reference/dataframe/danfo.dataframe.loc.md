@@ -254,5 +254,5 @@ df`.loc({ row: [a:e]}).print()`\
 For the slice above to work, you must quote each slice, e.g:\
 df``.loc({ row: [`"a":"e"`]}).print()``\
 \
-Inne_**Quotes are not needed for numeric indices!**_
+_**Inner**_ _**quotes are not needed for numeric indices!**_
 {% endhint %}
