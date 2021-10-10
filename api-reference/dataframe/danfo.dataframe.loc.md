@@ -250,9 +250,9 @@ sub_df.print()
 
 {% hint style="info" %}
 Note that when using loc with alphabetic slices. We expect you to pass labels in the correct format. That is, string labels must be explicitly quoted. For example, the following loc slice will throw an error:\
-`s.loc([a:e]).print()`\
+df`.loc({ row: [a:e]}).print()`\
 For the slice above to work, you must quote each slice, e.g:\
-``s.loc([`"a":"e"]).print()``\
+df``.loc({ row: [`"a":"e"`]}).print()``\
 \
-_**Quotes are not needed for numeric indices!**_
+Inne_**Quotes are not needed for numeric indices!**_
 {% endhint %}
