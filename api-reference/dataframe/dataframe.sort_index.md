@@ -5,9 +5,9 @@ description: Sort DataFrame by index
 
 DataFrame.**sort_index**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/core/frame.js#L2094)]
 
-| Parameters | Type   | Description                                                                                                                                                                                           | Default                                  |
-| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| kwargs     | Object | <p>{</p><p><strong>ascending</strong>:  Order of sorting</p><p><strong>inplace</strong>: specify whether to perform the operation to the row/column with/without creating a new DataFrame</p><p>}</p> | {**ascending**: true, **inplace:**false} |
+| Parameters | Type   | Description                                                                                                                                                                               | Default                                  |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| options    | Object | <p>{</p><p><strong>ascending</strong>:  Sorting order. </p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | {**ascending**: true, **inplace:**false} |
 
 **Returns:**
 
