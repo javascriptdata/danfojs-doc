@@ -4,40 +4,19 @@ description: >-
   length).
 ---
 
-# DataFrame.set\_index
+# DataFrame.set_index
 
-danfo.DataFrame.**set\_index**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)\]
+danfo.DataFrame.**set_index**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p><b>key</b>: This key can be either a single column name or a single array
-          of the same length as the calling DataFrame,</p>
-        <p><b>drop</b>: Delete columns to be used as the new index.</p>
-        <p><b>inplace</b>: specify whether to perform the operation to the row/column
-          with/without creating a new DataFrame</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">{<b>drop</b>: true, <b>inplace:</b>false}</td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                       | Default                             |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------- |
+| options    | Object | <p>{</p><p><strong>index</strong>: An array of index values to set.</p><p></p><p><strong>column</strong>: A column name to set the index to</p><p><strong>drop</strong>: Delete columns to be used as the new index.</p><p><strong>inplace</strong>: specify whether to perform the operation to the row/column with/without creating a new DataFrame</p><p>}</p> | {**drop**: true, **inplace:**false} |
 
 **Returns:**
 
-       ****return **DataFrame**
+```
+   ****return **DataFrame**
+```
 
 ## **Examples**
 
@@ -46,7 +25,6 @@ danfo.DataFrame.**set\_index**\(kwargs\) \[[source](https://github.com/opensourc
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-
 const dfd = require("danfojs-node")
 
 let data = { "A": [-20, 30, 47.3],
@@ -59,21 +37,18 @@ df.print()
 
 df.set_index({column: "A", inplace: true})
 df.print()
-
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
-
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -118,21 +93,18 @@ df.print()
 let new_index = ["a", "b", "a"]
 df.set_index({column: new_index, inplace: true})
 df.print()
-
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
-
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -159,5 +131,4 @@ df.print()
 {% endtab %}
 {% endtabs %}
 
-**Note:** To reset an index to the default values, use the [DataFrame.reset\_index](dataframe.reset_index.md). 
-
+**Note:** To reset an index to the default values, use the [DataFrame.reset_index](dataframe.reset_index.md).
