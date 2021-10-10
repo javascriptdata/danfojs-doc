@@ -4,19 +4,19 @@ description: Return sample standard deviation over requested axis.
 
 # DataFrame.std
 
-danfo.DataFrame.**var**\(axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L563)\]
+danfo.DataFrame.**std**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| axis | Int | 0 for row and 1 for columns  | 1 |
+| Parameters | Type   | Description                                                                         | Default     |
+| ---------- | ------ | ----------------------------------------------------------------------------------- | ----------- |
+| options    | Object | **axis:** 0 or 1. If 0, compute the mean column-wise, if 1, row-wise. Defaults to 1 | { axis: 1 } |
 
 **Returns:**
 
-       ****return **Series**
+**       **return** Series**
 
 ## **Examples**
 
-## Calculates the standard deviation of values along default axis 1 \(column\)
+## Calculates the standard deviation of values along default axis 1 (column)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -32,14 +32,13 @@ df.std().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -53,7 +52,7 @@ df.std().print()
 {% endtab %}
 {% endtabs %}
 
-## Calculates the standard deviation of values along row axis \(0\)
+## Calculates the standard deviation of values along row axis (0)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -63,20 +62,19 @@ data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
 cols = ["A", "B", "C"]
 
 let df = new dfd.DataFrame(data)
-df.std(axis=0).print()
+df.std({axis:0}).print()
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -92,7 +90,5 @@ df.std(axis=0).print()
 {% endtab %}
 {% endtabs %}
 
-## 
-
-
+##
 
