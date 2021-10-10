@@ -15,9 +15,9 @@ danfo.DataFrame.**sample**(num, seed) \[[source](https://github.com/opensource9j
 
 **       **return** {Promies} resolves to DataFrame**
 
-## **Examples**
+****
 
-**Sam**
+## Sample a DataFrame randomly
 
 {% tabs %}
 {% tab title="Node" %}
@@ -57,6 +57,50 @@ load_data()
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ 2 │ Banana            │ 30                │ 40                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+```
+{% endtab %}
+{% endtabs %}
+
+## Sample a DataFrame randomly wit
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+
+async function load_data() {
+  let data = {
+    Name: ["Apples", "Mango", "Banana", "Pear"],
+    Count: [21, 5, 30, 10],
+    Price: [200, 300, 40, 250],
+  };
+
+  let df = new dfd.DataFrame(data);
+  let s_df = await df.sample(2);
+  s_df.print();
+  
+}
+
+load_data()
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```
+```
+{% endtab %}
+{% endtabs %}
+
+{% tabs %}
+{% tab title="Output" %}
+```
+╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
+║   │ Name              │ Count             │ Price             ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 0 │ Apples            │ 21                │ 200               ║
+╟───┼───────────────────┼───────────────────┼───────────────────╢
+║ 2 │ Banana            │ 30                │ 40                ║
+
 ```
 {% endtab %}
 {% endtabs %}
