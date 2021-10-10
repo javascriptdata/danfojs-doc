@@ -6,9 +6,9 @@ description: Return cumulative sum over a DataFrame or Series axis.
 
 danfo.DataFrame.**cumsum**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L706)]
 
-| Parameters | Type   | Description                                                                                      | Default                   |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------ | ------------------------- |
-| options    | Object | <p><strong>axis</strong>: 0 for row and 1 for column</p><p><strong>inplace</strong>: </p><p></p> | {axis: 1, inplace: false} |
+| Parameters | Type   | Description                                                                                                                                                                           | Default                   |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
+| options    | Object | <p><strong>axis</strong>: 0 for row and 1 for column</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p></p> | {axis: 1, inplace: false} |
 
 **Returns:**
 
