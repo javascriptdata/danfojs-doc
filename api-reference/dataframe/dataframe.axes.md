@@ -7,11 +7,11 @@ description: >-
 
 # DataFrame.axes
 
-danfo.DataFrame.**axes** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)\]
+danfo.DataFrame.**axis** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]
 
 **Returns:**
 
-       ****return **Object**
+**       **return** Object**
 
 ## **Examples**
 
@@ -26,7 +26,7 @@ let data = {"A": [-20.1, 30, 47.3, -20],
             
 let df = new dfd.DataFrame(data, {index: ["a", "b", "c", "d"]})
 
-console.log(df.axes)
+console.log(df.axis)
 
 
 ```
@@ -34,16 +34,14 @@ console.log(df.axes)
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 { index: [ 'a', 'b', 'c', 'd' ], columns: [ 'A', 'B', 'C' ] }
 ```
 {% endtab %}
 {% endtabs %}
-
