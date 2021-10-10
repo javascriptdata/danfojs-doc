@@ -6,9 +6,9 @@ description: Cast column of a DataFrame to a specified dtype.
 
 danfo.DataFrame.**astype**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
 
-| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                | Default |
-| ---------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| options    | Object | <p>{</p><p><strong>column</strong>:  Array, label/column name of column to cast</p><p><strong>dtype</strong>: dtype to cast to. One of [string, float32, int32, boolean]</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | {inpl   |
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                | Default            |
+| ---------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| options    | Object | <p>{</p><p><strong>column</strong>:  Array, label/column name of column to cast</p><p><strong>dtype</strong>: dtype to cast to. One of [string, float32, int32, boolean]</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { inplace: false } |
 
 **Returns:**
 
