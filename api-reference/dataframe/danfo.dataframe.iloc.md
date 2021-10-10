@@ -72,7 +72,7 @@ sub_df.print()
 
 ### **Index by a slice of row and return all columns**
 
-The [**iloc**](danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end], e.g "\[1: 4]". This will return all values between index position 1 and 3.  The end index is not included. 
+The [**iloc**](danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end], e.g "\[1: 3]". This will return all values between index position 1 and 3.  The end index is not included. 
 
 {% tabs %}
 {% tab title="Node" %}
