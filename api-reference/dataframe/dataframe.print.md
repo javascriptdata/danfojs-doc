@@ -1,6 +1,9 @@
 ---
-description: Pretty prints n number of rows in a DataFrame or Series to the console
+description: >-
+  Pretty prints default (10) number of rows in a DataFrame or Series to the
+  console
 ---
+
 # DataFrame.print
 
 danfo.DataFrame.**print()** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]

@@ -66,8 +66,8 @@ df.print()
 const dfd = require("danfojs-node")
 
 let data = { "A": [-20, 30, 47.3],
-             "B": [34, -4, 5, 6],
-             "C": [20, 2, 3, 30] }
+             "B": [34, 5, 6],
+             "C": [20, 3, 30] }
 
 
 let df = new dfd.DataFrame(data)
