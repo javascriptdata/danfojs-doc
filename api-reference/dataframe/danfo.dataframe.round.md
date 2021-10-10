@@ -6,14 +6,14 @@ description: Round elements in a DataFrame to a specified number of decimal plac
 
 danfo.DataFrame.**round**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)]
 
-| Parameters | Type   | Description                                                                         | Default         |
-| ---------- | ------ | ----------------------------------------------------------------------------------- | --------------- |
-| dp         | Int    | Number of decimal places to round to. Defaults to 1                                 | 1               |
-| options    | Object | **axis:** 0 or 1. If 0, compute the mean column-wise, if 1, row-wise. Defaults to 1 | { inplace: fa } |
+| Parameters | Type   | Description                                                                                        | Default            |
+| ---------- | ------ | -------------------------------------------------------------------------------------------------- | ------------------ |
+| dp         | Int    | Number of decimal places to round to. Defaults to 1                                                | 1                  |
+| options    | Object | **inplace:** Boolean indicating whether to perform the operation inplace or not. Defaults to false | { inplace: false } |
 
 **Returns:**
 
-**       **return** Series**
+**       **return** DataFrame**
 
 ## **Examples**
 
