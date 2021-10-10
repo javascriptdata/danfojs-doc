@@ -32,7 +32,7 @@ let data = {
 }
 let df = new dfd.DataFrame(data)
 
-let df_new = df.div(2)
+let df_new = df.pow(2)
 
 df_new.print()
 ```
@@ -78,7 +78,7 @@ let data = {
 let df = new dfd.DataFrame(data)
 let sf = new dfd.Series([4, 5])
 
-let df_new = df.div(sf, { axis: 1 })
+let df_new = df.pow(sf, { axis: 1 })
 
 df_new.print()
 ```
@@ -110,7 +110,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Exponential of**  **DataFrame wi a DataFrame
+### Exponential of**  **DataFrame with a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -126,7 +126,7 @@ let data2 = {"new_col1": [1, 5, 20, 10],
 let df = new dfd.DataFrame(data)
 let df2 = new dfd.DataFrame(data2)
 
-let df_new = df.div(df2)
+let df_new = df.pow(df2)
 
 df_new.print()
 
@@ -159,7 +159,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Division of** ** Array to DataFrame along axis 0
+### Exponential of** ** Array with DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -174,7 +174,7 @@ let data = {
 let df = new dfd.DataFrame(data)
 let val = [2, 2, 2, 2]
 
-let df_new = df.div(val, { axis: 0 })
+let df_new = df.pow(val, { axis: 0 })
 
 df_new.print()
 ```
@@ -205,7 +205,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Division works inplace
+### Exponential works inplace
 
 {% tabs %}
 {% tab title="Node" %}
@@ -220,7 +220,7 @@ let data = {
 let df = new dfd.DataFrame(data)
 let val = [2, 2, 2, 2]
 
-df.div(val, { axis: 0, inplace: true })
+df.pow(val, { axis: 0, inplace: true })
 
 df.print()
 ```
