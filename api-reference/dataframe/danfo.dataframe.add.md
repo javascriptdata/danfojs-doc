@@ -60,7 +60,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of**  Series to **DataFrame along the row axis
+### Addition of**  Series to **DataFrame along the row axis 0
 
 {% tabs %}
 {% tab title="Node" %}
