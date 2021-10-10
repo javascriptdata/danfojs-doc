@@ -38,7 +38,7 @@ console.log(df.index);
 {% endtab %}
 {% endtabs %}
 
-Returns set** **index of a** **DataFrame
+
 
 {% tabs %}
 {% tab title="Node" %}
