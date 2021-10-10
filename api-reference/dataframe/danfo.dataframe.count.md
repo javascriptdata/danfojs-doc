@@ -6,19 +6,19 @@ description: >-
 
 # DataFrame.count
 
-danfo.DataFrame.**count**\(axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L587)\]
+danfo.DataFrame.**count**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| axis | Int | 0 for row and 1 for columns  | 1 |
+| Parameters | Type   | Description                                                                         | Default     |
+| ---------- | ------ | ----------------------------------------------------------------------------------- | ----------- |
+| options    | Object | **axis:** 0 or 1. If 0, compute the mean column-wise, if 1, row-wise. Defaults to 1 | { axis: 1 } |
 
 **Returns:**
 
-       ****return **Series**
+**       **return** Series**
 
 ## **Examples**
 
-## Count Non-NaN values along default axis 1 \(column\)
+## Count Non-NaN values along default axis 1 (column)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -36,14 +36,13 @@ df.count().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══════╤══════════════════════╗
 ║       │ 0                    ║
 ╟───────┼──────────────────────╢
@@ -57,7 +56,7 @@ df.count().print()
 {% endtab %}
 {% endtabs %}
 
-## Count Non-NaN values along row axis \(0\)
+## Count Non-NaN values along row axis (0)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -66,23 +65,22 @@ const dfd = require("danfojs-node")
 
 let data = { "Name": ["Apples", "Mango", "Banana", undefined],
            "Count": [NaN, 5, NaN, 10],
-           "Price": [200, 300, 40, 250] }]
+           "Price": [200, 300, 40, 250] }
 
 let df = new dfd.DataFrame(data)
-df.count({axis: 0).print()
+df.count({axis: 0}).print()
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -98,7 +96,5 @@ df.count({axis: 0).print()
 {% endtab %}
 {% endtabs %}
 
-## 
-
-
+##
 
