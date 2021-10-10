@@ -4,35 +4,15 @@ description: Cast column of a DataFrame to a specified dtype.
 
 # DataFrame.astype
 
-danfo.DataFrame.**astype**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)\]
+danfo.DataFrame.**astype**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p><b>column</b>: Array, label/column name of column to cast</p>
-        <p><b>dtype</b>: dtype to cast to. One of [string, float32, int32]</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left"></td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                | Default |
+| ---------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| options    | Object | <p>{</p><p><strong>column</strong>:  Array, label/column name of column to cast</p><p><strong>dtype</strong>: dtype to cast to. One of [string, float32, int32, boolean]</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | {inpl   |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -61,14 +41,13 @@ df.ctypes.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 //before casting
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║
@@ -148,14 +127,13 @@ df.ctypes.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -184,7 +162,7 @@ df.ctypes.print()
 {% endtab %}
 {% endtabs %}
 
-**Note:** Casting a string column of alphabets/words to numeric form will return NaNs as values
+**Note: **Casting a string column of alphabets/words to numeric form will return NaNs as values
 
 {% tabs %}
 {% tab title="Node" %}
@@ -208,14 +186,13 @@ df.ctypes.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║
@@ -243,4 +220,3 @@ df.ctypes.print()
 ```
 {% endtab %}
 {% endtabs %}
-
