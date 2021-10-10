@@ -1,12 +1,18 @@
 # Release Notes
 
-### \[LATEST] Release [ ](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.3)Node (v0.3.2), Browser (0.3.2)
+### \[LATEST] Release Node (v0.3.3), Browser (0.3.3)
+
+**Date:** 10th Oct 2021
+
+Minor patch update
+
+### \[LATEST] ReleaseNode (v0.3.2), Browser (0.3.2)
 
 **Date:** 2nd Oct 2021
 
-Minor patch update for column name display after aggregation functions like sum, mean, var, are applied to a column axis. 
+Minor patch update for column name display after aggregation functions like sum, mean, var, are applied to a column axis.
 
-### Release [ ](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.3)Node (v0.3.1), Browser (0.3.1)
+### ReleaseNode (v0.3.1), Browser (0.3.1)
 
 **Date:** 1st Oct 2021
 
@@ -21,17 +27,17 @@ Minor patch update for column name display after aggregation functions like sum,
 * Add loc indexing support for Series
 * Add configuration support for formating DataFrame display in the console
 * New DataFrame `applyMap` function for element-wise apply function
-* `and` and `or` logical comparison support. E.g \
-       `df.loc({`\
-         `rows: df['Salary_in_1000'].gte(100)).and(df['Age'].gt(60))`\
+* `and` and `or` logical comparison support. E.g\
+  `df.loc({`\
+  `rows: df['Salary_in_1000'].gte(100)).and(df['Age'].gt(60))`\
   `})`
 * `read_csv` now uses [Papaparse](https://www.papaparse.com) and supports config values for headers, separator, etc.
-* `to_csv` , `to_json` and `to_excel` functions now support saving to local disk in Node and downloadable in the browser. Also, supports config parameters for output. 
+* `to_csv` , `to_json` and `to_excel` functions now support saving to local disk in Node and downloadable in the browser. Also, supports config parameters for output.
 * `read_json` now supports config values for headers, authentication, separator, etc.
-* `read_excel` now uses [XLSX](https://www.npmjs.com/package/xlsx) parser, hence supports all XLSX config options. 
-* DataFrame `query` function now accepts boolean masks with single or multiple conditions. E.g \
+* `read_excel` now uses [XLSX](https://www.npmjs.com/package/xlsx) parser, hence supports all XLSX config options.
+* DataFrame `query` function now accepts boolean masks with single or multiple conditions. E.g\
   `df.query({`\
-    `rows: df['Salary_in_1000'].gte(100)).and(df['Age'].gt(60)) `\
+  `rows: df['Salary_in_1000'].gte(100)).and(df['Age'].gt(60))`\
   `})`
 
 **Bug Fixes**
@@ -43,9 +49,9 @@ Minor patch update for column name display after aggregation functions like sum,
 * Fix loc slicing bug for row index with string labels
 * DataFrame apply function now works only across a specified axis
 
-Contributors [@risenW](https://github.com/risenW) 
+Contributors [@risenW](https://github.com/risenW)
 
-### \[LATEST] Release [ ](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.3)Node (v0.2.7), Browser (0.2.6)
+### \[LATEST] ReleaseNode (v0.2.7), Browser (0.2.6)
 
 **Date:** 30th May 2021
 
@@ -54,12 +60,12 @@ Contributors [@risenW](https://github.com/risenW)
 
 Contributors [@risenW](https://github.com/risenW) [@steveoni](https://github.com/steveoni) [@jpjagt](https://github.com/jpjagt) [@sponsfreixes](https://github.com/sponsfreixes) [@bherbruck](https://github.com/bherbruck) [@woosuk288](https://github.com/woosuk288) and [@adithyaakrishna](https://github.com/adithyaakrishna)
 
-### Release [ ](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.3)Node (v0.2.6), Browser (0.2.5)
+### ReleaseNode (v0.2.6), Browser (0.2.5)
 
 **Date:** 29th March 2021
 
-* \[Bug Fixes]: [#150](https://github.com/opensource9ja/danfojs/pull/150) [#152 ](https://github.com/opensource9ja/danfojs/pull/152)
-* \[Patches] [#159](https://github.com/opensource9ja/danfojs/pull/159) , [#158 ](https://github.com/opensource9ja/danfojs/pull/158)
+* \[Bug Fixes]: [#150](https://github.com/opensource9ja/danfojs/pull/150) [#152](https://github.com/opensource9ja/danfojs/pull/152)
+* \[Patches] [#159](https://github.com/opensource9ja/danfojs/pull/159) , [#158](https://github.com/opensource9ja/danfojs/pull/158)
 * \[Feature] [#154](https://github.com/opensource9ja/danfojs/pull/154) Perform groupby operation on grouped columns directly:
 
 ```javascript
@@ -81,7 +87,7 @@ We added/updated the following features:
 
 * Fix error thrown when danfojs CDN is placed in an HTML header
 * Smaller bundle size for browser: From \~1.7mb to about \~550kb
-* Stopped bundling Danfojs with Plotly. This means that as of v0.2.3, we no longer ship with Plotly distribution due to the huge size. Plotly plots are still supported, but in order to make them, you have to explicitly add the Plotly CDN or package. 
+* Stopped bundling Danfojs with Plotly. This means that as of v0.2.3, we no longer ship with Plotly distribution due to the huge size. Plotly plots are still supported, but in order to make them, you have to explicitly add the Plotly CDN or package.
 
 A simple example:
 
@@ -126,13 +132,13 @@ A simple example:
 </html>
 ```
 
-### Release [ (v0.2.2)](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.2)
+### Release [(v0.2.2)](https://github.com/opensource9ja/danfojs/releases/tag/v0.2.2)
 
 **Date:** 14th February 2021
 
 We added/updated the following features:
 
-* Fix babel runtime issue in node version 
+* Fix babel runtime issue in node version
 * Smaller size in browser version in this version. From \~8mb to about \~5mb
 * Fix browser tag issue and returns back to specific versioning instead of @latest
 * Danfojs now ships with an exported version of tensorflowjs-node (2.8.5). This fixes the double dependency issue when building ML models, as you no longer need to install/import tensorflowjs separately.
@@ -164,7 +170,7 @@ We added/updated the following features:
 * Add [sort_index](api-reference/dataframe/dataframe.sort_index.md) function to DataFrame and Series (New feature)
 * Minor patch and overall optimizations (Fix)
 
-**Contributors**: [Rising Odegua](https://github.com/risenW), [Stephen Oni](https://github.com/steveoni), [Jhenner Tigreros](https://github.com/JhennerTigreros), [Aditya Zope](https://github.com/adzo261) 
+**Contributors**: [Rising Odegua](https://github.com/risenW), [Stephen Oni](https://github.com/steveoni), [Jhenner Tigreros](https://github.com/JhennerTigreros), [Aditya Zope](https://github.com/adzo261)
 
 ### Release (v0.1.0-beta)
 
@@ -181,4 +187,3 @@ This is a minor release for browser-based environments. We added/updated the fol
 * Fixed upper bound bug in indexing
 
 **Contributors**: Rising Odegua, Stephen Oni
-
