@@ -6,11 +6,11 @@ description: >-
 
 # DataFrame.describe
 
-danfo.DataFrame.**describe**\(\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L821)\]
+danfo.DataFrame.**describe**() \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L821)]
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -30,14 +30,13 @@ df.describe().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔══════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║          │ col1              │ col2              │ col3              ║
 ╟──────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -59,5 +58,4 @@ df.describe().print()
 {% endtab %}
 {% endtabs %}
 
-## 
-
+##

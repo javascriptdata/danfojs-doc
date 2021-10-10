@@ -4,11 +4,11 @@ description: Obtain the dimension of a series
 
 # Series.ndim
 
-> danfo.Series.ndim  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L209)\]
+> danfo.Series.ndim  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L209)]
 
-**Parameters:** None
+**Parameters: **None
 
-**Returns:** int
+**Returns: **int
 
 **Example**
 
@@ -27,9 +27,8 @@ console.log(sf1.ndim)
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 1
 ```
 {% endtab %}
 {% endtabs %}
-

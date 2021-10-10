@@ -4,7 +4,7 @@ description: Obtain the mean per groups for each column(s)
 
 # Groupby.mean
 
-> danfo.Series.mean\(\)      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L274)\]
+> danfo.Series.mean()      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L274)]
 
 **Parameters**: None
 
@@ -36,7 +36,7 @@ grp.col(["C"]).mean().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 
   Shape: (2,2) 
 
@@ -74,7 +74,7 @@ grp.col(["C","D"]).mean().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (2,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -110,7 +110,7 @@ grp.col(["C"]).mean().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
     Shape: (5,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -152,7 +152,7 @@ grp.col(["C","D"]).mean().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
     Shape: (5,4) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -170,5 +170,4 @@ grp.col(["C","D"]).mean().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-\*\*\*\*
-
+****

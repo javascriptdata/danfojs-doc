@@ -4,39 +4,19 @@ description: Add new column to a DataFrame
 
 # DataFrame.addColumn
 
-danfo.DataFrame.**addColumn**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1083)\]
+danfo.DataFrame.**addColumn**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1083)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{<b>column</b> : str, name of the column to add</p>
-        <p><b> value: </b>Series<b>, </b>Array. New values to add }</p>
-      </td>
-      <td style="text-align:left"></td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                                    | Default |
+| ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| kwargs     | Object | <p>{<strong>column</strong> : str, name of the column to add</p><p> <strong>values:</strong> Series<strong>,</strong> Array of new values to add <br> <strong>inplace</strong>: Default to false. </p><p>}</p> |         |
 
 **Returns:**
-
-       ****return **Null**
 
 ## **Examples**
 
 ## **Add Array as a new column to DataFrame**
 
-New columns get added at the end of the DataFrame, and this happens  so returns nothing,
+New columns get added at the end of the DataFrame, and this happens so returns nothing,
 
 {% tabs %}
 {% tab title="Node" %}
@@ -53,20 +33,18 @@ let new_col = [1, 2, 3, 4]
 df.addColumn({ "column": "D", "values": new_col, inplace: true });
 
 df.print()
-
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -112,21 +90,18 @@ let s = new dfd.Series([1, 2, 3, 4])
 df.addColumn({ "column": "D", "values": s, inplace: true });
 
 df.print()
-
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
-
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -141,4 +116,3 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
-

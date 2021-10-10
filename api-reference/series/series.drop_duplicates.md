@@ -2,20 +2,19 @@
 description: Remove duplicate rows
 ---
 
-# Series.drop\_duplicates
+# Series.drop_duplicates
 
-> danfo.Series.**drop\_duplicates**\(kwargs\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L1007)\]
+> danfo.Series.**drop_duplicates**(options)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L1007)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| kwargs\["**inplace**"\] | bool | return a new series or not.  | false |
-| kwargs\["**keep**"\] | String | {"**first**"or "**last**"}. Specify if to keep the last or the first duplicate value  | first |
+| Parameters | Type   | Description                                                                                                                                                                                                              | Default                               |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------- |
+| options    | Object | <p><strong>keep</strong>: "first" | "last", which duplicate value to keep. Defaults to "first".<br><strong>inplace</strong>:  Boolean indicating whether to perform the operation in-place or not. Defaults to false</p> | <p>{</p><p>inplace: false</p><p>}</p> |
 
-**Returns:** Series
+**Returns: **Series
 
 **Examples**
 
-Drop duplicate by keeping the first value of the duplicate value
+### Drop duplicate by keeping the first occurrence of the duplicate value
 
 {% tabs %}
 {% tab title="Node" %}
@@ -33,7 +32,7 @@ sf_drop.print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -51,7 +50,7 @@ sf_drop.print()
 {% endtab %}
 {% endtabs %}
 
-Drop duplicate and keep only the last duplicated value
+### Drop duplicate and keep only the last duplicated value
 
 {% tabs %}
 {% tab title="Node" %}
@@ -69,7 +68,7 @@ sf_drop.print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -87,7 +86,7 @@ sf_drop.print()
 {% endtab %}
 {% endtabs %}
 
-Remove duplicate value in series without returning a new series
+### Remove duplicate value in-place
 
 {% tabs %}
 {% tab title="Node" %}
@@ -105,7 +104,7 @@ sf.print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -120,4 +119,3 @@ sf.print()
 ```
 {% endtab %}
 {% endtabs %}
-

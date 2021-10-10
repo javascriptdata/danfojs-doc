@@ -4,15 +4,15 @@ description: Group DataFrame using a mapper or by a Series of columns.
 
 # DataFrame.groupby
 
-danfo.DataFrame.**groupby**\(columns\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1142)\]
+danfo.DataFrame.**groupby**(columns) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1142)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| columns | Array | The names of a column\(s\) in the DataFrame to group by |  |
+| Parameters | Type  | Description                                           | Default |
+| ---------- | ----- | ----------------------------------------------------- | ------- |
+| columns    | Array | The names of a column(s) in the DataFrame to group by |         |
 
 **Returns:**
 
-       ****return **DataFrame.groups**
+**       **return** DataFrame.groups**
 
 ## **Examples**
 
@@ -33,14 +33,13 @@ group_df.col_dict
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ Name                 ║
 ╟───┼──────────────────────╢
@@ -69,4 +68,3 @@ group_df.col_dict
 {% endtabs %}
 
 To select more than one column with specific rows, you can use any of the following: [DataFrame.loc](danfo.dataframe.loc.md), [DataFrame.iloc](danfo.dataframe.iloc.md) or [DataFrame.query](danfo.dataframe.query.md)
-

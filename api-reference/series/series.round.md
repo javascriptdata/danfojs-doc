@@ -4,13 +4,14 @@ description: round off floating values in series
 
 # Series.round
 
-> danfo.Series.round\(dp\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L404)\]
+> danfo.Series.round(dp, options)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L404)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| dp | int | decimal place to round off to |  |
+| Parameters | Type   | Description                                                                                    | Default                               |
+| ---------- | ------ | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
+| dp         | int    | decimal place to round off to                                                                  |                                       |
+| options    | Object | inplace: Boolean indicating whether to perform the operation inplace or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
 
-**Returns:** Series
+**Returns: **Series
 
 **Example**
 
@@ -29,7 +30,7 @@ sf1.round(2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -44,6 +45,4 @@ sf1.round(2).print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

@@ -4,7 +4,7 @@ description: Count the occurrence of values in columns per groups
 
 # Groupby.count
 
-> danfo.Groupby.count\(\)      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L249)\]
+> danfo.Groupby.count()      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L249)]
 
 **Parameters**: None
 
@@ -37,7 +37,7 @@ grp.col(["C"]).count().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 
   Shape: (2,2) 
 
@@ -74,7 +74,7 @@ grp.col(["C","D"]).count().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
   Shape: (2,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -111,7 +111,7 @@ grp.col(["C"]).count().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
   Shape: (5,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -153,7 +153,7 @@ grp.col(["C","D"]).count().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
   
    Shape: (5,4) 
 
@@ -172,5 +172,4 @@ grp.col(["C","D"]).count().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-\*\*\*\*
-
+****

@@ -4,14 +4,15 @@ description: Joins two or more strings/arrays
 
 # Series.str.concat
 
-> danfo.Series.str.**concat**\(other, position\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L80)\]
+> danfo.Series.str.**concat**(other, position, options)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L80)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | string or Array | string or list of strings to add to each string element of the series | "" |
-| position | Int | The position to add the **other** \(string or array\) is either 0 or 1. 0 is to add the other at the beginning of each of the string element, and 1 is to add to the end of the string element | 1  |
+| Parameters | Type            | Description                                                                                                                                                                                  | Default                                                |
+| ---------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------ |
+| other      | string or Array | string or list of strings to add to each string element of the series                                                                                                                        | ""                                                     |
+| position   | Int             | The position to add the **other **(string or array) is either 0 or 1. 0 is to add the other at the beginning of each of the string element, and 1 is to add to the end of the string element | 1                                                      |
+| options    | Object          | **inplace**: Whether to perform the operation in-place or not.                                                                                                                               | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
-**Returns:** Series \(String element\)
+**Returns: **Series (String element)
 
 **Examples**
 
@@ -31,14 +32,13 @@ sf.str.concat(data2,0).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -70,14 +70,13 @@ sf.str.concat(data2,1).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -109,14 +108,13 @@ sf.str.concat("pre",0).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -148,12 +146,11 @@ sf.str.concat("post",1).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -166,4 +163,3 @@ sf.str.concat("post",1).print()
 ║ 3 │ SwApCaSepost         ║
 ╚═══╧══════════════════════╝
 ```
-

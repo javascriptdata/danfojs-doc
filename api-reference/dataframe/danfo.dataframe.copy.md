@@ -4,11 +4,11 @@ description: Makes a new copy of the DataFrame
 
 # DataFrame.copy
 
-danfo.DataFrame.**copy**\(\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L940)\]
+danfo.DataFrame.**copy**() \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L940)]
 
 **Returns:**
 
-       ****return **new DataFrame**
+**       **return** new DataFrame**
 
 ## **Examples**
 
@@ -27,14 +27,13 @@ new_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
@@ -51,6 +50,4 @@ new_df.print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

@@ -4,7 +4,7 @@ description: Transform features by scaling each feature to a range of max and mi
 
 # danfo.MinMaxScaler
 
-class danfo.**MinMaxScaler** \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
+class danfo.**MinMaxScaler **\[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
 
 danfo.js provides the MinMaxScaler class for standardization of DataFrame and Series. This estimator scales and translates each feature individually such that it is in the given range on the training set, e.g. between zero and one.
 
@@ -40,14 +40,13 @@ df_enc.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ 0                 │ 1                 │ 2                 │ 3                 ║
@@ -100,14 +99,13 @@ df_enc.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
  Shape: (3,1) 
 
@@ -125,4 +123,3 @@ df_enc.print()
 {% endtabs %}
 
 See also [MinMaxScaler](danfo.minmaxscaler.md)
-

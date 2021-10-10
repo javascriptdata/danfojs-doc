@@ -4,15 +4,15 @@ description: Returns the first n rows of the DataFrame based on position.
 
 # DataFrame.head
 
-danfo.DataFrame.**head**\(rows\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L292)\]
+danfo.DataFrame.**head**(rows) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L292)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| rows | Int | The number of rows to return | 5 |
+| Parameters | Type | Description                  | Default |
+| ---------- | ---- | ---------------------------- | ------- |
+| rows       | Int  | The number of rows to return | 5       |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -34,14 +34,13 @@ s_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -52,4 +51,3 @@ s_df.print()
 ```
 {% endtab %}
 {% endtabs %}
-

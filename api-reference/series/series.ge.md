@@ -4,13 +4,13 @@ description: Check if all the values in a series is greater than or equal a valu
 
 # Series.ge
 
-> danfo.Series.ge\(other\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L874)\]
+> danfo.Series.ge(other)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L874)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series**\|** int\|float | value\(s\) to compare |  |
+| Parameters | Type                    | Description         | Default |
+| ---------- | ----------------------- | ------------------- | ------- |
+| other      | Series, Array or number | value(s) to compare |         |
 
-**Returns:** Series \(Boolean element\)
+**Returns: **Series (Boolean element)
 
 **Example**
 
@@ -33,7 +33,7 @@ sf1.ge(sf2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -72,7 +72,7 @@ sf1.ge(20).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -93,4 +93,3 @@ sf1.ge(20).print()
 ```
 {% endtab %}
 {% endtabs %}
-

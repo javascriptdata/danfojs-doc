@@ -4,7 +4,7 @@ description: Obtain the minimum value per groups for a coumn(s)
 
 # Groupby.min
 
-> danfo.Groupby.min\(\)      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L315)\]
+> danfo.Groupby.min()      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L315)]
 
 **Parameters**: None
 
@@ -36,7 +36,7 @@ grp.col(["C"]).min().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (2,2) 
 
 ╔═══╤═══════════════════╤═══════════════════╗
@@ -72,7 +72,7 @@ grp.col(["C","D"]).min().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
   Shape: (2,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -108,7 +108,7 @@ grp.col(["C"]).min().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (5,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -150,7 +150,7 @@ grp.col(["C","D"]).min().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
   Shape: (5,4) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -168,5 +168,4 @@ grp.col(["C","D"]).min().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-\*\*\*\*
-
+****

@@ -6,12 +6,12 @@ description: >-
 
 # Series.div
 
-> danfo.Series.div\(other\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L188)\]
+> danfo.Series.div(other, options)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L188)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series\|int\| | values  |  |
-| round | bool | specify if to round off the floating number | true |
+| Parameters | Type          | Description                                                                                    | Default                               |
+| ---------- | ------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
+| other      | Series\|int\| | values                                                                                         |                                       |
+| options    | Object        | inplace: Boolean indicating whether to perform the operation inplace or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
 
 **Return:** Series
 
@@ -35,7 +35,7 @@ sf1.div(sf2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -51,7 +51,7 @@ sf1.div(sf2).print()
 {% endtab %}
 {% endtabs %}
 
-divide with a value
+### divide with a value
 
 {% tabs %}
 {% tab title="Node" %}
@@ -68,7 +68,7 @@ sf1.div(2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -85,4 +85,3 @@ sf1.div(2).print()
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -4,41 +4,19 @@ description: Concatenate DataFrames and Series along an axis
 
 # danfo.concat
 
-danfo.**concat**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
+danfo.**concat**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>kwargs</b>
-      </td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p><b>df_list</b>: List of DataFrames or Series to concatenate together.</p>
-        <p><b>axis</b>: One of 0 or 1. The axis on which to perform concatenation.
-          Specified axis must align in both Objects</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">{<b>axis</b>: 1}</td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                                                                | Default       |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------- |
+| **kwargs** | Object | <p>{</p><p><strong>df_list</strong>: List of DataFrames or Series to concatenate together.</p><p><strong>axis</strong>: One of  0 or 1. The axis on which to perform concatenation. Specified axis must align in both Objects </p><p>}</p> | {**axis**: 1} |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
-### **Concatenate two DataFrames along column axis \(1\)** 
+### **Concatenate two DataFrames along column axis (1) **
 
 {% tabs %}
 {% tab title="Node" %}
@@ -66,14 +44,13 @@ com_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Key1              │ Key2              │ A                 │ ...               │ Key1_2            │ Key2_2            │ A_2               │ D                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -89,7 +66,7 @@ com_df.print()
 {% endtab %}
 {% endtabs %}
 
-### **Concatenate two DataFrames along row axis \(0\)** 
+### **Concatenate two DataFrames along row axis (0) **
 
 {% tabs %}
 {% tab title="Node" %}
@@ -117,14 +94,13 @@ com_df.print(10)
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Key1              │ Key2              │ A                 │ B                 │ D                 ║
@@ -149,7 +125,7 @@ com_df.print(10)
 {% endtab %}
 {% endtabs %}
 
-### **Concatenate two Series along row axis \(0\)** 
+### **Concatenate two Series along row axis (0) **
 
 {% tabs %}
 {% tab title="Node" %}
@@ -177,14 +153,13 @@ com_df.print(10)
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Key1              │ Key2              │ A                 │ B                 │ D                 ║
@@ -210,4 +185,3 @@ com_df.print(10)
 {% endtabs %}
 
 See also [danfo.concat ](danfo.concat.md)for joining objects based on axis.
-

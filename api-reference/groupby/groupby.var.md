@@ -4,7 +4,7 @@ description: Obtain the variance per groups for a specified column
 
 # Groupby.var
 
-> danfo.Groupby.**var**\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L268)\]
+> danfo.Groupby.**var**()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L268)]
 
 **Parameters**: None
 
@@ -37,7 +37,7 @@ grp.col(["C"]).var().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 
  Shape: (2,2) 
 
@@ -74,7 +74,7 @@ grp.col(["C","D"]).var().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (2,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -111,7 +111,7 @@ grp.col(["C"]).var().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (5,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -153,7 +153,7 @@ grp.col(["C","D"]).var().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
   
   Shape: (5,4) 
 
@@ -172,5 +172,4 @@ grp.col(["C","D"]).var().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-\*\*\*\*
-
+****

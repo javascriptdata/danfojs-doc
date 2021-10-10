@@ -4,11 +4,11 @@ description: Converts all characters to lower case.
 
 # Series.str.toLowerCase
 
-> danfo.Series.str.toLowerCase\(\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L20)\]
+> danfo.Series.str.toLowerCase(options)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L20)]
 
-**Parameters:** None
-
-**Returns**:  Series \(String element\)
+| Parameters | Type   | Description                                                     | Default                                                |
+| ---------- | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
 **Example**
 
@@ -27,14 +27,13 @@ sf.str.toLowerCase().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -49,4 +48,3 @@ sf.str.toLowerCase().print()
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -4,16 +4,17 @@ description: Obtain the substring of each element in a series
 
 # Series.str.slice
 
-> danfo.Series.str.slice\(startIndex, endIndex\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L235)\]
+> danfo.Series.str.slice(startIndex, endIndex, options)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L235)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| startIndex | Number | specify the index to start obtaining the substring | 0 |
-| endIndex | Number | specify the index to end the substring | 1 |
+| Parameters | Type   | Description                                                     | Default                                                |
+| ---------- | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| startIndex | Number | specify the index to start obtaining the substring              | 0                                                      |
+| endIndex   | Number | specify the index to end the substring                          | 1                                                      |
+| options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
 **Returns:**
 
-  ****return Series.
+**  **return Series.
 
 **Example**
 
@@ -30,14 +31,13 @@ sf.str.slice(2, 4).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -52,4 +52,3 @@ sf.str.slice(2, 4).print()
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -2,58 +2,30 @@
 description: Reads an excel file into DataFrame.
 ---
 
-# danfo.read\_excel
+# danfo.read_excel
 
-> danfo.**read\_excel**\(source, configs\) [\[source](https://github.com/opensource9ja/danfojs/blob/849d14c8e7fa79bce4ffa9d0d177639047313520/danfojs/src/io/reader.js#L89)\]
+> danfo.**read_excel**(source, configs) [\[source](https://github.com/opensource9ja/danfojs/blob/849d14c8e7fa79bce4ffa9d0d177639047313520/danfojs/src/io/reader.js#L89)]
 
-> <table>
->   <thead>
->     <tr>
->       <th style="text-align:left">Parameters</th>
->       <th style="text-align:left">Type</th>
->       <th style="text-align:left">Description</th>
->     </tr>
->   </thead>
->   <tbody>
->     <tr>
->       <td style="text-align:left">source</td>
->       <td style="text-align:left">string</td>
->       <td style="text-align:left"><b>source</b> : string, URL or local file path to retreive Excel file.</td>
->     </tr>
->     <tr>
->       <td style="text-align:left">configs</td>
->       <td style="text-align:left">Object</td>
->       <td style="text-align:left">
->         <p>{</p>
->         <p><b>sheet</b> : string, (Optional) Name of the sheet which u want to parse.
->           Default will be the first sheet.</p>
->         <p><b>header_index</b> : int, (Optional) Only used in browser environment.
->           The Index of the row which represents the header(columns) of the data.
->           Default will be the first non empty row.</p>
->         <p><b>data_index</b> : int, (Optional) Only used in browser environment. The
->           index of the row from which actual data(content) starts. Default will be
->           the next row of <code>header_index</code>
->         </p>
->         <p>}</p>
->       </td>
->     </tr>
->   </tbody>
-> </table>
->
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                      |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| source     | string | **source** : string, URL or local file path to retreive Excel file.                                                                                                                                                                                                                                                                                                                              |
+| configs    | Object | <p>{</p><p><strong>sheet</strong> : string, (Optional) Name of the sheet which u want to parse. Default will be the first sheet.<br><strong>method</strong>: The HTTP method to use.</p><p><strong>headers</strong>: Additional headers to send with the request if reading JSON from remote url. Supports all the node-fetch options in Nodejs, and all fetch options in browsers. </p><p>}</p> |
+
 > **Returns:**
 >
->        ****return ****{**Promise**} DataFrame structure of parsed Excel data
+> **       **return** **{**Promise**} DataFrame structure of parsed Excel data
 
 ### Example
 
-The **read\_excel** method can read excel files saved from local disk, or over the internet.
+The **read_excel** method can read excel files saved on a local disk, or over the internet.
 
 {% tabs %}
 {% tab title="Node.js" %}
 ```javascript
 const dfd = require("danfojs-node")
+const path = require("path")
 
-local_xcel = 'testexcel.xls'
+let local_xcel = path.join(process.cwd(), "data", "testexcel.xlxs")
 
 async function load_process_data() {
     let df = await dfd.read_excel(local_xcel)
@@ -94,4 +66,3 @@ load_process_data()
 ```
 {% endtab %}
 {% endtabs %}
-

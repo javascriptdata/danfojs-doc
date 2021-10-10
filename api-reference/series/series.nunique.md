@@ -1,14 +1,14 @@
 ---
-description: Obtain the number of unique values in a series
+description: Returns the number of unique values in a series
 ---
 
 # Series.nunique
 
-> danfo.Series.**nunique**\(\)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L750)\]
+> danfo.Series.**nunique**()       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L750)]
 
 **Parameters**: None
 
-**Returns:** int
+**Returns: **int
 
 **Example**
 
@@ -27,9 +27,8 @@ console.log(sf.nunique())
 
 {% tabs %}
 {% tab title="Ouptut" %}
-```text
+```
 9
 ```
 {% endtab %}
 {% endtabs %}
-

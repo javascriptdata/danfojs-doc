@@ -1,20 +1,21 @@
 ---
-description: invoke a function on Series Value
+description: Invoke a function on each value in a Series.
 ---
 
 # Series.apply
 
-> danfo.series.**apply**\(callable\) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L718)\]
+> danfo.series.**apply**(callable, options) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L718)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| callable | Function | Function \(can be anonymous\) to apply |  |
+| Parameters | Type     | Description                                                                                    | Default                               |
+| ---------- | -------- | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
+| callable   | Function | Function (can be anonymous) to apply                                                           |                                       |
+| options    | Object   | inplace: Boolean indicating whether to perform the operation inplace or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
 
 **Returns:**
 
-       ****return **Series**
+**       **return** Series**
 
-\*\*\*\*
+****
 
 **Example**
 
@@ -34,14 +35,13 @@ sf.apply(apply_func).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -78,14 +78,13 @@ sf.apply(Math.log).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -124,14 +123,13 @@ sf.apply((x)=>{
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -148,6 +146,4 @@ sf.apply((x)=>{
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

@@ -1,14 +1,15 @@
 ---
-description: 'Return Subtraction of series and other, element-wise (binary operator sub).'
+description: Return Subtraction of series and other, element-wise (binary operator sub).
 ---
 
 # Series.sub
 
-> danfo.Series.sub\(other\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L148)\]
+> danfo.Series.sub(other, options)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L148)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series\|int\| | values  |  |
+| Parameters | Type          | Description                                                                                    | Default                               |
+| ---------- | ------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
+| other      | Series\|int\| | values                                                                                         |                                       |
+| options    | Object        | inplace: Boolean indicating whether to perform the operation inplace or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
 
 **Return:** Series
 
@@ -32,7 +33,7 @@ sf1.sub(sf2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -65,7 +66,7 @@ sf1.sub(2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -82,6 +83,4 @@ sf1.sub(2).print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

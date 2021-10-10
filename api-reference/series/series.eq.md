@@ -4,13 +4,13 @@ description: Check all the values in a series is equal to another value
 
 # Series.eq
 
-> danfo.Series.eq\(other\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L894)\]
+> danfo.Series.eq(other)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L894)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series**\|** int\|String\|float |  value to compare |  |
+| Parameters | Type                    | Description       | Default |
+| ---------- | ----------------------- | ----------------- | ------- |
+| other      | Series, Array or number |  value to compare |         |
 
-**Returns**: Series \(Boolean element\)
+**Returns**: Series (Boolean element)
 
 **Examples**
 
@@ -33,7 +33,7 @@ sf1.eq(sf2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -72,7 +72,7 @@ sf1.eq(10).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -93,4 +93,3 @@ sf1.eq(10).print()
 ```
 {% endtab %}
 {% endtabs %}
-

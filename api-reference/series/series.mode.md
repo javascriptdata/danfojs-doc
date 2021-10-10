@@ -4,7 +4,7 @@ description: Obtain the center value in a series
 
 # Series.mode
 
-> danfo.Series.min\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L303)\]
+> danfo.Series.min()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L303)]
 
 **Parameter:** None
 
@@ -27,11 +27,10 @@ console.log(sf1.mode())
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 [ 4 ]
 ```
 {% endtab %}
 {% endtabs %}
 
-\*\*\*\*
-
+****

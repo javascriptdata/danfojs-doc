@@ -2,40 +2,18 @@
 description: Convert categorical variable into dummy/indicator variables.
 ---
 
-# danfo.get\_dummies
+# danfo.get_dummies
 
-danfo.**get\_dummies**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
+danfo.**get_dummies**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>kwargs</b>
-      </td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p><b>data</b>: Array | Series | DataFrame</p>
-        <p><b>prefix_sep</b>: String separator for created columns e.g &quot;_&quot;,</p>
-        <p><b>prefix</b>: String | Array of String, of column names</p>
-        <p><b>columns</b>: [Array] columns to be encoded in DataFrame.</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">{<b>prefix_sep</b>: &quot;_&quot;}</td>
-    </tr>
-  </tbody>
-</table>
+| Parameters  | Type                | Description                                                                                                                                                                                                                                                                                               | Default                     |
+| ----------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| data        | Series or Dataframe | The data to dummify                                                                                                                                                                                                                                                                                       |                             |
+| **options** | Object              | <p>{</p><p><strong>columns</strong>:  Array of column names to dummify. If not specified, all categorical columns are encoded.</p><p><strong>prefixSeparator</strong>: String separator for created columns e.g "_",</p><p><strong>prefix</strong>: String | Array of String, of column names</p><p>}</p> | {**prefixSeparator**: "\_"} |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -49,35 +27,34 @@ const dfd = require("danfojs-node")
 let datasf = ['pear', 'mango', "pawpaw", "mango", "bean"]
 let sf1 = new dfd.Series(datasf)
 
-let dum_df = dfd.get_dummies({data: sf1, prefix:"fruit"})
+let dum_df = dfd.get_dummies(sf1, { prefix: "fruit" })
 dum_df.print()
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
-╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ fruit_pear        │ fruit_mango       │ fruit_pawpaw      │ fruit_bean        ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0 │ 1                 │ 0                 │ 0                 │ 0                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ 0                 │ 1                 │ 0                 │ 0                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ 0                 │ 0                 │ 1                 │ 0                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ 0                 │ 1                 │ 0                 │ 0                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 4 │ 0                 │ 0                 │ 0                 │ 1                 ║
-╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ fruit_pear        │ fruit_mango       │ fruit_pawpaw      │ fruit_bean        ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0          │ 1                 │ 0                 │ 0                 │ 0                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1          │ 0                 │ 1                 │ 0                 │ 0                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2          │ 0                 │ 0                 │ 1                 │ 0                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3          │ 0                 │ 1                 │ 0                 │ 0                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 4          │ 0                 │ 0                 │ 0                 │ 1                 ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 {% endtab %}
 {% endtabs %}
@@ -96,21 +73,20 @@ let data = { fruits: ['pear', 'mango', "pawpaw", "mango", "bean"],
 let df = new dfd.DataFrame(data)
 df.print()
 
-let dum_df = dfd.get_dummies({ data: df })
+let dum_df = dfd.get_dummies(df)
 dum_df.print()
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ fruits            │ Count             │ Country           ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -159,21 +135,20 @@ let data = { fruits: ['pear', 'mango', "pawpaw", "mango", "bean"],
 let df = new dfd.DataFrame(data)
 df.print()
 
-let dum_df = dfd.get_dummies({ data: df, columns: ['fruits']})
+let dum_df = dfd.get_dummies(df, { columns: ['fruits']})
 dum_df.print()
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ fruits            │ Count             │ Country           ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -211,4 +186,3 @@ dum_df.print()
 {% hint style="info" %}
 See also [LabelEncoder](danfo.labelencoder.md) and [OneHotEncoder](danfo.onehotencoder.md)
 {% endhint %}
-

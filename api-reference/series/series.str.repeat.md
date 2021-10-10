@@ -4,13 +4,14 @@ description: Repeat the the character(s) in a string for a specified number of t
 
 # Series.str.repeat
 
-> danfo.Series.str.**repeat**\(num\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L205)\]
+> danfo.Series.str.**repeat**(num, options)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L205)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| num | integer | the string to search for | 1 |
+| Parameters | Type    | Description                                                     | Default                                                |
+| ---------- | ------- | --------------------------------------------------------------- | ------------------------------------------------------ |
+| num        | integer | the string to search for                                        | 1                                                      |
+| options    | Object  | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
-**Returns:**  Series
+**Returns:  **Series
 
 **Example**
 
@@ -27,14 +28,13 @@ sf.str.repeat(4).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -49,4 +49,3 @@ sf.str.repeat(4).print()
 ```
 {% endtab %}
 {% endtabs %}
-

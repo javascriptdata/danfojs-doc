@@ -4,13 +4,15 @@ description: Remove leading and trailing Whitespace from a String element
 
 # Series.str.trim
 
-> danfo.Series.str.**trim**\(\)  **\[**[**source**](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L293)**\]**
+> danfo.Series.str.**trim**(options)  **\[**[**source**](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L293)**]**
 
-**Parameters:** None
+| Parameters | Type   | Description                                                     | Default                                                |
+| ---------- | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
 **Returns:**
 
-         ****return Series
+**         **return Series
 
 {% tabs %}
 {% tab title="Node" %}
@@ -25,14 +27,13 @@ sf.str.trim().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -47,4 +48,3 @@ sf.str.trim().print()
 ```
 {% endtab %}
 {% endtabs %}
-

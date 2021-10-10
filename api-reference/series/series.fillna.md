@@ -4,18 +4,15 @@ description: Replace all NaN value with specified value
 
 # Series.fillna
 
-> danfo.Series.**fillna**\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L470)\]
+> danfo.Series.**fillna**(options)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L470)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| kwargs\["**value**"\] | int \| String\| bool | value to replace the NaN values |  |
-| kwargs\["**inplace**"\] | bool | return a new series or not.  | false |
-
-**Returns:**  Series
+| Parameters | Type   | Description                                                                                                                                                                                        | Default                               |
+| ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| options    | Object | <p><strong>value</strong>: The value to replace all missing value with. </p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p> | <p>{</p><p>inplace: false</p><p>}</p> |
 
 **Examples**
 
-Fill nan value and then return new series
+### Fill nan value and then return new series
 
 {% tabs %}
 {% tab title="Node" %}
@@ -34,7 +31,7 @@ sf_rep.print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -62,7 +59,7 @@ sf_rep.print()
 {% endtab %}
 {% endtabs %}
 
-Fill nan value without returning new Series
+### Fill nan value in-place
 
 {% tabs %}
 {% tab title="Node" %}
@@ -80,7 +77,7 @@ sf.print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -107,4 +104,3 @@ sf.print()
 ```
 {% endtab %}
 {% endtabs %}
-

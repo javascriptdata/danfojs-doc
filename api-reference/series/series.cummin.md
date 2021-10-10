@@ -4,11 +4,11 @@ description: Returns the cumulative min of a Series
 
 # Series.cummin
 
-> danfo.Series.**cummin**\(\)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L816)\]
+> danfo.Series.**cummin**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/core/series.js#L721)]
 
-**Parameters:** None
-
-**Return**: Series
+| Parameters | Type   | Description                                                     | Default                                                |
+| ---------- | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
 **Example**
 
@@ -28,7 +28,7 @@ sf1.cummin().print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -49,4 +49,3 @@ sf1.cummin().print()
 ```
 {% endtab %}
 {% endtabs %}
-

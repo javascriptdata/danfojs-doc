@@ -4,11 +4,11 @@ description: Standardize features by removing the mean and scaling to unit varia
 
 # danfo.StandardScaler
 
-class danfo.**StandScaler** \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
+class danfo.**StandScaler **\[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
 
-danfo.js provides the StandardScaler class for standardization of DataFrame and Series. The standard score of a sample `x` is calculated as:
+danfo.js provides the StandardScaler class for the standardization of DataFrame and Series. The standard score of a sample `x` is calculated as:
 
-> z = \(x - u\) / s
+> z = (x - u) / s
 
 where `u` is the mean of the training samples or zero if `with_mean=False`, and `s` is the standard deviation of the training samples or one if `with_std=False`.
 
@@ -37,14 +37,13 @@ sf_enc.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -97,14 +96,13 @@ df_enc.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ 0                 │ 1                 │ 2                 │ 3                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -132,4 +130,3 @@ df_enc.print()
 {% endtabs %}
 
 See also [MinMaxScaler](danfo.minmaxscaler.md)
-

@@ -2,17 +2,17 @@
 description: Return a subset of the DataFrame’s columns based on the column dtypes.
 ---
 
-# DataFrame.select\_dtypes
+# DataFrame.select_dtypes
 
-danfo.DataFrame.**select\_dtypes** \[[source](https://github.com/opensource9ja/danfojs/blob/db48bf9701e1c3205811ba2699b42ce56ef7e63b/danfojs/src/core/frame.js#L778)\]
+danfo.DataFrame.**select_dtypes** \[[source](https://github.com/opensource9ja/danfojs/blob/db48bf9701e1c3205811ba2699b42ce56ef7e63b/danfojs/src/core/frame.js#L778)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| include | Array | List of column dtypes to return  |  |
+| Parameters | Type  | Description                      | Default |
+| ---------- | ----- | -------------------------------- | ------- |
+| include    | Array | List of column dtypes to return  |         |
 
 **Returns:**
 
-       ****return  **DataFrame**
+**       **return**  DataFrame**
 
 ## **Examples**
 
@@ -42,14 +42,13 @@ str_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 //select float column(s)
 ╔═══╤══════════════════════╗
 ║   │ A                    ║
@@ -93,4 +92,3 @@ str_df.print()
 ```
 {% endtab %}
 {% endtabs %}
-

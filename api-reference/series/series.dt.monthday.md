@@ -4,11 +4,11 @@ description: Obtain the day of the month
 
 # Series.dt.monthday
 
-> danfo.Series.dt.**monthday**\(\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L268)\]
+> danfo.Series.dt.**monthday**()   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L268)]
 
-**Parameters:** None
+**Parameters: **None
 
-**Returns**: Series \(Int elements\)
+**Returns**: Series (Int elements)
 
 **Examples**
 
@@ -28,17 +28,14 @@ sf.dt.monthday().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
 ║ 0 │ 1/1/2000, 1:00:00 AM ║
 ╟───┼──────────────────────╢
 ║ 1 │ 1/2/2000, 1:00:00 AM ║
@@ -46,17 +43,13 @@ sf.dt.monthday().print()
 ║ 2 │ 1/3/2000, 1:00:00 AM ║
 ╚═══╧══════════════════════╝
 
-//print monthdays
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 1                    ║
-╟───┼──────────────────────╢
-║ 1 │ 2                    ║
-╟───┼──────────────────────╢
-║ 2 │ 3                    ║
-╚═══╧══════════════════════╝
+╔═══╤═══╗
+║ 0 │ 1 ║
+╟───┼───╢
+║ 1 │ 2 ║
+╟───┼───╢
+║ 2 │ 3 ║
+╚═══╧═══╝
 ```
 {% endtab %}
 {% endtabs %}
-

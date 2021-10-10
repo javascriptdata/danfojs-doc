@@ -4,7 +4,7 @@ description: Obtain the median of a series
 
 # Series.median
 
-> danfo.Series.median\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L274)\]
+> danfo.Series.median()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L274)]
 
 **Parameter:** None
 
@@ -27,11 +27,10 @@ console.log(sf1.median())
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 4
 ```
 {% endtab %}
 {% endtabs %}
 
-\*\*\*\*
-
+****

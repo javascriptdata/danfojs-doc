@@ -4,13 +4,13 @@ description: Obtain data aggregate per groups for each column
 
 # Groupby.agg
 
-> danfo.Groupby.**agg**\(kwargs\)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L349)\]
+> danfo.Groupby.**agg**(kwargs)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L349)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| kwargs | Object | kwargs contain keys which are column names in the dataframe, and the values are operation to be performed |  |
+| Parameters | Type   | Description                                                                                               | Default |
+| ---------- | ------ | --------------------------------------------------------------------------------------------------------- | ------- |
+| kwargs     | Object | kwargs contain keys which are column names in the dataframe, and the values are operation to be performed |         |
 
-**Return:** DataFrame
+**Return: **DataFrame
 
 **Examples**
 
@@ -38,7 +38,7 @@ grp.agg({"C":"mean","D":"sum"}).print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (2,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -74,7 +74,7 @@ grp.agg({"C":"mean","D":"sum"}).print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (5,4) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -91,4 +91,3 @@ grp.agg({"C":"mean","D":"sum"}).print()
 ║ 4 │ bar               │ two               │ 2                 │ 6                 ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
-

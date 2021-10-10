@@ -4,15 +4,15 @@ description: Return the elements of the specified column in the DataFrame
 
 # DataFrame.column
 
-danfo.DataFrame.**column**\(col\_name\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1217)\]
+danfo.DataFrame.**column**(col_name) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1217)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| col\_name | Str | The name of a column in the DataFrame |  |
+| Parameters | Type | Description                           | Default |
+| ---------- | ---- | ------------------------------------- | ------- |
+| col_name   | Str  | The name of a column in the DataFrame |         |
 
 **Returns:**
 
-       ****return **Series**
+**       **return** Series**
 
 ## **Examples**
 
@@ -38,14 +38,13 @@ df['Name'].print() //produces the same result as above
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ Name                 ║
 ╟───┼──────────────────────╢
@@ -74,4 +73,3 @@ df['Name'].print() //produces the same result as above
 {% endtabs %}
 
 To select more than one column with specific rows, you can use any of the following: [DataFrame.loc](danfo.dataframe.loc.md), [DataFrame.iloc](danfo.dataframe.iloc.md) or [DataFrame.query](danfo.dataframe.query.md)
-

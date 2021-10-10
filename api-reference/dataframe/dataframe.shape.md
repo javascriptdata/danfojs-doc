@@ -4,11 +4,11 @@ description: Returns an Array representing the dimensionality of the DataFrame.
 
 # DataFrame.shape
 
-danfo.DataFrame.**shape** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)\]
+danfo.DataFrame.**shape** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]
 
 **Returns:**
 
-       ****return **Int**
+**       **return** Int**
 
 ## **Examples**
 
@@ -30,16 +30,14 @@ console.log(df.shape)
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 [4,3]
 ```
 {% endtab %}
 {% endtabs %}
-

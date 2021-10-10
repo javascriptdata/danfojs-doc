@@ -4,7 +4,7 @@ description: Obtain the standard deviation per groups for specified columns
 
 # Groupby.std
 
-> danfo.Groupby.**std**\(\)      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L262)\]
+> danfo.Groupby.**std**()      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L262)]
 
 **Parameters**: None
 
@@ -37,7 +37,7 @@ grp.col(["C"]).std().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 
  Shape: (2,2) 
 
@@ -74,7 +74,7 @@ grp.col(["C","D"]).std().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (2,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -111,7 +111,7 @@ grp.col(["C"]).std().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
     Shape: (5,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -153,7 +153,7 @@ grp.col(["C","D"]).std().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
   
  Shape: (5,4) 
 
@@ -172,5 +172,4 @@ grp.col(["C","D"]).std().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-\*\*\*\*
-
+****

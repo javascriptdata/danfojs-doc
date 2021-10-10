@@ -6,20 +6,20 @@ description: >-
 
 # DataFrame.le
 
-danfo.DataFrame.le\(other, axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L718)\]
+danfo.DataFrame.le(other, axis) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L718)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | DataFrame, Series, Array, Scalar | Data structure, or array-like object to compare against |  |
-| axis | Int | Whether to compare by the index \(0\) or columns \(1\). | 0 |
+| Parameters | Type                             | Description                                             | Default |
+| ---------- | -------------------------------- | ------------------------------------------------------- | ------- |
+| other      | DataFrame, Series, Array, Scalar | Data structure, or array-like object to compare against |         |
+| axis       | Int                              | Whether to compare by the index (0) or columns (1).     | 0       |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
-### Comparing ****DataFrame with a scalar value:
+### Comparing** **DataFrame with a scalar value:
 
 {% tabs %}
 {% tab title="Node" %}
@@ -39,14 +39,13 @@ df_rep.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ Col1              │ Col2              ║
 ╟───┼───────────────────┼───────────────────╢
@@ -62,7 +61,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Comparing ****DataFrame with a Series along the column axis:
+### Comparing** **DataFrame with a Series along the column axis:
 
 {% tabs %}
 {% tab title="Node" %}
@@ -85,14 +84,13 @@ df_rep.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ Col1              │ Col2              ║
 ╟───┼───────────────────┼───────────────────╢
@@ -108,7 +106,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Comparing ****DataFrame with a DataFrame
+### Comparing** **DataFrame with a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -131,7 +129,6 @@ df_rep.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -154,7 +151,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Comparing ****DataFrame with a JavaScript Array
+### Comparing** **DataFrame with a JavaScript Array
 
 {% tabs %}
 {% tab title="Node" %}
@@ -174,7 +171,6 @@ df_rep.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -196,4 +192,3 @@ df_rep.print()
 ```
 {% endtab %}
 {% endtabs %}
-

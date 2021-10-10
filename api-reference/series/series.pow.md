@@ -6,11 +6,12 @@ description: >-
 
 # Series.pow
 
-> danfo.Series.pow\(other\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L216)\]
+> danfo.Series.pow(other, options)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L216)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series\|int\| | values  |  |
+| Parameters | Type          | Description                                                                                    | Default                               |
+| ---------- | ------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
+| other      | Series\|int\| | values                                                                                         |                                       |
+| options    | Object        | inplace: Boolean indicating whether to perform the operation inplace or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
 
 **Return:** Series
 
@@ -34,7 +35,7 @@ sf1.pow(sf2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -67,7 +68,7 @@ sf1.pow(2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -84,4 +85,3 @@ sf1.pow(2).print()
 ```
 {% endtab %}
 {% endtabs %}
-

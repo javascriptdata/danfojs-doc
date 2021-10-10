@@ -6,13 +6,13 @@ description: >-
 
 # DataFrame.ndim
 
-danfo.DataFrame.**ndim** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)\]
+danfo.DataFrame.**ndim** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]
 
 **Returns:**
 
-       ****return **Int**
+**       **return** Int**
 
-**Note:** To get the **shape** of the DataFrame use the .[shape](dataframe.shape.md) property.
+**Note:** To get the **shape **of the DataFrame use the .[shape](dataframe.shape.md) property.
 
 ## **Examples**
 
@@ -33,16 +33,14 @@ console.log(df.ndim)
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 2
 ```
 {% endtab %}
 {% endtabs %}
-

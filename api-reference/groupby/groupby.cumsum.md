@@ -4,7 +4,7 @@ description: Obtain the cumulative sum per groups for each column
 
 # Groupby.cumsum
 
-> danfo.Groupby.**cumsum**\(\)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L280)\]
+> danfo.Groupby.**cumsum**()       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L280)]
 
 **Parameters**: None
 
@@ -37,7 +37,7 @@ grp.col(["C"]).cumsum().tail().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 
 Shape: (5,2) 
 
@@ -98,7 +98,7 @@ grp.col(["C","D"]).cumsum().tail().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
   
  Shape: (5,3) 
 
@@ -160,7 +160,7 @@ grp.col(["C"]).cumsum().tail().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
   Shape: (5,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -220,7 +220,7 @@ grp.col(["C","D"]).cumsum().tail().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
   
    Shape: (5,4) 
 
@@ -256,5 +256,4 @@ grp.col(["C","D"]).cumsum().tail().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-\*\*\*\*
-
+****

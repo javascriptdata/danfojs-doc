@@ -4,13 +4,14 @@ description: Obtain the character at the specified index (position)
 
 # Series.str.charAt
 
-> danfo.Series.str.**charAt**\(index\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L64)\]
+> danfo.Series.str.**charAt**(index)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L64)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| index | int | the index at which to obtain the character | 0 |
+| Parameters | Type   | Description                                                     | Default                                                |
+| ---------- | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| index      | int    | the index at which to obtain the character                      | 0                                                      |
+| options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
-**Returns**:  Series \(Character element\)
+**Returns**:  Series (Character element)
 
 **Example**
 
@@ -29,14 +30,13 @@ sf.str.charAt(2).print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -51,4 +51,3 @@ sf.str.charAt(2).print()
 ```
 {% endtab %}
 {% endtabs %}
-

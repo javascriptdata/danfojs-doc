@@ -7,15 +7,15 @@ description: >-
 
 # DataFrame.ctypes
 
-danfo.DataFrame.**dtypes** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/frame.js#L1848)\]
+danfo.DataFrame.**dtypes** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/frame.js#L1848)]
 
 **Returns:**
 
-       ****return  **Series**
+**       **return**  Series**
 
 ## **Examples**
 
-Returns auto-generated ****index of a ****DataFrame
+Returns auto-generated** **index of a** **DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -34,14 +34,13 @@ df.ctypes.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -76,14 +75,13 @@ df.ctypes.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -100,4 +98,3 @@ df.ctypes.print()
 {% endtabs %}
 
 **Note**: To cast a type, use the [astype](dataframe.astype.md) method. 
-

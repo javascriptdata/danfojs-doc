@@ -4,17 +4,18 @@ description: Obtain the index position of a searched  character in a String
 
 # Series.str.search
 
-> danfo.Series.str.**search**\(str\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L220)\]
+> danfo.Series.str.**search**(str, options)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L220)]
 
 
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| str | String | the string to search for | "" |
+| Parameters | Type   | Description                                                     | Default                                                |
+| ---------- | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| str        | String | the string to search for                                        | ""                                                     |
+| options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
 **Returns:**
 
-     ****return Series: Series of index position
+**     **return Series: Series of index position
 
 **Example**
 
@@ -33,14 +34,13 @@ sf.str.search("S").print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -71,14 +71,13 @@ sf.str.search("city").print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -93,4 +92,3 @@ sf.str.search("city").print()
 ```
 {% endtab %}
 {% endtabs %}
-

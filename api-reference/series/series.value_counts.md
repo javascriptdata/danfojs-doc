@@ -2,13 +2,13 @@
 description: Count the number of occurrence for each element in a Series
 ---
 
-# Series.value\_counts
+# Series.value_counts
 
-> danfo.Series.value\_counts\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L750)\]
+> danfo.Series.value_counts()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L750)]
 
-**Parameters:** None
+**Parameters: **None
 
-**Returns:** Series \(int element\)
+**Returns: **Series (int element)
 
 **Example**
 
@@ -27,7 +27,7 @@ sf.value_counts().print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔════╤══════════════════════╗
 ║    │ 0                    ║
 ╟────┼──────────────────────╢
@@ -52,4 +52,3 @@ sf.value_counts().print()
 ```
 {% endtab %}
 {% endtabs %}
-

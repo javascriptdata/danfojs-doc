@@ -4,14 +4,15 @@ description: Replace a word or character(s) in a String element
 
 # Series.str.replace
 
-> danfo.Series.str.replace\(searchValue, replaceValue\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L191)\]
+> danfo.Series.str.replace(searchValue, replaceValue, options)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L191)]    
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| searchValue | string | the string to search for | "" |
-| replaceValue | String | string to replace the searched string | "" |
+| Parameters   | Type   | Description                                                     | Default                                                |
+| ------------ | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| searchValue  | string | String \| Character value to replace. Supports regex.           | ""                                                     |
+| replaceValue | String | string to replace the searched string                           | ""                                                     |
+| options      | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
-**Returns:** Series
+**Returns: **Series
 
 {% tabs %}
 {% tab title="Node" %}
@@ -26,14 +27,13 @@ sf.str.replace("A", "XXX").print()
 
 {% tab title="Browse" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -48,4 +48,3 @@ sf.str.replace("A", "XXX").print()
 ```
 {% endtab %}
 {% endtabs %}
-

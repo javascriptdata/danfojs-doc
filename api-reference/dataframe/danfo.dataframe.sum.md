@@ -4,19 +4,19 @@ description: Return the sum of the values for the requested axis.
 
 # DataFrame.sum
 
-danfo.DataFrame.**sum**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L940)\]
+danfo.DataFrame.**sum**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L940)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| kwargs | Object | {**axis**: 0 for row and 1 for column} | {axis: 1} |
+| Parameters | Type   | Description                            | Default   |
+| ---------- | ------ | -------------------------------------- | --------- |
+| kwargs     | Object | {**axis**: 0 for row and 1 for column} | {axis: 1} |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
-## Sum elements along default axis \(column\)
+## Sum elements along default axis (column)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -36,14 +36,13 @@ df_sum.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -69,7 +68,7 @@ df_sum.print()
 {% endtab %}
 {% endtabs %}
 
-## Sum elements along row axis \(0\)
+## Sum elements along row axis (0)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -89,14 +88,13 @@ df_sum.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -123,4 +121,3 @@ df_sum.print()
 ```
 {% endtab %}
 {% endtabs %}
-

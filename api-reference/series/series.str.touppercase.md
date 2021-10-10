@@ -4,11 +4,13 @@ description: Converts all characters to uppercase.
 
 # Series.str.toUpperCase
 
-> danfo.Series.str.toUpperCase\(\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L33)\]
+> danfo.Series.str.toUpperCase(options)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L33)]
 
-**Parameters:** None
+| Parameters | Type   | Description                                                     | Default                                                |
+| ---------- | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
-**Returns**:  Series \(String element\)
+**Returns**:  Series (String element)
 
 **Example**
 
@@ -27,14 +29,13 @@ sf.str.toUpperCase().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -49,4 +50,3 @@ sf.str.toUpperCase().print()
 ```
 {% endtab %}
 {% endtabs %}
-

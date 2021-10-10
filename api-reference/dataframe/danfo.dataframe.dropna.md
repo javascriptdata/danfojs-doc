@@ -1,46 +1,22 @@
 ---
-description: 'Remove missing values (NaNs, undefined) for DataFrame'
+description: Remove missing values (NaNs, undefined) for DataFrame
 ---
 
 # DataFrame.dropna
 
-danfo.DataFrame.**dropna**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1430)\]
+danfo.DataFrame.**dropna**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1430)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{<b>axis</b>: <em>0<b>: </b>Apply along</em> row/index axis</p>
-        <p><em><b>             </b>1</em>: Apply across columns axis</p>
-        <p><b>inplace</b>:If true, perform operation inplace</p>
-        <p>and return None.</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">
-        <p>{<b>axis</b>: 0,</p>
-        <p> <b>inplace: </b>false}</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                       | Default                                                                    |
+| ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------- |
+| kwargs     | Object | <p>{<strong>axis</strong>: <em>0<strong>: </strong>Apply along</em> row/index axis</p><p><em><strong>             </strong>1</em>: Apply across columns axis</p><p><strong>inplace</strong>:If true, perform operation inplace </p><p>              and return None.</p><p> }</p> | <p>{<strong>axis</strong>: 0, </p><p> <strong>inplace: </strong>false}</p> |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
-### Drop rows \(axis=0\) with missing values  
+### Drop rows (axis=0) with missing values  
 
 {% tabs %}
 {% tab title="Node" %}
@@ -60,14 +36,13 @@ df_drop.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -77,7 +52,7 @@ df_drop.print()
 {% endtab %}
 {% endtabs %}
 
-### Drop columns \(axis=1\) with missing values  
+### Drop columns (axis=1) with missing values  
 
 {% tabs %}
 {% tab title="Node" %}
@@ -97,14 +72,13 @@ df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╗
 ║   │ C                 ║
 ╟───┼───────────────────╢
@@ -119,4 +93,3 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
-

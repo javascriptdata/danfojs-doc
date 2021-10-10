@@ -7,37 +7,15 @@ description: >-
 
 # DataFrame.apply
 
-danfo.DataFrame.**apply**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1566)\]
+danfo.DataFrame.**apply**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1566)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{<b>callable</b>: Function to call on each element,</p>
-        <p><b>axis</b>: <em>undefined</em>: if undefined, then any JavaScript function</p>
-        <p>is accepted and will be applied element-wise.</p>
-        <p><em><b>             </b>0<b>: </b>Apply along</em> row/index axis</p>
-        <p><em><b>             </b>1</em>: Apply across columns axis</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">undefined</td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                     | Default   |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------- |
+| kwargs     | Object | <p>{<strong>callable</strong>: Function to call on each element,</p><p><strong>axis</strong>: <em>undefined</em>: if undefined, then any JavaScript function </p><p>                            is accepted and will be applied element-wise.</p><p><em><strong>             </strong>0<strong>: </strong>Apply along</em> row/index axis</p><p><em><strong>             </strong>1</em>: Apply across columns axis</p><p>}</p> | undefined |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -65,14 +43,13 @@ df_new.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -110,14 +87,13 @@ df_new.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ short_name        │ long_name         ║
 ╟───┼───────────────────┼───────────────────╢
@@ -158,14 +134,13 @@ df_new.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -203,14 +178,13 @@ df_new.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -223,4 +197,3 @@ df_new.print()
 ```
 {% endtab %}
 {% endtabs %}
-

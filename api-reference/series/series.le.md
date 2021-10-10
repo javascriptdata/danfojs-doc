@@ -4,13 +4,13 @@ description: Check if all the values in a series is less than or equal to a valu
 
 # Series.le
 
-> danfo.Series.le\(other\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L865)\]
+> danfo.Series.le(other)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L865)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series**\|** int\|float | value\(s\) to compare |  |
+| Parameters | Type                    | Description         | Default |
+| ---------- | ----------------------- | ------------------- | ------- |
+| other      | Series, Array or number | value(s) to compare |         |
 
-**Returns:** Series \(Boolean Element\)
+**Returns: **Series (Boolean Element)
 
 **Example**
 
@@ -31,7 +31,7 @@ sf1.le(20).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -72,7 +72,7 @@ sf1.le(sf2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -93,6 +93,4 @@ sf1.le(sf2).print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

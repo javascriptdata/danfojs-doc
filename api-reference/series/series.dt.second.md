@@ -4,11 +4,11 @@ description: Obtain the seconds in Date series
 
 # Series.dt.seconds
 
-> danfo.Series.dt.**seconds**\(\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L280)\]
+> danfo.Series.dt.**seconds**()   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L280)]
 
 **Parameters**: None
 
-**Returns:** Series \(Int elements\)
+**Returns: **Series (Int elements)
 
 **Example**
 
@@ -25,24 +25,21 @@ let sf = new dfd.Series(data)
 sf.print()
 
 //print the seconds obtained
-sf.seconds().print()
+sf.dt.seconds().print()
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
 ║ 0 │ 1/1/2000, 1:00:00 AM ║
 ╟───┼──────────────────────╢
 ║ 1 │ 1/1/2000, 1:00:01 AM ║
@@ -50,18 +47,14 @@ sf.seconds().print()
 ║ 2 │ 1/1/2000, 1:00:02 AM ║
 ╚═══╧══════════════════════╝
 
-//the seconds obtained
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 0                    ║
-╟───┼──────────────────────╢
-║ 1 │ 1                    ║
-╟───┼──────────────────────╢
-║ 2 │ 2                    ║
-╚═══╧══════════════════════╝
+╔═══╤═══╗
+║ 0 │ 0 ║
+╟───┼───╢
+║ 1 │ 1 ║
+╟───┼───╢
+║ 2 │ 2 ║
+╚═══╧═══╝
 
 ```
 {% endtab %}
 {% endtabs %}
-

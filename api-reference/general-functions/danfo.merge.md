@@ -6,40 +6,15 @@ description: >-
 
 # danfo.merge
 
-danfo.**merge**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)\]
+danfo.**merge**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left"><b>kwargs</b>
-      </td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{</p>
-        <p><b>left</b>: A DataFrame or named Series object.</p>
-        <p><b>right</b>: Another DataFrame or named Series object.</p>
-        <p><b>on</b>: Column names to join on. Must be found in both the left and
-          right DataFrame and/or Series objects.</p>
-        <p><b>how</b>: One of <code>&apos;left&apos;,&apos;right&apos;</code>,<code>&apos;outer&apos;</code>, <code>&apos;inner&apos;</code>.
-          Defaults to &apos;inner&apos;</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">{<b>how</b>: inner}</td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                | Default          |
+| ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| **kwargs** | Object | <p>{</p><p><strong>left</strong>:  A DataFrame or named Series object.</p><p><strong>right</strong>:  Another DataFrame or named Series object.</p><p><strong>on</strong>: Column names to join on. Must be found in both the left and right DataFrame and/or Series objects. </p><p><strong>how</strong>: One of <code>'left','right'</code>,<code>'outer'</code>, <code>'inner'</code>. Defaults to 'inner' </p><p>}</p> | {**how**: inner} |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -80,14 +55,13 @@ merge_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
  //first DataFrame
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -169,14 +143,13 @@ merge_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 //first DataFrame
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Key1              │ Key2              │ A                 │ B                 ║
@@ -254,14 +227,13 @@ merge_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 //First DataFrame
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Key1              │ Key2              │ A                 │ B                 ║
@@ -339,14 +311,13 @@ merge_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 //first DataFrame
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Key1              │ Key2              │ A                 │ B                 ║
@@ -424,14 +395,13 @@ merge_df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 //first DataFrame
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Key1              │ Key2              │ A                 │ B                 ║
@@ -481,4 +451,3 @@ merge_df.print()
 {% hint style="info" %}
 See also [danfo.concat ](danfo.concat.md)for joining objects based on axis.
 {% endhint %}
-

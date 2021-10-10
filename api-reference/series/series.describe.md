@@ -7,9 +7,9 @@ description: >-
 
 # Series.describe
 
-> danfo.Series.describe\(\) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L583)\]
+> danfo.Series.describe() \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L583)]
 
-**Parameters:** No parameter
+**Parameters: **No parameter
 
 **return:** Series
 
@@ -28,14 +28,13 @@ sf.describe().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔══════════╤══════════════════════╗
 ║          │ 0                    ║
 ╟──────────┼──────────────────────╢
@@ -56,4 +55,3 @@ sf.describe().print()
 ```
 {% endtab %}
 {% endtabs %}
-

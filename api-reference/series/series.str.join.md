@@ -4,16 +4,17 @@ description: Join a new string value to all string elements in a Series.
 
 # Series.str.join
 
-> danfo.Series.str.**join**\(valToJoin,joinChar\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L308)\]
+> danfo.Series.str.**join**(valToJoin, joinChar, options)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L308)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| valToJoin | String | the string value you want to  |  "" |
-| joinChar | String | The delimiter to specify the joining | " " |
+| Parameters | Type   | Description                                                     | Default                                                |
+| ---------- | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| valToJoin  | String | the string value you want to                                    |  ""                                                    |
+| joinChar   | String | The delimiter to specify the joining                            | " "                                                    |
+| options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
 **Returns:**
 
-   ****return **Series**
+**   **return **Series**
 
 **Examples**
 
@@ -30,26 +31,22 @@ sf.str.join("new", "_").print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ lower part_new       ║
-╟───┼──────────────────────╢
-║ 1 │ CAPITALS city_new    ║
-╟───┼──────────────────────╢
-║ 2 │ this is a sentenc... ║
-╟───┼──────────────────────╢
-║ 3 │ SwAp CaSe_new        ║
-╚═══╧══════════════════════╝
+```
+╔═══╤════════════════════════╗
+║ 0 │ lower part_new         ║
+╟───┼────────────────────────╢
+║ 1 │ CAPITALS city_new      ║
+╟───┼────────────────────────╢
+║ 2 │ this is a sentence_new ║
+╟───┼────────────────────────╢
+║ 3 │ SwAp CaSe_new          ║
+╚═══╧════════════════════════╝
 ```
 {% endtab %}
 {% endtabs %}
-

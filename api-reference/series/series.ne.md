@@ -4,13 +4,13 @@ description: Check if all values in a  series is not equal to a value(s)
 
 # Series.ne
 
-> danfo.Series.ne\(other\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L883)\]
+> danfo.Series.ne(other)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L883)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series**\|** int\|String\|float |  value to compare |  |
+| Parameters | Type                    | Description       | Default |
+| ---------- | ----------------------- | ----------------- | ------- |
+| other      | Series, Array or number |  value to compare |         |
 
-**Returns**: Series \(Boolean element\)
+**Returns**: Series (Boolean element)
 
 **Example**
 
@@ -33,7 +33,7 @@ sf1.ne(sf2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -72,7 +72,7 @@ sf1.ne(10).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -93,4 +93,3 @@ sf1.ne(10).print()
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -4,13 +4,13 @@ description: Check if all values in a Series are less than a value.
 
 # Series.lt
 
-> danfo.Series.lt\(other\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L847)\]
+> danfo.Series.lt(other)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L847)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series**\|** int\|float | value\(s\) to compare |  |
+| Parameters | Type                    | Description         | Default |
+| ---------- | ----------------------- | ------------------- | ------- |
+| other      | Series, Array or number | value(s) to compare |         |
 
-**Returns**: Series \(boolean element\)
+**Returns**: Series (boolean element)
 
 **Example**
 
@@ -31,7 +31,7 @@ sf1.lt(20).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -72,7 +72,7 @@ sf1.lt(sf2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -94,4 +94,3 @@ sf1.lt(sf2).print()
 ```
 {% endtab %}
 {% endtabs %}
-

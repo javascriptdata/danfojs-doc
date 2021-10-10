@@ -6,44 +6,21 @@ description: >-
 
 # DataFrame.query
 
-danfo.DataFrame.**query**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1011)\]
+danfo.DataFrame.**query**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1011)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{<b>column</b> : str, name of the column</p>
-        <p><b> is: </b>Logical operator, one of &quot;&gt;&quot;, &quot;&lt;&quot;,
-          &quot;&gt;=&quot;, &quot;&lt;=&quot;, and. &quot;==&quot;</p>
-        <p><b>to</b>: Int, Float, Str. Value to compare against,</p>
-        <p><b>inplace</b>: boolean. true | false. Whether to perform operation to
-          the original Object or create a new one.</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">{<b>inplace</b>: false}</td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                               | Default              |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
+| kwargs     | Object | <p>{<strong>column</strong> : str, name of the column </p><p><strong> is: </strong>Logical operator, one of  ">", "&#x3C;", ">=", "&#x3C;=", and. "=="</p><p><strong>to</strong>: Int, Float, Str. Value to compare against,</p><p><strong>inplace</strong>: boolean. true | false. Whether to perform operation to the original Object or create a new one. </p><p>}</p> | {**inplace**: false} |
 
 **Returns:**
 
-       ****return **new DataFrame**
+**       **return** new DataFrame**
 
 ## **Examples**
 
 ## **Query a DataFrame using logical operators**
 
-To query a DataFrame, you can specify the column to use, the logical operator \("&gt;", "&lt;", "&gt;=", "&lt;=", and. "=="\), and the value to compare against. 
+To query a DataFrame, you can specify the column to use, the logical operator (">", "<", ">=", "<=", and. "=="), and the value to compare against. 
 
 {% tabs %}
 {% tab title="Node" %}
@@ -65,14 +42,13 @@ query_df.print() //after query
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 //before query
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
@@ -118,14 +94,13 @@ query_df.print() //after query
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -173,14 +148,13 @@ query_df.print() //after query
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
@@ -234,14 +208,13 @@ df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -252,4 +225,3 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
-

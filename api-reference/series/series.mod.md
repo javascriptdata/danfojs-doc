@@ -1,14 +1,15 @@
 ---
-description: 'Return Modulo of series and other, element-wise (binary operator mod).'
+description: Return Modulo of series and other, element-wise (binary operator mod).
 ---
 
 # Series.mod
 
-> danfo.Series.mod\(other\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L235)\]
+> danfo.Series.mod(other, options)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L235)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series\|int\|float | values  |  |
+| Parameters | Type               | Description                                                                                    | Default                               |
+| ---------- | ------------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
+| other      | Series\|int\|float | values                                                                                         |                                       |
+| options    | Object             | inplace: Boolean indicating whether to perform the operation inplace or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
 
 **Return:** Series
 
@@ -32,7 +33,7 @@ sf1.mod(sf2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -65,7 +66,7 @@ sf1.mod(2).print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -82,4 +83,3 @@ sf1.mod(2).print()
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -4,7 +4,7 @@ description: Obtain the mean of a series
 
 # Series.mean
 
-> danfo.Series.mean\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L253)\]
+> danfo.Series.mean()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L253)]
 
 **Parameter:** None
 
@@ -27,11 +27,10 @@ console.log(sf1.mean())
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 23.000001907348633
 ```
 {% endtab %}
 {% endtabs %}
 
-\*\*\*\*
-
+****

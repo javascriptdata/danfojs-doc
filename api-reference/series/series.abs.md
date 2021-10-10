@@ -4,11 +4,13 @@ description: Returns the absolute value in a Series
 
 # Series.abs
 
-> danfo.Series.**abs**\(\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L793)\]
+> danfo.Series.**abs**(options)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L793)]
 
-**Parameters**: None
+| Parameters | Type   | Description                                                                                          | Default                               |
+| ---------- | ------ | ---------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| options    | Object | **inplace**:  Boolean indicating whether to perform the operation in-place or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
 
-**Returns:** Series
+**Returns: **Series
 
 **Example**
 
@@ -27,7 +29,7 @@ sf.abs().print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -48,4 +50,3 @@ sf.abs().print()
 ```
 {% endtab %}
 {% endtabs %}
-

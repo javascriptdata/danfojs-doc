@@ -4,11 +4,11 @@ description: Obtain the dtype of a series
 
 # Series.dtype
 
-> danfo.Series.dtype  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L197)\]
+> danfo.Series.dtype  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L197)]
 
 **Parameters**: None
 
-**Returns:** String
+**Returns: **String
 
 **Example**
 
@@ -27,9 +27,8 @@ console.log(sf1.dtype)
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 float32
 ```
 {% endtab %}
 {% endtabs %}
-

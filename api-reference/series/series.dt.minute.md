@@ -4,11 +4,11 @@ description: Obtain the minutes in a Time Series
 
 # Series.dt.minutes
 
-> danfo.Series.dt.**minutes**\(\)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L292)\]
+> danfo.Series.dt.**minutes**()  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L292)]
 
 **Parameters**: None
 
-**Returns:** Series \(int Elements\)
+**Returns: **Series (int Elements)
 
 **Example**
 
@@ -28,14 +28,13 @@ sf.dt.minutes().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -59,4 +58,3 @@ sf.dt.minutes().print()
 ```
 {% endtab %}
 {% endtabs %}
-

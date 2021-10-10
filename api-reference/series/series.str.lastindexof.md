@@ -6,11 +6,12 @@ description: >-
 
 # Series.str.lastIndexOf
 
-danfo.Series.str.lastIndexOf\(str\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L175)\]
+danfo.Series.str.lastIndexOf(str, options)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L175)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| str | string | the string to search for | "" |
+| Parameters | Type   | Description                                                     | Default                                                |
+| ---------- | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| str        | string | the string to search for                                        | ""                                                     |
+| options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
 **Returns**: Series
 
@@ -29,14 +30,13 @@ sf.str.lastIndexOf("r").print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -51,6 +51,4 @@ sf.str.lastIndexOf("r").print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
 

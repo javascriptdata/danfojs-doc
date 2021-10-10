@@ -4,11 +4,13 @@ description: Capitalize the first character of each string
 
 # Series.str.capitalize
 
-> danfo.Series.str.**capitalize**\(\)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L46)\]
+> danfo.Series.str.**capitalize**(options)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L46)]
 
-**Parameters:** None
+| Parameters | Type   | Description                                                     | Default                                                |
+| ---------- | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
-**Returns**:  Series \(String element\)
+**Returns**:  Series (String element)
 
 **Example**
 
@@ -27,14 +29,13 @@ sf.str.capitalize().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -49,4 +50,3 @@ sf.str.capitalize().print()
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -4,11 +4,11 @@ description: Obtain the year in a date time series
 
 # Series.dt.year
 
-> danfo.Series.dt.**year**\(\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L228)\]
+> danfo.Series.dt.**year**()    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L228)]
 
 **Parameters**: None
 
-**Returns:** Series \(int elements\)
+**Returns: **Series (int elements)
 
 **Examples**
 
@@ -25,11 +25,9 @@ sf.dt.year().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 //print date time series
 ╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
 ║ 0 │ 1/1/2000, 1:00:00 AM ║
 ╟───┼──────────────────────╢
 ║ 1 │ 1/1/2001, 1:00:00 AM ║
@@ -37,15 +35,11 @@ sf.dt.year().print()
 ║ 2 │ 1/1/2002, 1:00:00 AM ║
 ╚═══╧══════════════════════╝
 
-//print the year series
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 2000                 ║
-╟───┼──────────────────────╢
-║ 1 │ 2001                 ║
-╟───┼──────────────────────╢
-║ 2 │ 2002                 ║
-╚═══╧══════════════════════╝
+╔═══╤══════╗
+║ 0 │ 2000 ║
+╟───┼──────╢
+║ 1 │ 2001 ║
+╟───┼──────╢
+║ 2 │ 2002 ║
+╚═══╧══════╝
 ```
-

@@ -4,13 +4,14 @@ description: Checks whether a string ends with specified characters
 
 # Series.str.endsWith
 
-> danfo.Series.str.**endsWith**\(str\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L133)\]
+> danfo.Series.str.**endsWith**(str, options)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/strings.js#L133)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| str | string | the character\(s\) to check | "" |
+| Parameters | Type   | Description                                                     | Default                                                |
+| ---------- | ------ | --------------------------------------------------------------- | ------------------------------------------------------ |
+| str        | string | the character(s) to check                                       | ""                                                     |
+| options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
-**Returns**: Series \(Boolean element\)
+**Returns**: Series (Boolean element)
 
 **Example**
 
@@ -27,14 +28,13 @@ sf.str.endsWith("e").print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -49,4 +49,3 @@ sf.str.endsWith("e").print()
 ```
 {% endtab %}
 {% endtabs %}
-

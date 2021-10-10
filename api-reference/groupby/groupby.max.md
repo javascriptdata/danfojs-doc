@@ -4,9 +4,9 @@ description: Obtain the maximum value of columns per groups
 
 # Groupby.max
 
-> danfo.Groupby.max\(\)      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L309)\]
+> danfo.Groupby.max()      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L309)]
 
-**Parameters:** None
+**Parameters: **None
 
 **Returns**: DataFrame
 
@@ -36,7 +36,7 @@ grp.col(["C"]).max().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (2,2) 
 
 ╔═══╤═══════════════════╤═══════════════════╗
@@ -73,7 +73,7 @@ grp.col(["C","D"]).max().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (2,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -109,7 +109,7 @@ grp.col(["C"]).max().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (5,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -151,7 +151,7 @@ grp.col(["C","D"]).max().print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
  Shape: (5,4) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
@@ -168,4 +168,3 @@ grp.col(["C","D"]).max().print()
 ║ 4 │ bar               │ two               │ 2                 │ 6                 ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
-

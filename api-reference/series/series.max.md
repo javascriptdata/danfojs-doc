@@ -4,7 +4,7 @@ description: Obtain the maximum value in a Series
 
 # Series.max
 
-> danfo.Series.max\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L317)\]
+> danfo.Series.max()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L317)]
 
 **Parameter:** None
 
@@ -27,11 +27,10 @@ console.log(sf1.max())
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 89
 ```
 {% endtab %}
 {% endtabs %}
 
-\*\*\*\*
-
+****

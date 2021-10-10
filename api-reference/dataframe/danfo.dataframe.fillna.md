@@ -6,37 +6,15 @@ description: >-
 
 # DataFrame.fillna
 
-danfo.DataFrame.**fillna**\(kwargs\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1235)\]
+danfo.DataFrame.**fillna**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1235)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">kwargs</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{<b>columns</b>:Array of column name(s) to fill. If undefined fill all
-          columns</p>
-        <p><b>values</b>: Array | Scalar of value(s) to fill with.</p>
-        <p><b>inplace</b>: boolean. true | false. Whether to perform operation to
-          the original Object or create a new one.</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left"></td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                        | Default |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
+| kwargs     | Object | <p>{<strong>columns</strong>:Array of column name(s) to fill. If undefined fill all columns</p><p><strong>values</strong>: Array | Scalar of value(s) to fill with. </p><p><strong>inplace</strong>: boolean. true | false. Whether to perform operation to the original Object or create a new one. </p><p> }</p> |         |
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -62,14 +40,13 @@ df_filled.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 //Before filling
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
@@ -122,14 +99,13 @@ df_filled.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
@@ -171,14 +147,13 @@ df.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
@@ -194,4 +169,3 @@ df.print()
 ```
 {% endtab %}
 {% endtabs %}
-

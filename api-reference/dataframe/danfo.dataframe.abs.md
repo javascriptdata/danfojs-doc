@@ -4,11 +4,11 @@ description: Return a DataFrame with the absolute numeric value of each element.
 
 # DataFrame.abs
 
-danfo.DataFrame.**abs**\(\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L973)\]
+danfo.DataFrame.**abs**() \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L973)]
 
 **Returns:**
 
-       ****return **DataFrame**
+**       **return** DataFrame**
 
 ## **Examples**
 
@@ -33,14 +33,13 @@ df_abs.abs().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -69,4 +68,3 @@ df_abs.abs().print()
 ```
 {% endtab %}
 {% endtabs %}
-

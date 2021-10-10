@@ -4,7 +4,7 @@ description: Obtain the total number of values in a series
 
 # Series.count
 
-> danfo.Series.count\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L350)\]
+> danfo.Series.count()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L350)]
 
 **Parameter:** None
 
@@ -27,11 +27,10 @@ console.log(sf1.count())
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 9
 ```
 {% endtab %}
 {% endtabs %}
 
-\*\*\*\*
-
+****

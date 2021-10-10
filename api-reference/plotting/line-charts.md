@@ -10,7 +10,7 @@ description: >-
 
 ### Basic Line plot on Series
 
-The **line** plot is exposed by the .**plot\(\)** function called on a Series or DataFrame. The **.plot\(\)** method accepts an HTML Div id where it renders the plot, while configuration options for the lines drawn can be passed through the config parameter. 
+The **line** plot is exposed by the .**plot()** function called on a Series or DataFrame. The **.plot()** method accepts an HTML Div id where it renders the plot, while configuration options for the lines drawn can be passed through the config parameter. 
 
 ```markup
 <!DOCTYPE html>
@@ -43,7 +43,7 @@ The **line** plot is exposed by the .**plot\(\)** function called on a Series or
 
 ### Line plots on DataFrame
 
-The example below shows the plot of column values against a common x-axis \(index\)
+The example below shows the plot of column values against a common x-axis (index)
 
 ```markup
 <!DOCTYPE html>
@@ -73,7 +73,7 @@ The example below shows the plot of column values against a common x-axis \(inde
 
 ```
 
-![](../../.gitbook/assets/newplot-2-%20%281%29%20%281%29%20%282%29.png)
+![](<../../.gitbook/assets/newplot-2- (1) (1) (2) (2).png>)
 
 The example below shows how to plot two columns in a DataFrame against each other.
 
@@ -110,4 +110,3 @@ The example below shows how to plot two columns in a DataFrame against each othe
 {% hint style="info" %}
 To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
 {% endhint %}
-

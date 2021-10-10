@@ -4,50 +4,19 @@ description: Add a new value or values to the end of a Series.
 
 # Series.append
 
-danfo.Series.**append**\(newValue, index, options\) \[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/core/series.js#L1120)\]
+danfo.Series.**append**(newValue, index, options) \[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/core/series.js#L1120)]
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-      <th style="text-align:left">Default</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">newValue</td>
-      <td style="text-align:left">Array, Series</td>
-      <td style="text-align:left">Object to append</td>
-      <td style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">index</td>
-      <td style="text-align:left">Array</td>
-      <td style="text-align:left">The new index value(s) to append to the Series. Must contain the same
-        number of values as <code>newValues</code> as they map <code>1 - 1</code>.</td>
-      <td
-      style="text-align:left"></td>
-    </tr>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>{
-          <br /><b>inplace</b>: Whether to perform operation in-place or not.</p>
-        <p>}</p>
-      </td>
-      <td style="text-align:left">false</td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type          | Description                                                                                                                | Default |
+| ---------- | ------------- | -------------------------------------------------------------------------------------------------------------------------- | ------- |
+| newValue   | Array, Series | Object to append                                                                                                           |         |
+| index      | Array         | The new index value(s) to append to the Series. Must contain the same number of values as `newValues` as they map `1 - 1`. |         |
+| options    | Object        | <p>{ <br><strong>inplace</strong>: Whether to perform operation in-place or not.</p><p>}</p>                               | false   |
 
 **Returns:**
 
-       ****return **Series**
+**       **return** Series**
 
-\*\*\*\*
+****
 
 ### **Append new Series to the end of a Series**
 
@@ -67,7 +36,7 @@ new_sf.print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔════╤═══╗
 ║ f1 │ 1 ║
 ╟────┼───╢
@@ -104,7 +73,7 @@ sf1.print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 ╔════╤═══╗
 ║ f1 │ 1 ║
 ╟────┼───╢
@@ -138,14 +107,13 @@ new_sf.print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔════╤═══╗
 ║ f1 │ 1 ║
 ╟────┼───╢
@@ -165,4 +133,3 @@ new_sf.print()
 ```
 {% endtab %}
 {% endtabs %}
-
