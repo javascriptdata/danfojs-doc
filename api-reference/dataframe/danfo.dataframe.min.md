@@ -4,19 +4,19 @@ description: Return the minimum of the values for the requested axis.
 
 # DataFrame.min
 
-danfo.DataFrame.**min**\(axis\) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L499)\]
+danfo.DataFrame.**min**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| axis | Int | 0 for row and 1 for columns  | 1 |
+| Parameters | Type   | Description                                                                         | Default     |
+| ---------- | ------ | ----------------------------------------------------------------------------------- | ----------- |
+| options    | Object | **axis:** 0 or 1. If 0, compute the mean column-wise, if 1, row-wise. Defaults to 1 | { axis: 1 } |
 
 **Returns:**
 
-       ****return **Series**
+**       **return** Series**
 
 ## **Examples**
 
-## Returns the minimum value along default axis 1 \(column\)
+## Returns the minimum value along default axis 1 (column)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -35,14 +35,13 @@ df.min().print()
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -68,7 +67,7 @@ df.min().print()
 {% endtab %}
 {% endtabs %}
 
-## Return the minimum value along row axis \(0\)
+## Return the minimum value along row axis (0)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -80,20 +79,19 @@ cols = ["A", "B", "C"]
 
 df.print()
 let df = new dfd.DataFrame(data)
-df.min(axis=0).print()
+df.min({axis: 0}).print()
 ```
 {% endtab %}
 
 {% tab title="Browser" %}
 ```
-
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -120,4 +118,3 @@ df.min(axis=0).print()
 ```
 {% endtab %}
 {% endtabs %}
-
