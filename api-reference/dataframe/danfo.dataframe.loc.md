@@ -287,3 +287,36 @@ sub_df.print()
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 ```
+
+### Slice DataFrame rows by multiple boolean conditions
+
+By design, you can chain as many boolean logic as possible, as long as they resolve to a B 
+
+{% tabs %}
+{% tab title="Node" %}
+```javascript
+const dfd = require("danfojs-node")
+
+let data = {
+    "Name": ["Apples", "Mango", "Banana", "Pear"],
+    "Count": [21, 5, 30, 10],
+    "Price": [200, 300, 40, 250]
+}
+
+let df = new dfd.DataFrame(data, { index: ["a", "b", "c", "d"] })
+let sub_df = df.loc({ rows: df["Count"].gt(10) })
+sub_df.print()
+```
+{% endtab %}
+{% endtabs %}
+
+```
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ Name              │ Count             │ Price             ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ a          │ Apples            │ 21                │ 200               ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ c          │ Banana            │ 30                │ 40                ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+```
