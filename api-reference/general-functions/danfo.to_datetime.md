@@ -25,7 +25,7 @@ let data = new dfd.date_range({"start":'1/1/2018',period:12, freq:'M'})
 let sf = new dfd.Series(data)
 sf.print()
 
-let dt = dfd.toDateTime({data:sf})
+let dt = dfd.toDateTime(data)
 
 dt.month().print()
 dt.month_name().print()
