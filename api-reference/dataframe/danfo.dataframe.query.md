@@ -1,24 +1,24 @@
 ---
 description: >-
-  Query the DataFrame by the result of a logical comparison. Supports logical
-  operations like (">", "<", ">=", "<=", and. "==")
+  Query the DataFrame by the result of a logical comparison or boolean mask.
+  Supports logical operations like (">", "<", ">=", "<=", and. "==")
 ---
 
 # DataFrame.query
 
 danfo.DataFrame.**query**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1011)]
 
-| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                               | Default              |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------- |
-| kwargs     | Object | <p>{<strong>column</strong> : str, name of the column </p><p><strong> is: </strong>Logical operator, one of  ">", "&#x3C;", ">=", "&#x3C;=", and. "=="</p><p><strong>to</strong>: Int, Float, Str. Value to compare against,</p><p><strong>inplace</strong>: boolean. true | false. Whether to perform operation to the original Object or create a new one. </p><p>}</p> | {**inplace**: false} |
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                | Default              |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | -------------------- |
+| kwargs     | Object | <p>{</p><p><strong>condition:</strong> A logical boolean mask,</p><p><strong>column</strong> : str, name of the column </p><p> <strong>is:</strong> Logical operator, one of  ">", "&#x3C;", ">=", "&#x3C;=", and. "=="</p><p><strong>to</strong>: Int, Float, Str. Value to compare against,</p><p><strong>inplace</strong>: boolean. true | false. Whether to perform operation to the original Object or create a new one. </p><p>}</p> | {**inplace**: false} |
 
 **Returns:**
 
-**       **return** new DataFrame**
+&#x20;      ****       return **new DataFrame**
 
 ## **Examples**
 
-## **Query a DataFrame using boolean mask**
+## **Query a DataFrame using a boolean mask**
 
 {% hint style="info" %}
 Querying by a boolean condition is supported from v0.3.0 and above.
@@ -71,7 +71,7 @@ query_df.print() //after query
 
 ## **Query a DataFrame using logical operators**
 
-To query a DataFrame, you can specify the column to use, the logical operator (">", "<", ">=", "<=", and. "=="), and the value to compare against. 
+To query a DataFrame, you can specify the column to use, the logical operator (">", "<", ">=", "<=", and. "=="), and the value to compare against.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}
@@ -177,7 +177,7 @@ query_df.print() //after query
 
 ## **Query by a string column in a DataFrame**
 
-The query method also works on string columns. 
+The query method also works on string columns.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}
