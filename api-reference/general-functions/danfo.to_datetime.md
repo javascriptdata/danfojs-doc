@@ -2,9 +2,9 @@
 description: Converts an array of Date time string to Date object.
 ---
 
-# danfo.to_datetime
+# danfo.toDateTime
 
-danfo.**to_datetime**(data) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
+danfo.**toDateTime**(data) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
 
 | Parameters | Type          | Description                                                                                                       | Default |
 | ---------- | ------------- | ----------------------------------------------------------------------------------------------------------------- | ------- |
@@ -12,7 +12,7 @@ danfo.**to_datetime**(data) \[[source](https://github.com/opensource9ja/danfojs/
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
