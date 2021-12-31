@@ -37,8 +37,8 @@ let data = {
 let df = new dfd.DataFrame(data)
 df.print()
 
-let values = ["Apples", df["Count"].mean()]
-let df_filled = df.fillna(values, { columns: ["Name", "Count"] })
+let updateValues = ["Apples", df["Count"].mean()]
+let df_filled = df.fillna({ columns: ["Name", "Count"], values: updateValues })
 df_filled.print()
 
 ```
