@@ -8,7 +8,7 @@ danfo.DataFrame.**copy**() \[[source](https://github.com/opensource9ja/danfojs/b
 
 **Returns:**
 
-**       **return** new DataFrame**
+&#x20;      ****       return **new DataFrame**
 
 ## **Examples**
 

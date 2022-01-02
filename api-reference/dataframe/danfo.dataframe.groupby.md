@@ -12,7 +12,7 @@ danfo.DataFrame.**groupby**(columns) \[[source](https://github.com/opensource9ja
 
 **Returns:**
 
-**       **return** DataFrame.groups**
+&#x20;      ****       return **DataFrame.groups**
 
 ## **Examples**
 
@@ -78,7 +78,7 @@ A groupby operation will return a GroupBy class object. You can apply any of the
 3. [std](danfo.dataframe.std.md)
 4. [var](danfo.dataframe.var.md)
 5. [mean](danfo.dataframe.mean.md)
-6. [cumsum](danfo.dataframe.cumsum.md) 
+6. [cumsum](danfo.dataframe.cumsum.md)&#x20;
 7. [cummax](danfo.dataframe.cummax.md)
 8. [cumprod](danfo.dataframe.cumprod.md)
 9. [cummin](danfo.dataframe.cummin.md)

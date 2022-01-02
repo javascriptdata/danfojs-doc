@@ -11,11 +11,11 @@ danfo.DataFrame.**dtypes** \[[source](https://github.com/opensource9ja/danfojs/b
 
 **Returns:**
 
-**       **return**  Series**
+&#x20;      ****       return  **Series**
 
 ## **Examples**
 
-Returns auto-generated** **index of a** **DataFrame
+Returns auto-generated **** index of a **** DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -97,4 +97,4 @@ df.ctypes.print()
 {% endtab %}
 {% endtabs %}
 
-**Note**: To cast a type, use the [astype](dataframe.astype.md) method. 
+**Note**: To cast a type, use the [astype](dataframe.astype.md) method.&#x20;

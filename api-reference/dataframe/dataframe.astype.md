@@ -12,7 +12,7 @@ danfo.DataFrame.**astype**(options) \[[source](https://github.com/opensource9ja/
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
@@ -162,7 +162,7 @@ df_new.ctypes.print()
 {% endtab %}
 {% endtabs %}
 
-**Note: **Casting a string column of alphabets/words to numeric form will return NaNs as values
+**Note:** Casting a string column of alphabets/words to numeric form will return NaNs as values
 
 {% tabs %}
 {% tab title="Node" %}

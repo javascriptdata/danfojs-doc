@@ -30,10 +30,9 @@ Make a violin plot from DataFrame columns, optionally grouped by some other colu
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-25-.png)
+![](<../../.gitbook/assets/newplot (25).png>)
 
 ### Box plots on a DataFrame
 
@@ -68,10 +67,9 @@ Make a violin plot from DataFrame columns, optionally grouped by some other colu
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-26-.png)
+![](<../../.gitbook/assets/newplot (26).png>)
 
 ### Box plot for selected columns in a DataFrame
 
@@ -105,12 +103,10 @@ Make a violin plot from DataFrame columns, optionally grouped by some other colu
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-27-.png)
+![](<../../.gitbook/assets/newplot (27).png>)
 
 {% hint style="info" %}
 To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
 {% endhint %}
-

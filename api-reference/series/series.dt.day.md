@@ -8,7 +8,7 @@ description: Obtain the numerical representation of the week day.
 
 **Parameters**: None
 
-**Returns: **Series (int elements)
+**Returns:** Series (int elements)
 
 **Examples**
 

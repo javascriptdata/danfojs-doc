@@ -1,6 +1,7 @@
 ---
 description: Adds new row to the end of a DataFrame
 ---
+
 # DataFrame.append
 
 danfo.DataFrame.**append**(val) \[[source](https://github.com/opensource9ja/danfojs/blob/2696f1d8420dd364464aae7c5c175c6cd0ef4c93/danfojs/src/core/frame.js#L2059)]
@@ -13,7 +14,7 @@ danfo.DataFrame.**append**(val) \[[source](https://github.com/opensource9ja/danf
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 

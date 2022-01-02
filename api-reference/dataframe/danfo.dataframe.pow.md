@@ -15,11 +15,11 @@ danfo.DataFrame.pow(other, option) \[[source](https://github.com/opensource9ja/d
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
-### Exponential of** scalar with **DataFrame along default axis 1
+### Exponential of **scalar with** DataFrame along default axis 1
 
 {% tabs %}
 {% tab title="Node" %}
@@ -65,7 +65,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Exponential of**  Series with **DataFrame along axis 0
+### Exponential of  **Series with** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -113,7 +113,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Exponential of**  **DataFrame with a DataFrame
+### Exponential of  ****  DataFrame with a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -163,7 +163,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Exponential of** ** Array with DataFrame along axis 0
+### Exponential of **** Array with DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}

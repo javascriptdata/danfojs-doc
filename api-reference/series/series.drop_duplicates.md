@@ -2,15 +2,15 @@
 description: Remove duplicate rows
 ---
 
-# Series.drop_duplicates
+# Series.drop\_duplicates
 
-> danfo.Series.**drop_duplicates**(options)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L1007)]
+> danfo.Series.**drop\_duplicates**(options)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L1007)]
 
 | Parameters | Type   | Description                                                                                                                                                                                                              | Default                               |
 | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------------------- |
 | options    | Object | <p><strong>keep</strong>: "first" | "last", which duplicate value to keep. Defaults to "first".<br><strong>inplace</strong>:  Boolean indicating whether to perform the operation in-place or not. Defaults to false</p> | <p>{</p><p>inplace: false</p><p>}</p> |
 
-**Returns: **Series
+**Returns:** Series
 
 **Examples**
 

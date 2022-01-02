@@ -11,7 +11,7 @@ danfo.DataFrame.**isna**(kwargs) \[[source](https://github.com/opensource9ja/dan
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 

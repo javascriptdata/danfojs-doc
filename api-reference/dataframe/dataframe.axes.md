@@ -5,13 +5,13 @@ description: >-
   order.
 ---
 
-# DataFrame.axes
+# DataFrame.axis
 
 danfo.DataFrame.**axis** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]
 
 **Returns:**
 
-**       **return** Object**
+&#x20;      ****       return **Object**
 
 ## **Examples**
 

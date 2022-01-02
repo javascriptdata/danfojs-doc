@@ -12,7 +12,7 @@ danfo.DataFrame.**head**(rows) \[[source](https://github.com/opensource9ja/danfo
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 

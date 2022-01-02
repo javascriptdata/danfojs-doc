@@ -10,7 +10,7 @@ description: Obtain data aggregate per groups for each column
 | ---------- | ------ | --------------------------------------------------------------------------------------------------------- | ------- |
 | kwargs     | Object | kwargs contain keys which are column names in the dataframe, and the values are operation to be performed |         |
 
-**Return: **DataFrame
+**Return:** DataFrame
 
 **Examples**
 

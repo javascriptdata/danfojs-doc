@@ -12,7 +12,7 @@ danfo.DataFrame.**cumsum**(options) \[[source](https://github.com/opensource9ja/
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 

@@ -10,7 +10,7 @@ description: Return the integer indices that would sort the Series values
 | ---------- | ------ | -------------------------------------- | ----------------------------------------------------- |
 | options    | Object | **ascending**: How to sort the indices | <p>{ <br><strong>ascending</strong>: true</p><p>}</p> |
 
-**Returns: ** Series (int element)
+**Returns:** Series (int element)
 
 **Example**
 

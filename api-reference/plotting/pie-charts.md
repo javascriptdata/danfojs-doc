@@ -39,10 +39,9 @@ A pie plot is a proportional representation of the numerical data in a column
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-12-.png)
+![](<../../.gitbook/assets/newplot (12).png>)
 
 ### Multiple Pie Chart from Columns in a DataFrame
 
@@ -76,14 +75,13 @@ A pie plot is a proportional representation of the numerical data in a column
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-21-.png)
+![](<../../.gitbook/assets/newplot (21).png>)
 
 ### Configure Position of Pie Charts
 
-If you have more than one pie charts displayed, you can set the grid parameter, and also the position of each pie. For example, in the snippet below, we set our grid to 2 by 2 and also pass a set of row and column index position. Each row/column position index correspond to each pie. 
+If you have more than one pie charts displayed, you can set the grid parameter, and also the position of each pie. For example, in the snippet below, we set our grid to 2 by 2 and also pass a set of row and column index position. Each row/column position index correspond to each pie.
 
 ```markup
 <!DOCTYPE html>
@@ -116,12 +114,10 @@ If you have more than one pie charts displayed, you can set the grid parameter, 
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-22-.png)
+![](<../../.gitbook/assets/newplot (22).png>)
 
 {% hint style="info" %}
 For more configuration options for Pie Charts, see the [Plotly](https://plotly.com/javascript/pie-charts/) style doc.
 {% endhint %}
-

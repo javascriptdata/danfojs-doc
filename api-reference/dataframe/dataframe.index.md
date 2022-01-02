@@ -8,7 +8,7 @@ danfo.DataFrame.**index** \[[source](https://github.com/opensource9ja/danfojs/bl
 
 ## **Examples**
 
-Returns auto-generated** **index of a** **DataFrame
+Returns auto-generated **** index of a **** DataFrame
 
 {% tabs %}
 {% tab title="Node" %}

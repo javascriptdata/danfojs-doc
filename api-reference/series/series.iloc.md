@@ -8,7 +8,7 @@ danfo.Series.**iloc**() \[[source](https://github.com/opensource9ja/danfojs/blob
 
 **Returns:**
 
-**       **return** Series**
+&#x20;      ****       return **Series**
 
 ## **Examples**
 
@@ -21,7 +21,7 @@ Allowed inputs are:
 * A boolean mask. E.g \[ true, false, false ]
 * A string slice object with ints, e.g. `"1:7"`
 
-_**Note: **only** **the start label is included, and the end label is ignored. _
+_**Note:** only **** the start label is included, and the end label is ignored._&#x20;
 
 `.iloc` will raise`IndexError` if a requested indexer is out-of-bounds.
 
@@ -61,7 +61,7 @@ s.iloc([0,5]).print()
 
 ### **Index by a slice of row**
 
-The [**iloc**](../dataframe/danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end], e.g "\[0: 5]". This will return all values from index positions 0 to 4. 
+The [**iloc**](../dataframe/danfo.dataframe.iloc.md) function also accepts string slices of the form \[start: end], e.g "\[0: 5]". This will return all values from index positions 0 to 4.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}
@@ -99,7 +99,7 @@ s.iloc(["0:5"]).print()
 {% endtab %}
 {% endtabs %}
 
-By specifying a start index in a slice, all values after that index are returned. 
+By specifying a start index in a slice, all values after that index are returned.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}
@@ -133,7 +133,7 @@ s.iloc(["5:"]).print()
 {% endtab %}
 {% endtabs %}
 
-### Slice Series by boolean condition 
+### Slice Series by boolean condition&#x20;
 
 {% tabs %}
 {% tab title="Node" %}

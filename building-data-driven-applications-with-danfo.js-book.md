@@ -1,6 +1,6 @@
 # Building Data Driven Applications with Danfo.js - Book
 
-## Purchase on [Packt](https://www.packtpub.com/product/building-data-driven-applications-with-danfo-js/9781801070850) using _25Danfo _ code before  31st December 2020 and get 25% discount. 
+## Purchase on [Packt](https://www.packtpub.com/product/building-data-driven-applications-with-danfo-js/9781801070850) using _25Danfo_ code before  31st December 2020 and get 25% discount.&#x20;
 
 ## What this book is about
 
@@ -8,7 +8,7 @@ The book then shows you how to load different datasets, combine and analyze them
 
 By the end of this app development book, you'll be able to build and embed data analytics, visualization, and ML capabilities into any JavaScript app in server-side Node.js or the browser.
 
-![Danfo.js book cover](.gitbook/assets/b17076\_cover.jpg)
+![Danfo.js book cover](.gitbook/assets/B17076\_Cover.jpg)
 
 ## **What you will learn**
 

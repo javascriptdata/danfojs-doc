@@ -1,15 +1,18 @@
 ---
-description: Return a Tensorflow tensor representation of the DataFrame. Only the values in the DataFrame will be returned, the axes labels will be removed.
+description: >-
+  Return a Tensorflow tensor representation of the DataFrame. Only the values in
+  the DataFrame will be returned, the axes labels will be removed.
 ---
+
 # DataFrame.tensor
 
 danfo.DataFrame.**tensor** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]
 
 **Returns:**
 
-**       **return** tf.tensor**
+&#x20;      ****       return **tf.tensor**
 
-> **Note:** [Tensorflow](https://js.tensorflow.org/api/latest/#tensor) tensors have single dtype, and will replace any string value with  NaN. Use with care. 
+> **Note:** [Tensorflow](https://js.tensorflow.org/api/latest/#tensor) tensors have single dtype, and will replace any string value with  NaN. Use with care.&#x20;
 
 ## **Examples**
 
@@ -52,7 +55,7 @@ Tensor
 {% endtab %}
 {% endtabs %}
 
-String values in a Tensor are represented as NaN, so ensure to transform them before working with tensor representations. 
+String values in a Tensor are represented as NaN, so ensure to transform them before working with tensor representations.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}

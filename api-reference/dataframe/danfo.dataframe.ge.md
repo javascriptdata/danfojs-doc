@@ -15,11 +15,11 @@ danfo.DataFrame.ge(other, option) \[[source](https://github.com/opensource9ja/da
 
 **Returns:**
 
-**     DataFrame**
+&#x20;    **DataFrame**
 
 ## **Examples**
 
-### Comparing** **DataFrame with a scalar value:
+### Comparing **** DataFrame with a scalar value:
 
 {% tabs %}
 {% tab title="Node" %}
@@ -61,7 +61,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Comparing** **DataFrame with a Series along the column axis:
+### Comparing **** DataFrame with a Series along the column axis:
 
 {% tabs %}
 {% tab title="Node" %}
@@ -106,7 +106,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Comparing** **DataFrame with a DataFrame
+### Comparing **** DataFrame with a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -152,7 +152,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Comparing** **DataFrame with a JavaScript Array
+### Comparing **** DataFrame with a JavaScript Array
 
 {% tabs %}
 {% tab title="Node" %}

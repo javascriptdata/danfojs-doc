@@ -15,11 +15,11 @@ danfo.DataFrame.**fillna**(values, options) \[[source](https://github.com/openso
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
-### Fill missing values in specified columns with specified values 
+### Fill missing values in specified columns with specified values&#x20;
 
 Missing values are NaN, undefined or null values
 
@@ -84,7 +84,7 @@ df_filled.print()
 {% endtab %}
 {% endtabs %}
 
-### Fill all columns with NaNs with a specified value 
+### Fill all columns with NaNs with a specified value&#x20;
 
 {% tabs %}
 {% tab title="Node" %}
@@ -130,7 +130,7 @@ df_filled.print()
 {% endtab %}
 {% endtabs %}
 
-### Fill NaNs inplace 
+### Fill NaNs inplace&#x20;
 
 {% tabs %}
 {% tab title="Node" %}

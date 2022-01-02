@@ -1,10 +1,10 @@
 # Using Danfojs in React
 
-**TL:DR **See Example react application using danfojs [here](https://github.com/opensource9ja/Data-aRT)
+**TL:DR** See Example react application using danfojs [here](https://github.com/opensource9ja/Data-aRT)
 
-Danfojs works for both browser and NodeJs environment, and as such is available to frontend frameworks like React and Vue. 
+Danfojs works for both browser and NodeJs environment, and as such is available to frontend frameworks like React and Vue.&#x20;
 
-In order to use Danfojs in a library like React, you must install the [browser side version ](https://www.npmjs.com/package/danfojs)from npm. 
+In order to use Danfojs in a library like React, you must install the [browser side version ](https://www.npmjs.com/package/danfojs)from npm.&#x20;
 
 ```bash
 npm install danfojs
@@ -58,7 +58,7 @@ export default App;
 
 On running the app, we get the following output in the console:
 
-![](../.gitbook/assets/screen-shot-2021-02-14-at-7.22.16-pm.png)
+![](<../.gitbook/assets/Screen Shot 2021-02-14 at 7.22.16 PM.png>)
 
 Note that you can also import specific modules. For instance, in the code below we import only the DataFrame module:
 
@@ -66,4 +66,4 @@ Note that you can also import specific modules. For instance, in the code below 
 import { DataFrame } from "danfojs/src/index";
 ```
 
-Following these steps, you can use danfojs in any client-side library. 
+Following these steps, you can use danfojs in any client-side library.&#x20;

@@ -6,9 +6,9 @@ description: Obtain the hours in a time series
 
 > danfo.Series.dt.**hour**()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L205)]
 
-**Parameters: **None
+**Parameters:** None
 
-**Returns: **Series (int elements)
+**Returns:** Series (int elements)
 
 **Examples**
 

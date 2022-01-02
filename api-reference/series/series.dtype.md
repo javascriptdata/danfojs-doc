@@ -8,7 +8,7 @@ description: Obtain the dtype of a series
 
 **Parameters**: None
 
-**Returns: **String
+**Returns:** String
 
 **Example**
 

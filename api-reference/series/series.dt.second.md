@@ -8,7 +8,7 @@ description: Obtain the seconds in Date series
 
 **Parameters**: None
 
-**Returns: **Series (Int elements)
+**Returns:** Series (Int elements)
 
 **Example**
 

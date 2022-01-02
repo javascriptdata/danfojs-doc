@@ -8,7 +8,7 @@ A bar plot presents categorical data with rectangular bars with lengths proporti
 
 ## Examples
 
-The **bar** plot is exposed by the .**plot\(\)** function called on a Series or DataFrame. The **.plot\(\)** method accepts an HTML Div id where it renders the plot, while configuration options for the bars drawn can be passed through the config parameter. 
+The **bar** plot is exposed by the .**plot()** function called on a Series or DataFrame. The **.plot()** method accepts an HTML Div id where it renders the plot, while configuration options for the bars drawn can be passed through the config parameter.
 
 ### Bar plot on Series
 
@@ -36,10 +36,9 @@ The **bar** plot is exposed by the .**plot\(\)** function called on a Series or 
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-6-.png)
+![](<../../.gitbook/assets/newplot (6).png>)
 
 ### Bar plot on DataFrame
 
@@ -67,12 +66,10 @@ The **bar** plot is exposed by the .**plot\(\)** function called on a Series or 
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-7-.png)
+![](<../../.gitbook/assets/newplot (7).png>)
 
 {% hint style="info" %}
 To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
 {% endhint %}
-

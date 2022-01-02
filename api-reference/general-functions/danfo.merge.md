@@ -14,7 +14,7 @@ danfo.**merge**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
@@ -22,7 +22,7 @@ danfo.**merge**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob
 
 danfo.js provides a single function, [`merge()`](danfo.merge.md), as the entry point for all standard database join operations between `DataFrame` or named `Series` objects.
 
-For a more intuitive understanding, this [guide](https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html#brief-primer-on-merge-methods-relational-algebra) on the [Pandas](https://pandas.pydata.org/pandas-docs/stable) doc is worth reading.
+For a more intuitive understanding, this [guide](https://pandas.pydata.org/pandas-docs/stable/user\_guide/merging.html#brief-primer-on-merge-methods-relational-algebra) on the [Pandas](https://pandas.pydata.org/pandas-docs/stable) doc is worth reading.
 
 ### **Merging by a single key found in both axis**
 

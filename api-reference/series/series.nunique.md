@@ -8,7 +8,7 @@ description: Returns the number of unique values in a series
 
 **Parameters**: None
 
-**Returns: **int
+**Returns:** int
 
 **Example**
 

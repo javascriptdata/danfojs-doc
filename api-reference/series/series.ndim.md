@@ -6,9 +6,9 @@ description: Obtain the dimension of a series
 
 > danfo.Series.ndim  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L209)]
 
-**Parameters: **None
+**Parameters:** None
 
-**Returns: **int
+**Returns:** int
 
 **Example**
 

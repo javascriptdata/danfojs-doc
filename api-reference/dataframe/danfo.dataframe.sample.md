@@ -13,7 +13,7 @@ danfo.DataFrame.**sample**(num, seed) \[[source](https://github.com/opensource9j
 
 **Returns:**
 
-**       **return** {Promies} resolves to DataFrame**
+&#x20;      ****       return **{Promies} resolves to DataFrame**
 
 ****
 
@@ -63,7 +63,7 @@ load_data()
 
 ## Sample a DataFrame randomly with seed
 
-By setting `seed` when using `sample`, you can ensure that the random sampling is reproducible. 
+By setting `seed` when using `sample`, you can ensure that the random sampling is reproducible.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}

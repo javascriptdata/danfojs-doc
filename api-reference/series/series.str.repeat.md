@@ -11,7 +11,7 @@ description: Repeat the the character(s) in a string for a specified number of t
 | num        | integer | the string to search for                                        | 1                                                      |
 | options    | Object  | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
-**Returns:  **Series
+**Returns:**  Series
 
 **Example**
 

@@ -13,11 +13,11 @@ danfo.DataFrame.sub(other, option) \[[source](https://github.com/opensource9ja/d
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
-### Subtraction of** scalar to **DataFrame along default axis 1
+### Subtraction of **scalar to** DataFrame along default axis 1
 
 {% tabs %}
 {% tab title="Node" %}
@@ -60,7 +60,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Subtraction of**  Series to **DataFrame along axis 0
+### Subtraction of  **Series to** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -106,7 +106,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Subtraction of**  **DataFrame to a DataFrame
+### Subtraction of  ****  DataFrame to a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -154,7 +154,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Subtraction of** ** Array to DataFrame along axis 0
+### Subtraction of **** Array to DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}

@@ -8,7 +8,7 @@ danfo.DataFrame.**nunique**(axis) \[[source](https://github.com/opensource9ja/da
 
 **Returns:**
 
-**       **return** Series**
+&#x20;      ****       return **Series**
 
 ## **Examples**
 
@@ -95,4 +95,4 @@ df.nunique(axis=0).print()
 {% endtab %}
 {% endtabs %}
 
-**Note: **To get the unique elements along an axis, use** **[DataFrame.unique.](dataframe.nunique-1.md)
+**Note:** To get the unique elements along an axis, use **** [DataFrame.unique.](dataframe.nunique-1.md)

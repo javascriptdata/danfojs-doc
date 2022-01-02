@@ -13,11 +13,11 @@ danfo.DataFrame.mod(other, option) \[[source](https://github.com/opensource9ja/d
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
-### Modulo of** scalar with **DataFrame along default axis 1
+### Modulo of **scalar with** DataFrame along default axis 1
 
 {% tabs %}
 {% tab title="Node" %}
@@ -63,7 +63,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Modulo of**  Series with **DataFrame along axis 0
+### Modulo of  **Series with** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -111,7 +111,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Modulo of**  **DataFrame with a DataFrame
+### Modulo of  ****  DataFrame with a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -161,7 +161,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Modulo of** ** Array with DataFrame along axis 0
+### Modulo of **** Array with DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}

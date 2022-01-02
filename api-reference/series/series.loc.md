@@ -12,7 +12,7 @@ danfo.Series.**loc**() \[[source](https://github.com/opensource9ja/danfojs/blob/
 
 **Returns:**
 
-**       **return** Series**
+&#x20;      ****       return **Series**
 
 ## **Examples**
 
@@ -25,7 +25,7 @@ Allowed inputs are:
 * A boolean mask. E.g \[ true, false, false ]
 * A string slice object with ints, e.g. `[`'`"a":"d"'], ["1:4"]`
 
-_**Note: **only** **the start label is included, and the end label is ignored. _
+_**Note:** only **** the start label is included, and the end label is ignored._&#x20;
 
 `.loc` will raise a `ValueEror` if a requested label is not found.
 
@@ -85,7 +85,7 @@ s.loc(["a", "g"]).print()
 
 ### **Index by a slice of row**
 
-The **loc** function also accepts string slices of the form \[start: end], e.g **\[\`"a":"e"\`]**. This will return all values from label positions `a` to `e`. 
+The **loc** function also accepts string slices of the form \[start: end], e.g **\[\`"a":"e"\`]**. This will return all values from label positions `a` to `e`.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}
@@ -132,7 +132,7 @@ For the slice above to work, you must quote each slice, e.g:\
 _**Inner quotes are not needed for numeric indices!**_
 {% endhint %}
 
-### By specifying a start index in a slice, all values after that index are returned. 
+### By specifying a start index in a slice, all values after that index are returned.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}
@@ -173,7 +173,7 @@ s.loc([`1:`]).print()
 {% endtab %}
 {% endtabs %}
 
-### Slice Series by boolean condition 
+### Slice Series by boolean condition&#x20;
 
 {% tabs %}
 {% tab title="Node" %}

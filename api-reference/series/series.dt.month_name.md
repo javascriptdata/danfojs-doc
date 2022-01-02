@@ -2,13 +2,13 @@
 description: obtain the month name in a Time Series
 ---
 
-# Series.dt.month_name
+# Series.dt.month\_name
 
-> danfo.Series.dt.month_name()    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L241)]
+> danfo.Series.dt.month\_name()    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L241)]
 
 **Parameters**: None
 
-**Returns: **Series (String elements)
+**Returns:** Series (String elements)
 
 **Examples**
 

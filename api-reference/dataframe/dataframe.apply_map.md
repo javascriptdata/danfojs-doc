@@ -2,9 +2,9 @@
 description: Apply a function to a Dataframe values element-wise.
 ---
 
-# DataFrame.apply_map
+# DataFrame.apply\_map
 
-danfo.DataFrame.**apply_map**(callable, options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1566)]
+danfo.DataFrame.**apply\_map**(callable, options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1566)]
 
 | Parameters | Type     | Description                                                           | Default   |
 | ---------- | -------- | --------------------------------------------------------------------- | --------- |
@@ -13,14 +13,14 @@ danfo.DataFrame.**apply_map**(callable, options) \[[source](https://github.com/o
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
 ### Apply a  function to all values in a DataFrame
 
 {% hint style="info" %}
-Note that the specified function passed to `apply` will be called with each element in the DataFrame. If you need to apply a function across an axis, then use the [apply](danfo.dataframe.apply.md) function. 
+Note that the specified function passed to `apply` will be called with each element in the DataFrame. If you need to apply a function across an axis, then use the [apply](danfo.dataframe.apply.md) function.&#x20;
 {% endhint %}
 
 {% tabs %}

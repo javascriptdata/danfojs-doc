@@ -13,7 +13,7 @@ description: Invoke a function on each value in a Series.
 
 **Returns:**
 
-**       **return** Series**
+&#x20;      ****       return **Series**
 
 ****
 

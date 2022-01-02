@@ -11,7 +11,7 @@ description: round off floating values in series
 | dp         | int    | decimal place to round off to                                                                  |                                       |
 | options    | Object | inplace: Boolean indicating whether to perform the operation inplace or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
 
-**Returns: **Series
+**Returns:** Series
 
 **Example**
 

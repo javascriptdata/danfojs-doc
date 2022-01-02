@@ -29,9 +29,9 @@ description: >-
 
 ## TL:DR
 
-All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome. 
+All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.&#x20;
 
-For contributors familiar with open-source,  below is a quick guide to setting up danfojs locally.  
+For contributors familiar with open-source,  below is a quick guide to setting up danfojs locally. &#x20;
 
 ```
 git clone https://github.com/opensource9ja/danfojs.git
@@ -39,7 +39,7 @@ cd danfojs
 git checkout -b <your-branch-name>
 ```
 
-There are two folders, **danfojs-browser** and **danfojs-node**. If you are contributing a new feature, then you should include it in both versions. If you are doing a bug fix for a single version, then open that folder and install packages. 
+There are two folders, **danfojs-browser** and **danfojs-node**. If you are contributing a new feature, then you should include it in both versions. If you are doing a bug fix for a single version, then open that folder and install packages.&#x20;
 
 For instance, if I want to do some bug fixes in danfojs-node. I can do the following:
 
@@ -87,11 +87,11 @@ cd danfojs
 
 This creates the directory danfojs and connects your repository to the upstream (main project) repository.
 
-> **All development are done in two folders--**[**danfojs-browser**](https://github.com/opensource9ja/danfojs/tree/master/danfojs-browser)** and **[**danfojs-node**](https://github.com/opensource9ja/danfojs/tree/master/danfojs-node)** folders. The two folders are similar and it is always recommended to pull latest changes from master before development in any of the folder. **
+> **All development are done in two folders--**[**danfojs-browser**](https://github.com/opensource9ja/danfojs/tree/master/danfojs-browser) **and** [**danfojs-node**](https://github.com/opensource9ja/danfojs/tree/master/danfojs-node) **folders. The two folders are similar and it is always recommended to pull latest changes from master before development in any of the folder.**&#x20;
 
-Some Javascript features are supported both in the browser and node environment, and it is recommended to add these to both versions. 
+Some Javascript features are supported both in the browser and node environment, and it is recommended to add these to both versions.&#x20;
 
-For features that work only in NodeJs environment, especially file related issues, these should be developed and tested in the danfojs-node folder, and the corresponding tests are written there.   
+For features that work only in NodeJs environment, especially file related issues, these should be developed and tested in the danfojs-node folder, and the corresponding tests are written there.  &#x20;
 
 ## **Creating a development environment**
 
@@ -205,7 +205,7 @@ describe("Name of the class|module", function(){
 });
 ```
 
-**Example**: Let write a test, to test if the values in a dataframe are off a certain length. Assuming the method to obtain length is values_len()
+**Example**: Let write a test, to test if the values in a dataframe are off a certain length. Assuming the method to obtain length is values\_len()
 
 ```javascript
 import { assert } from "chai"
@@ -236,7 +236,7 @@ describe("DataFrame", function(){
 
 To run the test for the module you created,
 
-**1)** Open the package.json 
+**1)** Open the package.json&#x20;
 
 **2)** change the name of the test file to the file name you want. and don't forget the file is in the test folder
 
@@ -245,7 +245,7 @@ To run the test for the module you created,
     "test": "....... danfojs/tests/sub_directory_name/filename",
 ```
 
-**3)  **run the test, in the danfojs directory terminal
+**3)**  run the test, in the danfojs directory terminal
 
 ```python
 yarn test
@@ -300,29 +300,29 @@ This request then goes to the repository maintainers, and they will review the c
 
 In other to contribute to the code base of danfojs, there are some functions and properties provided to make implementation easy.
 
-The main exposed modules are the **Frame** and **Series** module. This module inherits from the **Generic **module.
+The main exposed modules are the **Frame** and **Series** module. This module inherits from the **Generic** module.
 
 The **Generic** module consists of the following methods and properties
 
 * `.dtypes`    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L213)] is used to obtain the dtype for each column
 * `.index` \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L250)] to obtain the index for Dataframe or Series
-* `.__set_index(label) `  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L257)] to set the index value
+* `.__set_index(label)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L257)] to set the index value
 * `.__reset_index()`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L271)] to reset the index in DataFrame and Series
-* `.values `   Obtain the values in  DataFrame and Series per rows
+* `.values`   Obtain the values in  DataFrame and Series per rows
 * `.col_data` Obtain the values in DataFrame and Series per columns
 * `.column_names`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L305)] Obtain the list of column names
 * `.__set_col_types` \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L165)] set the dtype for a column or infer the dtype from it
 * `.columns` to  access the column names directly
 * `row_data_tensor`  store the tensor representation of the data in DataFrame and Series
 
-The **Frame **module consists of the following methods and properties to aid implementation.
+The **Frame** module consists of the following methods and properties to aid implementation.
 
 * `__frame_is_compactible_for_operation`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L1754)]:  check if all the values in a DataFrame are numerical. This helps to check if the numerical operation can be done using the dataframe.
 * `.__get_ops_tensors(tensors, axis)`   \[[source\]](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L1767) : obtain tensors from dataframes along axis 0 or 1.
-* `.__get_df_from_tensor(val, col_names) `  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L1741)]:  Obtain dataframe from tensor.
+* `.__get_df_from_tensor(val, col_names)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L1741)]:  Obtain dataframe from tensor.
 * `.__get_tensor_and_idx(df, axis)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L928)]:  Obtain tensors, their index value and their axis from dataframe.
 
-The **Series **module contains mostly Generic properties and less special internal properties.
+The **Series** module contains mostly Generic properties and less special internal properties.
 
 * `__check_series_op_compactibility(other)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L666)]  check if two series are compatible for numerical operation
 

@@ -10,11 +10,11 @@ danfo.DataFrame.**describe**() \[[source](https://github.com/opensource9ja/danfo
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
-Descriptive statistics include those that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding `NaN` values. 
+Descriptive statistics include those that summarize the central tendency, dispersion and shape of a dataset’s distribution, excluding `NaN` values.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}

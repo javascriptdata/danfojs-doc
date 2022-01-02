@@ -1,15 +1,17 @@
 ---
 description: Convert DataFrame to JSON format
 ---
-# DataFrame.to_json
 
-> DataFrame.**to_json**(options) [\[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/io/io.json.js#L92)]
+# DataFrame.to\_json
 
-| **Parameters** | Type              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Default                                                         |
-| -------------- | ----------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | --------------------------------------------------------------- |
-| **options**    |  object, optional | <p> Configuration object: </p><p>{</p><p> <strong><code>filePath</code></strong>: Local file path to write the CSV file to. If not specified, the CSV will be returned as a string. Only needed in Nodejs version<br><strong><code>fileName</code></strong>: The name of the file to download as. Only needed in browser environment. <br><strong><code>format</code></strong>: The format of the JSON. Can be one of <strong><code>row</code></strong> or <strong><code>column</code></strong>.</p><p>}</p> | <p>{<br><strong><code>format</code></strong>: "column"<br>}</p> |
+> DataFrame.**to\_json**(options) [\[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/io/io.json.js#L92)]
 
-The **to_json** function can be used to write out a DataFrame or Series to JSON format/file. The output is configurable and will depend on the environment. In the following examples, we show you how to write/download a JSON file from Node and Browser environments.
+|                |                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                 |
+| -------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
+| **Parameters** | Type             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                              | Default                                                         |
+| **options**    | object, optional | <p>Configuration object:</p><p>{</p><p><strong><code>filePath</code></strong>: Local file path to write the CSV file to. If not specified, the CSV will be returned as a string. Only needed in Nodejs version<br><strong><code>fileName</code></strong>: The name of the file to download as. Only needed in browser environment.<br><strong><code>format</code></strong>: The format of the JSON. Can be one of <strong><code>row</code></strong> or <strong><code>column</code></strong>.</p><p>}</p> | <p>{<br><strong><code>format</code></strong>: "column"<br>}</p> |
+
+The **to\_json** function can be used to write out a DataFrame or Series to JSON format/file. The output is configurable and will depend on the environment. In the following examples, we show you how to write/download a JSON file from Node and Browser environments.
 
 ### Convert DataFrame/Series to JSON and return value
 
@@ -82,12 +84,11 @@ console.log(jsonObj);
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Convert DataFrame/Series to JSON  and write to file path
+### Convert DataFrame/Series to JSON and write to file path
 
 Writing a DataFrame/Series as JSON, to a local file path is only supported in the Nodejs environment
 
@@ -111,7 +112,7 @@ df.to_json({ filePath: "./testOutput.json" });
 
 ### Convert DataFrame/Series to JSON and download file in browser
 
-You can automatically convert and download a DataFrame/Series as a JSON file in a browser environment, by specifying a `fileName` and setting `download` to **true**. 
+You can automatically convert and download a DataFrame/Series as a JSON file in a browser environment, by specifying a `fileName` and setting `download` to **true**.
 
 ```javascript
 let data = {

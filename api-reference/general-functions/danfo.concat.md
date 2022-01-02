@@ -12,11 +12,11 @@ danfo.**concat**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blo
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
-### **Concatenate two DataFrames along column axis (1) **
+### **Concatenate two DataFrames along column axis (1)**&#x20;
 
 {% tabs %}
 {% tab title="Node" %}
@@ -66,7 +66,7 @@ com_df.print()
 {% endtab %}
 {% endtabs %}
 
-### **Concatenate two DataFrames along row axis (0) **
+### **Concatenate two DataFrames along row axis (0)**&#x20;
 
 {% tabs %}
 {% tab title="Node" %}
@@ -125,7 +125,7 @@ com_df.print(10)
 {% endtab %}
 {% endtabs %}
 
-### **Concatenate two Series along row axis (0) **
+### **Concatenate two Series along row axis (0)**&#x20;
 
 {% tabs %}
 {% tab title="Node" %}

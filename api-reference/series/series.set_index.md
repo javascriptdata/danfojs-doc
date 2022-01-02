@@ -2,16 +2,16 @@
 description: Assign new Index to Series
 ---
 
-# Series.set_index
+# Series.set\_index
 
-> danfo.series.**set_index(**options**) **\[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L635)]
+> danfo.series.**set\_index(**options**)** \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L635)]
 
 | Parameter | Type   | Description                                                                                    | Default                               |
 | --------- | ------ | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
 | index     | Array  | new index values                                                                               |                                       |
 | options   | Object | inplace: Boolean indicating whether to perform the operation inplace or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
 
-**Returns: **Series
+**Returns:** Series
 
 **Example**
 

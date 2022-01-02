@@ -6,7 +6,7 @@ description: Obtain the maximum value of columns per groups
 
 > danfo.Groupby.max()      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L309)]
 
-**Parameters: **None
+**Parameters:** None
 
 **Returns**: DataFrame
 

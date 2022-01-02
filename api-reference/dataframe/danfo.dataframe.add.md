@@ -13,11 +13,11 @@ danfo.DataFrame.**add**(other, option) \[[source](https://github.com/opensource9
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
-### Addition of** scalar to **DataFrame along default axis 1
+### Addition of **scalar to** DataFrame along default axis 1
 
 {% tabs %}
 {% tab title="Node" %}
@@ -60,7 +60,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of**  Series to **DataFrame along axis 0
+### Addition of  **Series to** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -105,7 +105,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of**  **DataFrame to a DataFrame
+### Addition of  ****  DataFrame to a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -152,7 +152,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of** ** Array to DataFrame along axis 0
+### Addition of **** Array to DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}

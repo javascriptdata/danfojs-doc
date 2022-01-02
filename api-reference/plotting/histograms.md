@@ -1,5 +1,5 @@
 ---
-description: 'Draw one histogram of the DataFrame’s columns, or single histogram for Series'
+description: Draw one histogram of the DataFrame’s columns, or single histogram for Series
 ---
 
 # Histograms
@@ -42,10 +42,9 @@ In the example below, we use the titanic dataset, to show a close to a real-worl
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-10-.png)
+![](<../../.gitbook/assets/newplot (10).png>)
 
 ### Customized Histogram plots on DataFrame
 
@@ -89,14 +88,13 @@ In the example below, we use the titanic dataset, to show a close to a real-worl
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-20-.png)
+![](<../../.gitbook/assets/newplot (20).png>)
 
 ### Configuring your plots
 
-danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly. 
+danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly.
 
 All [customization](https://plotly.com/javascript/line-charts/) on the plot can be passed as an object of key-value pairs to the config parameter. For example:
 
@@ -117,4 +115,3 @@ df.plot("div_tag").histogram({layout: layout})
 {% hint style="info" %}
 For more configuration options for Histograms, see the [Plotly](https://plotly.com/javascript/histograms/) style doc.
 {% endhint %}
-

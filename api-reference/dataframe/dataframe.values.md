@@ -8,9 +8,9 @@ danfo.DataFrame.**values** \[[source](https://github.com/opensource9ja/danfojs/b
 
 **Returns:**
 
-**       **return** Array**
+&#x20;      ****       return **Array**
 
-**Note:** To get the [Tensorflow](https://js.tensorflow.org) tensor backing the DataFrame, you can call the **.**[**tensor**](dataframe.tensor.md) property on the DataFrame.  
+**Note:** To get the [Tensorflow](https://js.tensorflow.org) tensor backing the DataFrame, you can call the **.**[**tensor**](dataframe.tensor.md) property on the DataFrame. &#x20;
 
 ## **Examples**
 

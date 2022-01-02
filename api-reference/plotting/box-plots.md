@@ -34,10 +34,9 @@ Make a box-and-whisker plot from DataFrame columns, optionally grouped by some o
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-23-.png)
+![](<../../.gitbook/assets/newplot (23).png>)
 
 ### Box plots on a DataFrame
 
@@ -72,10 +71,9 @@ Make a box-and-whisker plot from DataFrame columns, optionally grouped by some o
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/screen-shot-2020-08-11-at-1.20.42-am%20%281%29%20%281%29.png)
+![](<../../.gitbook/assets/screen-shot-2020-08-11-at-1.20.42-am (1).png>)
 
 ### Box plot for selected columns in a DataFrame
 
@@ -109,14 +107,10 @@ Make a box-and-whisker plot from DataFrame columns, optionally grouped by some o
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-24-.png)
-
-
+![](<../../.gitbook/assets/newplot (24).png>)
 
 {% hint style="info" %}
 To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
 {% endhint %}
-

@@ -9,15 +9,15 @@ danfo.DataFrame.**dropna**(axis, options) \[[source](https://github.com/opensour
 | Parameters | Type   | Description                                                                                                                   | Default              |
 | ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------- | -------------------- |
 | axis       | Int    | 0 or 1. If 0, drop columns with NaNs, if 1, drop rows with NaNs                                                               | 1                    |
-| options    | Object | <p></p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p> | {**inplace: **false} |
+| options    | Object | <p></p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p> | {**inplace:** false} |
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
-### Drop rows (axis=0) with missing values  
+### Drop rows (axis=0) with missing values &#x20;
 
 {% tabs %}
 {% tab title="Node" %}
@@ -53,7 +53,7 @@ df_drop.print()
 {% endtab %}
 {% endtabs %}
 
-### Drop columns (axis=1) with missing values  
+### Drop columns (axis=1) with missing values &#x20;
 
 {% tabs %}
 {% tab title="Node" %}

@@ -9,7 +9,7 @@ description: >-
 
 > danfo.Series.describe() \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L583)]
 
-**Parameters: **No parameter
+**Parameters:** No parameter
 
 **return:** Series
 

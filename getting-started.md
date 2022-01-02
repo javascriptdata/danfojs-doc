@@ -42,7 +42,7 @@ To play with Danfo.js in a Notebook-like environment, see [Dnotebooks](https://d
 
 ## 10 minutes to danfo.js
 
-This is a short introduction to Danfo.js, and its flow is adapted from the official [10 minutes to Pandas](https://pandas.pydata.org/pandas-docs/stable/user_guide/10min.html#min)
+This is a short introduction to Danfo.js, and its flow is adapted from the official [10 minutes to Pandas](https://pandas.pydata.org/pandas-docs/stable/user\_guide/10min.html#min)
 
 We will show you how to use danfo.js in both browser environments and Node.js environments. Most functions except [plotting](https://jsdata.gitbook.io/danfojs/api-reference/plotting) which require a DOM work the same way in both environments.
 
@@ -392,7 +392,7 @@ df.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-The columns of the resulting [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) have different [dtypes](https://pandas.pydata.org/pandas-docs/stable/user_guide/basics.html#basics-dtypes).
+The columns of the resulting [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) have different [dtypes](https://pandas.pydata.org/pandas-docs/stable/user\_guide/basics.html#basics-dtypes).
 
 ```javascript
 df.ctypes.print()
@@ -578,9 +578,9 @@ console.log(df.columns);
 [ 'A', 'B', 'C', 'D', 'E' ]
 ```
 
-[`DataFrame.tensor`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_numpy.html#pandas.DataFrame.to_numpy) returns a Tensorflow tensor representation of the underlying data. Note that **Tensorflow tensors have one dtype for the entire array, while danfo DataFrames have one dtype per column**.
+[`DataFrame.tensor`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to\_numpy.html#pandas.DataFrame.to\_numpy) returns a Tensorflow tensor representation of the underlying data. Note that **Tensorflow tensors have one dtype for the entire array, while danfo DataFrames have one dtype per column**.
 
-For `df`, our [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) of all floating-point values, [`DataFrame.tensor`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_numpy.html#pandas.DataFrame.to_numpy)is fast and doesn’t require copying data.
+For `df`, our [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) of all floating-point values, [`DataFrame.tensor`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to\_numpy.html#pandas.DataFrame.to\_numpy)is fast and doesn’t require copying data.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -660,7 +660,7 @@ Tensor
 
 **Note**
 
-[`DataFrame.tensor`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to_numpy.html#pandas.DataFrame.to_numpy) does _not_ include the index or column labels in the output.
+[`DataFrame.tensor`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.to\_numpy.html#pandas.DataFrame.to\_numpy) does _not_ include the index or column labels in the output.
 
 [`describe()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.describe.html#pandas.DataFrame.describe) shows a quick statistic summary of your data:
 
@@ -1130,7 +1130,7 @@ sub_df.print()
 
 #### Selection with Boolean Mask
 
-You can select subsections from a DataFrame by a booelan condition mask. E.g. In the following code, we select and return only rows where the column `Count` is greater than 10. 
+You can select subsections from a DataFrame by a booelan condition mask. E.g. In the following code, we select and return only rows where the column `Count` is greater than 10.
 
 ```javascript
 let data = {
@@ -1156,7 +1156,7 @@ sub_df.print()
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-A Boolean mask for filtering also works for multiple conditions using `and` & `or` functions. E.g, In the following code, we select and return only rows where the column `Count` is greater than 10 and column `Name` is equal to `Apples`. 
+A Boolean mask for filtering also works for multiple conditions using `and` & `or` functions. E.g, In the following code, we select and return only rows where the column `Count` is greater than 10 and column `Name` is equal to `Apples`.
 
 ```javascript
 let sub_df = df.iloc({
@@ -1296,7 +1296,6 @@ query_df.print() //after query
 ║ 0          │ Ng                │ 34                │ 20                ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-
 ```
 
 #### Adding a new column
@@ -1391,7 +1390,7 @@ df.print()
 
 ### Missing data
 
- **NaN** represent missing data in Danfo.js. These values can be dropped or filled using some functions available in Danfo.js. 
+**NaN** represent missing data in Danfo.js. These values can be dropped or filled using some functions available in Danfo.js.
 
 To drop any rows that have missing data:
 
@@ -1513,7 +1512,6 @@ df_drop.print()
 ╟────────────┼───────────────────╢
 ║ 3          │ 78                ║
 ╚════════════╧═══════════════════╝
-
 ```
 
 Filling missing data:
@@ -1802,7 +1800,7 @@ df_new.print()
 
 Applying Element wise operations to the data:
 
-You can use the `apply_map` function if you need to apply a function to each element in the DataFrame. `apply_map` works element-wise. 
+You can use the `apply_map` function if you need to apply a function to each element in the DataFrame. `apply_map` works element-wise.
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -1975,7 +1973,7 @@ com_df.print()
 
 #### Join
 
-SQL style merges. See the Pandas [Database style joining](https://pandas.pydata.org/pandas-docs/stable/user_guide/merging.html#merging-join) section for more info.
+SQL style merges. See the Pandas [Database style joining](https://pandas.pydata.org/pandas-docs/stable/user\_guide/merging.html#merging-join) section for more info.
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -2333,9 +2331,9 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 
 #### CSV
 
-[Writing to a  CSV file.](api-reference/dataframe/dataframe.to_csv.md)
+[Writing to a CSV file.](api-reference/dataframe/dataframe.to\_csv.md)
 
-Convert any DataFrame to csv format. If a file path is specified, then the CSV is saved to the path, else it is returned as a string. 
+Convert any DataFrame to csv format. If a file path is specified, then the CSV is saved to the path, else it is returned as a string.
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -2362,7 +2360,6 @@ df.to_csv({filePath: "testOut.csv" }) //writes to file in Nodejs
 
 df.to_csv({fileName: "testOut", download: true }) //downloads the file in browser version
 
-
 ```
 
 ```
@@ -2372,9 +2369,9 @@ Abs,Count,country code
 47.3,5,GH
 ```
 
-[Reading from a CSV file.](https://pandas.pydata.org/pandas-docs/stable/user_guide/io.html#io-read-csv-table)
+[Reading from a CSV file.](https://pandas.pydata.org/pandas-docs/stable/user\_guide/io.html#io-read-csv-table)
 
-The **read_csv** method can read CSV file from local disk, or over the internet. If the file is to be read from a local disk in Node environment, you have to prefix the full path name with a "**file://**" prefix. For instance, to read a CSV file at the path **/home/Desktop/titanic.csv**, you can do the following:
+The **read\_csv** method can read CSV file from local disk, or over the internet. If the file is to be read from a local disk in Node environment, you have to prefix the full path name with a "**file://**" prefix. For instance, to read a CSV file at the path **/home/Desktop/titanic.csv**, you can do the following:
 
 {% tabs %}
 {% tab title="JavaScript" %}
@@ -2429,7 +2426,7 @@ dfd.read_csv("file:///home/Desktop/titanic.csv")
 
 #### JSON
 
-Writing to [JSON](api-reference/dataframe/dataframe.to_json.md) format
+Writing to [JSON](api-reference/dataframe/dataframe.to\_json.md) format
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -2461,5 +2458,4 @@ console.log(json);
   Count: [ 34, 4, 5 ],
   'country code': [ 'NG', 'FR', 'GH' ]
 }
-
 ```

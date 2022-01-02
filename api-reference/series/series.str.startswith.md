@@ -11,7 +11,7 @@ description: Test whether a string begins with specified characters
 | str        | string | the character(s) to check                                       | ""                                                     |
 | options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
-**Returns:  **Series (Boolean element)
+**Returns:**  Series (Boolean element)
 
 **Examples**
 

@@ -10,9 +10,9 @@ danfo.DataFrame.**ndim** \[[source](https://github.com/opensource9ja/danfojs/blo
 
 **Returns:**
 
-**       **return** Int**
+&#x20;      ****       return **Int**
 
-**Note:** To get the **shape **of the DataFrame use the .[shape](dataframe.shape.md) property.
+**Note:** To get the **shape** of the DataFrame use the .[shape](dataframe.shape.md) property.
 
 ## **Examples**
 

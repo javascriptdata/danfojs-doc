@@ -12,7 +12,7 @@ description: Remove leading and trailing Whitespace from a String element
 
 **Returns:**
 
-**         **return Series
+&#x20;        ****         return Series
 
 {% tabs %}
 {% tab title="Node" %}

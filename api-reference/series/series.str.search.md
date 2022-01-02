@@ -15,7 +15,7 @@ description: Obtain the index position of a searched  character in a String
 
 **Returns:**
 
-**     **return Series: Series of index position
+&#x20;    ****     return Series: Series of index position
 
 **Example**
 

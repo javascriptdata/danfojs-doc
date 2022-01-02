@@ -1,10 +1,10 @@
 # Configuring your plots
 
-danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly. 
+danfo.js plotting uses [Plotly.js](https://plotly.com/javascript) as its backend for plotting. This means you have all the configuration, flexibility and interactiveness of Plotly.
 
-All [customization](https://plotly.com/javascript/line-charts/) on the plot can be passed as an object of key-value pairs to the config parameter. For example, in the line plot below, we define a layout for our plot and give it a name. 
+All [customization](https://plotly.com/javascript/line-charts/) on the plot can be passed as an object of key-value pairs to the config parameter. For example, in the line plot below, we define a layout for our plot and give it a name.
 
-For example in the following code, we show how to set some basic configuration as well as layout for a line plot. 
+For example in the following code, we show how to set some basic configuration as well as layout for a line plot.
 
 ```markup
 <!doctype html>
@@ -65,5 +65,4 @@ For example in the following code, we show how to set some basic configuration a
 </html>
 ```
 
-![](../../.gitbook/assets/newplot-32-.png)
-
+![](<../../.gitbook/assets/newplot (32).png>)

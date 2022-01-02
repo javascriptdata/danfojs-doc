@@ -4,13 +4,13 @@ description: Transform features by scaling each feature to a range of max and mi
 
 # danfo.MinMaxScaler
 
-class danfo.**MinMaxScaler **\[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
+class danfo.**MinMaxScaler** \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
 
 danfo.js provides the MinMaxScaler class for standardization of DataFrame and Series. This estimator scales and translates each feature individually such that it is in the given range on the training set, e.g. between zero and one.
 
 This transformation is often used as an alternative to zero mean, unit variance scaling like [Standardscaler](danfo.standardscaler.md).
 
-The API is similar to sklearn's [MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html?highlight=minmaxscaler#sklearn.preprocessing.MinMaxScaler), and provides a fit and transform method. 
+The API is similar to sklearn's [MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html?highlight=minmaxscaler#sklearn.preprocessing.MinMaxScaler), and provides a fit and transform method.&#x20;
 
 ## **Examples**
 

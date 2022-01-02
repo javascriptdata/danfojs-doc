@@ -10,11 +10,11 @@ description: Replaces values in a DataFrame with specified values
 | ---------- | ----------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------- |
 | oldValue   | String, boolean, Number | The value you want to replace                                                                                                                                                                                                                                            |                  |
 | newValue   | String, boolean, Number | The new value you want to replace the old value with                                                                                                                                                                                                                     |                  |
-| options    | Object                  | <p><strong>columns: </strong>Array<strong>. </strong>An array of column names to replace, If not specified, replace all columns.</p><p></p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p></p> | {inplace: false} |
+| options    | Object                  | <p><strong>columns:</strong> Array<strong>.</strong> An array of column names to replace, If not specified, replace all columns.</p><p></p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p></p> | {inplace: false} |
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ****
 
@@ -63,7 +63,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-By not specifying a** **column**, **the** **replace works on all columns ** **
+By not specifying a **** column**,** the **** replace works on all columns ****&#x20;
 
 {% tabs %}
 {% tab title="Node" %}

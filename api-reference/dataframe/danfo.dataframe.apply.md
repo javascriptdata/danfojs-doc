@@ -13,7 +13,7 @@ danfo.DataFrame.**apply**(callable, options) \[[source](https://github.com/opens
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 

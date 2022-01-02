@@ -11,7 +11,7 @@ description: the position of the first found occurrence of a specified value in 
 | str        | string | the string to obtain its index                                  | ""                                                     |
 | options    | Object | **inplace**: Whether to perform the operation in-place or not.  | <p>{</p><p><strong>inplace</strong>: false</p><p>}</p> |
 
-**Returns: **Series
+**Returns:** Series
 
 **Example**
 

@@ -1,9 +1,10 @@
 ---
 description: Sort DataFrame by index
 ---
-# DataFrame.sort_index
 
-DataFrame.**sort_index**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/core/frame.js#L2094)]
+# DataFrame.sort\_index
+
+DataFrame.**sort\_index**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/core/frame.js#L2094)]
 
 | Parameters | Type   | Description                                                                                                                                                                               | Default                                  |
 | ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
@@ -11,7 +12,7 @@ DataFrame.**sort_index**(options) \[[source](https://github.com/opensource9ja/da
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 

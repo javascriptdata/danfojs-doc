@@ -2,9 +2,9 @@
 description: Return a fixed frequency Dates spread between start and end parameters.
 ---
 
-# danfo.date_range
+# danfo.date\_range
 
-danfo.**date_range**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
+danfo.**date\_range**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
 
 | Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                       | Default         |
 | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
@@ -12,7 +12,7 @@ danfo.**date_range**(kwargs) \[[source](https://github.com/opensource9ja/danfojs
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 

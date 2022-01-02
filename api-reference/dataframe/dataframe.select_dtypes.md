@@ -2,9 +2,9 @@
 description: Return a subset of the DataFrame’s columns based on the column dtypes.
 ---
 
-# DataFrame.select_dtypes
+# DataFrame.select\_dtypes
 
-danfo.DataFrame.**select_dtypes** \[[source](https://github.com/opensource9ja/danfojs/blob/db48bf9701e1c3205811ba2699b42ce56ef7e63b/danfojs/src/core/frame.js#L778)]
+danfo.DataFrame.**select\_dtypes** \[[source](https://github.com/opensource9ja/danfojs/blob/db48bf9701e1c3205811ba2699b42ce56ef7e63b/danfojs/src/core/frame.js#L778)]
 
 | Parameters | Type  | Description                      | Default |
 | ---------- | ----- | -------------------------------- | ------- |
@@ -12,7 +12,7 @@ danfo.DataFrame.**select_dtypes** \[[source](https://github.com/opensource9ja/da
 
 **Returns:**
 
-**       **return**  DataFrame**
+&#x20;      ****       return  **DataFrame**
 
 ## **Examples**
 

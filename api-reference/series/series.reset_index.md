@@ -2,15 +2,15 @@
 description: Reset the index of a series.
 ---
 
-# Series.reset_index
+# Series.reset\_index
 
-> danfo.series.reset_index(options) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L614)]
+> danfo.series.reset\_index(options) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L614)]
 
 | Parameters | Type   | Description                                                                                         | Default          |
 | ---------- | ------ | --------------------------------------------------------------------------------------------------- | ---------------- |
-| options    | Object |  **inplace: **Boolean indicating whether to perform the operation inplace or not. Defaults to false | { inplace:false} |
+| options    | Object |  **inplace:** Boolean indicating whether to perform the operation inplace or not. Defaults to false | { inplace:false} |
 
-**Returns : **Series
+**Returns :** Series
 
 `reset_index` is useful when the index needs to be treated as a column, or when the index is meaningless and needs to be reset to default, before another operation.
 

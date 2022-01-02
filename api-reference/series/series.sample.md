@@ -13,7 +13,7 @@ description: Return a random sample of items from an axis of object.
 
 **Returns:**
 
-**       **return** {Promies} resolves to Series**
+&#x20;      ****       return **{Promies} resolves to Series**
 
 **Example**
 

@@ -12,7 +12,7 @@ danfo.DataFrame.**max**(options) \[[source](https://github.com/opensource9ja/dan
 
 **Returns:**
 
-**       **return** Series**
+&#x20;      ****       return **Series**
 
 ## **Examples**
 

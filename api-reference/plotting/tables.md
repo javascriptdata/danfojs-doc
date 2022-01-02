@@ -43,11 +43,11 @@ description: Turn DataFrame/Series in D3.js-based tables
 </html>
 ```
 
-![](../../.gitbook/assets/screen-shot-2020-08-11-at-12.34.08-am.png)
+![](<../../.gitbook/assets/Screen Shot 2020-08-11 at 12.34.08 AM.png>)
 
 ### Configure the header and cell of a table
 
-To configure the header and cell of a table, you can pass header/cell styles to the **header\_style** and **cell\_style** parameter. The [Plotly table](https://plotly.com/javascript/table/) doc shows numerous configuration options you can pass. 
+To configure the header and cell of a table, you can pass header/cell styles to the **header\_style** and **cell\_style** parameter. The [Plotly table](https://plotly.com/javascript/table/) doc shows numerous configuration options you can pass.
 
 ```markup
 <!DOCTYPE html>
@@ -90,8 +90,6 @@ To configure the header and cell of a table, you can pass header/cell styles to 
 
 </html>
 
-
 ```
 
-![](../../.gitbook/assets/screen-shot-2020-08-11-at-12.38.30-am.png)
-
+![](<../../.gitbook/assets/Screen Shot 2020-08-11 at 12.38.30 AM.png>)

@@ -8,7 +8,7 @@ danfo.DataFrame.**shape** \[[source](https://github.com/opensource9ja/danfojs/bl
 
 **Returns:**
 
-**       **return** Int**
+&#x20;      ****       return **Int**
 
 ## **Examples**
 

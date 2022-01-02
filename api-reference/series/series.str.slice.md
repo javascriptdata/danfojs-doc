@@ -14,7 +14,7 @@ description: Obtain the substring of each element in a series
 
 **Returns:**
 
-**  **return Series.
+&#x20; ****  return Series.
 
 **Example**
 

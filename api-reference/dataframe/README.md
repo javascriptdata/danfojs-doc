@@ -5,10 +5,10 @@ description: Two-dimensional, size-mutable, potentially heterogeneous tabular da
 # Dataframe
 
 > `DataFrame`(data, {\
->                                 **columns:** \[ Array ],\
->                                  **dtypes:** \[ Array ],** **\
-> **                                 index: **\[Array], \
->                                  **options**: Object})
+> &#x20;                               **columns:** \[ Array ],\
+> &#x20;                                **dtypes:** \[ Array ], **** \
+> &#x20;                                **index:** \[Array], \
+> &#x20;                                **options**: Object})
 
 ### Attributes
 
@@ -16,14 +16,14 @@ description: Two-dimensional, size-mutable, potentially heterogeneous tabular da
 | ------------------------------------------------ | ---------------------------------------- |
 | [`DataFrame.columns`](danfo.dataframe.column.md) | The column labels of the DataFrame.      |
 
-| [`DataFrame.ctypes`](dataframe.dtypes.md)               | Return the data types in the DataFrame.                                |
-| ------------------------------------------------------- | ---------------------------------------------------------------------- |
-| [`DataFrame.select_dtypes`](dataframe.select_dtypes.md) | Return a subset of the DataFrame’s columns based on the column dtypes. |
-| [`DataFrame.values`](dataframe.values.md)               | Return a Numpy representation of the DataFrame.                        |
-| [`DataFrame.axes`](dataframe.axes.md)                   | Return a Object representing the axes of the DataFrame.                |
-| [`DataFrame.ndim`](dataframe.ndim.md)                   | Return an int representing the number of axes / array dimensions.      |
-| [`DataFrame.size`](broken-reference)                    | Return an int representing the number of elements in this object.      |
-| [`DataFrame.shape`](dataframe.shape.md)                 | Return a tuple representing the dimensionality of the DataFrame.       |
+| [`DataFrame.ctypes`](dataframe.dtypes.md)                | Return the data types in the DataFrame.                                |
+| -------------------------------------------------------- | ---------------------------------------------------------------------- |
+| [`DataFrame.select_dtypes`](dataframe.select\_dtypes.md) | Return a subset of the DataFrame’s columns based on the column dtypes. |
+| [`DataFrame.values`](dataframe.values.md)                | Return a Numpy representation of the DataFrame.                        |
+| [`DataFrame.axes`](dataframe.axes.md)                    | Return a Object representing the axes of the DataFrame.                |
+| [`DataFrame.ndim`](dataframe.ndim.md)                    | Return an int representing the number of axes / array dimensions.      |
+| [`DataFrame.size`](broken-reference)                     | Return an int representing the number of elements in this object.      |
+| [`DataFrame.shape`](dataframe.shape.md)                  | Return a tuple representing the dimensionality of the DataFrame.       |
 
 ### Conversion
 
@@ -87,15 +87,15 @@ description: Two-dimensional, size-mutable, potentially heterogeneous tabular da
 
 ### Reindexing / selection / label manipulation
 
-|                                                     |                                                         |
-| --------------------------------------------------- | ------------------------------------------------------- |
-| [`DataFrame.drop`](dataframe.drop.md)               | Drop specified labels from rows or columns.             |
-| [`DataFrame.head`](danfo.dataframe.head.md)         | Return the first n rows.                                |
-| [`DataFrame.rename`](dataframe.rename.md)           | Alter axes labels.                                      |
-| [`DataFrame.reset_index`](dataframe.reset_index.md) | Reset the index of a DataFrame                          |
-| [`DataFrame.sample`](danfo.dataframe.sample.md)     | Return a random sample of items from an axis of object. |
-| [`DataFrame.set_index`](dataframe.set_index.md)     | Set the DataFrame index using existing columns.         |
-| [`DataFrame.tail`](danfo.dataframe.tail.md)         | Return the last n rows.                                 |
+|                                                      |                                                         |
+| ---------------------------------------------------- | ------------------------------------------------------- |
+| [`DataFrame.drop`](dataframe.drop.md)                | Drop specified labels from rows or columns.             |
+| [`DataFrame.head`](danfo.dataframe.head.md)          | Return the first n rows.                                |
+| [`DataFrame.rename`](dataframe.rename.md)            | Alter axes labels.                                      |
+| [`DataFrame.reset_index`](dataframe.reset\_index.md) | Reset the index of a DataFrame                          |
+| [`DataFrame.sample`](danfo.dataframe.sample.md)      | Return a random sample of items from an axis of object. |
+| [`DataFrame.set_index`](dataframe.set\_index.md)     | Set the DataFrame index using existing columns.         |
+| [`DataFrame.tail`](danfo.dataframe.tail.md)          | Return the last n rows.                                 |
 
 ### Missing data handling
 
@@ -110,7 +110,7 @@ description: Two-dimensional, size-mutable, potentially heterogeneous tabular da
 
 |                                                                                                                        |                                       |
 | ---------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| [`DataFrame.sort_values`](dataframe.sort_values.md)                                                                    | Sort by the values along either axis. |
+| [`DataFrame.sort_values`](dataframe.sort\_values.md)                                                                   | Sort by the values along either axis. |
 | [`DataFrame.T`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.T.html#pandas.DataFrame.T) | Return transpose of DataFrame         |
 
 ### Combining / comparing / joining / merging
@@ -139,7 +139,7 @@ description: Two-dimensional, size-mutable, potentially heterogeneous tabular da
 
 ### Serialization / IO / conversion
 
-|                                             |                                                      |
-| ------------------------------------------- | ---------------------------------------------------- |
-| [`DataFrame.to_csv`](dataframe.to_csv.md)   | Write object to a comma-separated values (csv) file. |
-| [`DataFrame.to_json`](dataframe.to_json.md) | Convert the object to a JSON string.                 |
+|                                              |                                                      |
+| -------------------------------------------- | ---------------------------------------------------- |
+| [`DataFrame.to_csv`](dataframe.to\_csv.md)   | Write object to a comma-separated values (csv) file. |
+| [`DataFrame.to_json`](dataframe.to\_json.md) | Convert the object to a JSON string.                 |

@@ -8,7 +8,7 @@ description: Obtain the days of the weeks
 
 **Parameters**: None
 
-**Returns: **Series (String elements)
+**Returns:** Series (String elements)
 
 **Examples**
 

@@ -12,7 +12,7 @@ danfo.DataFrame.**mean**(options) \[[source](https://github.com/opensource9ja/da
 
 **Returns:**
 
-**       **return** Series**
+&#x20;      ****       return **Series**
 
 ## **Examples**
 

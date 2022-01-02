@@ -10,7 +10,7 @@ description: Check if all the values in a series is less than or equal to a valu
 | ---------- | ----------------------- | ------------------- | ------- |
 | other      | Series, Array or number | value(s) to compare |         |
 
-**Returns: **Series (Boolean Element)
+**Returns:** Series (Boolean Element)
 
 **Example**
 

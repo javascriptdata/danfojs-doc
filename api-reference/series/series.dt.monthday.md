@@ -6,7 +6,7 @@ description: Obtain the day of the month
 
 > danfo.Series.dt.**monthday**()   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L268)]
 
-**Parameters: **None
+**Parameters:** None
 
 **Returns**: Series (Int elements)
 

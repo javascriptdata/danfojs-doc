@@ -4,7 +4,7 @@ description: Create a scatter plot of columns in a DataFrame
 
 # Scatter Plots
 
-The coordinates of each point are defined by two DataFrame columns and filled circles are used to represent each point. Scatter plot is useful for visualizing complex correlations between two variables. 
+The coordinates of each point are defined by two DataFrame columns and filled circles are used to represent each point. Scatter plot is useful for visualizing complex correlations between two variables.
 
 ## Examples
 
@@ -42,10 +42,9 @@ In the example below, we use the titanic dataset, to show a close to real-world 
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-8-%20%281%29.png)
+![](<../../.gitbook/assets/newplot-8- (1) (1).png>)
 
 ### More Examples
 
@@ -80,12 +79,10 @@ In the example below, we use the titanic dataset, to show a close to real-world 
 </body>
 
 </html>
-
 ```
 
-![](../../.gitbook/assets/newplot-19-.png)
+![](<../../.gitbook/assets/newplot (19).png>)
 
 {% hint style="info" %}
 To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
 {% endhint %}
-

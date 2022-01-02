@@ -13,11 +13,11 @@ danfo.DataFrame.mul(other, option) \[[source](https://github.com/opensource9ja/d
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
-### Multiplication of** scalar to **DataFrame along default axis 1
+### Multiplication of **scalar to** DataFrame along default axis 1
 
 {% tabs %}
 {% tab title="Node" %}
@@ -60,7 +60,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Multiplication of**  Series to **DataFrame along axis 0
+### Multiplication of  **Series to** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -106,7 +106,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Multiplication of**  **DataFrame to a DataFrame
+### Multiplication of  ****  DataFrame to a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -155,7 +155,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Multiplication of** ** Array to DataFrame along axis 0
+### Multiplication of **** Array to DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}

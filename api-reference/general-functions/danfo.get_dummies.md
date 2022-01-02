@@ -2,9 +2,9 @@
 description: Convert categorical variable into dummy/indicator variables.
 ---
 
-# danfo.get_dummies
+# danfo.get\_dummies
 
-danfo.**get_dummies**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
+danfo.**get\_dummies**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
 
 | Parameters  | Type                | Description                                                                                                                                                                                                                                                                                               | Default                     |
 | ----------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
@@ -13,7 +13,7 @@ danfo.**get_dummies**(kwargs) \[[source](https://github.com/opensource9ja/danfoj
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 

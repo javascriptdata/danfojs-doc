@@ -14,13 +14,13 @@ danfo.DataFrame.**drop**(options) \[[source](https://github.com/opensource9ja/da
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
 ### Drop columns by specifying the names
 
-By setting **inplace **to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default. 
+By setting **inplace** to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}

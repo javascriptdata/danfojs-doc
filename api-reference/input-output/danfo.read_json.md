@@ -2,20 +2,21 @@
 description: Reads a JSON file into DataFrame.
 ---
 
-# danfo.read_json
+# danfo.read\_json
 
-> danfo.**read_json**(source,) [\[source](https://github.com/opensource9ja/danfojs/blob/849d14c8e7fa79bce4ffa9d0d177639047313520/danfojs/src/io/reader.js#L47)]
+> danfo.**read\_json**(source,) [\[source](https://github.com/opensource9ja/danfojs/blob/849d14c8e7fa79bce4ffa9d0d177639047313520/danfojs/src/io/reader.js#L47)]
 
-| **Parameters** | Type                                            | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                  | Default                                         |
-| -------------- | ----------------------------------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
-| _**source**_   | Input file object, string file** **path or URL  | <p>Any valid string path is acceptable. The string could be a URL. Valid URL schemes include http, https, ftp, s3, gs, or a local path. Both relative and absolute paths are supported</p><p></p><p>An input file object is also supported in the browser. </p>                                                                                                                                                                                                              |                                                 |
-| options        | Object                                          | <p>Configuration options for reading JSON files. Supported options:</p><p> {<br><code>method</code>: The HTTP method to use.</p><p><code>headers</code>: Additional headers to send with the request if reading JSON from remote url. Supports all the <a href="https://github.com/node-fetch/node-fetch#options">node-fetch options</a> in Nodejs, and all <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch options</a> in browsers.</p><p>} </p> | <p>{<br><strong>method</strong>: "GET"<br>}</p> |
+|                |                                                    |                                                                                                                                                                                                                                                                                                                                                                                                                                                                            |                                                 |
+| -------------- | -------------------------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------- |
+| **Parameters** | Type                                               | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                | Default                                         |
+| _**source**_   | Input file object, string file\*\* \*\*path or URL | <p>Any valid string path is acceptable. The string could be a URL. Valid URL schemes include http, https, ftp, s3, gs, or a local path. Both relative and absolute paths are supported</p><p>An input file object is also supported in the browser.</p>                                                                                                                                                                                                                    |                                                 |
+| options        | Object                                             | <p>Configuration options for reading JSON files. Supported options:</p><p>{<br><code>method</code>: The HTTP method to use.</p><p><code>headers</code>: Additional headers to send with the request if reading JSON from remote url. Supports all the <a href="https://github.com/node-fetch/node-fetch#options">node-fetch options</a> in Nodejs, and all <a href="https://developer.mozilla.org/en-US/docs/Web/API/Fetch_API">fetch options</a> in browsers.</p><p>}</p> | <p>{<br><strong>method</strong>: "GET"<br>}</p> |
 
 **Returns:**
 
-**     **_**Promise**_. Resolves to DataFrame
+\*\* \*\*_**Promise**_. Resolves to DataFrame
 
-The **read_json** method can read JSON files from a local disk, over the internet, or directly from input file objects.
+The **read\_json** method can read JSON files from a local disk, over the internet, or directly from input file objects.
 
 ### **Reading JSON files from local disk**
 
@@ -85,7 +86,6 @@ dfd.read_json("https://raw.githubusercontentdatasets/master/finance-charts-apple
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -122,7 +122,6 @@ By specifying a valid [file object](https://developer.mozilla.org/en-US/docs/Web
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}

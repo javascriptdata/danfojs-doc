@@ -14,7 +14,7 @@ danfo.Series.**append**(newValue, index, options) \[[source](https://github.com/
 
 **Returns:**
 
-**       **return** Series**
+&#x20;      ****       return **Series**
 
 ****
 

@@ -12,7 +12,7 @@ danfo.DataFrame.**column**(column) \[[source](https://github.com/opensource9ja/d
 
 **Returns:**
 
-**       **return** Series**
+&#x20;      ****       return **Series**
 
 ## **Examples**
 

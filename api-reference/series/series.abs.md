@@ -10,7 +10,7 @@ description: Returns the absolute value in a Series
 | ---------- | ------ | ---------------------------------------------------------------------------------------------------- | ------------------------------------- |
 | options    | Object | **inplace**:  Boolean indicating whether to perform the operation in-place or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
 
-**Returns: **Series
+**Returns:** Series
 
 **Example**
 

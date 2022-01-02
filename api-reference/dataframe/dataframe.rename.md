@@ -15,13 +15,13 @@ danfo.DataFrame.**rename**(kwargs) \[[source](https://github.com/opensource9ja/d
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
-### Rename columns 
+### Rename columns&#x20;
 
-By setting **inplace **to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default. 
+By setting **inplace** to _true_, the original DataFrame is modified and nothing is returned. To not modify the original DataFrame and return a new one, set **inplace** to false or leave it as default.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}

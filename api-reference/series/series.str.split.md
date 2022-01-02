@@ -15,7 +15,7 @@ description: >-
 
 **Returns**
 
-                      return **Series**
+&#x20;                     return **Series**
 
 **Examples**
 
@@ -38,7 +38,7 @@ console.log(sf.str.split().values)
 {% endtab %}
 {% endtabs %}
 
-**OUTPUT:     **`[ 'king,of,the,music', 'the,lamba,queen', 'I,love,the,hat' ]`
+**OUTPUT:**     `[ 'king,of,the,music', 'the,lamba,queen', 'I,love,the,hat' ]`
 
 {% tabs %}
 {% tab title="JavaScript" %}

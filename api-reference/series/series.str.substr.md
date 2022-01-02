@@ -16,7 +16,7 @@ description: >-
 
 **Returns:**
 
-**      **return Series
+&#x20;     ****      return Series
 
 **Example**
 

@@ -14,7 +14,7 @@ description: Join a new string value to all string elements in a Series.
 
 **Returns:**
 
-**   **return **Series**
+&#x20;  ****   return **Series**
 
 **Examples**
 

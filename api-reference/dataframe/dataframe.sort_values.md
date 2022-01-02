@@ -2,17 +2,17 @@
 description: Sort a Dataframe in ascending or descending order by a specified column name.
 ---
 
-# DataFrame.sort_values
+# DataFrame.sort\_values
 
-danfo.DataFrame.**sort_values**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
+danfo.DataFrame.**sort\_values**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
 
 | Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                      | Default                                  |
 | ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
-| options    | Object | <p>{</p><p><strong>by</strong>:  This key can be either a single column name or a single array of the same length as the calling DataFrame,</p><p><strong>ascending: </strong>Order of sorting</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | {**ascending**: true, **inplace:**false} |
+| options    | Object | <p>{</p><p><strong>by</strong>:  This key can be either a single column name or a single array of the same length as the calling DataFrame,</p><p><strong>ascending:</strong> Order of sorting</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | {**ascending**: true, **inplace:**false} |
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 

@@ -8,7 +8,7 @@ description: Obtain the minutes in a Time Series
 
 **Parameters**: None
 
-**Returns: **Series (int Elements)
+**Returns:** Series (int Elements)
 
 **Example**
 

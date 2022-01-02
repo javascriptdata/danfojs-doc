@@ -8,7 +8,7 @@ description: Obtain the year in a date time series
 
 **Parameters**: None
 
-**Returns: **Series (int elements)
+**Returns:** Series (int elements)
 
 **Examples**
 

@@ -12,7 +12,7 @@ danfo.DataFrame.**loc**(args) \[[source](https://github.com/opensource9ja/danfoj
 
 **Returns:**
 
-**       **return** DataFrame**
+&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
@@ -25,7 +25,7 @@ Allowed inputs for are:
 * A boolean mask. E.g \[ true, false, false ]
 * A string slice object with ints, e.g. `[`'`"a":"d"'], ["1:4"]`
 
-_**Note: **only** **the start label is included, and the end label is ignored. _
+_**Note:** only **** the start label is included, and the end label is ignored._&#x20;
 
 `.loc` will raise a `ValueEror` if a requested label is not found.
 
@@ -198,7 +198,7 @@ sub_df.print()
 
 ## **Index by a slice of row**
 
-The **loc** function also accepts string slices of the form \[start: end], e.g **\[\`"a":"c"\`]**. This will return all values from label positions `a` to c. 
+The **loc** function also accepts string slices of the form \[start: end], e.g **\[\`"a":"c"\`]**. This will return all values from label positions `a` to c.&#x20;
 
 {% tabs %}
 {% tab title="Node" %}
@@ -257,7 +257,7 @@ df``.loc({ row: [`"a":"e"`]}).print()``\
 _**Inner**_ _**quotes are not needed for numeric indices!**_
 {% endhint %}
 
-### Slice DataFrame rows by boolean condition 
+### Slice DataFrame rows by boolean condition&#x20;
 
 {% tabs %}
 {% tab title="Node" %}
@@ -294,7 +294,7 @@ sub_df.print()
 ### Slice DataFrame rows by multiple boolean conditions
 
 {% hint style="info" %}
-_By design, you can chain as many boolean logic as possible, as long as they resolve to a Boolean array of the same length as the DataFrame. _
+_By design, you can chain as many boolean logic as possible, as long as they resolve to a Boolean array of the same length as the DataFrame._&#x20;
 {% endhint %}
 
 {% tabs %}
@@ -330,7 +330,7 @@ sub_df.print()
 ### Slice DataFrame with boolean mask
 
 {% hint style="info" %}
-_You can index a DataFrame with an array of boolean values as long as they resolve to an array of the same length as the DataFrame. _
+_You can index a DataFrame with an array of boolean values as long as they resolve to an array of the same length as the DataFrame._&#x20;
 {% endhint %}
 
 {% tabs %}

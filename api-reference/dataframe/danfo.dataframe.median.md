@@ -12,7 +12,7 @@ danfo.DataFrame.**median**(options) \[[source](https://github.com/opensource9ja/
 
 **Returns:**
 
-**       **return** Series**
+&#x20;      ****       return **Series**
 
 ## **Examples**
 
