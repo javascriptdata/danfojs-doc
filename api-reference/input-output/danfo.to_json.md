@@ -1,6 +1,6 @@
-# danfo.to\_json
+# danfo.toJSON
 
-> danfo.**to\_json**(data, options) [\[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/io/io.json.js#L92)]
+> danfo.toJSON(data, options)
 
 |                |                     |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          |                                                                 |
 | -------------- | ------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------- |
@@ -8,7 +8,7 @@
 | _**data**_     | Series or DataFrame | The Series or DataFrame to write to CSV                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |                                                                 |
 | **options**    | object, optional    | <p>Configuration object:</p><p>{</p><p><strong><code>filePath</code></strong>: Local file path to write the CSV file to. If not specified, the CSV will be returned as a string. Only needed in Nodejs version<br><strong><code>fileName</code></strong>: The name of the file to download as. Only needed in browser environment.<br><strong><code>format</code></strong>: The format of the JSON. Can be one of <strong><code>row</code></strong> or <strong><code>column</code></strong>.</p><p>}</p> | <p>{<br><strong><code>format</code></strong>: "column"<br>}</p> |
 
-The **to\_json** function can be used to write out a DataFrame or Series to JSON format/file. The output is configurable and will depend on the environment. In the following examples, we show you how to write/download a JSON file from Node and Browser environments.
+The **toJSON** function can be used to write out a DataFrame or Series to JSON format/file. The output is configurable and will depend on the environment. In the following examples, we show you how to write/download a JSON file from Node and Browser environments.
 
 ### Convert DataFrame/Series to JSON and return value
 
@@ -25,7 +25,7 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-const jsonObj = dfd.to_json(df, { download: false }); //column format
+const jsonObj = dfd.toJSON(df); //column format
 console.log(jsonObj);
 
 //output
@@ -36,8 +36,7 @@ console.log(jsonObj);
 ]
 
 //row format
-const jsonObj = dfd.to_json(df, {
-    download: false,
+const jsonObj = dfd.toJSON(df, {
     format: "row"
 });
 
@@ -75,7 +74,7 @@ console.log(jsonObj);
         
         let df = new dfd.DataFrame(data);
         
-        const csv = df.to_csv({ download: false });
+        const csv = df.toJSON();
         console.log(csv);
     </script>
 </body>
@@ -102,7 +101,7 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-dfd.to_json(df, { filePath: "./testOutput.json" });
+dfd.toJSON(df, { filePath: "./testOutput.json" });
 ```
 {% endtab %}
 {% endtabs %}
@@ -120,5 +119,5 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-dfd.to_json(df, { fileName: "test_out.json" });
+dfd.toJSON(df, { fileName: "test_out.json", download: true });
 ```

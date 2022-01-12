@@ -1,44 +1,13 @@
 # Creating a Series
 
-new danfo.**Series**\(data, options\)
+danfo.**Series**(data, options)
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">data</td>
-      <td style="text-align:left">1D Array, 1D Tensor, JSON object.</td>
-      <td style="text-align:left">Flat data structure to load into DataFrame</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>Optional configuration object. Supported properties are:
-          <br />
-        </p>
-        <p><b>index:</b> Array of numeric or string names for subseting array. If
-          not specified, indexes are auto-generated.
-          <br />
-        </p>
-        <p><b>dtypes:</b> Array of data types for each the column. If not specified,
-          dtypes are/is inferred.
-          <br />
-        </p>
-        <p><b>config</b>: General configuration object for extending or setting NDframe
-          behavior. See full options here</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ---------- | --------------------------------- | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| data       | 1D Array, 1D Tensor, JSON object. | Flat data structure to load into DataFrame                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| options    | Object                            | <p>Optional configuration object. Supported properties are:<br></p><p><strong>index:</strong> Array of numeric or string names for subseting array. If not specified, indexes are auto-generated.<br></p><p><strong>dtypes:</strong> Array of data types for each the column. If not specified, dtypes are/is inferred.<br></p><p><strong>config</strong>: General configuration object for extending or setting NDframe behavior. See full options here</p> |
 
-In order to create a Series, you need to call the new Keyword and pass a flat data structure. In the following examples, we show you how to create a Series by specifying different config options. 
+In order to create a Series, you need to call the new Keyword and pass a flat data structure. In the following examples, we show you how to create a Series by specifying different config options.
 
 ### Creating a Series from an object:
 
@@ -142,7 +111,7 @@ df.print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 ╔═══╤═══════╗
 ║ 0 │ bval1 ║
 ╟───┼───────╢
@@ -156,7 +125,7 @@ df.print()
 
 ### Creating a Series and specifying index and dtypes
 
-You can create a Series and specify options like index, dtypes, as well as configuration options for display, and memory mode etc. 
+You can create a Series and specify options like index, dtypes, as well as configuration options for display, and memory mode etc.
 
 > Note: Specifing dtypes, and index on Series creation makes the process slightly faster.
 
@@ -175,7 +144,7 @@ df.print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 ╔═══╤═══╗
 ║ a │ 1 ║
 ╟───┼───╢
@@ -207,4 +176,3 @@ df.print()
 {% hint style="info" %}
 **Note**: In low memory mode, less space is used by the Series.
 {% endhint %}
-

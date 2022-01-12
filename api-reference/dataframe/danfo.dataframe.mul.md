@@ -4,20 +4,16 @@ description: Get Multiplication of dataframe and other, element-wise (binary ope
 
 # DataFrame.mul
 
-danfo.DataFrame.mul(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L347)]
+danfo.DataFrame.mul(other, option)&#x20;
 
-| Parameters | Type                               | Description                                                                                                                                                                                  | Default                      |
-| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| other      | DataFrame, Series, Array or Scalar | Object to add with                                                                                                                                                                           |                              |
-| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false }  |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type                               | Description                                                                                                                                                                                  | Default                     |
+| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| other      | DataFrame, Series, Array or Scalar | Object to multiply with                                                                                                                                                                      |                             |
+| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false } |
 
 ## **Examples**
 
-### Multiplication of **scalar to** DataFrame along default axis 1
+### Multiplication of **scalar with** DataFrame along default axis 1
 
 {% tabs %}
 {% tab title="Node" %}
@@ -60,7 +56,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Multiplication of  **Series to** DataFrame along axis 0
+### Multiplication of **Series with** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -101,12 +97,11 @@ df_new.print()
 ╟────────────┼───────────────────┼───────────────────╢
 ║ 3          │ 4                 │ 20                ║
 ╚════════════╧═══════════════════╧═══════════════════╝
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Multiplication of  ****  DataFrame to a DataFrame
+### Multiplication of DataFrame **with** another DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -125,7 +120,6 @@ let df2 = new dfd.DataFrame(data2)
 let df_new = df.mul(df2)
 
 df_new.print()
-
 ```
 {% endtab %}
 
@@ -150,12 +144,11 @@ df_new.print()
 ║ 3          │ 0                 │ 8                 ║
 ╚════════════╧═══════════════════╧═══════════════════╝
 
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Multiplication of **** Array to DataFrame along axis 0
+### Multiplication of Array **with** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -196,7 +189,6 @@ df_new.print()
 ╟────────────┼───────────────────┼───────────────────╢
 ║ 3          │ 20                │ 48                ║
 ╚════════════╧═══════════════════╧═══════════════════╝
-
 
 
 ```
@@ -245,8 +237,6 @@ df.print()
 ║ 3          │ 20                │ 48                ║
 ╚════════════╧═══════════════════╧═══════════════════╝
 
-
 ```
 {% endtab %}
 {% endtabs %}
-

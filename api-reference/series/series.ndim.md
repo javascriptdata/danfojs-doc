@@ -4,7 +4,7 @@ description: Obtain the dimension of a series
 
 # Series.ndim
 
-> danfo.Series.ndim  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L209)]
+> danfo.Series.ndim
 
 **Parameters:** None
 

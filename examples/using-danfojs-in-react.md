@@ -2,9 +2,9 @@
 
 **TL:DR** See Example react application using danfojs [here](https://github.com/opensource9ja/Data-aRT)
 
-Danfojs works for both browser and NodeJs environment, and as such is available to frontend frameworks like React and Vue.&#x20;
+Danfojs works for both browser and NodeJs environment, and as such is available to frontend frameworks like React and Vue.
 
-In order to use Danfojs in a library like React, you must install the [browser side version ](https://www.npmjs.com/package/danfojs)from npm.&#x20;
+In order to use Danfojs in a library like React, you must install the [browser side version ](https://www.npmjs.com/package/danfojs)from npm.
 
 ```bash
 npm install danfojs
@@ -18,14 +18,14 @@ Follow the steps here to bootstrap a React app, and in your App.js or any file w
 
 ```bash
 import "./App.css";
-import * as dfd from "danfojs/src/index";
+import * as dfd from "danfojs";
 ```
 
 Now you have access to all features under the `dfd` namespace. Below is a sample App.js file using danfojs:
 
 ```bash
 import "./App.css";
-import * as dfd from "danfojs/src/index";
+import * as dfd from "danfojs";
 
 function App() {
 
@@ -53,7 +53,6 @@ function App() {
 }
 
 export default App;
-
 ```
 
 On running the app, we get the following output in the console:
@@ -63,7 +62,7 @@ On running the app, we get the following output in the console:
 Note that you can also import specific modules. For instance, in the code below we import only the DataFrame module:
 
 ```bash
-import { DataFrame } from "danfojs/src/index";
+import { DataFrame } from "danfojs";
 ```
 
-Following these steps, you can use danfojs in any client-side library.&#x20;
+Following these steps, you can use danfojs in any client-side library.

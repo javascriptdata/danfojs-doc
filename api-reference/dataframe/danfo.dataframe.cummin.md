@@ -2,32 +2,28 @@
 description: Return cumulative minimum over a DataFrame or Series axis.
 ---
 
-# DataFrame.cummin
+# DataFrame.cumMin
 
-danfo.DataFrame.**cummin**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L706)]
+danfo.DataFrame.**cumMin**(options)&#x20;
 
-| Parameters | Type   | Description                                                                                                                                                                           | Default                   |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| options    | Object | <p><strong>axis</strong>: 0 for row and 1 for column</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p></p> | {axis: 1, inplace: false} |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type   | Description                                                                                                                                                                    | Default                   |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
+| options    | Object | <p><strong>axis</strong>: 0 for row and 1 for column</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p> | {axis: 1, inplace: false} |
 
 ## **Examples**
 
-## Cumulative minimum of elements along default axis (row)
+## Cumulative minimum of elements along axis 0 (row)
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
 
-data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
-cols = ["A", "B", "C"]
+let data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+let cols = ["A", "B", "C"]
 
 let df = new dfd.DataFrame(data, { columns: cols })
-let new_df = df.cummin({ axis: 0 })
+let new_df = df.cumMin({ axis: 0 })
 
 new_df.print()
 ```
@@ -64,11 +60,11 @@ new_df.print()
 ```javascript
 const dfd = require("danfojs-node")
 
-data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
-cols = ["A", "B", "C"]
+let data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+let cols = ["A", "B", "C"]
 
 let df = new dfd.DataFrame(data, { columns: cols })
-let new_df = df.cummin({ axis: 1 })
+let new_df = df.cumMin({ axis: 1 })
 
 new_df.print()
 ```

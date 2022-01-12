@@ -1,10 +1,10 @@
 ---
-description: Obtain the mean of a series
+description: Returns the mean of a series
 ---
 
 # Series.mean
 
-> danfo.Series.mean()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L253)]
+> danfo.Series.mean()&#x20;
 
 **Parameter:** None
 
@@ -33,4 +33,4 @@ console.log(sf1.mean())
 {% endtab %}
 {% endtabs %}
 
-****
+***

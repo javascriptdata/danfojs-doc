@@ -4,16 +4,12 @@ description: Get Modulo of DataFrame and other, element-wise (binary operator mo
 
 # DataFrame.mod
 
-danfo.DataFrame.mod(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L347)]
+danfo.DataFrame.mod(other, option)
 
-| Parameters | Type                               | Description                                                                                                                                                                                  | Default                      |
-| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| other      | DataFrame, Series, Array or Scalar | Object to add with                                                                                                                                                                           |                              |
-| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false }  |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type                               | Description                                                                                                                                                                                  | Default                     |
+| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| other      | DataFrame, Series, Array or Scalar | Object to modulo with                                                                                                                                                                        |                             |
+| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false } |
 
 ## **Examples**
 
@@ -58,12 +54,11 @@ df_new.print()
 ╚════════════╧═══════════════════╧═══════════════════╝
 
 
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Modulo of  **Series with** DataFrame along axis 0
+### Modulo of **Series with** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -106,12 +101,11 @@ df_new.print()
 ╚════════════╧═══════════════════╧═══════════════════╝
 
 
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Modulo of  ****  DataFrame with a DataFrame
+### Modulo of DataFrame with a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -130,7 +124,6 @@ let df2 = new dfd.DataFrame(data2)
 let df_new = df.mod(df2)
 
 df_new.print()
-
 ```
 {% endtab %}
 
@@ -156,12 +149,11 @@ df_new.print()
 ╚════════════╧═══════════════════╧═══════════════════╝
 
 
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Modulo of **** Array with DataFrame along axis 0
+### Modulo of Array with DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -202,7 +194,6 @@ df_new.print()
 ╟────────────┼───────────────────┼───────────────────╢
 ║ 3          │ 0                 │ 0                 ║
 ╚════════════╧═══════════════════╧═══════════════════╝
-
 
 ```
 {% endtab %}
@@ -251,8 +242,6 @@ df.print()
 ╚════════════╧═══════════════════╧═══════════════════╝
 
 
-
 ```
 {% endtab %}
 {% endtabs %}
-

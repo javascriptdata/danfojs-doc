@@ -4,22 +4,18 @@ description: >-
   for an array-like object.
 ---
 
-# DataFrame.fillna
+# DataFrame.fillNa
 
-danfo.DataFrame.**fillna**(values, options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1235)]
+danfo.DataFrame.fillNa(values, options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1235)]
 
-| Parameters | Type            | Description                                                                                                                                                                                                                      | Default          |
-| ---------- | --------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| values     | Array \| Scalar | The list of value(s) to use for replacement.                                                                                                                                                                                     |                  |
-| options    | Object          | <p>{<strong>columns</strong>:Array of column name(s) to fill. If undefined fill all columns </p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false </p><p> }</p> | {inplace: false} |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type            | Description                                                                                                                                                                                                                   | Default          |
+| ---------- | --------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
+| values     | Array \| Scalar | The list of value(s) to use for replacement.                                                                                                                                                                                  |                  |
+| options    | Object          | <p>{<strong>columns</strong>:Array of column name(s) to fill. If undefined fill all columns</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | {inplace: false} |
 
 ## **Examples**
 
-### Fill missing values in specified columns with specified values&#x20;
+### Fill missing values in specified columns with specified values
 
 Missing values are NaN, undefined or null values
 
@@ -38,9 +34,8 @@ let df = new dfd.DataFrame(data)
 df.print()
 
 let values = ["Apples", df["Count"].mean()]
-let df_filled = df.fillna(values, { columns: ["Name", "Count"] })
+let df_filled = df.fillNa(values, { columns: ["Name", "Count"] })
 df_filled.print()
-
 ```
 {% endtab %}
 
@@ -53,38 +48,34 @@ df_filled.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-//Before filling
-╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ Name              │ Count             │ Price             ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 0 │ Apples            │ NaN               │ 200               ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ Mango             │ 5                 │ 300               ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ Banana            │ NaN               │ 40                ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ NaN               │ 10                │ 250               ║
-╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ Name              │ Count             │ Price             ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0          │ Apples            │ NaN               │ 200               ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1          │ Mango             │ 5                 │ 300               ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2          │ Banana            │ NaN               │ 40                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3          │ undefined         │ 10                │ 250               ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-
- //After filling
-
-╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ Name              │ Count             │ Price             ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 0 │ Apples            │ 7.5               │ 200               ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ Mango             │ 5                 │ 300               ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ Banana            │ 7.5               │ 40                ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ Apples            │ 10                │ 250               ║
-╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝═╝
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ Name              │ Count             │ Price             ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0          │ Apples            │ 7.5               │ 200               ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1          │ Mango             │ 5                 │ 300               ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2          │ Banana            │ 7.5               │ 40                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3          │ Apples            │ 10                │ 250               ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 {% endtab %}
 {% endtabs %}
 
-### Fill all columns with NaNs with a specified value&#x20;
+### Fill all columns with NaNs with a specified value
 
 {% tabs %}
 {% tab title="Node" %}
@@ -98,10 +89,9 @@ let data = {
 }
 
 let df = new dfd.DataFrame(data)
-let df_filled = df.fillna("Apples")
+let df_filled = df.fillNa("Apples")
 
 df_filled.print()
-
 ```
 {% endtab %}
 
@@ -114,7 +104,6 @@ df_filled.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -130,7 +119,7 @@ df_filled.print()
 {% endtab %}
 {% endtabs %}
 
-### Fill NaNs inplace&#x20;
+### Fill NaNs inplace
 
 {% tabs %}
 {% tab title="Node" %}
@@ -144,7 +133,7 @@ let data = {
 
 let df = new dfd.DataFrame(data)
 let values = ["Apples", df["Count"].mean()]
-df.fillna(values, {
+df.fillNa(values, {
     columns: ["Name", "Count"],
     inplace: true
 })
@@ -161,7 +150,6 @@ df.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢

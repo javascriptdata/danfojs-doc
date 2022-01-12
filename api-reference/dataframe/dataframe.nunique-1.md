@@ -1,18 +1,18 @@
-# DataFrame.nunique
+---
+description: Returns the number of unique elements in a column, across the specified axis.
+---
 
-danfo.DataFrame.**nunique**(axis) \[[source](https://github.com/opensource9ja/danfojs/blob/f84d7f53f2b0639e464f9483fb5cea969ad913d6/danfojs/src/core/frame.js#L1975)]
+# DataFrame.nUnique
 
-| Parameters | Type | Description                            | Default |
-| ---------- | ---- | -------------------------------------- | ------- |
-| axis       | Int  |  0 for row axis, and 1 for column axis | 1       |
+danfo.DataFrame.nUnique(axis) \[[source](https://github.com/opensource9ja/danfojs/blob/f84d7f53f2b0639e464f9483fb5cea969ad913d6/danfojs/src/core/frame.js#L1975)]
 
-**Returns:**
-
-&#x20;      ****       return **Series**
+| Parameters | Type | Description                           | Default |
+| ---------- | ---- | ------------------------------------- | ------- |
+| axis       | Int  | 0 for row axis, and 1 for column axis | 1       |
 
 ## **Examples**
 
-### Return number of unique values along column axis (axis=1)
+### Return number of unique values along default axis (axis=1)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -26,7 +26,6 @@ let data = { "A": [-20, 30, 47.3, -20] ,
 
 let df = new dfd.DataFrame(data)
 df.nunique().print()
-
 ```
 {% endtab %}
 
@@ -40,15 +39,14 @@ df.nunique().print()
 {% tab title="Output" %}
 ```
 ╔═══╤═══╗
-║ 0 │ 3 ║
+║ 0 │ 4 ║
 ╟───┼───╢
 ║ 1 │ 4 ║
 ╟───┼───╢
-║ 2 │ 2 ║
+║ 2 │ 4 ║
 ╟───┼───╢
-║ 3 │ 3 ║
+║ 3 │ 4 ║
 ╚═══╧═══╝
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -66,8 +64,7 @@ let data = { "A": [-20, 30, 47.3, -20] ,
              "D": ["a", "b", "c", "c"] }
 
 let df = new dfd.DataFrame(data)
-df.nunique(axis=0).print()
-
+df.nUnique(axis=0).print()
 ```
 {% endtab %}
 
@@ -80,19 +77,17 @@ df.nunique(axis=0).print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 4                    ║
-╟───┼──────────────────────╢
-║ 1 │ 4                    ║
-╟───┼──────────────────────╢
-║ 2 │ 4                    ║
-╟───┼──────────────────────╢
-║ 3 │ 4                    ║
-╚═══╧══════════════════════╝
+╔═══╤═══╗
+║ A │ 3 ║
+╟───┼───╢
+║ B │ 4 ║
+╟───┼───╢
+║ C │ 2 ║
+╟───┼───╢
+║ D │ 3 ║
+╚═══╧═══╝
 ```
 {% endtab %}
 {% endtabs %}
 
-**Note:** To get the unique elements along an axis, use **** [DataFrame.unique.](dataframe.nunique-1.md)
+**Note:** To get the unique elements along an axis, see [DataFrame.unique.](dataframe.nunique-1.md)

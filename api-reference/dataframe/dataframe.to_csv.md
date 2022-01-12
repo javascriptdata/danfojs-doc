@@ -1,17 +1,17 @@
 ---
-description: Convert DataFrame data to a comma-separated values (csv)
+description: Convert DataFrame to a comma-separated values (CSV)
 ---
 
-# DataFrame.to\_csv
+# DataFrame.toCSV
 
-DataFrame.**to\_csv**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
+DataFrame.toCSV(options)&#x20;
 
-|                |                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |                                                                                    |
-| -------------- | ---------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------- |
-| **Parameters** | Type             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                       | Default                                                                            |
-| **options**    | object, optional | <p>Configuration object:</p><p>{</p><p><strong><code>filePath</code></strong>: Local file path to write the CSV file to. If not specified, the CSV will be returned as a string. Only needed in Nodejs version<br><strong><code>fileName</code></strong>: The name of the file to download as. Only needed in browser environment.<br><strong><code>download</code></strong>: Boolean indicating whether to automatically download the CSV file in the browser. Only needed in the browser environment.</p><p><strong><code>header</code></strong>: Boolean indicating whether to include a header row in the CSV file.</p><p><strong><code>sep</code></strong>: Character to be used as a separator in the CSV file.</p><p>}</p> | <p>{<br><strong>download</strong>: true,<br><strong>sep</strong>: ","<br><br>}</p> |
+|                |                  |                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |                                            |
+| -------------- | ---------------- | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------ |
+| **Parameters** | Type             | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 | Default                                    |
+| **options**    | object, optional | <p>Configuration object:</p><p></p><p><strong><code>filePath</code></strong>: Local file path to write the CSV file to. If not specified, the CSV will be returned as a string. Only needed in Nodejs version</p><p><br><strong><code>fileName</code></strong>: The name of the file to download as. Only needed in browser environment.</p><p><br><strong><code>download</code></strong>: Boolean indicating whether to automatically download the CSV file in the browser. Only needed in the browser environment.</p><p></p><p><strong><code>header</code></strong>: Boolean indicating whether to include a header row in the CSV file.</p><p></p><p><strong><code>sep</code></strong>: Character to be used as a separator in the CSV file.</p><p></p> | <p>{<br><strong>sep</strong>: ","<br>}</p> |
 
-The **to\_csv** function can be used to write out a DataFrame or Series to CSV file. The output is configurable and will depend on the environment. In the following examples, we show you how to write/download a CSV file from Node and Browser environments.
+The **toCSV** function can be used to write out a DataFrame or Series to CSV file. The output is configurable and will depend on the environment. In the following examples, we show you how to write/download a CSV file from Node and Browser environments.
 
 ***
 
@@ -30,7 +30,7 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-const csv = df.to_csv({ download: false });
+const csv = df.toCSV();
 console.log(csv);
 
 //output
@@ -75,7 +75,7 @@ Abs,Count,country code
 {% endtab %}
 {% endtabs %}
 
-### Convert DataFrame to CSV string and write to file path
+### Convert DataFrame to CSV and write to local file path
 
 Writing a CSV file to a local file path is only supported in the Nodejs environment
 
@@ -91,13 +91,12 @@ let data = {
 };
 
 let df = new dfd.DataFrame(data);
-
-df.to_csv({ filePath: "testOut.csv"});
+ df.toCSV({ filePath: "testOut.csv"});
 ```
 {% endtab %}
 {% endtabs %}
 
-### Convert DataFrame to CSV string and download file in browser
+### Convert DataFrame to CSV and download file in browser
 
 You can automatically convert and download a CSV file in a browser environment, by specifying a `fileName` and setting `download` to **true**.
 
@@ -110,5 +109,5 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-df.to_csv({ fileName: "testOut.csv", download: true});
+df.toCSV({ fileName: "testOut.csv", download: true});
 ```

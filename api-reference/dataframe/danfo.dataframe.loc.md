@@ -4,19 +4,15 @@ description: Access a group of rows and columns by label(s)
 
 # DataFrame.loc
 
-danfo.DataFrame.**loc**(args) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
+danfo.DataFrame.**loc**(args)
 
-| Parameters | Type   | Description                                                                                                                                            | Default |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------ | ------- |
-| args       | Object | <p>{</p><p><strong>rows</strong>:  Array, labels, Boolean mask of row index</p><p><strong>columns</strong>:  Array, labels of column names</p><p>}</p> |         |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type   | Description                                                                                                                                          | Default |
+| ---------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
+| args       | Object | <p>{</p><p><strong>rows</strong>: Array, labels, Boolean mask of row index</p><p><strong>columns</strong>: Array, labels of column names</p><p>}</p> |         |
 
 ## **Examples**
 
-`.loc()` is  label position based-from `0` to `length-1` of the row axis.
+`.loc()` is label position based-from `0` to `length-1` of the row axis.
 
 Allowed inputs for are:
 
@@ -25,7 +21,7 @@ Allowed inputs for are:
 * A boolean mask. E.g \[ true, false, false ]
 * A string slice object with ints, e.g. `[`'`"a":"d"'], ["1:4"]`
 
-_**Note:** only **** the start label is included, and the end label is ignored._&#x20;
+_**Note:** only \*\*\*\* the start label is included, and the end label is ignored._
 
 `.loc` will raise a `ValueEror` if a requested label is not found.
 
@@ -58,7 +54,6 @@ sub_df.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -169,7 +164,6 @@ sub_df.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Name              │ Count             │ Price             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -198,7 +192,7 @@ sub_df.print()
 
 ## **Index by a slice of row**
 
-The **loc** function also accepts string slices of the form \[start: end], e.g **\[\`"a":"c"\`]**. This will return all values from label positions `a` to c.&#x20;
+The **loc** function also accepts string slices of the form \[start: end], e.g **\[\`"a":"c"\`]**. This will return all values from label positions `a` to c.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -250,14 +244,14 @@ sub_df.print()
 
 {% hint style="info" %}
 Note that when using loc with alphabetic slices. We expect you to pass labels in the correct format. That is, string labels must be explicitly quoted. For example, the following loc slice will throw an error:\
-df`.loc({ row: [a:e]}).print()`\
+df`.loc({ row: ["a:e"]}).print()`\
 For the slice above to work, you must quote each slice, e.g:\
 df``.loc({ row: [`"a":"e"`]}).print()``\
 \
 _**Inner**_ _**quotes are not needed for numeric indices!**_
 {% endhint %}
 
-### Slice DataFrame rows by boolean condition&#x20;
+### Slice DataFrame rows by boolean condition
 
 {% tabs %}
 {% tab title="Node" %}
@@ -288,13 +282,12 @@ sub_df.print()
 ║ d          │ Pear              │ 10                │ 250               ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-
 ```
 
 ### Slice DataFrame rows by multiple boolean conditions
 
 {% hint style="info" %}
-_By design, you can chain as many boolean logic as possible, as long as they resolve to a Boolean array of the same length as the DataFrame._&#x20;
+_By design, you can chain as many boolean logic as required, as long as they resolve to a Boolean array of the same length as the DataFrame._
 {% endhint %}
 
 {% tabs %}
@@ -324,13 +317,12 @@ sub_df.print()
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ c          │ Banana            │ 30                │ 40                ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-
 ```
 
 ### Slice DataFrame with boolean mask
 
 {% hint style="info" %}
-_You can index a DataFrame with an array of boolean values as long as they resolve to an array of the same length as the DataFrame._&#x20;
+_You can index a DataFrame with an array of boolean values as long as they resolve to an array of the same length as the DataFrame._
 {% endhint %}
 
 {% tabs %}
@@ -362,6 +354,5 @@ sub_df.print()
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ d          │ Pear              │ 10                │ 250               ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-
 
 ```

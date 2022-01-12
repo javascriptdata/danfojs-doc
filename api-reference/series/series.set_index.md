@@ -2,9 +2,9 @@
 description: Assign new Index to Series
 ---
 
-# Series.set\_index
+# Series.setIndex
 
-> danfo.series.**set\_index(**options**)** \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L635)]
+> danfo.series.setIndex**(options)**&#x20;
 
 | Parameter | Type   | Description                                                                                    | Default                               |
 | --------- | ------ | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
@@ -19,11 +19,12 @@ description: Assign new Index to Series
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
+
 let data = [{ alpha: "A", count: 1 }, { alpha: "B", count: 2 }, { alpha: "C", count: 3 }]
 let sf = new dfd.Series(data)
 sf.print()
 
-let sf_new = sf.set_index({ "index": ["one", "two", "three"] })
+let sf_new = sf.setIndex(["one", "two", "three"])
 sf_new.print()
 ```
 {% endtab %}
@@ -63,7 +64,7 @@ const dfd = require("danfojs-node")
 
 let data = ["Humans","Life","Meaning","Fact","Truth"]
 let sf = new dfd.Series(data)
-let sf_new = sf.set_index({ "index": ["H", "L", "M","F","T"] })
+let sf_new = sf.setIndex(["H", "L", "M","F","T"])
 sf_new.print()
 ```
 {% endtab %}
@@ -77,19 +78,17 @@ sf_new.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ H │ Humans               ║
-╟───┼──────────────────────╢
-║ L │ Life                 ║
-╟───┼──────────────────────╢
-║ M │ Meaning              ║
-╟───┼──────────────────────╢
-║ F │ Fact                 ║
-╟───┼──────────────────────╢
-║ T │ Truth                ║
-╚═══╧══════════════════════╝
+╔═══╤═════════╗
+║ H │ Humans  ║
+╟───┼─────────╢
+║ L │ Life    ║
+╟───┼─────────╢
+║ M │ Meaning ║
+╟───┼─────────╢
+║ F │ Fact    ║
+╟───┼─────────╢
+║ T │ Truth   ║
+╚═══╧═════════╝
 ```
 {% endtab %}
 {% endtabs %}
@@ -103,7 +102,7 @@ const dfd = require("danfojs")
 
 let data = [1, 2, 3, 4, 5, 6]
 let sf = new dfd.Series(data)
-sf.set_index({ index: ["one", "two", "three", "four", "five", "six"], inplace: true })
+sf.setIndex(["one", "two", "three", "four", "five", "six"], { inplace: true })
 sf.print()
 ```
 {% endtab %}
@@ -130,7 +129,6 @@ sf.print()
 ╟───────┼───╢
 ║ six   │ 6 ║
 ╚═══════╧═══╝
-
 ```
 {% endtab %}
 {% endtabs %}

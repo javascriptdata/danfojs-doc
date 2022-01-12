@@ -4,9 +4,9 @@ description: Makes a deep copy of a Series
 
 # Series.copy
 
-> danfo.Series.copy()   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L569)]
+> danfo.Series.copy()&#x20;
 
-**parameter:** 
+**parameter:**
 
 **Return:** Series
 

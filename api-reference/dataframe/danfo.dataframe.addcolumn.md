@@ -4,11 +4,13 @@ description: Add new column to a DataFrame
 
 # DataFrame.addColumn
 
-danfo.DataFrame.**addColumn**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1083)]
+danfo.DataFrame.**addColumn**(column**,** values**,** options)&#x20;
 
-| Parameters | Type   | Description                                                                                                                                                                                                    | Default |
-| ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------- |
-| options    | Object | <p>{<strong>column</strong> : str, name of the column to add</p><p> <strong>values:</strong> Series<strong>,</strong> Array of new values to add <br> <strong>inplace</strong>: Default to false. </p><p>}</p> |         |
+| Parameters  | Type               | Description                                                   | Default           |
+| ----------- | ------------------ | ------------------------------------------------------------- | ----------------- |
+| **column**  | String             | Name of the column to add.                                    |                   |
+| **values**  | Series**,** Array  | New values to add                                             |                   |
+| **options** | Object             | **inplace**: Whether to perform the operation inplace or not. | Default to false. |
 
 **Returns:**
 
@@ -16,21 +18,24 @@ danfo.DataFrame.**addColumn**(options) \[[source](https://github.com/opensource9
 
 ## **Add Array as a new column to DataFrame**
 
-New columns get added at the end of the DataFrame, and this happens so returns nothing,
+New columns get added at the end of the DataFrame.
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
-let data = {"A": [30, 1, 2, 3], 
-            "B": [34, 4, 5, 6], 
-            "C": [20, 20, 30, 40]}
+
+let data = {
+    "A": [30, 1, 2, 3],
+    "B": [34, 4, 5, 6],
+    "C": [20, 20, 30, 40]
+}
 
 let df = new dfd.DataFrame(data)
 df.print()
 
 let new_col = [1, 2, 3, 4]
-df.addColumn({ "column": "D", "values": new_col, inplace: true });
+df.addColumn("D", new_col, { inplace: true });
 
 df.print()
 ```
@@ -57,9 +62,6 @@ df.print()
 ║ 3 │ 3                 │ 6                 │ 40                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-
- Shape: (4,3) 
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -81,13 +83,18 @@ df.print()
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
-let data = {"A": [30, 1, 2, 3], 
-            "B": [34, 4, 5, 6], 
-            "C": [20, 20, 30, 40]}
+
+let data = {
+    "A": [30, 1, 2, 3],
+    "B": [34, 4, 5, 6],
+    "C": [20, 20, 30, 40]
+}
 
 let df = new dfd.DataFrame(data)
+df.print()
+
 let s = new dfd.Series([1, 2, 3, 4])
-df.addColumn({ "column": "D", "values": s, inplace: true });
+df.addColumn("D", s, { inplace: true });
 
 df.print()
 ```

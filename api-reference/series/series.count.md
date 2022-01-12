@@ -1,10 +1,10 @@
 ---
-description: Obtain the total number of values in a series
+description: Returns the total number of non-null elements in a series
 ---
 
 # Series.count
 
-> danfo.Series.count()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L350)]
+> danfo.Series.count()&#x20;
 
 **Parameter:** None
 
@@ -33,4 +33,4 @@ console.log(sf1.count())
 {% endtab %}
 {% endtabs %}
 
-****
+***

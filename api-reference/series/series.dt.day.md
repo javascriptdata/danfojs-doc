@@ -2,9 +2,9 @@
 description: Obtain the numerical representation of the week day.
 ---
 
-# Series.dt.day
+# Series.dt.dayOfWeek
 
-> danfo.Series.dt.**day**()    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L216)]
+> danfo.Series.dt.dayOfWeek() \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L216)]
 
 **Parameters**: None
 
@@ -17,10 +17,12 @@ description: Obtain the numerical representation of the week day.
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = new dfd.date_range({"start":'2016-12-31', "end":'2018-01-08'})
+let data = new dfd.dateRange({"start":'2016-12-31', "end":'2018-01-08'})
 let sf = new dfd.Series(data)
-
-sf.dt.day().print()
+//print series
+sf.print()
+//print days of the week
+sf.dt.dayOfWeek().print()
 ```
 {% endtab %}
 
@@ -31,6 +33,28 @@ sf.dt.day().print()
 {% endtabs %}
 
 ```
+╔═══╤════════════════════════╗
+║ 0 │ 12/31/2016, 1:00:00 AM ║
+╟───┼────────────────────────╢
+║ 1 │ 1/1/2017, 1:00:00 AM   ║
+╟───┼────────────────────────╢
+║ 2 │ 1/2/2017, 1:00:00 AM   ║
+╟───┼────────────────────────╢
+║ 3 │ 1/3/2017, 1:00:00 AM   ║
+╟───┼────────────────────────╢
+║ 4 │ 1/4/2017, 1:00:00 AM   ║
+╟───┼────────────────────────╢
+║ 5 │ 1/5/2017, 1:00:00 AM   ║
+╟───┼────────────────────────╢
+║ 6 │ 1/6/2017, 1:00:00 AM   ║
+╟───┼────────────────────────╢
+║ 7 │ 1/7/2017, 1:00:00 AM   ║
+╟───┼────────────────────────╢
+║ 8 │ 1/8/2017, 1:00:00 AM   ║
+╟───┼────────────────────────╢
+║ 9 │ 1/9/2017, 1:00:00 AM   ║
+╚═══╧════════════════════════╝
+
 ╔═══╤═══╗
 ║ 0 │ 6 ║
 ╟───┼───╢

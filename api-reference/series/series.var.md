@@ -4,7 +4,7 @@ description: Calculate the variance  of a Series
 
 # Series.var
 
-> danfo.Series.var\(\)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L436)\]
+> danfo.Series.var()&#x20;
 
 **Parameter:** None
 
@@ -27,9 +27,8 @@ console.log(sf1.var())
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 968.25
 ```
 {% endtab %}
 {% endtabs %}
-

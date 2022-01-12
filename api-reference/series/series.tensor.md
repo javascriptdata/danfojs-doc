@@ -4,7 +4,7 @@ description: Obtain the tensor representation of the values in a Series
 
 # Series.tensor
 
-> danfo.Series.tensor   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L45)\]
+> danfo.Series.tensor&#x20;
 
 **Parameters**: None
 
@@ -27,7 +27,7 @@ console.log(sf1.tensor)
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 Tensor {
   kept: false,
   isDisposedInternal: false,
@@ -43,4 +43,3 @@ Tensor {
 ```
 {% endtab %}
 {% endtabs %}
-

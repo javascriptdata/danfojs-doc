@@ -2,9 +2,9 @@
 description: Obtain the hours in a time series
 ---
 
-# Series.dt.hour
+# Series.dt.hours
 
-> danfo.Series.dt.**hour**()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L205)]
+> danfo.Series.dt.**hours**()&#x20;
 
 **Parameters:** None
 
@@ -17,7 +17,7 @@ description: Obtain the hours in a time series
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = new dfd.date_range({"start":"2000-01-01", period:3, freq:"H"})
+let data = new dfd.dateRange({"start":"2000-01-01", period:3, freq:"H"})
 let sf = new dfd.Series(data)
 // print series
 sf.print()
@@ -46,7 +46,6 @@ sf.dt.hours().print()
 ╟───┼───╢
 ║ 1 │ 2 ║
 ╚═══╧═══╝
-
 ```
 {% endtab %}
 {% endtabs %}

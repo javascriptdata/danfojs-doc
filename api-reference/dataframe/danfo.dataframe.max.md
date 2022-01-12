@@ -4,15 +4,11 @@ description: Return the maximum of the values for the requested axis.
 
 # DataFrame.max
 
-danfo.DataFrame.**max**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)]
+danfo.DataFrame.**max**(options)&#x20;
 
 | Parameters | Type   | Description                                                                         | Default     |
 | ---------- | ------ | ----------------------------------------------------------------------------------- | ----------- |
 | options    | Object | **axis:** 0 or 1. If 0, compute the mean column-wise, if 1, row-wise. Defaults to 1 | { axis: 1 } |
-
-**Returns:**
-
-&#x20;      ****       return **Series**
 
 ## **Examples**
 
@@ -22,12 +18,12 @@ danfo.DataFrame.**max**(options) \[[source](https://github.com/opensource9ja/dan
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
-data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
-cols = ["A", "B", "C"]
 
+let data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+let cols = ["A", "B", "C"]
+
+let df = new dfd.DataFrame(data, { columns: cols })
 df.print()
-
-let df = new dfd.DataFrame(data)
 df.max().print()
 ```
 {% endtab %}
@@ -53,15 +49,16 @@ df.max().print()
 ║ 3 │ 2                 │ 89                │ 78                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ A │ 11                   ║
-╟───┼──────────────────────╢
-║ B │ 89                   ║
-╟───┼──────────────────────╢
-║ C │ 78                   ║
-╚═══╧══════════════════════╝
+╔═══╤════╗
+║ 0 │ 20 ║
+╟───┼────╢
+║ 1 │ 15 ║
+╟───┼────╢
+║ 2 │ 40 ║
+╟───┼────╢
+║ 3 │ 89 ║
+╚═══╧════╝
+
 ```
 {% endtab %}
 {% endtabs %}
@@ -72,12 +69,12 @@ df.max().print()
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
-data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
-cols = ["A", "B", "C"]
+let data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+let cols = ["A", "B", "C"]
 
+let df = new dfd.DataFrame(data, { columns: cols })
 df.print()
-let df = new dfd.DataFrame(data)
-df.max({axis:0}).print()
+df.max({ axis: 0 }).print()
 ```
 {% endtab %}
 
@@ -102,17 +99,13 @@ df.max({axis:0}).print()
 ║ 3 │ 2                 │ 89                │ 78                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 20                   ║
-╟───┼──────────────────────╢
-║ 1 │ 15                   ║
-╟───┼──────────────────────╢
-║ 2 │ 40                   ║
-╟───┼──────────────────────╢
-║ 3 │ 89                   ║
-╚═══╧══════════════════════╝
+╔═══╤════╗
+║ A │ 11 ║
+╟───┼────╢
+║ B │ 89 ║
+╟───┼────╢
+║ C │ 78 ║
+╚═══╧════╝
 ```
 {% endtab %}
 {% endtabs %}

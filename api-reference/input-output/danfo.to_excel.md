@@ -1,19 +1,19 @@
 ---
 description: >-
-  Converts a DataFrame or Series to Excel file and write file to disk or
+  Converts a DataFrame or Series to Excel file, and write file to disk or
   download in browser.
 ---
 
-# danfo.to_excel
+# danfo.toExcel
 
-> danfo.**to_excel**(data, options) [\[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/io/io.excel.js#L97)]
+> danfo.**toExcel**(data, options)&#x20;
 
-| **Parameters** | Type                | Description                                                                                                                                                                                                                                                                                                                                                                                                                       | Default                                                                                                  |
-| -------------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| _**data**_     | Series or DataFrame | The Series or DataFrame to write to CSV                                                                                                                                                                                                                                                                                                                                                                                           |                                                                                                          |
-| **options**    |  object, optional   | <p> Configuration object: </p><p>{</p><p> <strong><code>filePath</code></strong>: Local file path to write the CSV file to. If not specified, the CSV will be returned as a string. Only needed in Nodejs version<br><strong><code>fileName</code></strong>: The name of the file to download as. Only needed in the browser environment. <br><strong><code>sheetName</code></strong>: Name to call the excel sheet. </p><p>}</p> | <p>{<br><strong>filePath</strong>: "./output.xlsx",<br><strong>sheetName</strong>: "Sheet1"<br><br>}</p> |
+| **Parameters** | Type                | Description                                                                                                                                                                                                                                                                                                                                                                                                                  | Default                                                                                                  |
+| -------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| _**data**_     | Series or DataFrame | The Series or DataFrame to write to CSV                                                                                                                                                                                                                                                                                                                                                                                      |                                                                                                          |
+| **options**    | object, optional    | <p>Configuration object:</p><p>{</p><p><strong><code>filePath</code></strong>: Local file path to write the CSV file to. If not specified, the CSV will be returned as a string. Only needed in Nodejs version<br><strong><code>fileName</code></strong>: The name of the file to download as. Only needed in the browser environment.<br><strong><code>sheetName</code></strong>: Name to call the excel sheet.</p><p>}</p> | <p>{<br><strong>filePath</strong>: "./output.xlsx",<br><strong>sheetName</strong>: "Sheet1"<br><br>}</p> |
 
-The **to_excel** function can be used to write out a DataFrame or Series to Excel (**.xlsx**) file. The output format will depend on the environment. In the following examples, we show you how to write/download an Excel file from Node and Browser environments.
+The **toExcel** function can be used to write out a DataFrame or Series to Excel (**.xlsx**) file. The output format will depend on the environment. In the following examples, we show you how to write/download an Excel file from Node and Browser environments.
 
 ### Convert DataFrame to Excel and write to file path
 
@@ -32,14 +32,14 @@ let data = {
 
 let df = new dfd.DataFrame(data);
 
-dfd.to_excel(df, { filePath: "testOut.xlsx"});
+dfd.toExcel(df, { filePath: "testOut.xlsx"});
 ```
 {% endtab %}
 {% endtabs %}
 
-### Convert DataFrame to Excel and download the file in  Client-side lib
+### Convert DataFrame to Excel and download the file in Client-side lib
 
-You can automatically convert and download an Excel file in a browser environment, by specifying a `fileName`. 
+You can automatically convert and download an Excel file in a browser environment, by specifying a filename and setting download to `true`
 
 ```javascript
 let data = {
@@ -48,7 +48,7 @@ let data = {
     "country code": ["NG", "FR", "GH"],
 };
 
-let df = new dfd.DataFrame(data);
+let df = new DataFrame(data);
 
-dfd.to_excel(df, { fileName: "testOut.xlsx"});
+dfd.toExcel(df, { fileName: "testOut.xlsx", download: true});
 ```

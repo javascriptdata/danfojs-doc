@@ -6,7 +6,7 @@ description: >-
 
 # DataFrame.print
 
-danfo.DataFrame.**print()** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]
+danfo.DataFrame.**print()**&#x20;
 
 ## **Examples**
 
@@ -34,7 +34,6 @@ df.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Abs               │ Count             │ country code      ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -77,28 +76,29 @@ console.log(String(df));
 {% tab title="Output" %}
 ```
 DataFrame {
+  '$dataIncolumnFormat': [ [ 20.2, 30, 47.3 ], [ 34, 4, 5 ], [ 'NG', 'FR', 'GH' ] ],
+  '$index': [ 0, 1, 2 ],
+  '$columns': [ 'Abs', 'Count', 'country code' ],
+  '$dtypes': [ 'float32', 'int32', 'string' ],
   '$isSeries': false,
   '$config': Configs {
     tableDisplayConfig: {},
     tableMaxRow: 10,
-    tableMaxColInConsole: 21,
-    dtypeTestLim: 7,
+    tableMaxColInConsole: 10,
+    dtypeTestLim: 20,
     lowMemoryMode: false
   },
-  '$data': [ [ 20.2, 34, 'NG' ], [ 30, 5, 'FR' ], [ 47.3, 6, 'GH' ] ],
-  '$dataIncolumnFormat': [ [ 20.2, 30, 47.3 ], [ 34, 5, 6 ], [ 'NG', 'FR', 'GH' ] ],
-  '$index': [ 0, 1, 2 ],
-  '$dtypes': [ 'float32', 'int32', 'string' ],
-  '$columns': [ 'Abs', 'Count', 'country code' ]
+  '$data': [ [ 20.2, 34, 'NG' ], [ 30, 4, 'FR' ], [ 47.3, 5, 'GH' ] ]
 }
+
 ╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║            │ Abs               │ Count             │ country code      ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 0          │ 20.2              │ 34                │ NG                ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1          │ 30                │ 5                 │ FR                ║
+║ 1          │ 30                │ 4                 │ FR                ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ 47.3              │ 6                 │ GH                ║
+║ 2          │ 47.3              │ 5                 │ GH                ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 {% endtab %}

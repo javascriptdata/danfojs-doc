@@ -4,15 +4,11 @@ description: Return the minimum of the values for the requested axis.
 
 # DataFrame.min
 
-danfo.DataFrame.**min**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)]
+danfo.DataFrame.**min**(options)
 
 | Parameters | Type   | Description                                                                         | Default     |
 | ---------- | ------ | ----------------------------------------------------------------------------------- | ----------- |
 | options    | Object | **axis:** 0 or 1. If 0, compute the mean column-wise, if 1, row-wise. Defaults to 1 | { axis: 1 } |
-
-**Returns:**
-
-&#x20;      ****       return **Series**
 
 ## **Examples**
 
@@ -23,12 +19,11 @@ danfo.DataFrame.**min**(options) \[[source](https://github.com/opensource9ja/dan
 ```javascript
 const dfd = require("danfojs-node")
 
-data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
-cols = ["A", "B", "C"]
+let data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+let cols = ["A", "B", "C"]
 
+let df = new dfd.DataFrame(data, { columns: cols })
 df.print()
-
-let df = new dfd.DataFrame(data)
 df.min().print()
 ```
 {% endtab %}
@@ -54,15 +49,15 @@ df.min().print()
 ║ 3 │ 2                 │ 89                │ 78                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ A │ 1                    ║
-╟───┼──────────────────────╢
-║ B │ 15                   ║
-╟───┼──────────────────────╢
-║ C │ 3                    ║
-╚═══╧══════════════════════╝
+╔═══╤═══╗
+║ 0 │ 3 ║
+╟───┼───╢
+║ 1 │ 1 ║
+╟───┼───╢
+║ 2 │ 2 ║
+╟───┼───╢
+║ 3 │ 2 ║
+╚═══╧═══╝
 ```
 {% endtab %}
 {% endtabs %}
@@ -74,12 +69,12 @@ df.min().print()
 ```javascript
 const dfd = require("danfojs-node")
 
-data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
-cols = ["A", "B", "C"]
+let data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+let cols = ["A", "B", "C"]
 
+let df = new dfd.DataFrame(data, { columns: cols })
 df.print()
-let df = new dfd.DataFrame(data)
-df.min({axis: 0}).print()
+df.min({ axis: 0 }).print()
 ```
 {% endtab %}
 
@@ -104,17 +99,13 @@ df.min({axis: 0}).print()
 ║ 3 │ 2                 │ 89                │ 78                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 3                    ║
-╟───┼──────────────────────╢
-║ 1 │ 1                    ║
-╟───┼──────────────────────╢
-║ 2 │ 2                    ║
-╟───┼──────────────────────╢
-║ 3 │ 2                    ║
-╚═══╧══════════════════════╝
+╔═══╤════╗
+║ A │ 1  ║
+╟───┼────╢
+║ B │ 15 ║
+╟───┼────╢
+║ C │ 3  ║
+╚═══╧════╝
 ```
 {% endtab %}
 {% endtabs %}

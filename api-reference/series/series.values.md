@@ -4,11 +4,11 @@ description: Obtain the values in a series
 
 # Series.values
 
-> danfo.Series.values   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L279)\]
+> danfo.Series.values&#x20;
 
 **Parameters:** None
 
-**Returns**:  Array
+**Returns**: Array
 
 **Example**
 
@@ -27,9 +27,8 @@ console.log(sf1.values)
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 [ 30.21091, 40.190901, 3.564, 5.0212 ]
 ```
 {% endtab %}
 {% endtabs %}
-

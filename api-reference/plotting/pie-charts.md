@@ -10,36 +10,70 @@ A pie plot is a proportional representation of the numerical data in a column
 
 ### Pie Chart from Columns in a DataFrame
 
-```markup
+{% tabs %}
+{% tab title="React" %}
+```tsx
+import { useEffect } from 'react';
+import './App.css';
+import { DataFrame } from "danfojs-nightly";
+
+function App() {
+
+  useEffect(() => {
+    const df = new DataFrame({
+      Price: [19, 26, 55],
+      Location: ["NG", "GH", "SA"],
+      Type: ["Residential", "Non-Residential", "Utility"],
+    });
+
+    df.plot("plot_div").pie({ config: { values: "Price", labels: "Type" } });
+  }, [])
+
+  return (
+    <div className="App">
+      <header className="App-header">
+        <div id="plot_div"></div>
+      </header>
+    </div>
+  );
+}
+
+export default App;
+
+```
+{% endtab %}
+
+{% tab title="Browser" %}
+```html
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/danfojs-nightly@1.0.2/lib/bundle.js"></script>
 
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
     <title>Document</title>
-</head>
+  </head>
 
-<body>
+  <body>
+    <div id="plot_div"></div>
 
     <div id="plot_div"></div>
     <script>
+      const df = new dfd.DataFrame({
+        Price: [19, 26, 55],
+        Location: ["NG", "GH", "SA"],
+        Type: ["Residential", "Non-Residential", "Utility"],
+      });
 
-         df = new dfd.DataFrame({
-            Price: [19, 26, 55],
-            Location: ["NG", "GH", "SA"],
-            Type: ['Residential', 'Non-Residential', 'Utility']
-        })
-        
-        df.plot("plot_div").pie({ values: "Price", labels: "Type" })
-
+      df.plot("plot_div").pie({ config: { values: "Price", labels: "Type" } });
     </script>
-</body>
-
+  </body>
 </html>
+e
 ```
+{% endtab %}
+{% endtabs %}
 
 ![](<../../.gitbook/assets/newplot (12).png>)
 
@@ -62,14 +96,20 @@ A pie plot is a proportional representation of the numerical data in a column
     <div id="plot_div"></div>
     <script>
 
-       df = new dfd.DataFrame({
-            Price: [19, 26, 55],
-            Count: [20, 50, 25],
-            Type: ['Residential', 'Non-Residential', 'Utility']
-        })
-
-        df.plot("plot_div").pie({ labels: "Type"})
-
+       const df = new dfd.DataFrame({
+          Price: [19, 26, 55],
+          Volume: [100, 200, 300],
+          Location: ["NG", "GH", "SA"],
+          Type: ["Residential", "Non-Residential", "Utility"],
+        });
+    
+        df.plot("plot_div").pie({
+          config: {
+            labels: "Location",
+            columns: ["Price", "Volume"],
+            columnPositions: [0, 1],
+          }
+        });
 
     </script>
 </body>
@@ -81,7 +121,9 @@ A pie plot is a proportional representation of the numerical data in a column
 
 ### Configure Position of Pie Charts
 
-If you have more than one pie charts displayed, you can set the grid parameter, and also the position of each pie. For example, in the snippet below, we set our grid to 2 by 2 and also pass a set of row and column index position. Each row/column position index correspond to each pie.
+If you have more than one pie chart to display, you can set the grid parameter, and also the position of each pie.
+
+&#x20;For example, in the snippet below, we set the `grid` to 2 by 2 and also pass a set of row and column index positions. Each row/column position index corresponds to each pie.
 
 ```markup
 <!DOCTYPE html>
@@ -90,7 +132,6 @@ If you have more than one pie charts displayed, you can set the grid parameter, 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-   <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
      <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
@@ -106,9 +147,15 @@ If you have more than one pie charts displayed, you can set the grid parameter, 
             Type: ['Residential', 'Non-Residential', 'Utility']
         })
 
-       df.plot("plot_div").pie({ labels: "Type",
-                                 grid: { rows: 2, columns: 2 },
-                                 row_pos: [0, 1], col_pos: [0, 1] })
+        df.plot("plot_div").pie({
+          config: {
+            labels: "Location",
+            columns: ["Price", "Volume"],
+            columnPositions: [0, 1],
+            rowPositions: [0, 1],
+            grid: { rows: 2, columns: 2 }
+          }
+        });
 
     </script>
 </body>

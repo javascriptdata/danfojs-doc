@@ -6,16 +6,12 @@ description: >-
 
 # Series.str.split
 
-> danfo.Series.str.**split**(splitVal, options) \[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/core/strings.js#L553)]
+> danfo.Series.str.**split**(splitVal, options)
 
 | Parameters | Type   | Description                                                | Default                         |
 | ---------- | ------ | ---------------------------------------------------------- | ------------------------------- |
 | splitVal   | String | separator or delimiter used to split the string            | " "                             |
 | options    | Object | **inplace**: Whether to perform operation in-place or not. | <p>{<br>inplace: false<br>}</p> |
-
-**Returns**
-
-&#x20;                     return **Series**
 
 **Examples**
 
@@ -38,7 +34,7 @@ console.log(sf.str.split().values)
 {% endtab %}
 {% endtabs %}
 
-**OUTPUT:**     `[ 'king,of,the,music', 'the,lamba,queen', 'I,love,the,hat' ]`
+**OUTPUT:** `[ 'king,of,the,music', 'the,lamba,queen', 'I,love,the,hat' ]`
 
 {% tabs %}
 {% tab title="JavaScript" %}

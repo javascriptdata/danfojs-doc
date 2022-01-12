@@ -1,10 +1,16 @@
 ---
 description: >-
-  This page gives an overview of all public danfo objects, functions and
-  methods. All classes and functions exposed in danfo.* namespace are public.
+  List of all public Danfo objects, functions and methods. All classes and
+  functions exposed in danfo.* namespace is public.
 ---
 
 # API reference
+
+{% hint style="info" %}
+A stable version of Danfojs (v1), has been released, and it comes with full Typescript support, new features, and many bug fixes. See release note [here](../release-notes.md#latest-release-node-v1.0.0-browser-v1.0.0).&#x20;
+
+There are a couple of breaking changes, so we have prepared a short migration [guide](../examples/migrating-to-the-stable-version-of-danfo.js.md) for pre-v1 users.&#x20;
+{% endhint %}
 
 * [General Functions](general-functions/)
   * [Data manipulations](general-functions/#data-manipulations)
@@ -26,7 +32,7 @@ description: >-
   * [Accessors](series/#accessors)
   * [Serialization / IO / conversion](series/#serialization-io-conversion)
 * [DataFrame](dataframe/)
-  * [Attributes ](dataframe/#attributes)
+  * [Attributes](dataframe/#attributes)
   * [Conversion](dataframe/#conversion)
   * [Indexing, iteration](dataframe/#indexing-iteration)
   * [Binary operator functions](dataframe/#binary-operator-functions)
@@ -51,4 +57,3 @@ description: >-
   * [Indexing, iteration](groupby/#indexing-iteration)
   * [Function application](groupby/#function-application)
   * [Computations / descriptive stats](groupby/#computations-descriptive-stats)
-

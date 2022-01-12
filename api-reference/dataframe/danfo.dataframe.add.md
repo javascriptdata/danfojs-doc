@@ -4,16 +4,12 @@ description: Get Addition of DataFrame and other, element-wise (binary operator 
 
 # DataFrame.add
 
-danfo.DataFrame.**add**(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L347)]
+danfo.DataFrame.**add**(other, option)&#x20;
 
-| Parameters | Type                               | Description                                                                                                                                                                                  | Default                      |
-| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| other      | DataFrame, Series, Array or Scalar | Object to add with                                                                                                                                                                           |                              |
-| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false }  |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type                               | Description                                                                                                                                                                                  | Default                                                 |   |
+| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------- | - |
+| other      | DataFrame, Series, Array or Scalar | Object to add with                                                                                                                                                                           |                                                         |   |
+| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | <p>{ </p><p>axis: 1, </p><p>inplace: false </p><p>}</p> |   |
 
 ## **Examples**
 
@@ -60,7 +56,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of  **Series to** DataFrame along axis 0
+### Addition of **Series to** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -105,7 +101,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of  ****  DataFrame to a DataFrame
+### Addition of DataFrame to a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -124,7 +120,6 @@ let df2 = new dfd.DataFrame(data2)
 let df_new = df.add(df2)
 
 df_new.print()
-
 ```
 {% endtab %}
 
@@ -152,7 +147,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Addition of **** Array to DataFrame along axis 0
+### Addition of Array to DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -193,7 +188,6 @@ df_new.print()
 ╟────────────┼───────────────────┼───────────────────╢
 ║ 3          │ 12                │ 26                ║
 ╚════════════╧═══════════════════╧═══════════════════╝
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -239,8 +233,6 @@ df.print()
 ╟────────────┼───────────────────┼───────────────────╢
 ║ 3          │ 12                │ 26                ║
 ╚════════════╧═══════════════════╧═══════════════════╝
-
 ```
 {% endtab %}
 {% endtabs %}
-

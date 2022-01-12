@@ -2,17 +2,17 @@
 description: Sorts a Series in ascending or descending order
 ---
 
-# Series.sort_values
+# Series.sortValues
 
-> danfo.Series.sort_values(options)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L511)]
+> danfo.Series.sortValues(options) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L511)]
 
 | Parameters | Type   | Description                                                                                                                                                                                                                           | Default                                                   |
 | ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------- |
 | options    | Object | <p><strong>inplace</strong>: Boolean indicating whether to perform the operation in-place or not. Defaults to false</p><p><strong>ascending</strong>: Whether to return sorted values in ascending order or not. Defaults to true</p> | <p>{<br>ascending: true,</p><p>inplace: false</p><p>}</p> |
 
-  **Return:** Series
+**Return:** Series
 
-### Sort values in a Series 
+### Sort values in a Series
 
 {% tabs %}
 {% tab title="Node" %}
@@ -21,7 +21,7 @@ const dfd = require("danfojs-node")
 
 let data1 = [20, 30, 1, 2, 4, 57, 89, 0, 4]
 let sf1 = new dfd.Series(data1)
-let sf2 = sf1.sort_values()
+let sf2 = sf1.sortValues()
 
 sf2.print()
 ```
@@ -54,7 +54,7 @@ sf2.print()
 {% endtab %}
 {% endtabs %}
 
-### Sort Series in-place
+### Sort Series inplace
 
 {% tabs %}
 {% tab title="Node" %}
@@ -92,7 +92,6 @@ sf1.print()
 ╟───┼────╢
 ║ 6 │ 89 ║
 ╚═══╧════╝
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -106,7 +105,7 @@ const dfd = require("danfojs-node")
 
 let data1 = [20, 30, 1, 2, 4, 57, 89, 0, 4]
 let sf1 = new dfd.Series(data1)
-sf1.sort_values({ "ascending": false, "inplace": true })
+sf1.sortValues({ "ascending": false, "inplace": true })
 
 sf1.print()
 ```

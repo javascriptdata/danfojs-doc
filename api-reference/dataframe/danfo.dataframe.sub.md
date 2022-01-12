@@ -4,20 +4,16 @@ description: Get Subtraction of dataframe and other, element-wise (binary operat
 
 # DataFrame.sub
 
-danfo.DataFrame.sub(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L347)]
+danfo.DataFrame.sub(other, option)&#x20;
 
-| Parameters | Type                               | Description                                                                                                                                                                                  | Default                      |
-| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| other      | DataFrame, Series, Array or Scalar | Object to add with                                                                                                                                                                           |                              |
-| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false }  |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type                               | Description                                                                                                                                                                                  | Default                     |
+| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| other      | DataFrame, Series, Array or Scalar | Object to subtract                                                                                                                                                                           |                             |
+| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false } |
 
 ## **Examples**
 
-### Subtraction of **scalar to** DataFrame along default axis 1
+### Subtraction of **scalar from** DataFrame along default axis 1
 
 {% tabs %}
 {% tab title="Node" %}
@@ -60,7 +56,7 @@ df_new.print()
 {% endtab %}
 {% endtabs %}
 
-### Subtraction of  **Series to** DataFrame along axis 0
+### Subtraction of **Series from** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -101,12 +97,11 @@ df_new.print()
 ╟────────────┼───────────────────┼───────────────────╢
 ║ 3          │ -3                │ -1                ║
 ╚════════════╧═══════════════════╧═══════════════════╝
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Subtraction of  ****  DataFrame to a DataFrame
+### Subtraction of DataFrame from another DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -125,7 +120,6 @@ let df2 = new dfd.DataFrame(data2)
 let df_new = df.sub(df2)
 
 df_new.print()
-
 ```
 {% endtab %}
 
@@ -149,12 +143,11 @@ df_new.print()
 ╟────────────┼───────────────────┼───────────────────╢
 ║ 3          │ -10               │ 2                 ║
 ╚════════════╧═══════════════════╧═══════════════════╝
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Subtraction of **** Array to DataFrame along axis 0
+### Subtraction of Array from DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -195,7 +188,6 @@ df_new.print()
 ╟────────────┼───────────────────┼───────────────────╢
 ║ 3          │ 8                 │ 22                ║
 ╚════════════╧═══════════════════╧═══════════════════╝
-
 
 ```
 {% endtab %}
@@ -243,8 +235,6 @@ df.print()
 ║ 3          │ 8                 │ 22                ║
 ╚════════════╧═══════════════════╧═══════════════════╝
 
-
 ```
 {% endtab %}
 {% endtabs %}
-

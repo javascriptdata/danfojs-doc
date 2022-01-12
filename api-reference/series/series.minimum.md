@@ -1,14 +1,14 @@
 ---
-description: Obtain the minimum value between two series (element wise)
+description: Return the minimum between two series (element wise)
 ---
 
 # Series.minimum
 
-> danfo.Series.minimum\(other\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L383)\]
+> danfo.Series.minimum(other)&#x20;
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series | series to match |  |
+| Parameters | Type   | Description     | Default |
+| ---------- | ------ | --------------- | ------- |
+| other      | Series | series to match |         |
 
 **Return:** {Series}
 
@@ -30,19 +30,16 @@ sf1.minimum(sf2).print()
 
 {% tabs %}
 {% tab title="output" %}
-```text
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 10                   ║
-╟───┼──────────────────────╢
-║ 1 │ 40                   ║
-╟───┼──────────────────────╢
-║ 2 │ 2                    ║
-╟───┼──────────────────────╢
-║ 3 │ 0                    ║
-╚═══╧══════════════════════╝
+```
+╔═══╤════╗
+║ 0 │ 10 ║
+╟───┼────╢
+║ 1 │ 40 ║
+╟───┼────╢
+║ 2 │ 2  ║
+╟───┼────╢
+║ 3 │ 0  ║
+╚═══╧════╝
 ```
 {% endtab %}
 {% endtabs %}
-

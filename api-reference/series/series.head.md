@@ -4,13 +4,13 @@ description: Obtain the first n rows for the object based on position.
 
 # Series.head
 
-> danfo.Series.head\(rows\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L76)\]
+> danfo.Series.head(rows)&#x20;
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| rows | Int | number of first n values | 5 |
+| Parameters | Type | Description              | Default |
+| ---------- | ---- | ------------------------ | ------- |
+| rows       | Int  | number of first n values | 5       |
 
- **Return:** Series
+**Return:** Series
 
 **Example**
 
@@ -29,7 +29,7 @@ sf1.head().print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤══════════════════════╗
 ║   │ 0                    ║
 ╟───┼──────────────────────╢
@@ -46,6 +46,3 @@ sf1.head().print()
 ```
 {% endtab %}
 {% endtabs %}
-
-
-

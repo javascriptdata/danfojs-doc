@@ -6,7 +6,7 @@ description: >-
 
 # Series.div
 
-> danfo.Series.div(other, options)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L188)]
+> danfo.Series.div(other, options)
 
 | Parameters | Type          | Description                                                                                    | Default                               |
 | ---------- | ------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------- |

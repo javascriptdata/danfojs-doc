@@ -4,11 +4,13 @@ description: Replace values given in replace param with value
 
 # Series.replace
 
-> danfo.Series.**replace**(options)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L892)]
+> danfo.Series.**replace**(oldValue, newValue, options)&#x20;
 
-| Parameters | Type   | Description                                                                                                                                                                                                                                               | Default                               |
-| ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| options    | Object | <p> <strong>oldValue</strong>: The value you want to replace</p><p><strong>newValue</strong>: The new value you want to replace the old value with</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not</p> | <p>{</p><p>inplace: false</p><p>}</p> |
+| Parameters   | Type   | Description                                                                       | Default                               |
+| ------------ | ------ | --------------------------------------------------------------------------------- | ------------------------------------- |
+| **oldValue** | Any    | <p>The value you want to replace.</p><p> </p>                                     |                                       |
+| **newValue** | Any    | The new value you want to replace with.                                           |                                       |
+| options      | Object | **inplace**: Boolean, indicating whether to perform the operation inplace or not. | <p>{</p><p>inplace: false</p><p>}</p> |
 
 **Returns**: Series
 
@@ -23,7 +25,7 @@ const dfd = require("danfojs-node")
 
 let data1 = [10, 45, 56, 25, 23, 20, 10]
 let sf = new dfd.Series(data1)
-let sf_rep = sf.replace({ oldValue: 10, newValue: -50 })
+let sf_rep = sf.replace(10, -50)
 
 sf_rep.print()
 ```
@@ -48,7 +50,6 @@ sf_rep.print()
 ╟───┼─────╢
 ║ 6 │ -50 ║
 ╚═══╧═════╝
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -62,7 +63,7 @@ const dfd = require("danfojs-node")
 
 let data1 = [10, 45, 56, 25, 23, 20, 10]
 let sf = new dfd.Series(data1)
-sf.replace({ oldValue: 10, newValue: -50, inplace: true})
+sf.replace(10, -50, { inplace: true})
 
 sf.print()
 ```
@@ -85,5 +86,4 @@ sf.print()
 ╟───┼─────╢
 ║ 6 │ -50 ║
 ╚═══╧═════╝
-
 ```

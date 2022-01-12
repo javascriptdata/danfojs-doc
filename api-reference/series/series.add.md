@@ -4,7 +4,7 @@ description: Return Addition of series and other, element-wise (binary operator 
 
 # Series.add
 
-> danfo.Series.add(other, options)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L129)]
+> danfo.Series.add(other, options)&#x20;
 
 | Parameters | Type          | Description                                                                                    | Default                               |
 | ---------- | ------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
@@ -83,4 +83,3 @@ sf1.add(2).print()
 ```
 {% endtab %}
 {% endtabs %}
-

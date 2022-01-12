@@ -6,13 +6,13 @@ description: >-
 
 # Series.and
 
-> danfo.Series.and\(other\)    \[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/core/series.js#L1243)\]
+> danfo.Series.and(other)&#x20;
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series, Scalar, Array of Scalars | Data to compare with |  |
+| Parameters | Type                             | Description          | Default |
+| ---------- | -------------------------------- | -------------------- | ------- |
+| other      | Series, Scalar, Array of Scalars | Data to compare with |         |
 
- **Return:** Series
+**Return:** Series
 
 ### **Logical AND between two Series object**
 
@@ -34,7 +34,7 @@ res.print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════╗
 ║ 0 │ false ║
 ╟───┼───────╢
@@ -73,7 +73,7 @@ res.print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════╗
 ║ 0 │ false ║
 ╟───┼───────╢
@@ -110,7 +110,7 @@ res.print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔═══╤═══════╗
 ║ 0 │ false ║
 ╟───┼───────╢
@@ -129,4 +129,3 @@ res.print()
 ```
 {% endtab %}
 {% endtabs %}
-

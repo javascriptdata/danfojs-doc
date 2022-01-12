@@ -2,17 +2,15 @@
 description: Reset the index of a series.
 ---
 
-# Series.reset\_index
+# Series.resetIndex
 
-> danfo.series.reset\_index(options) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L614)]
+> danfo.series.resetIndex(options)&#x20;
 
-| Parameters | Type   | Description                                                                                         | Default          |
-| ---------- | ------ | --------------------------------------------------------------------------------------------------- | ---------------- |
-| options    | Object |  **inplace:** Boolean indicating whether to perform the operation inplace or not. Defaults to false | { inplace:false} |
+| Parameters | Type   | Description                                                                                        | Default          |
+| ---------- | ------ | -------------------------------------------------------------------------------------------------- | ---------------- |
+| options    | Object | **inplace:** Boolean indicating whether to perform the operation inplace or not. Defaults to false | { inplace:false} |
 
-**Returns :** Series
-
-`reset_index` is useful when the index needs to be treated as a column, or when the index is meaningless and needs to be reset to default, before another operation.
+`resetIndex` is useful when the index needs to be treated as a column, or when the index is meaningless and needs to be reset to default, before another operation.
 
 ### **Reset index to default values**
 
@@ -24,7 +22,7 @@ let data = [20, 30, 40]
 let sf = new dfd.Series(data, { index: ["a", "b", "c"] })
 sf.print()
 
-let sf_reset = sf.reset_index()
+let sf_reset = sf.resetIndex()
 sf_reset.print()
 ```
 {% endtab %}
@@ -66,9 +64,8 @@ let data = [1, 2, 3, 4, 5, 6]
 let sf = new dfd.Series(data, { index: ['a', 'b', 'c', 'd', 'e', 'f'] })
 sf.print()
 
-sf.reset_index({ inplace: true })
+sf.resetIndex({ inplace: true })
 sf.print()
-
 ```
 {% endtab %}
 

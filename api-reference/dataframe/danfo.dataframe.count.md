@@ -6,15 +6,11 @@ description: >-
 
 # DataFrame.count
 
-danfo.DataFrame.**count**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)]
+danfo.DataFrame.**count**(options)
 
 | Parameters | Type   | Description                                                                         | Default     |
 | ---------- | ------ | ----------------------------------------------------------------------------------- | ----------- |
 | options    | Object | **axis:** 0 or 1. If 0, compute the mean column-wise, if 1, row-wise. Defaults to 1 | { axis: 1 } |
-
-**Returns:**
-
-&#x20;      ****       return **Series**
 
 ## **Examples**
 
@@ -43,15 +39,15 @@ df.count().print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══════╤══════════════════════╗
-║       │ 0                    ║
-╟───────┼──────────────────────╢
-║ Name  │ 3                    ║
-╟───────┼──────────────────────╢
-║ Count │ 2                    ║
-╟───────┼──────────────────────╢
-║ Price │ 4                    ║
-╚═══════╧══════════════════════╝
+╔═══╤═══╗
+║ 0 │ 2 ║
+╟───┼───╢
+║ 1 │ 3 ║
+╟───┼───╢
+║ 2 │ 2 ║
+╟───┼───╢
+║ 3 │ 2 ║
+╚═══╧═══╝
 ```
 {% endtab %}
 {% endtabs %}
@@ -81,20 +77,15 @@ df.count({axis: 0}).print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 2                    ║
-╟───┼──────────────────────╢
-║ 1 │ 3                    ║
-╟───┼──────────────────────╢
-║ 2 │ 2                    ║
-╟───┼──────────────────────╢
-║ 3 │ 2                    ║
-╚═══╧══════════════════════╝
+╔═══════╤═══╗
+║ Name  │ 3 ║
+╟───────┼───╢
+║ Count │ 2 ║
+╟───────┼───╢
+║ Price │ 4 ║
+╚═══════╧═══╝
 ```
 {% endtab %}
 {% endtabs %}
 
 ##
-

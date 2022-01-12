@@ -4,13 +4,13 @@ description: >-
   length).
 ---
 
-# DataFrame.set_index
+# DataFrame.setIndex
 
-danfo.DataFrame.**set_index**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
+danfo.DataFrame.setIndex(options) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
 
-| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                  | Default                              |
-| ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------ |
-| options    | Object | <p>{</p><p><strong>index</strong>: An array of index values to set.</p><p></p><p><strong>column</strong>: A column name to set the index to.</p><p></p><p><strong>drop</strong>: Whether to drop the column whose index was set. Defaults to false.</p><p></p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | {**drop**: false, **inplace:**false} |
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                             | Default                                  |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------- |
+| options    | Object | <p>{</p><p><strong>index</strong>: An array of index values to set.</p><p><strong>column</strong>: A column name to set the index to.</p><p><strong>drop</strong>: Whether to drop the column whose index was set. Defaults to false.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | {**drop**: false, \*\*inplace:\*\*false} |
 
 ## **Examples**
 
@@ -29,7 +29,7 @@ let data = { "A": [-20, 30, 47.3],
 let df = new dfd.DataFrame(data, {index: ["a", "b", "c"]})
 df.print()
 
-df.set_index({column: "A", inplace: true})
+df.setIndex({column: "A", inplace: true})
 df.print()
 ```
 {% endtab %}
@@ -66,8 +66,6 @@ df.print()
 {% endtab %}
 {% endtabs %}
 
-### ****
-
 ### **Setting index to a column in the DataFrame and dropping the column**
 
 {% tabs %}
@@ -83,7 +81,7 @@ let data = { "A": [-20, 30, 47.3],
 let df = new dfd.DataFrame(data, {index: ["a", "b", "c"]})
 df.print()
 
-df.set_index({column: "A", drop: true, inplace: true})
+df.setIndex({column: "A", drop: true, inplace: true})
 df.print()
 ```
 {% endtab %}
@@ -136,7 +134,7 @@ let df = new dfd.DataFrame(data)
 df.print()
 
 let new_index = ["a", "b", "c"]
-df.set_index({index: new_index, inplace: true})
+df.setIndex({index: new_index, inplace: true})
 df.print()
 ```
 {% endtab %}
@@ -173,4 +171,4 @@ df.print()
 {% endtab %}
 {% endtabs %}
 
-**Note:** To reset an index to the default values, use the [DataFrame.reset_index](dataframe.reset_index.md).
+**Note:** To reset an index to the default values, use the [DataFrame.resetIndex](dataframe.reset\_index.md).

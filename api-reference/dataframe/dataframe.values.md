@@ -4,13 +4,9 @@ description: Return a the JavaScript array representation of the DataFrame.
 
 # DataFrame.values
 
-danfo.DataFrame.**values** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]
+danfo.DataFrame.**values**&#x20;
 
-**Returns:**
-
-&#x20;      ****       return **Array**
-
-**Note:** To get the [Tensorflow](https://js.tensorflow.org) tensor backing the DataFrame, you can call the **.**[**tensor**](dataframe.tensor.md) property on the DataFrame. &#x20;
+**Note:** To get the [Tensorflow](https://js.tensorflow.org) tensor of the DataFrame, you can call the **.**[**tensor**](dataframe.tensor.md) property on the DataFrame.
 
 ## **Examples**
 
@@ -26,7 +22,6 @@ let data = {"A": [-20.1, 30, 47.3, -20],
 let df = new dfd.DataFrame(data)
 
 console.log(df.values)
-
 ```
 {% endtab %}
 

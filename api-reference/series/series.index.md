@@ -4,7 +4,7 @@ description: Obtain the index of a Series
 
 # Series.index
 
-> danfo.Series.index     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L234)\]
+> danfo.Series.index&#x20;
 
 **Returns**: Array
 
@@ -25,9 +25,8 @@ console.log(sf1.index)
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 [ 0, 1, 2, 3 ]
 ```
 {% endtab %}
 {% endtabs %}
-

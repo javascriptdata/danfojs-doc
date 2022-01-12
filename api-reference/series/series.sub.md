@@ -4,7 +4,7 @@ description: Return Subtraction of series and other, element-wise (binary operat
 
 # Series.sub
 
-> danfo.Series.sub(other, options)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L148)]
+> danfo.Series.sub(other, options)&#x20;
 
 | Parameters | Type          | Description                                                                                    | Default                               |
 | ---------- | ------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
@@ -83,4 +83,3 @@ sf1.sub(2).print()
 ```
 {% endtab %}
 {% endtabs %}
-

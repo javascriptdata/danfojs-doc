@@ -2,25 +2,21 @@
 description: Apply a function to a Dataframe values element-wise.
 ---
 
-# DataFrame.apply\_map
+# DataFrame.applyMap
 
-danfo.DataFrame.**apply\_map**(callable, options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1566)]
+danfo.DataFrame.applyMap(callable, options)
 
 | Parameters | Type     | Description                                                           | Default   |
 | ---------- | -------- | --------------------------------------------------------------------- | --------- |
 | callable   | Function | Function to apply to each column or row                               |           |
 | options    | Object   | **axis**: 0 or 1. If 0, compute the power column-wise, if 1, row-wise | {axis: 1} |
 
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
-
 ## **Examples**
 
-### Apply a  function to all values in a DataFrame
+### Apply a function to each element in a DataFrame
 
 {% hint style="info" %}
-Note that the specified function passed to `apply` will be called with each element in the DataFrame. If you need to apply a function across an axis, then use the [apply](danfo.dataframe.apply.md) function.&#x20;
+Note that the specified function passed to **applyMap** will be called with each element in the DataFrame. If you need to apply a function across an axis, then use the [apply](danfo.dataframe.apply.md) function.
 {% endhint %}
 
 {% tabs %}

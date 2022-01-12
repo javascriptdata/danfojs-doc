@@ -1,6 +1,30 @@
 # Release Notes
 
-### \[LATEST] Release Node (v0.3.3), Browser (0.3.3)
+### \[LATEST] Release Node (v1.0.0), Browser (v1.0.0)
+
+**Date:** 12th Jan 2022
+
+Major breaking update. See the migration [guide](examples/migrating-to-the-stable-version-of-danfo.js.md) for pre-v1 users.
+
+**New Features**
+
+* Full Typescript support
+* streamCsvTransforme ==> Pipable stream transformer for incrementally transforming DataFrames
+* streamJSON ==> Supports streaming of local or remote JSON files into DataFrame.
+* streamCSV ==> Supports streaming of local or remote CSV files into DataFrame.
+* openCsvInputStream ==> Open a local/remote CSV file as a readable stream
+* writeCsvOutputStream ==> Open a local/remote CSV file as a writable stream
+* [https://github.com/javascriptdata/danfojs/issues/325](https://github.com/javascriptdata/danfojs/issues/325)
+* [https://github.com/javascriptdata/danfojs/issues/296](https://github.com/javascriptdata/danfojs/issues/296)
+
+**Bug Fixes**
+
+* [https://github.com/javascriptdata/danfojs/issues/335](https://github.com/javascriptdata/danfojs/issues/335)
+* [https://github.com/javascriptdata/danfojs/issues/338](https://github.com/javascriptdata/danfojs/issues/338)
+
+Contributors [@risenW](https://github.com/risenW) [@steveoni](https://github.com/steveoni)
+
+### Release Node (v0.3.3), Browser (0.3.3)
 
 **Date:** 10th Oct 2021
 
@@ -161,13 +185,13 @@ model.summary();
 
 We added/updated the following features:
 
-* [Read JSON](api-reference/input-output/danfo.read_json.md) files from local and remote URL into DataFrame (New feature)
-* [Read Excel](api-reference/input-output/danfo.read_excel.md) files from local or remote URL into DataFrame (New feature)
+* [Read JSON](api-reference/input-output/danfo.read\_json.md) files from local and remote URL into DataFrame (New feature)
+* [Read Excel](api-reference/input-output/danfo.read\_excel.md) files from local or remote URL into DataFrame (New feature)
 * Fix string comparison bug in [query](api-reference/dataframe/danfo.dataframe.query.md) function (Fix)
 * Add append function for [DataFrame](api-reference/dataframe/dataframe.append.md) and [Series](api-reference/series/series.append.md) (New feature)
 * Fix null value bug when creating DataFrame from JSON files (Fix)
 * Add relative import for reading files into DataFrame
-* Add [sort_index](api-reference/dataframe/dataframe.sort_index.md) function to DataFrame and Series (New feature)
+* Add [sort\_index](api-reference/dataframe/dataframe.sort\_index.md) function to DataFrame and Series (New feature)
 * Minor patch and overall optimizations (Fix)
 
 **Contributors**: [Rising Odegua](https://github.com/risenW), [Stephen Oni](https://github.com/steveoni), [Jhenner Tigreros](https://github.com/JhennerTigreros), [Aditya Zope](https://github.com/adzo261)

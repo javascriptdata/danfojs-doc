@@ -4,7 +4,7 @@ description: Obtain the minutes in a Time Series
 
 # Series.dt.minutes
 
-> danfo.Series.dt.**minutes**()  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L292)]
+> danfo.Series.dt.**minutes**() \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L292)]
 
 **Parameters**: None
 
@@ -17,7 +17,7 @@ description: Obtain the minutes in a Time Series
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = new dfd.date_range({"start":"2000-01-01", period:3, freq:"m"})
+let data = new dfd.dateRange({"start":"2000-01-01", period:3, freq:"m"})
 let sf = new dfd.Series(data)
 //print the series
 sf.print()
