@@ -1,14 +1,10 @@
 ---
-description: Makes a new copy of the DataFrame
+description: Makes a deep copy of the DataFrame
 ---
 
 # DataFrame.copy
 
-danfo.DataFrame.**copy**() \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L940)]
-
-**Returns:**
-
-&#x20;      ****       return **new DataFrame**
+danfo.DataFrame.**copy**()
 
 ## **Examples**
 
@@ -34,7 +30,6 @@ new_df.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -46,8 +41,6 @@ new_df.print()
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ 3 │ -20               │ 6                 │ -40               ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
-
 ```
 {% endtab %}
 {% endtabs %}
-

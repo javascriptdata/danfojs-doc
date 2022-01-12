@@ -4,15 +4,11 @@ description: Returns the last n rows from the DataFrame based on position.
 
 # DataFrame.tail
 
-danfo.DataFrame.**tail**(rows) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L292)]
+danfo.DataFrame.**tail**(rows)
 
 | Parameters | Type | Description                  | Default |
 | ---------- | ---- | ---------------------------- | ------- |
 | rows       | Int  | The number of rows to return | 5       |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
@@ -28,7 +24,6 @@ let data = { "Name": ["Apples", "Mango", "Banana", "Pear"],
 let df = new dfd.DataFrame(data)
 let s_df = df.tail(3)
 s_df.print()
-
 ```
 {% endtab %}
 

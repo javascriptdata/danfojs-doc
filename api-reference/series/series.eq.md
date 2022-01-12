@@ -4,11 +4,11 @@ description: Check all the values in a series is equal to another value
 
 # Series.eq
 
-> danfo.Series.eq(other)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L894)]
+> danfo.Series.eq(other)&#x20;
 
-| Parameters | Type                    | Description       | Default |
-| ---------- | ----------------------- | ----------------- | ------- |
-| other      | Series, Array or number |  value to compare |         |
+| Parameters | Type                    | Description      | Default |
+| ---------- | ----------------------- | ---------------- | ------- |
+| other      | Series, Array or number | value to compare |         |
 
 **Returns**: Series (Boolean element)
 
@@ -34,23 +34,21 @@ sf1.eq(sf2).print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ true                 ║
-╟───┼──────────────────────╢
-║ 1 │ false                ║
-╟───┼──────────────────────╢
-║ 2 │ true                 ║
-╟───┼──────────────────────╢
-║ 3 │ false                ║
-╟───┼──────────────────────╢
-║ 4 │ false                ║
-╟───┼──────────────────────╢
-║ 5 │ false                ║
-╟───┼──────────────────────╢
-║ 6 │ false                ║
-╚═══╧══════════════════════╝
+╔═══╤═══════╗
+║ 0 │ true  ║
+╟───┼───────╢
+║ 1 │ false ║
+╟───┼───────╢
+║ 2 │ true  ║
+╟───┼───────╢
+║ 3 │ false ║
+╟───┼───────╢
+║ 4 │ false ║
+╟───┼───────╢
+║ 5 │ false ║
+╟───┼───────╢
+║ 6 │ false ║
+╚═══╧═══════╝
 ```
 {% endtab %}
 {% endtabs %}
@@ -73,23 +71,21 @@ sf1.eq(10).print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ true                 ║
-╟───┼──────────────────────╢
-║ 1 │ false                ║
-╟───┼──────────────────────╢
-║ 2 │ false                ║
-╟───┼──────────────────────╢
-║ 3 │ false                ║
-╟───┼──────────────────────╢
-║ 4 │ false                ║
-╟───┼──────────────────────╢
-║ 5 │ false                ║
-╟───┼──────────────────────╢
-║ 6 │ true                 ║
-╚═══╧══════════════════════╝
+╔═══╤═══════╗
+║ 0 │ true  ║
+╟───┼───────╢
+║ 1 │ false ║
+╟───┼───────╢
+║ 2 │ false ║
+╟───┼───────╢
+║ 3 │ false ║
+╟───┼───────╢
+║ 4 │ false ║
+╟───┼───────╢
+║ 5 │ false ║
+╟───┼───────╢
+║ 6 │ true  ║
+╚═══╧═══════╝
 ```
 {% endtab %}
 {% endtabs %}

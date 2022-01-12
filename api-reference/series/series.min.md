@@ -4,7 +4,7 @@ description: Obtain the minimum value in a series
 
 # Series.min
 
-> danfo.Series.min()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L303)]
+> danfo.Series.min()&#x20;
 
 **Parameter:** None
 
@@ -33,4 +33,4 @@ console.log(sf1.min())
 {% endtab %}
 {% endtabs %}
 
-****
+***

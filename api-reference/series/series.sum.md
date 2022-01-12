@@ -4,7 +4,7 @@ description: Return the sum of the values in a series.
 
 # Series.sum
 
-> danfo.Series.sum()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L333)]
+> danfo.Series.sum()&#x20;
 
 **Parameter:** None
 
@@ -33,4 +33,4 @@ console.log(sf1.sum())
 {% endtab %}
 {% endtabs %}
 
-****
+***

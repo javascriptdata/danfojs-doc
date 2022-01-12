@@ -1,21 +1,15 @@
 ---
-description: >-
-  Get Float division of DataFrame and other, element-wise (binary operator
-  truediv).
+description: Get division of DataFrame and other, element-wise
 ---
 
 # DataFrame.div
 
-danfo.DataFrame.div(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L347)]
+danfo.DataFrame.div(other, option)&#x20;
 
-| Parameters | Type                               | Description                                                                                                                                                                                  | Default                      |
-| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| other      | DataFrame, Series, Array or Scalar | Object to add with                                                                                                                                                                           |                              |
-| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false }  |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type                               | Description                                                                                                                                                                                  | Default                     |
+| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| other      | DataFrame, Series, Array or Scalar | Object to divide with                                                                                                                                                                        |                             |
+| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false } |
 
 ## **Examples**
 
@@ -58,12 +52,11 @@ df_new.print()
 ╟────────────┼───────────────────┼───────────────────╢
 ║ 3          │ 5                 │ 12                ║
 ╚════════════╧═══════════════════╧═══════════════════╝
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Division of  **Series with** DataFrame along axis 0
+### Division of **Series with** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -105,12 +98,11 @@ df_new.print()
 ║ 3          │ 0.25              │ 0.8000000119209…  ║
 ╚════════════╧═══════════════════╧═══════════════════╝
 
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Division of  ****  DataFrame **with** a DataFrame
+### Division of DataFrame **with** another DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -129,7 +121,6 @@ let df2 = new dfd.DataFrame(data2)
 let df_new = df.div(df2)
 
 df_new.print()
-
 ```
 {% endtab %}
 
@@ -154,12 +145,11 @@ df_new.print()
 ║ 3          │ 0                 │ 2                 ║
 ╚════════════╧═══════════════════╧═══════════════════╝
 
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Division of **** Array **with** DataFrame along axis 0
+### Division of Array **with** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -200,7 +190,6 @@ df_new.print()
 ╟────────────┼───────────────────┼───────────────────╢
 ║ 3          │ 5                 │ 12                ║
 ╚════════════╧═══════════════════╧═══════════════════╝
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -247,8 +236,6 @@ df.print()
 ║ 3          │ 5                 │ 12                ║
 ╚════════════╧═══════════════════╧═══════════════════╝
 
-
 ```
 {% endtab %}
 {% endtabs %}
-

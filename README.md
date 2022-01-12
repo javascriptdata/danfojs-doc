@@ -7,12 +7,12 @@ description: >-
 
 # Danfo.js Documentation
 
-D**anfo.js** is heavily inspired by the [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) library and provides a similar interface and API. This means users familiar with the [Pandas ](https://pandas.pydata.org/pandas-docs/stable/index.html)API can easily use D**anfo.js.**&#x20;
+D**anfo.js** is heavily inspired by the [Pandas](https://pandas.pydata.org/pandas-docs/stable/index.html) library and provides a similar interface and API. This means users familiar with the [Pandas ](https://pandas.pydata.org/pandas-docs/stable/index.html)API can easily use D**anfo.js.**
 
 ## Main Features
 
-* Danfo.js is fast and supports[ Tensorflow.js](https://js.tensorflow.org)'s tensors out of the box. This means you can [convert Danfo.js ](api-reference/dataframe/)DataFrames to Tensors, and vice versa.&#x20;
-* Easy handling of missing **** data (represented as `NaN`) in floating point as well as non-floating point data
+* Danfo.js is fast and supports[ Tensorflow.js](https://js.tensorflow.org)'s tensors out of the box. This means you can [convert Danfo.js ](api-reference/dataframe/)DataFrames to Tensors, and vice versa.
+* Easy handling of missing data (represented as `NaN, undefined, or null`) in data
 * Size mutability: columns can be inserted/deleted from DataFrame
 * Automatic and explicit alignment: objects can be explicitly aligned to a set of labels, or the user can simply ignore the labels and let [`Series`](api-reference/series/), [`DataFrame`](api-reference/dataframe/), etc. automatically align the data for you in computations
 * Powerful, flexible, [groupby](api-reference/groupby/) functionality to perform split-apply-combine operations on data sets, for both aggregating and transforming data
@@ -26,7 +26,7 @@ D**anfo.js** is heavily inspired by the [Pandas](https://pandas.pydata.org/panda
 
 ## Getting Started
 
-New to Danfo? Check out the getting started guides. It contains a quick introduction to D_anfo's_ main concepts and links to additional content.
+New to Danfo? Check out the getting started guides. It contains a quick introduction to D\_anfo's\_ main concepts and links to additional content.
 
 {% content-ref url="getting-started.md" %}
 [getting-started.md](getting-started.md)
@@ -34,7 +34,7 @@ New to Danfo? Check out the getting started guides. It contains a quick introduc
 
 ## **API Reference**
 
-The reference guide contains a detailed description of the **danfo** API. The reference describes how each function works and which parameters can be used.&#x20;
+The reference guide contains a detailed description of the **danfo** API. The reference describes how each function works and which parameters can be used.
 
 {% content-ref url="api-reference/" %}
 [api-reference](api-reference/)
@@ -54,7 +54,7 @@ The reference guide contains a detailed description of the **danfo** API. The re
 
 ## Contributing Guide
 
-Want to help improve our documentation and existing functionalities? The contributing guidelines will guide you through the process.&#x20;
+Want to help improve our documentation and existing functionalities? The contributing guidelines will guide you through the process.
 
 {% content-ref url="contributing-guide.md" %}
 [contributing-guide.md](contributing-guide.md)
@@ -65,4 +65,3 @@ Want to help improve our documentation and existing functionalities? The contrib
 {% content-ref url="release-notes.md" %}
 [release-notes.md](release-notes.md)
 {% endcontent-ref %}
-

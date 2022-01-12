@@ -4,11 +4,11 @@ description: The index (row labels) of the DataFrame.
 
 # DataFrame.index
 
-danfo.DataFrame.**index** \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L940)]
+danfo.DataFrame.**index**&#x20;
 
 ## **Examples**
 
-Returns auto-generated **** index of a **** DataFrame
+Returns auto-generated  index of a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -37,8 +37,6 @@ console.log(df.index);
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 {% tabs %}
 {% tab title="Node" %}

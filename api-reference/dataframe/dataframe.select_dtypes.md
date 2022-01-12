@@ -2,17 +2,13 @@
 description: Return a subset of the DataFrame’s columns based on the column dtypes.
 ---
 
-# DataFrame.select\_dtypes
+# DataFrame.selectDtypes
 
-danfo.DataFrame.**select\_dtypes** \[[source](https://github.com/opensource9ja/danfojs/blob/db48bf9701e1c3205811ba2699b42ce56ef7e63b/danfojs/src/core/frame.js#L778)]
+danfo.DataFrame.selectDtypes()
 
-| Parameters | Type  | Description                      | Default |
-| ---------- | ----- | -------------------------------- | ------- |
-| include    | Array | List of column dtypes to return  |         |
-
-**Returns:**
-
-&#x20;      ****       return  **DataFrame**
+| Parameters | Type  | Description                     | Default |
+| ---------- | ----- | ------------------------------- | ------- |
+| include    | Array | List of column dtypes to return |         |
 
 ## **Examples**
 
@@ -28,15 +24,15 @@ let data = {"A": [-20.1, 30, 47.3, -20],
             
 let df = new dfd.DataFrame(data)
 
-float_df = df.select_dtypes(['float32'])
+
+float_df = df.selectDtypes(['float32'])
 float_df.print()
 
-mix_df = df.select_dtypes(include=['float32', "int32"])
+mix_df = df.selectDtypes(['float32', "int32"])
 mix_df.print()
 
-str_df = df.select_dtypes(include=['string'])
+str_df = df.selectDtypes(['string'])
 str_df.print()
-
 ```
 {% endtab %}
 

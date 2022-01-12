@@ -2,17 +2,13 @@
 description: Return a fixed frequency Dates spread between start and end parameters.
 ---
 
-# danfo.date\_range
+# danfo.dateRange
 
-danfo.**date\_range**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
+danfo.**dateRange**(options)&#x20;
 
-| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                       | Default         |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------- |
-| **kwargs** | Object | <p>{</p><p><strong>start</strong>:  str or datetime-like. Left bound for generating dates.</p><p><strong>end</strong>: str or datetime-like. Right bound for generating dates.</p><p><strong>period</strong> : int. Number of periods to generate.</p><p><strong>freq</strong>: str or DateOffset, one of ["M","D","s","H","m","Y"]. </p><p>}</p> | {**freq:** 'D'} |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters  | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                               |
+| ----------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| **options** | Object | <p>Includes any of the following:</p><p></p><p><strong>start</strong>: Left bound for generating dates.</p><p></p><p><strong>end</strong>: Right bound for generating dates.</p><p></p><p><strong>period</strong> : Number of periods to generate.</p><p></p><p><strong>offSet</strong>: Date range offset</p><p></p><p><strong>freq</strong>: Date range frequency. One of ["M","D","s","H","m","Y"]</p> |
 
 ## **Examples**
 
@@ -21,7 +17,7 @@ danfo.**date\_range**(kwargs) \[[source](https://github.com/opensource9ja/danfoj
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = new dfd.date_range({"start":'1/1/2018',period:5, freq:'M'})
+let data = new dfd.dateRange({"start":'1/1/2018', period:5, freq:'M'})
 console.log(data);
 ```
 {% endtab %}
@@ -50,7 +46,6 @@ console.log(data);
 </body>
 
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -74,7 +69,7 @@ console.log(data);
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = new dfd.date_range({"start":'1/1/2018',period:12, freq:'Y'})
+let data = new dfd.dateRange({ "start": '1/1/2018', period: 12, freq: 'Y' })
 console.log(data);
 ```
 {% endtab %}
@@ -107,5 +102,5 @@ console.log(data);
 {% endtabs %}
 
 {% hint style="info" %}
-datetime properties of Series or datetime-like columns in DataFrame can be accessed via accessors in the **dt** name space. See  [Accessors](https://app.gitbook.com/@jsdata/s/danfojs/\~/drafts/-MEMaWwva1cjt8CxnG-b/api-reference/series#accessors)
+Datetime properties of Series or datetime-like columns in DataFrame can be accessed via accessors in the **dt** name space. See [Accessors](https://app.gitbook.com/@jsdata/s/danfojs/\~/drafts/-MEMaWwva1cjt8CxnG-b/api-reference/series#accessors)
 {% endhint %}

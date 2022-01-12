@@ -4,13 +4,13 @@ description: Transform features by scaling each feature to a range of max and mi
 
 # danfo.MinMaxScaler
 
-class danfo.**MinMaxScaler** \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
+class danfo.**MinMaxScaler**&#x20;
 
 danfo.js provides the MinMaxScaler class for standardization of DataFrame and Series. This estimator scales and translates each feature individually such that it is in the given range on the training set, e.g. between zero and one.
 
 This transformation is often used as an alternative to zero mean, unit variance scaling like [Standardscaler](danfo.standardscaler.md).
 
-The API is similar to sklearn's [MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html?highlight=minmaxscaler#sklearn.preprocessing.MinMaxScaler), and provides a fit and transform method.&#x20;
+The API is similar to sklearn's [MinMaxScaler](https://scikit-learn.org/stable/modules/generated/sklearn.preprocessing.MinMaxScaler.html?highlight=minmaxscaler#sklearn.preprocessing.MinMaxScaler), and provides a fit and transform method.
 
 ## **Examples**
 
@@ -34,7 +34,6 @@ scaler.fit(df)
 
 let df_enc = scaler.transform(df)
 df_enc.print()
-
 ```
 {% endtab %}
 
@@ -47,7 +46,6 @@ df_enc.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ 0                 │ 1                 │ 2                 │ 3                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -87,13 +85,12 @@ let data = [[100,1000,2000, 3000] ,
             [1, 1, 1, 0]]
 
 let df = new dfd.DataFrame(data)
-let sf = df.iloc({columns: ["0"]})
+let sf = df.iloc({columns: [0]})
 
 scaler.fit(sf)
 
 let df_enc = scaler.transform(sf)
 df_enc.print()
-
 ```
 {% endtab %}
 
@@ -106,7 +103,6 @@ df_enc.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
  Shape: (3,1) 
 
 ╔═══╤═══════════════════╗

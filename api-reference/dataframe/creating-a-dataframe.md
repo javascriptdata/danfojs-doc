@@ -4,49 +4,14 @@ description: Creates a DataFrame object from flat structure
 
 # Creating a DataFrame
 
-new danfo.**DataFrame**\(data, options\)
+danfo.**DataFrame**(data, options)
 
-<table>
-  <thead>
-    <tr>
-      <th style="text-align:left">Parameters</th>
-      <th style="text-align:left">Type</th>
-      <th style="text-align:left">Description</th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr>
-      <td style="text-align:left">data</td>
-      <td style="text-align:left">2D Array, 2D Tensor, JSON object.</td>
-      <td style="text-align:left">Flat data structure to load into DataFrame</td>
-    </tr>
-    <tr>
-      <td style="text-align:left">options</td>
-      <td style="text-align:left">Object</td>
-      <td style="text-align:left">
-        <p>Optional configuration object. Supported properties are:
-          <br />
-        </p>
-        <p><b>index:</b> Array of numeric or string names for subseting array. If
-          not specified, indexes are auto-generated.
-          <br />
-        </p>
-        <p><b>columns:</b> Array of column names. If not specified, column names are
-          auto generated.
-          <br />
-        </p>
-        <p><b>dtypes:</b> Array of data types for each the column. If not specified,
-          dtypes are/is inferred.
-          <br />
-        </p>
-        <p><b>config</b>: General configuration object for extending or setting NDframe
-          behavior. See full options here</p>
-      </td>
-    </tr>
-  </tbody>
-</table>
+| Parameters | Type                              | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
+| ---------- | --------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| data       | 2D Array, 2D Tensor, JSON object. | Flat data structure to load into DataFrame                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
+| options    | Object                            | <p>Optional configuration object. Supported properties are:<br></p><p><strong>index:</strong> Array of numeric or string names for subseting array. If not specified, indexes are auto-generated.<br></p><p><strong>columns:</strong> Array of column names. If not specified, column names are auto generated.<br></p><p><strong>dtypes:</strong> Array of data types for each the column. If not specified, dtypes are/is inferred.<br></p><p><strong>config</strong>: General configuration object for extending or setting NDframe behavior. See full options here</p> |
 
-In order to create a DataFrame, you new to call the new Keyword and pass in a flat data structure. In the following examples, we show you how to create DataFrames by specifying different config options. 
+In order to create a DataFrame, you new to call the new Keyword and pass in a flat data structure. In the following examples, we show you how to create DataFrames by specifying different config options.
 
 ### Creating a `DataFrame` from a JSON object:
 
@@ -143,7 +108,7 @@ df.print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 ╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║            │ A                 │ B                 │ C                 │ D                 ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -159,8 +124,7 @@ df.print()
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
-const tf = require("@tensorflow/tfjs-node")
-
+const tf = dfd.tensorflow
 
 let tensor_arr = tf.tensor2d([[12, 34, 2.2, 2], [30, 30, 2.1, 7]])
 let df = new dfd.DataFrame(tensor_arr, {columns: ["A", "B", "C", "D"]})
@@ -201,7 +165,7 @@ df.ctypes.print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -231,7 +195,7 @@ df.ctypes.print()
 const dfd = require("danfojs-node")
 
 
-dates = new dfd.date_range({ start: '2017-01-01', end: "2020-01-01", period: 4, freq: "Y" })
+dates = new dfd.dateRange({ start: '2017-01-01', end: "2020-01-01", period: 4, freq: "Y" })
 
 console.log(dates);
 
@@ -285,7 +249,7 @@ df.print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 //output in console
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 │ E                 ║
@@ -302,7 +266,7 @@ df.print()
 
 ### Creating a `DataFrame` and specifying index, dtypes, columns
 
-You can create a DataFrame and specify options like index, column names, dtypes as well as configuration options like display, memory mode etc. 
+You can create a DataFrame and specify options like index, column names, dtypes as well as configuration options like display, memory mode etc.
 
 > Note: Specifing dtypes, column names and index on DataFrame creation makes the process slightly faster.
 
@@ -322,7 +286,7 @@ df.print()
 {% endtab %}
 {% endtabs %}
 
-```text
+```
 ╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║            │ col1              │ col2              │ col3              │ col4              │ col5              │ col6              ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -348,8 +312,7 @@ df.print()
 ```
 
 {% hint style="info" %}
-**Note**: In low memory mode, less space is used by the DataFrame. The drawback is that some operations especially the ones involving column data become slightly slower. 
+**Note**: In low memory mode, less space is used by the DataFrame. The drawback is that some operations especially the ones involving column data become slightly slower.
 {% endhint %}
 
 For loading flat files like CSV, EXCEL and, JSON into DataFrames, see this [page](../input-output/)
-

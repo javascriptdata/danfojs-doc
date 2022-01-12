@@ -2,18 +2,14 @@
 description: Convert categorical variable into dummy/indicator variables.
 ---
 
-# danfo.get\_dummies
+# danfo.getDummies
 
-danfo.**get\_dummies**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
+danfo.**getDummies**(kwargs)&#x20;
 
-| Parameters  | Type                | Description                                                                                                                                                                                                                                                                                               | Default                     |
-| ----------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
-| data        | Series or Dataframe | The data to dummify                                                                                                                                                                                                                                                                                       |                             |
-| **options** | Object              | <p>{</p><p><strong>columns</strong>:  Array of column names to dummify. If not specified, all categorical columns are encoded.</p><p><strong>prefixSeparator</strong>: String separator for created columns e.g "_",</p><p><strong>prefix</strong>: String | Array of String, of column names</p><p>}</p> | {**prefixSeparator**: "\_"} |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters  | Type                | Description                                                                                                                                                                                                                                                                                                           | Default                                                             |
+| ----------- | ------------------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------------------------------------------------- |
+| data        | Series or Dataframe | The data to dummify                                                                                                                                                                                                                                                                                                   |                                                                     |
+| **options** | Object              | <p>These includes: </p><p></p><p><strong>columns</strong>: Array of column names to dummify. If not specified, all categorical columns are encoded.</p><p></p><p><strong>prefixSeparator</strong>: String separator for created columns e.g "_",</p><p></p><p><strong>prefix</strong>: Prefix for the new columns</p> | <p>{</p><p><strong>prefixSeparator</strong>: "-"</p><p>}</p><p></p> |
 
 ## **Examples**
 
@@ -27,7 +23,7 @@ const dfd = require("danfojs-node")
 let datasf = ['pear', 'mango', "pawpaw", "mango", "bean"]
 let sf1 = new dfd.Series(datasf)
 
-let dum_df = dfd.get_dummies(sf1, { prefix: "fruit" })
+let dum_df = dfd.getDummies(sf1, { prefix: "fruit" })
 dum_df.print()
 ```
 {% endtab %}
@@ -41,7 +37,6 @@ dum_df.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
 ╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║            │ fruit_pear        │ fruit_mango       │ fruit_pawpaw      │ fruit_bean        ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -73,7 +68,7 @@ let data = { fruits: ['pear', 'mango', "pawpaw", "mango", "bean"],
 let df = new dfd.DataFrame(data)
 df.print()
 
-let dum_df = dfd.get_dummies(df)
+let dum_df = dfd.getDummies(df)
 dum_df.print()
 ```
 {% endtab %}
@@ -135,7 +130,7 @@ let data = { fruits: ['pear', 'mango', "pawpaw", "mango", "bean"],
 let df = new dfd.DataFrame(data)
 df.print()
 
-let dum_df = dfd.get_dummies(df, { columns: ['fruits']})
+let dum_df = dfd.getDummies(df, { columns: ['fruits']})
 dum_df.print()
 ```
 {% endtab %}

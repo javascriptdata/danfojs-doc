@@ -6,14 +6,14 @@ description: >-
 
 # Configuration Options
 
-On DataFrame/Series creation, a config object can be passed along to configure some internal properties of the created object. The following list shows what options are available and what they do. 
+On DataFrame/Series creation, a config object can be passed along to configure some internal properties of the created object. The following list shows what options are available and what they do.
 
-| Parameter          | Description                                                                                                                                                                                                           |
-| ------------------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| tableDisplayConfig | **Object**, General table display options. Because we use the table package under the hood to display a table in the console, all [table display configurations](https://www.npmjs.com/package/table) are supported.  |
-| tableMaxRow        | **Number**, the total number of rows to display in the console when the **print** function is called. Defaults to 10                                                                                                  |
-| dtypeTestLim       | **Number**, the total number of values to test when inferring data type. Defaults to 10                                                                                                                               |
-| lowMemoryMode      | <p><strong>Boolean</strong>, whether to use minimal memory or not. Defaults to false. <br><strong>Note:</strong> There's a slight decrease in speed when low memory mode is set to true. </p>                         |
+| Parameter          | Description                                                                                                                                                                                                          |
+| ------------------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| tableDisplayConfig | **Object**, General table display options. Because we use the table package under the hood to display a table in the console, all [table display configurations](https://www.npmjs.com/package/table) are supported. |
+| tableMaxRow        | **Number**, the total number of rows to display in the console when the **print** function is called. Defaults to 10                                                                                                 |
+| dtypeTestLim       | **Number**, the total number of values to test when inferring data type. Defaults to 20                                                                                                                              |
+| lowMemoryMode      | <p><strong>Boolean</strong>, whether to use minimal memory space or not. Defaults to false.<br><strong>Note:</strong> There's a slight decrease in speed when low memory mode is set to true.</p>                    |
 
 > See an example of creating DataFrame [in low memory mode](dataframe/creating-a-dataframe.md#creating-a-dataframe-and-specifying-memory-mode)
 

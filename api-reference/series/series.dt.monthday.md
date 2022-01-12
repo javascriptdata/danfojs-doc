@@ -2,9 +2,9 @@
 description: Obtain the day of the month
 ---
 
-# Series.dt.monthday
+# Series.dt.dayOfMonth
 
-> danfo.Series.dt.**monthday**()   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L268)]
+> danfo.Series.dt.dayOfMonth() \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L268)]
 
 **Parameters:** None
 
@@ -17,12 +17,12 @@ description: Obtain the day of the month
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = new dfd.date_range({"start":"2000-01-01", period:4, freq:"D"})
+let data = new dfd.dateRange({"start":"2000-01-01", period:4, freq:"D"})
 let sf = new dfd.Series(data)
 //print series
 sf.print()
 //print monthdays
-sf.dt.monthday().print()
+sf.dt.dayOfMonth().print()
 ```
 {% endtab %}
 

@@ -4,21 +4,17 @@ description: >-
   reading of CSV files in chunks.
 ---
 
-# danfo.read\_csv
+# danfo.readCSV
 
-> danfo.**read\_csv**(source, configs) [\[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/io/reader.js#L21)]
+> danfo.**readCSV**(source, options)&#x20;
 
-|                |                             |                                                                                                                                                                                                                            |                                                                                                                   |
-| -------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------- |
-| **Parameters** | Type                        | Description                                                                                                                                                                                                                | Default                                                                                                           |
-| _**source**_   | File object, File path, URL | <p>Any valid string path is acceptable. The string could be a URL or a valid local file path.</p><p>A browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/File">input file object</a> is also supported.</p> |                                                                                                                   |
-| **configs**:   | object, optional            | Supports all Papaparse config parameters. See [https://www.papaparse.com/docs#config](https://www.papaparse.com/docs#config).                                                                                              | <p><strong>{</strong></p><p><strong>dynamicTyping:</strong> true,</p><p><strong>header:</strong> true</p><p>}</p> |
+|                |                             |                                                                                                                                                                                                                            |                                                                       |
+| -------------- | --------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------------------------------------------------- |
+| **Parameters** | Type                        | Description                                                                                                                                                                                                                | Default                                                               |
+| _**source**_   | File object, File path, URL | <p>Any valid string path is acceptable. The string could be a URL or a valid local file path.</p><p>A browser <a href="https://developer.mozilla.org/en-US/docs/Web/API/File">input file object</a> is also supported.</p> |                                                                       |
+| **options**    | object, optional            | Supports all Papaparse config parameters. See [https://www.papaparse.com/docs#config](https://www.papaparse.com/docs#config).                                                                                              | <p><strong>{</strong></p><p><strong>header:</strong> true</p><p>}</p> |
 
-**Returns:**
-
-\*\* \*\*_**Promise**_. Resolves to DataFrame
-
-The **read\_csv** method can read a CSV file from a local disk, or over the internet (URL). Reading of local files is only supported in Nodejs, while reading of input file objects is only supported in the browser.
+The **readCSV** method can read a CSV file from a local disk, or over the internet (URL). Reading of local files is only supported in Nodejs, while reading of input file objects is only supported in the browser.
 
 ### **Reading files from local disk**
 
@@ -29,7 +25,7 @@ By specifying a valid file path, you can load CSV files from local disk:
 ```javascript
 const dfd = require("danfojs-node")
 
-dfd.read_csv("./user_names.csv") //assumes file is in CWD
+dfd.readCSV("./user_names.csv") //assumes file is in CWD
   .then(df => {
   
    df.head().print()
@@ -50,7 +46,7 @@ By specifying a valid URL, you can load CSV files from any location into Danfo\*
 ```javascript
 const dfd = require("danfojs-node")
 
-dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv") //assumes file is in CWD
+dfd.readCSV("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv") //assumes file is in CWD
   .then(df => {
   
    df.head().print()
@@ -79,7 +75,7 @@ dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-c
     <div id="plot_div"></div>
     <script>
 
-         dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
+         dfd.readCSV("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
             .then(df => {
 
                 //do something like display descriptive statistics
@@ -120,7 +116,7 @@ By specifying a valid [file object](https://developer.mozilla.org/en-US/docs/Web
             
         inputFile.addEventListener("change", async () => {
             const csvFile = inputFile.files[0]
-            dfd.read_csv(csvFile).then((df) => {
+            dfd.readCSV(csvFile).then((df) => {
                 df.print()
             })
         })

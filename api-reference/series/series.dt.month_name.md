@@ -2,9 +2,9 @@
 description: obtain the month name in a Time Series
 ---
 
-# Series.dt.month\_name
+# Series.dt.monthName
 
-> danfo.Series.dt.month\_name()    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L241)]
+> danfo.Series.dt.monthName() \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L241)]
 
 **Parameters**: None
 
@@ -22,7 +22,7 @@ let sf = new dfd.Series(data)
 //print series
 sf.print()
 //print month names
-sf.dt.month_name().print()
+sf.dt.monthName().print()
 ```
 {% endtab %}
 

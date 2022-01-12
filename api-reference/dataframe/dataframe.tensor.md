@@ -1,18 +1,14 @@
 ---
 description: >-
-  Return a Tensorflow tensor representation of the DataFrame. Only the values in
-  the DataFrame will be returned, the axes labels will be removed.
+  Return a Tensorflow tensor of the DataFrame. Only the values in the DataFrame
+  will be returned, the axis labels will be removed.
 ---
 
 # DataFrame.tensor
 
-danfo.DataFrame.**tensor** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]
+danfo.DataFrame.**tensor**&#x20;
 
-**Returns:**
-
-&#x20;      ****       return **tf.tensor**
-
-> **Note:** [Tensorflow](https://js.tensorflow.org/api/latest/#tensor) tensors have single dtype, and will replace any string value with  NaN. Use with care.&#x20;
+> **Note:** [Tensorflow](https://js.tensorflow.org/api/latest/#tensor) tensors have single dtype, and will replace any string value with NaN. Use with care.
 
 ## **Examples**
 
@@ -46,6 +42,19 @@ tf_tensor.print()
 {% tab title="Output" %}
 ```
 float32
+
+Tensor {
+  kept: false,
+  isDisposedInternal: false,
+  shape: [ 4, 3 ],
+  dtype: 'float32',
+  size: 12,
+  strides: [ 3 ],
+  dataId: {},
+  id: 0,
+  rankType: '2'
+}
+
 Tensor
     [[-20       , 34, 20],
      [30        , -4, 20],
@@ -55,7 +64,7 @@ Tensor
 {% endtab %}
 {% endtabs %}
 
-String values in a Tensor are represented as NaN, so ensure to transform them before working with tensor representations.&#x20;
+String values in a Tensor are represented as NaN, so ensure to transform them before working with tensor representations.
 
 {% tabs %}
 {% tab title="Node" %}

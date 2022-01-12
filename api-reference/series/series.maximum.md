@@ -4,11 +4,11 @@ description: Obtain the maximum number between two series
 
 # Series.maximum
 
-> danfo.Series.maximum\(other\)   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L363)\]
+> danfo.Series.maximum(other)&#x20;
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| other | Series | series to match |  |
+| Parameters | Type   | Description     | Default |
+| ---------- | ------ | --------------- | ------- |
+| other      | Series | series to match |         |
 
 **Return:** {Series}
 
@@ -30,21 +30,17 @@ sf1.maximum(sf2).print()
 
 {% tabs %}
 {% tab title="output" %}
-```text
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 30                   ║
-╟───┼──────────────────────╢
-║ 1 │ 41                   ║
-╟───┼──────────────────────╢
-║ 2 │ 3                    ║
-╟───┼──────────────────────╢
-║ 3 │ 5                    ║
-╚═══╧══════════════════════╝
+```
+╔═══╤════╗
+║ 0 │ 30 ║
+╟───┼────╢
+║ 1 │ 41 ║
+╟───┼────╢
+║ 2 │ 3  ║
+╟───┼────╢
+║ 3 │ 5  ║
+╚═══╧════╝
+
 ```
 {% endtab %}
 {% endtabs %}
-
-
-

@@ -6,16 +6,12 @@ description: >-
 
 # DataFrame.pow
 
-danfo.DataFrame.pow(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L347)]
+danfo.DataFrame.pow(other, option)&#x20;
 
-| Parameters | Type                               | Description                                                                                                                                                                                  | Default                      |
-| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------- |
-| other      | DataFrame, Series, Array or Scalar | Object to add with                                                                                                                                                                           |                              |
-| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false }  |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type                               | Description                                                                                                                                                                                  | Default                     |
+| ---------- | ---------------------------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | --------------------------- |
+| other      | DataFrame, Series, Array or Scalar | Object to raised to power with                                                                                                                                                               |                             |
+| option     | Object                             | <p>{</p><p><strong>axis</strong>: 0 for row, 1 for column.</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { axis: 1, inplace: false } |
 
 ## **Examples**
 
@@ -60,12 +56,11 @@ df_new.print()
 ╚════════════╧═══════════════════╧═══════════════════╝
 
 
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Exponential of  **Series with** DataFrame along axis 0
+### Exponential of **Series with** DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -108,12 +103,11 @@ df_new.print()
 ╚════════════╧═══════════════════╧═══════════════════╝
 
 
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Exponential of  ****  DataFrame with a DataFrame
+### Exponential of DataFrame with another DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -132,7 +126,6 @@ let df2 = new dfd.DataFrame(data2)
 let df_new = df.pow(df2)
 
 df_new.print()
-
 ```
 {% endtab %}
 
@@ -158,12 +151,11 @@ df_new.print()
 ╚════════════╧═══════════════════╧═══════════════════╝
 
 
-
 ```
 {% endtab %}
 {% endtabs %}
 
-### Exponential of **** Array with DataFrame along axis 0
+### Exponential of Array with DataFrame along axis 0
 
 {% tabs %}
 {% tab title="Node" %}
@@ -204,7 +196,6 @@ df_new.print()
 ╟────────────┼───────────────────┼───────────────────╢
 ║ 3          │ 100               │ 576               ║
 ╚════════════╧═══════════════════╧═══════════════════╝
-
 
 ```
 {% endtab %}
@@ -253,8 +244,6 @@ df.print()
 ╚════════════╧═══════════════════╧═══════════════════╝
 
 
-
 ```
 {% endtab %}
 {% endtabs %}
-

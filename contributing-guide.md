@@ -29,80 +29,67 @@ description: >-
 
 ## TL:DR
 
-All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.&#x20;
+All contributions, bug reports, bug fixes, documentation improvements, enhancements, and ideas are welcome.
 
-For contributors familiar with open-source,  below is a quick guide to setting up danfojs locally. &#x20;
+For contributors familiar with open-source, below is a quick guide to setting up danfojs locally.
 
 ```
-git clone https://github.com/opensource9ja/danfojs.git
+git clone https://github.com/javascriptdata/danfojs.git
 cd danfojs
 git checkout -b <your-branch-name>
 ```
 
-There are two folders, **danfojs-browser** and **danfojs-node**. If you are contributing a new feature, then you should include it in both versions. If you are doing a bug fix for a single version, then open that folder and install packages.&#x20;
+There are three main folders in the `src` folder, **danfojs-base**, **danfojs-browser,** and **danfojs-node**.&#x20;
 
-For instance, if I want to do some bug fixes in danfojs-node. I can do the following:
-
-```
-cd danfojs-node 
-yarn ##install all packages 
-```
-
-Add my bug fixes and ensure test passes:
-
-```
-yarn test ## run test 
-```
+The **danfojs-base** folder holds all shared classes, modules, and functions used by both danfojs-browser and danfojs-node. So features or bug fixes that work the same way in both versions will generally be done in the **danfojs-base** folder.&#x20;
 
 ## Where to start?
 
-For first time contributors, you can find pending issues on the GitHub “issues” page. There are a number of issues listed and "good first issue" where you could start out. Once you’ve found an interesting issue, and have an improvement in mind, next thing is to set up your development environment.
+For first-time contributors, you can find pending issues on the GitHub “issues” page. There are a number of issues listed and "good first issue" where you could start out. Once you’ve found an interesting issue, and have an improvement in mind, next thing is to set up your development environment.
 
 ## Working with the code
 
-Now that you have an issue you want to fix, an enhancement to add, or documentation to improve, you need to learn how to work with GitHub and the danfojs code base.
+If you have an issue you want to fix, an enhancement to add, or documentation to improve, you need to learn how to work with GitHub and the Danfojs code base.
 
 ### **Version control, Git, and GitHub**
 
-The danfojs code is hosted on GitHub. To contribute you will need to sign up for a free GitHub account. We use Git for version control to allow many people to work together on this project.
+Danfojs code is hosted on GitHub. To contribute you will need to sign up for a free GitHub account. We use Git for version control to allow many people to work together on this project.
 
 Some great resources for learning Git:
 
 * Official [GitHub pages](http://help.github.com).
 
-### **Getting started with Git¶**
+### **Getting started with Git**
 
 Find [Instructions](http://help.github.com/set-up-git-redirect) for installing git, setting up your SSH key, and configuring git. These steps need to be completed before you can work seamlessly between your local repository and GitHub.
 
-## **Forking the danfojs repo**
+## **Forking the Danfojs repo**
 
 You will need your own fork to work on the code. Go to the danfojs [project page](https://github.com/opensource9ja/danfojs) and hit the Fork button.
 
 Next, you will clone your fork to your local machine:
 
 ```
-git clone https://github.com/opensource9ja/danfojs.git
+git clone https://github.com/javascriptdata/danfojs.git
 cd danfojs
 ```
 
 This creates the directory danfojs and connects your repository to the upstream (main project) repository.
 
-> **All development are done in two folders--**[**danfojs-browser**](https://github.com/opensource9ja/danfojs/tree/master/danfojs-browser) **and** [**danfojs-node**](https://github.com/opensource9ja/danfojs/tree/master/danfojs-node) **folders. The two folders are similar and it is always recommended to pull latest changes from master before development in any of the folder.**&#x20;
+Some Javascript features are supported both in the browser and node environment, and it is recommended to add features in the **danfojs-base** folder.&#x20;
 
-Some Javascript features are supported both in the browser and node environment, and it is recommended to add these to both versions.&#x20;
+For features that work differently or only in a specific environment, you can add them in the corresponding danfojs-node or danfojs-browser folder.&#x20;
 
-For features that work only in NodeJs environment, especially file related issues, these should be developed and tested in the danfojs-node folder, and the corresponding tests are written there.  &#x20;
+
 
 ## **Creating a development environment**
 
 To test out code changes, you’ll need to build danfojs, which requires a Nodejs environment.
 
 ```python
-git clone https://github.com/opensource9ja/danfojs.git
+git clone https://github.com/javascriptdata/danfojs.git
 cd danfojs
-cd danfojs-browser && yarn ## installs required packages in browser version
-cd .. && cd danfojs-node && yarn ## installs required packages in node version
-cd .. ## Go back to root folder
+yarn install ## automatically installs all required packages
 yarn test ##Runs test in both node and browser folder
 ```
 
@@ -127,10 +114,9 @@ function add_series(series1, series2){
 
         return new Series()
 }
-
 ```
 
-And for functions that contain more than two argument, keyword argument should be used. Parsing of keyword argument is also applicable to most of the methods in a class
+And for functions that contain more than two arguments, a keyword argument can be used. Parsing of keyword argument is also applicable to most of the methods in a class
 
 ```javascript
 /**
@@ -151,9 +137,9 @@ function join_df(kwargs){
 
 ## **Writing tests**
 
-We strongly encourage contributors to write tests for their code. Like many packages, danfojs uses mocha
+We strongly encourage contributors to write tests for their code. Like many packages, Danfojs uses mocha.&#x20;
 
-All tests should go into the tests subdirectory and place in the corresponding module. The tests folder contains some current examples of tests, and we suggest looking to these for inspiration.
+All tests should go into the tests subdirectory and placed in the corresponding module. The tests folder contains some current examples of tests, and we suggest looking to these for inspiration.
 
 Below is the general Framework to write a test for each module.
 
@@ -236,16 +222,16 @@ describe("DataFrame", function(){
 
 To run the test for the module you created,
 
-**1)** Open the package.json&#x20;
+**1)** Open the package.json
 
-**2)** change the name of the test file to the file name you want. and don't forget the file is in the test folder
+**2)** change the name of the test script to the file name you want to test.
 
 ```python
 "scripts": {
     "test": "....... danfojs/tests/sub_directory_name/filename",
 ```
 
-**3)**  run the test, in the danfojs directory terminal
+**3)** run the test, in the danfojs directory terminal
 
 ```python
 yarn test
@@ -300,30 +286,7 @@ This request then goes to the repository maintainers, and they will review the c
 
 In other to contribute to the code base of danfojs, there are some functions and properties provided to make implementation easy.
 
-The main exposed modules are the **Frame** and **Series** module. This module inherits from the **Generic** module.
+The folder **danfojs-base** contains the bulk of Danfojs modules, and these are simply extended or exported by the **danfojs-browser** and **danfojs-node** folders. The base class for Frames and Series is the NdFrame class which is found in the `danfojs-base/core/generic` file.&#x20;
 
-The **Generic** module consists of the following methods and properties
 
-* `.dtypes`    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L213)] is used to obtain the dtype for each column
-* `.index` \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L250)] to obtain the index for Dataframe or Series
-* `.__set_index(label)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L257)] to set the index value
-* `.__reset_index()`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L271)] to reset the index in DataFrame and Series
-* `.values`   Obtain the values in  DataFrame and Series per rows
-* `.col_data` Obtain the values in DataFrame and Series per columns
-* `.column_names`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L305)] Obtain the list of column names
-* `.__set_col_types` \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L165)] set the dtype for a column or infer the dtype from it
-* `.columns` to  access the column names directly
-* `row_data_tensor`  store the tensor representation of the data in DataFrame and Series
 
-The **Frame** module consists of the following methods and properties to aid implementation.
-
-* `__frame_is_compactible_for_operation`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L1754)]:  check if all the values in a DataFrame are numerical. This helps to check if the numerical operation can be done using the dataframe.
-* `.__get_ops_tensors(tensors, axis)`   \[[source\]](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L1767) : obtain tensors from dataframes along axis 0 or 1.
-* `.__get_df_from_tensor(val, col_names)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L1741)]:  Obtain dataframe from tensor.
-* `.__get_tensor_and_idx(df, axis)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/frame.js#L928)]:  Obtain tensors, their index value and their axis from dataframe.
-
-The **Series** module contains mostly Generic properties and less special internal properties.
-
-* `__check_series_op_compactibility(other)`  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L666)]  check if two series are compatible for numerical operation
-
-Lastly, the **Utils** module contains important utility functions.

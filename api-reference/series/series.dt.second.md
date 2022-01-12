@@ -4,7 +4,7 @@ description: Obtain the seconds in Date series
 
 # Series.dt.seconds
 
-> danfo.Series.dt.**seconds**()   \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L280)]
+> danfo.Series.dt.**seconds**()
 
 **Parameters**: None
 
@@ -19,7 +19,7 @@ Obtain the seconds of the datetime
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = new dfd.date_range({"start":"2000-01-01", period:3, freq:"s"})
+let data = new dfd.dateRange({"start":"2000-01-01", period:3, freq:"s"})
 let sf = new dfd.Series(data)
 //print the series frame
 sf.print()
@@ -38,7 +38,6 @@ sf.dt.seconds().print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
 ╔═══╤══════════════════════╗
 ║ 0 │ 1/1/2000, 1:00:00 AM ║
 ╟───┼──────────────────────╢
@@ -54,7 +53,6 @@ sf.dt.seconds().print()
 ╟───┼───╢
 ║ 2 │ 2 ║
 ╚═══╧═══╝
-
 ```
 {% endtab %}
 {% endtabs %}

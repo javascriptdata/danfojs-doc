@@ -10,8 +10,6 @@ description: >-
 
 ### Basic Line plot on Series
 
-The **line** plot is exposed by the .**plot()** function called on a Series or DataFrame. The **.plot()** method accepts an HTML Div id where it renders the plot, while configuration options for the lines drawn can be passed through the config parameter.
-
 ```markup
 <!DOCTYPE html>
 <html lang="en">
@@ -19,7 +17,6 @@ The **line** plot is exposed by the .**plot()** function called on a Series or D
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
     <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
@@ -29,7 +26,7 @@ The **line** plot is exposed by the .**plot()** function called on a Series or D
     <div id="plot_div"></div>
     <script>
 
-        s = new dfd.Series([1, 3, 2, 6, 10, 34, 40, 51, 90, 75])
+        const s = new dfd.Series([1, 3, 2, 6, 10, 34, 40, 51, 90, 75])
         s.plot("plot_div").line()
 
     </script>
@@ -51,7 +48,6 @@ The example below shows the plot of column values against a common x-axis (index
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
      <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
@@ -61,7 +57,7 @@ The example below shows the plot of column values against a common x-axis (index
     <div id="plot_div"></div>
     <script>
 
-        df = new dfd.DataFrame({'pig': [20, 18, 489, 675, 1776],
+        const df = new dfd.DataFrame({'pig': [20, 18, 489, 675, 1776],
                                'horse': [4, 25, 281, 600, 1900]}, {index: [1990, 1997, 2003, 2009, 2014]})
         df.plot("plot_div").line()
 
@@ -91,10 +87,17 @@ The example below shows how to plot two columns in a DataFrame against each othe
 
     <div id="plot_div"></div>
     <script>
-
-        df = new dfd.DataFrame({'pig': [20, 18, 489, 675, 1776],
-                               'horse': [4, 25, 281, 600, 1900]}, {index: [1990, 1997, 2003, 2009, 2014]})
-        df.plot("plot_div").line({x: 'pig', y: 'horse'})
+    
+      const df = new dfd.DataFrame({
+        'pig': [20, 18, 489, 675, 1776],
+        'horse': [4, 25, 281, 600, 1900]
+      }, { index: [1990, 1997, 2003, 2009, 2014] })
+  
+      df.plot("plot_div").line({
+        config: {
+          x: 'pig', y: 'horse'
+        }
+      })
 
     </script>
 </body>
@@ -105,5 +108,5 @@ The example below shows how to plot two columns in a DataFrame against each othe
 ![](<../../.gitbook/assets/newplot (3).png>)
 
 {% hint style="info" %}
-To set configuration for your plots, see the [Configuring your plot page](configuring-your-plots.md)
+To customize your plots, see the [Customize your plot page](configuring-your-plots.md)
 {% endhint %}

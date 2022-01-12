@@ -4,7 +4,7 @@ description: Check if all the values in a series is greater than or equal a valu
 
 # Series.ge
 
-> danfo.Series.ge(other)     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L874)]
+> danfo.Series.ge(other)&#x20;
 
 | Parameters | Type                    | Description         | Default |
 | ---------- | ----------------------- | ------------------- | ------- |
@@ -14,7 +14,7 @@ description: Check if all the values in a series is greater than or equal a valu
 
 **Example**
 
-Compare all the value in a Series to the values in another series
+Compare all the values in a Series to the values in another series
 
 {% tabs %}
 {% tab title="Node" %}
@@ -34,28 +34,26 @@ sf1.ge(sf2).print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ true                 ║
-╟───┼──────────────────────╢
-║ 1 │ false                ║
-╟───┼──────────────────────╢
-║ 2 │ true                 ║
-╟───┼──────────────────────╢
-║ 3 │ true                 ║
-╟───┼──────────────────────╢
-║ 4 │ false                ║
-╟───┼──────────────────────╢
-║ 5 │ true                 ║
-╟───┼──────────────────────╢
-║ 6 │ true                 ║
-╚═══╧══════════════════════╝
+╔═══╤═══════╗
+║ 0 │ true  ║
+╟───┼───────╢
+║ 1 │ false ║
+╟───┼───────╢
+║ 2 │ true  ║
+╟───┼───────╢
+║ 3 │ true  ║
+╟───┼───────╢
+║ 4 │ false ║
+╟───┼───────╢
+║ 5 │ true  ║
+╟───┼───────╢
+║ 6 │ true  ║
+╚═══╧═══════╝
 ```
 {% endtab %}
 {% endtabs %}
 
-Check if all the value in a Series is greater than or equal a value.
+Check if all the value in a Series is greater than or equal to a scalar value.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -73,23 +71,21 @@ sf1.ge(20).print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ false                ║
-╟───┼──────────────────────╢
-║ 1 │ true                 ║
-╟───┼──────────────────────╢
-║ 2 │ true                 ║
-╟───┼──────────────────────╢
-║ 3 │ true                 ║
-╟───┼──────────────────────╢
-║ 4 │ true                 ║
-╟───┼──────────────────────╢
-║ 5 │ true                 ║
-╟───┼──────────────────────╢
-║ 6 │ false                ║
-╚═══╧══════════════════════╝
+╔═══╤═══════╗
+║ 0 │ false ║
+╟───┼───────╢
+║ 1 │ true  ║
+╟───┼───────╢
+║ 2 │ true  ║
+╟───┼───────╢
+║ 3 │ true  ║
+╟───┼───────╢
+║ 4 │ true  ║
+╟───┼───────╢
+║ 5 │ true  ║
+╟───┼───────╢
+║ 6 │ false ║
+╚═══╧═══════╝
 ```
 {% endtab %}
 {% endtabs %}

@@ -4,20 +4,16 @@ description: Get Less than of DataFrame and other, element-wise (binary operator
 
 # DataFrame.It
 
-danfo.DataFrame.l**t**(other, option) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1566)]
+danfo.DataFrame.l**t**(other, option)&#x20;
 
 | Parameters | Type                             | Description                                                 | Default   |
 | ---------- | -------------------------------- | ----------------------------------------------------------- | --------- |
 | other      | DataFrame, Series, Array, Scalar | Data structure, or array-like object to compare against     |           |
 | option     | Object                           | **axis**: 0 or 1. If 0, add column-wise, if 1, add row-wise | {axis: 1} |
 
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
-
 ## **Examples**
 
-### Comparing **** DataFrame with a scalar value:
+### Comparing a DataFrame with a scalar value:
 
 {% tabs %}
 {% tab title="Node" %}
@@ -58,7 +54,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Comparing **** DataFrame with a Series along the column axis:
+### Comparing a DataFrame with a Series along the column axis:
 
 {% tabs %}
 {% tab title="Node" %}
@@ -75,7 +71,6 @@ let sf = new dfd.Series([10, 40])
 let df_rep = df.lt(sf, { axis: 1 })
 
 df_rep.print()
-
 
 ```
 {% endtab %}
@@ -104,7 +99,7 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Comparing **** DataFrame with a DataFrame
+### Comparing a DataFrame with another DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -122,7 +117,6 @@ let df2 = new dfd.DataFrame(data2)
 let df_rep = df.lt(df2)
 
 df_rep.print()
-
 ```
 {% endtab %}
 
@@ -150,20 +144,21 @@ df_rep.print()
 {% endtab %}
 {% endtabs %}
 
-### Comparing **** DataFrame with an Array
+### Comparing a DataFrame with an Array
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = {"Col1": [10, 45, 56, 10],
-            "Col2": [23, 20, 10, 24]}
-            
+let data = {
+    "Col1": [10, 45, 56, 10],
+    "Col2": [23, 20, 10, 24]
+}
 let df = new dfd.DataFrame(data)
-let val = [10,40]
+let val = [10, 40]
 
-let df_rep = df.lt(val, axis=1)
+let df_rep = df.lt(val, { axis: 1 })
 
 df_rep.print()
 ```

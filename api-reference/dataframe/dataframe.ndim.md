@@ -1,16 +1,12 @@
 ---
 description: >-
-  Return an int representing the number of axes / array dimensions. Returns 1 if
-  Series. Otherwise return 2 for DataFrame.
+  Return an integer representing the number of dimensions. Returns 1 if Series.
+  Otherwise return 2 for DataFrame.
 ---
 
 # DataFrame.ndim
 
-danfo.DataFrame.**ndim** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]
-
-**Returns:**
-
-&#x20;      ****       return **Int**
+danfo.DataFrame.**ndim**&#x20;
 
 **Note:** To get the **shape** of the DataFrame use the .[shape](dataframe.shape.md) property.
 
@@ -27,7 +23,6 @@ let data = {"A": [-20.1, 30, 47.3, -20],
 let df = new dfd.DataFrame(data)
 
 console.log(df.ndim)
-
 ```
 {% endtab %}
 

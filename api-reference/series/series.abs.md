@@ -4,11 +4,11 @@ description: Returns the absolute value in a Series
 
 # Series.abs
 
-> danfo.Series.**abs**(options)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L793)]
+> danfo.Series.**abs**(options)&#x20;
 
-| Parameters | Type   | Description                                                                                          | Default                               |
-| ---------- | ------ | ---------------------------------------------------------------------------------------------------- | ------------------------------------- |
-| options    | Object | **inplace**:  Boolean indicating whether to perform the operation in-place or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
+| Parameters | Type   | Description                                                                                         | Default                               |
+| ---------- | ------ | --------------------------------------------------------------------------------------------------- | ------------------------------------- |
+| options    | Object | **inplace**: Boolean indicating whether to perform the operation in-place or not. Defaults to false | <p>{</p><p>inplace: false</p><p>}</p> |
 
 **Returns:** Series
 
@@ -30,23 +30,21 @@ sf.abs().print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 10                   ║
-╟───┼──────────────────────╢
-║ 1 │ 45                   ║
-╟───┼──────────────────────╢
-║ 2 │ 56                   ║
-╟───┼──────────────────────╢
-║ 3 │ 25                   ║
-╟───┼──────────────────────╢
-║ 4 │ 23                   ║
-╟───┼──────────────────────╢
-║ 5 │ 20                   ║
-╟───┼──────────────────────╢
-║ 6 │ 10                   ║
-╚═══╧══════════════════════╝
+╔═══╤════╗
+║ 0 │ 10 ║
+╟───┼────╢
+║ 1 │ 45 ║
+╟───┼────╢
+║ 2 │ 56 ║
+╟───┼────╢
+║ 3 │ 25 ║
+╟───┼────╢
+║ 4 │ 23 ║
+╟───┼────╢
+║ 5 │ 20 ║
+╟───┼────╢
+║ 6 │ 10 ║
+╚═══╧════╝
 ```
 {% endtab %}
 {% endtabs %}

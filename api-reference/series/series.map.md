@@ -4,7 +4,7 @@ description: Map the value of a series to a function or Object
 
 # Series.map
 
-> danfo.series.**map**(callable) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L685)]
+> danfo.series.**map**(callable)
 
 | Parameter | Type               | Description                                                                                    | Default                               |
 | --------- | ------------------ | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
@@ -13,7 +13,7 @@ description: Map the value of a series to a function or Object
 
 **Example**
 
-Mapping the element in a Series  words in an Object
+Mapping the element in a Series words in an Object
 
 {% tabs %}
 {% tab title="Node" %}
@@ -23,7 +23,6 @@ const dfd = require("danfojs-node")
 let sf = new dfd.Series([1, 2, 3, 4])
 let map = { 1: "ok", 2: "okie", 3: "frit", 4: "gop" }
 sf.map(map).print()
-
 ```
 {% endtab %}
 
@@ -36,17 +35,15 @@ sf.map(map).print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ ok                   ║
-╟───┼──────────────────────╢
-║ 1 │ okie                 ║
-╟───┼──────────────────────╢
-║ 2 │ frit                 ║
-╟───┼──────────────────────╢
-║ 3 │ gop                  ║
-╚═══╧══════════════════════╝
+╔═══╤══════╗
+║ 0 │ ok   ║
+╟───┼──────╢
+║ 1 │ okie ║
+╟───┼──────╢
+║ 2 │ frit ║
+╟───┼──────╢
+║ 3 │ gop  ║
+╚═══╧══════╝
 ```
 {% endtab %}
 {% endtabs %}
@@ -63,7 +60,6 @@ let sf = new dfd.Series([1,2,3,4])
 sf.map((x)=>{
     return `I have ${x} cat(s)`
 }).print()
-
 ```
 {% endtab %}
 
@@ -76,17 +72,15 @@ sf.map((x)=>{
 {% tabs %}
 {% tab title="Output" %}
 ```
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ I have 1 cat(s)      ║
-╟───┼──────────────────────╢
-║ 1 │ I have 2 cat(s)      ║
-╟───┼──────────────────────╢
-║ 2 │ I have 3 cat(s)      ║
-╟───┼──────────────────────╢
-║ 3 │ I have 4 cat(s)      ║
-╚═══╧══════════════════════╝
+╔═══╤═════════════════╗
+║ 0 │ I have 1 cat(s) ║
+╟───┼─────────────────╢
+║ 1 │ I have 2 cat(s) ║
+╟───┼─────────────────╢
+║ 2 │ I have 3 cat(s) ║
+╟───┼─────────────────╢
+║ 3 │ I have 4 cat(s) ║
+╚═══╧═════════════════╝
 ```
 {% endtab %}
 {% endtabs %}

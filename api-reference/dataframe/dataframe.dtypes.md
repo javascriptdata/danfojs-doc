@@ -7,15 +7,11 @@ description: >-
 
 # DataFrame.ctypes
 
-danfo.DataFrame.**dtypes** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/frame.js#L1848)]
-
-**Returns:**
-
-&#x20;      ****       return  **Series**
+danfo.DataFrame.**dtypes**&#x20;
 
 ## **Examples**
 
-Returns auto-generated **** index of a **** DataFrame
+Returns auto-generated  index of a DataFrame
 
 {% tabs %}
 {% tab title="Node" %}
@@ -59,7 +55,6 @@ Columns with mixed types are represented as **string.**
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-
 const dfd = require("danfojs-node")
 
 let data = {"A": [-20.1, 30, 47.3, -20],
@@ -97,4 +92,4 @@ df.ctypes.print()
 {% endtab %}
 {% endtabs %}
 
-**Note**: To cast a type, use the [astype](dataframe.astype.md) method.&#x20;
+**Note**: To cast a type, use the [asType](dataframe.astype.md) method.

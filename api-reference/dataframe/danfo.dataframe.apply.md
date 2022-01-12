@@ -4,20 +4,16 @@ description: Apply a function to each element or along a specified axis of a Dat
 
 # DataFrame.apply
 
-danfo.DataFrame.**apply**(callable, options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1566)]
+danfo.DataFrame.**apply**(callable, options)&#x20;
 
 | Parameters | Type     | Description                                                           | Default   |
 | ---------- | -------- | --------------------------------------------------------------------- | --------- |
 | callable   | Function | Function to apply to each column or row                               |           |
 | options    | Object   | **axis**: 0 or 1. If 0, compute the power column-wise, if 1, row-wise | {axis: 1} |
 
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
-
 ## **Examples**
 
-### Apply a  function along default axis 1 (columns)
+### Apply a function along default axis 1 (columns)
 
 {% hint style="info" %}
 Note that the specified function passed to `apply` will be called with an array of the values across the specified axis.
@@ -51,17 +47,19 @@ df_new.print()
 {% tab title="Output" %}
 ```
 ╔═══╤═════╗
-║ A │ 64  ║
+║ 0 │ 6   ║
 ╟───┼─────╢
-║ B │ 126 ║
+║ 1 │ 15  ║
 ╟───┼─────╢
-║ C │ 127 ║
+║ 2 │ 90  ║
+╟───┼─────╢
+║ 3 │ 206 ║
 ╚═══╧═════╝
 ```
 {% endtab %}
 {% endtabs %}
 
-### Apply a  function along  axis 0 (row)
+### Apply a function along axis 0 (row)
 
 {% tabs %}
 {% tab title="Node" %}
@@ -78,7 +76,6 @@ function sum_vals(col) {
 
 let df_new = df.apply(sum_vals, { axis: 0 })
 df_new.print()
-
 ```
 {% endtab %}
 
@@ -92,15 +89,12 @@ df_new.print()
 {% tab title="Output" %}
 ```
 ╔═══╤═════╗
-║ 0 │ 6   ║
+║ A │ 64  ║
 ╟───┼─────╢
-║ 1 │ 15  ║
+║ B │ 126 ║
 ╟───┼─────╢
-║ 2 │ 90  ║
-╟───┼─────╢
-║ 3 │ 206 ║
+║ C │ 127 ║
 ╚═══╧═════╝
-
 ```
 {% endtab %}
 {% endtabs %}

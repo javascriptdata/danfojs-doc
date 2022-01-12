@@ -13,7 +13,7 @@ In this tutorial, I will show you how to load and process the famous Titanic dat
 
 The main objective of this tutorial is to show you how to use danfo.js to load and process data easily in JavaScript, so we won't be doing anything too advanced. Also, I assumed that you're familiar with basic deep learning with Tensorflow.js and Pandas as well. If you do not have any background in ML, these are good resources to get started:
 
-* [Introduction to Machine Learning](https://developers.google.com/machine-learning/crash-course/ml-intro) 
+* [Introduction to Machine Learning](https://developers.google.com/machine-learning/crash-course/ml-intro)
 * [Deep Learning and Neural Networks](https://www.tensorflow.org/resources/learn-ml/basics-of-machine-learning)
 * [A Gentle Introduction to TensorFlow.js](https://blog.tensorflow.org/2018/04/a-gentle-introduction-to-tensorflowjs.html)
 
@@ -41,19 +41,19 @@ When you're done, create a file called app.js and import the packages:
 
 ```javascript
 const dfd = require("danfojs-node")
-const tf = dfd.tf //Reference to the exported tensorflowjs library
+const tf = dfd.tensorflow //Reference to the exported tensorflowjs library
 ```
 
 ## Loading and processing your data
 
-To load a CSV dataset, you can use the [read_csv](../api-reference/input-output/danfo.read_csv.md) function. This can load a file from both a local path, as well as over the internet. In this tutorial, you'll load the titanic dataset from the internet.
+To load a CSV dataset, you can use the [readCSV](../api-reference/input-output/danfo.read\_csv.md) function. This can load a file from both a local path, as well as over the internet. In this tutorial, you'll load the titanic dataset from the internet.
 
 Below your import add the following lines of code:
 
 ```javascript
 async function load_process_data() {
 
-    let df = await dfd.read_csv("https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv")
+    let df = await dfd.redCSV("https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv")
     df.head().print()
 
 
@@ -61,8 +61,7 @@ async function load_process_data() {
 ```
 
 ```
- Shape: (5,8) 
-
+ 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Survived          │ Pclass            │ Name              │ Sex               │ ...               │ Age               │ Siblings/Spou...  │ Parents/Child...  │ Fare              ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -78,7 +77,7 @@ async function load_process_data() {
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-You wrote an async function because loading dataset over the internet takes a few seconds depending on your network. Inside the async function, you pass in the url of the titanic dataset to the read_csv function.
+You wrote an async function because loading a dataset over the internet takes a few seconds depending on your network. Inside the async function, you pass in the url of the titanic dataset to the read\_csv function.
 
 Next you'll perform some basic data preprocessing. The [ctypes](../api-reference/dataframe/dataframe.dtypes.md) attribute returns the column data types:
 
@@ -115,7 +114,7 @@ From the data types table above, you'll notice that there are two strong columns
 let title = df['Name'].apply((x) => { return x.split(".")[0] }).values
 
 //replace in df
-df.addColumn({ column: "Name", values: title, inplace: true })
+df.addColumn("Name", title, { inplace: true })
 ```
 
 In the code above, you are calling the [apply](../api-reference/series/series.apply.md) function on the _**Name**_ column. The parameter to the [apply](../api-reference/series/series.apply.md) function is a function that gets called on each element of the column. This function can be any JavaScript function.
@@ -147,7 +146,7 @@ let cols = ["Sex", "Name"]
 cols.forEach(col => {
   encoder.fit(df[col])
   enc_val = encoder.transform(df[col])
-  df.addColumn({ column: col, values: enc_val, inplace: true })
+  df.addColumn( col, enc_val, { inplace: true })
 })
 
 df.head().print()
@@ -207,19 +206,19 @@ In the code cell above, first, you create an instance from the MinMaxScaler clas
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-The full code for the load_process_data function becomes:
+The full code for the load\_process\_data function becomes:
 
 ```javascript
 const dfd = require("danfojs-node")
 const tf = dfd.tf;
 
 async function load_process_data() {
-    let df = await dfd.read_csv("https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv")
+    let df = await dfd.readCSV("https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv")
 
     //A feature engineering: Extract all titles from names columns
     let title = df['Name'].apply((x) => { return x.split(".")[0] }).values
     //replace in df
-    df.addColumn({ column: "Name", values: title, inplace: true })
+    df.addColumn("Name",  title, { inplace: true })
 
     //label Encode Name feature
     let encoder = new dfd.LabelEncoder()
@@ -227,14 +226,14 @@ async function load_process_data() {
     cols.forEach(col => {
         encoder.fit(df[col])
         enc_val = encoder.transform(df[col])
-        df.addColumn({ column: col, values: enc_val, inplace: true })
+        df.addColumn( col, enc_val, { inplace: true })
     })
 
 
-    let Xtrain,ytrain;
+    let Xtrain, ytrain;
     Xtrain = df.iloc({ columns: [`1:`] })
     ytrain = df['Survived']
-
+    
     // Standardize the data with MinMaxScaler
     let scaler = new dfd.MinMaxScaler()
     scaler.fit(Xtrain)
@@ -250,7 +249,7 @@ load_process_data()
 
 In this section, you'll build a simple classification model using tensorflow.js. If you're not familiar with Tensorflow.js, you can start [here](https://blog.tensorflow.org/2018/04/a-gentle-introduction-to-tensorflowjs.html).
 
-Create a simple function called get_model. This will construct and return a model when called.
+Create a simple function called get\_model. This will construct and return a model when called.
 
 ```javascript
 function get_model() {
@@ -297,23 +296,23 @@ async function train() {
 }
 ```
 
-This function calls the _**load_process_data**_ function to retrieve training data as tensors and also calls the _**get_model**_ to retrieve the model. Next, you compile the model by specifying an optimizer, a loss function and a metric to report.
+This function calls the _**load\_process\_data**_ function to retrieve training data as tensors and also calls the _**get\_model**_ to retrieve the model. Next, you compile the model by specifying an optimizer, a loss function and a metric to report.
 
 Next, you call the **fit** function on the model, by passing the training data and labels (tensors), specify batch size, epoch size, validation split size, and also a callback function to track training progress.
 
 The training progress is printed to the console at the end of each Epoch. Below is the full code from loading data to training your model:
 
 ```javascript
-const dfd = require("danfojs-node")
-const tf = dfd.tf;
+const dfd = require("danfojs-node-nightly")
+const tf = dfd.tensorflow
 
 async function load_process_data() {
-    let df = await dfd.read_csv("https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv")
+    let df = await dfd.readCSV("https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv")
 
     //A feature engineering: Extract all titles from names columns
     let title = df['Name'].apply((x) => { return x.split(".")[0] }).values
     //replace in df
-    df.addColumn({ column: "Name", values: title, inplace: true })
+    df.addColumn("Name",  title, { inplace: true })
 
     //label Encode Name feature
     let encoder = new dfd.LabelEncoder()
@@ -321,11 +320,11 @@ async function load_process_data() {
     cols.forEach(col => {
         encoder.fit(df[col])
         enc_val = encoder.transform(df[col])
-        df.addColumn({ column: col, values: enc_val, inplace: true })
+        df.addColumn( col, enc_val, { inplace: true })
     })
 
 
-    let Xtrain,ytrain;
+    let Xtrain, ytrain;
     Xtrain = df.iloc({ columns: [`1:`] })
     ytrain = df['Survived']
 
@@ -333,7 +332,6 @@ async function load_process_data() {
     let scaler = new dfd.MinMaxScaler()
     scaler.fit(Xtrain)
     Xtrain = scaler.transform(Xtrain)
-
     return [Xtrain.tensor, ytrain.tensor] //return the data as tensors
 }
 
@@ -417,8 +415,8 @@ After 15 epochs, you reach an accuracy of about 83%. This can definitely be impr
 
 In this tutorial, you have seen how to use danfo.js with tensorflow.js to load and process data, as well as train a neural network. This is similar to the Pandas-Tensorflow packages in Python.
 
-You also notice that danfo.js provides similar API as Pandas and can easily be picked up by Python developers.
+You also notice that danfo.js provides a similar API as Pandas and can easily be picked up by Python developers.
 
 As an extra task, you can try to do more feature engineering using danfo.js and try to improve the accuracy of your model.
 
-Go danfo! 😎
+Go Danfo! 😎

@@ -6,6 +6,12 @@ description: >-
 
 # Getting Started
 
+{% hint style="info" %}
+A stable version of Danfojs (v1), has been released, and it comes with full Typescript support, new features, and many bug fixes. See release note [here](release-notes.md#latest-release-node-v1.0.0-browser-v1.0.0).&#x20;
+
+There are a couple of breaking changes, so we have prepared a short migration [guide](examples/migrating-to-the-stable-version-of-danfo.js.md) for pre-v1.0.0 users.&#x20;
+{% endhint %}
+
 ## Installation
 
 There are three ways to install and use Danfo.js in your application
@@ -33,23 +39,26 @@ yarn add danfojs
 For use directly in HTML files, you can add the latest script tag from [JsDelivr](https://www.jsdelivr.com/package/npm/danfojs?version=0.3.1\&path=lib):
 
 ```markup
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@1.0.0/lib/bundle.min.js"></script>
 ```
 
 {% hint style="info" %}
-To play with Danfo.js in a Notebook-like environment, see [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo)
+To play with Danfo.js in a Notebook-like environment, see [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo) or the [VS-Code Nodejs notebook extension](https://marketplace.visualstudio.com/items?itemName=donjayamanne.typescript-notebook).&#x20;
 {% endhint %}
 
 ## 10 minutes to danfo.js
 
 This is a short introduction to Danfo.js, and its flow is adapted from the official [10 minutes to Pandas](https://pandas.pydata.org/pandas-docs/stable/user\_guide/10min.html#min)
 
-We will show you how to use danfo.js in both browser environments and Node.js environments. Most functions except [plotting](https://jsdata.gitbook.io/danfojs/api-reference/plotting) which require a DOM work the same way in both environments.
+We will show you how to use danfo.js in a browser, client-side libraries, and Node.js environments. Most functions except [plotting](https://jsdata.gitbook.io/danfojs/api-reference/plotting) which require a DOM work the same way in all environments.
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
+
+//or using ES6
+import * as dfd from "danfojs-node"
 ```
 {% endtab %}
 
@@ -78,6 +87,15 @@ const dfd = require("danfojs-node")
 </html>
 ```
 {% endtab %}
+
+{% tab title="React" %}
+```jsx
+import * as dfd from "danfojs"
+
+//import specific methods/classes
+import { readCSV, DataFrame } from "danfojs"
+```
+{% endtab %}
 {% endtabs %}
 
 ### Creating a DataFrame/Series
@@ -87,6 +105,8 @@ You can create a [`Series`](https://pandas.pydata.org/pandas-docs/stable/referen
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
+import * as dfd from "danfojs-node"
+
 s = new dfd.Series([1, 3, 5, undefined, 6, 8])
 s.print()
 ```
@@ -144,7 +164,7 @@ Creating a [`Series`](https://pandas.pydata.org/pandas-docs/stable/reference/api
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
-const tf = require("@tensorflow/tfjs-node")
+const tf = dfd.tensorflow //Tensorflow.js is exportedfrom Danfojs
 
 
 let tensor_arr = tf.tensor([12,34,56,2])
@@ -169,7 +189,7 @@ s.print()
 <body>
 
     <script>
-        const tf = dfd.tf //get tensorflow lib from danfo
+        const tf = dfd.tensorflow //get tensorflow lib from danfo
         let tensor_arr = tf.tensor([12,34,56,2])
         let s = new dfd.Series(tensor_arr)
         s.print()
@@ -251,7 +271,7 @@ Creating a [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
-const tf = require("@tensorflow/tfjs-node")
+const tf = dfd.tensorflow //Tensorflow.js is exported from Danfojs
 
 
 let tensor_arr = tf.tensor2d([[12, 34, 2.2, 2], [30, 30, 2.1, 7]])
@@ -318,12 +338,12 @@ df.ctypes.print()
 Creating a [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.html#pandas.DataFrame) by passing a dictionary of objects with the same length
 
 {% tabs %}
-{% tab title="Node" %}
+{% tab title="Nodejs" %}
 ```javascript
 const dfd = require("danfojs-node")
 
-
-dates = new dfd.date_range({ start: '2017-01-01', end: "2020-01-01", period: 4, freq: "Y" })
+// Danfojs v1.0.0 and above
+dates = new dfd.dateRange({ start: '2017-01-01', end: "2020-01-01", period: 4, freq: "Y" })
 
 console.log(dates);
 
@@ -355,7 +375,7 @@ df.print()
 
     <script>
 
-        dates = new dfd.date_range({ start: '2017-01-01', end: "2020-01-01", period: 4, freq: "Y" })
+        dates = new dfd.dateRange({ start: '2017-01-01', end: "2020-01-01", period: 4, freq: "Y" })
 
         console.log(dates);
 
@@ -514,22 +534,27 @@ Display the index, columns:
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
-const dfd = require("danfojs-node")
+const dfd = require('danfojs-node')
 
-dates = new dfd.date_range({ start: '2017-01-01', end: "2020-01-01", period: 4, freq: "Y" })
+let dates = new dfd.dateRange({
+    start: "2017-01-01",
+    end: "2020-01-01",
+    period: 4,
+    freq: "Y",
+  });
 
+  let obj_data = {
+    A: dates,
+    B: ["bval1", "bval2", "bval3", "bval4"],
+    C: [10, 20, 30, 40],
+    D: [1.2, 3.45, 60.1, 45],
+    E: ["test", "train", "test", "train"],
+  };
 
-obj_data = {'A': dates,
-            'B': ["bval1", "bval2", "bval3", "bval4"],
-            'C': [10, 20, 30, 40],
-            'D': [1.2, 3.45, 60.1, 45],
-            'E': ["test", "train", "test", "train"]
-            }
-
-df = new dfd.DataFrame(obj_data)
-
-console.log(df.index);
-console.log(df.columns);
+  let df = new dfd.DataFrame(obj_data);
+  df.print();
+  console.log(df.index);
+  console.log(df.columns);
 ```
 {% endtab %}
 
@@ -549,21 +574,25 @@ console.log(df.columns);
 
     <script>
 
-       dates = new dfd.date_range({ start: '2017-01-01', end: "2020-01-01", period: 4, freq: "Y" })
+      let dates = new dfd.dateRange({
+        start: "2017-01-01",
+        end: "2020-01-01",
+        period: 4,
+        freq: "Y",
+      });
 
+      let obj_data = {
+        A: dates,
+        B: ["bval1", "bval2", "bval3", "bval4"],
+        C: [10, 20, 30, 40],
+        D: [1.2, 3.45, 60.1, 45],
+        E: ["test", "train", "test", "train"],
+      };
 
-        obj_data = {'A': dates,
-                    'B': ["bval1", "bval2", "bval3", "bval4"],
-                    'C': [10, 20, 30, 40],
-                    'D': [1.2, 3.45, 60.1, 45],
-                    'E': ["test", "train", "test", "train"]
-                    }
-
-        df = new dfd.DataFrame(obj_data)
-
-        console.log(df.index);
-        console.log(df.columns);
-
+      let df = new dfd.DataFrame(obj_data);
+      df.print();
+      console.log(df.index);
+      console.log(df.columns)
     </script>
 </body>
 
@@ -574,6 +603,19 @@ console.log(df.columns);
 
 ```
 //output
+
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ A                 │ B                 │ C                 │ D                 │ E                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0          │ 1/1/2017, 1:00:…  │ bval1             │ 10                │ 1.2               │ test              ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1          │ 1/1/2018, 1:00:…  │ bval2             │ 20                │ 3.45              │ train             ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2          │ 1/1/2019, 1:00:…  │ bval3             │ 30                │ 60.1              │ test              ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3          │ 1/1/2020, 1:00:…  │ bval4             │ 40                │ 45                │ train             ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+
 [ 0, 1, 2, 3 ]
 [ 'A', 'B', 'C', 'D', 'E' ]
 ```
@@ -588,12 +630,12 @@ For `df`, our [`DataFrame`](https://pandas.pydata.org/pandas-docs/stable/referen
 const dfd = require("danfojs-node")
 
 
-json_data = [{ A: 0.4612, B: 4.28283, C: -1.509, D: -1.1352 },
+j son_data = [{ A: 0.4612, B: 4.28283, C: -1.509, D: -1.1352 },
 { A: 0.5112, B: -0.22863, C: -3.39059, D: 1.1632 },
 { A: 0.6911, B: -0.82863, C: -1.5059, D: 2.1352 },
 { A: 0.4692, B: -1.28863, C: 4.5059, D: 4.1632 }]
 
-df = new dfd.DataFrame(json_data)
+let  df = new dfd.DataFrame(json_data)
 
 console.log(df.tensor);
 //or
@@ -670,12 +712,12 @@ Tensor
 const dfd = require("danfojs-node")
 
 
-json_data = [{ A: 0.4612, B: 4.28283, C: -1.509, D: -1.1352 },
+let json_data = [{ A: 0.4612, B: 4.28283, C: -1.509, D: -1.1352 },
 { A: 0.5112, B: -0.22863, C: -3.39059, D: 1.1632 },
 { A: 0.6911, B: -0.82863, C: -1.5059, D: 2.1352 },
 { A: 0.4692, B: -1.28863, C: 4.5059, D: 4.1632 }]
 
-df = new dfd.DataFrame(json_data)
+let df = new dfd.DataFrame(json_data)
 
 df.describe().print()
 ```
@@ -749,7 +791,7 @@ let data = {"A": [-20, 30, 47.3, NaN],
 
 
 let df = new dfd.DataFrame(data)
-df.sort_values({by: "C", inplace: true})
+df.sortValues("C", {inplace: true})
 df.print()
 ```
 {% endtab %}
@@ -776,7 +818,7 @@ df.print()
 
 
         let df = new dfd.DataFrame(data)
-        df.sort_values({by: "C", inplace: true})
+        df.sortValues("C", {inplace: true})
         df.print()
 
     </script>
@@ -1175,83 +1217,7 @@ sub_df.print()
 
 #### Boolean Querying/Filtering
 
-Using a single column’s values to select data.
-
-{% tabs %}
-{% tab title="Node" %}
-```javascript
-const dfd = require("danfojs-node")
-
-let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
-let cols = ["A", "B", "C"]
-
-let df = new dfd.DataFrame(data, { columns: cols })
-df.print() //before query
-
-let query_df = df.query({ "column": "B", "is": ">", "to": 5 })
-query_df.print() //after query
-```
-{% endtab %}
-
-{% tab title="Browser" %}
-```markup
-<!DOCTYPE html>
-<html lang="en">
-
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <!--danfojs CDN -->
-<script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>    <title>Document</title>
-</head>
-
-<body>
-
-    <script>
-
-
-       let data = [[1, 2, 3], [4, 5, 6], [20, 30, 40], [39, 89, 78]]
-        let cols = ["A", "B", "C"]
-
-        let df = new dfd.DataFrame(data, { columns: cols })
-        df.print() //before query
-
-        let query_df = df.query({ "column": "B", "is": ">", "to": 5 })
-        query_df.print() //after query
-
-    </script>
-</body>
-
-</html>
-```
-{% endtab %}
-{% endtabs %}
-
-```
-//before query
-╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ A                 │ B                 │ C                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 0 │ 1                 │ 2                 │ 3                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ 4                 │ 5                 │ 6                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ 20                │ 30                │ 40                ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ 39                │ 89                │ 78                ║
-╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
-
-//after query
-╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ A                 │ B                 │ C                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ 20                │ 30                │ 40                ║
-╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ 39                │ 89                │ 78                ║
-╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
-```
-
-The best way to query data is to use a boolean mask just as we demonstrated above with iloc and locs. For example, in the following code, we pass a condition parameter instead:
+The best way to query data is to use a boolean mask just as we demonstrated above with iloc and loc. For example, in the following code, we use a condition parameter to query the DataFrame:
 
 ```javascript
 let data = {
@@ -1261,7 +1227,7 @@ let data = {
 }
 let df = new dfd.DataFrame(data)
 
-let query_df = df.query({ condition: df["B"].gt(5) })
+let query_df = df.query(df["B"].gt(5))
 query_df.print()
 ```
 
@@ -1283,10 +1249,7 @@ let data = {
     "B": [34, 4, 5, 6],
     "C": [20, 20, 30, 40]
 }
-let query_df = df.query({
-    condition:
-        df["B"].gt(5).and(df["C"].lt(30))
-})
+let query_df = df.query( df["B"].gt(5).and(df["C"].lt(0)))
 query_df.print() //after query
 
 //output
@@ -1295,7 +1258,6 @@ query_df.print() //after query
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 0          │ Ng                │ 34                │ 20                ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-
 ```
 
 #### Adding a new column
@@ -1315,7 +1277,7 @@ let df = new dfd.DataFrame(data)
 df.print()
 
 let new_col = [1, 2, 3, 4]
-df.addColumn({ column: "D", values: new_col, inplace: true }); //happens inplace
+df.addColumn("D", new_col, { inplace: true }); //happens inplace
 
 df.print()
 ```
@@ -1390,9 +1352,9 @@ df.print()
 
 ### Missing data
 
-**NaN** represent missing data in Danfo.js. These values can be dropped or filled using some functions available in Danfo.js.
+**NaN, null,** and **undefined** represent missing data in Danfo.js. These values can be dropped or filled using some functions available in Danfo.js.
 
-To drop any rows that have missing data:
+To drop any columns that have missing data:
 
 {% tabs %}
 {% tab title="Node" %}
@@ -1405,7 +1367,7 @@ let df = new dfd.DataFrame(data, { columns: cols })
 
 df.print()
 
-let df_drop = df.dropna(0)
+let df_drop = df.dropNa({ axis: 0 })
 df_drop.print()
 ```
 {% endtab %}
@@ -1433,7 +1395,7 @@ df_drop.print()
 
         df.print()
 
-        let df_drop = df.dropna({axis: 0})
+        let df_drop = df.dropNa({axis: 0})
         df_drop.print()
 
     </script>
@@ -1459,28 +1421,32 @@ df_drop.print()
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
-//after droppping
-╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║            │ A                 │ B                 │ C                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0          │ 1                 │ 2                 │ 3                 ║
-╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3          │ 39                │ 20                │ 78                ║
-╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+//after dropping
+╔════════════╤═══════════════════╤═══════════════════╗
+║            │ B                 │ C                 ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 0          │ 2                 │ 3                 ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 1          │ 5                 │ 6                 ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 2          │ 30                │ 40                ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 3          │ 20                │ 78                ║
+╚════════════╧═══════════════════╧═══════════════════╝
 ```
 
-To drop any columns with have missing data, set the axis to 1:
+To drop row(s) with have missing data, set the axis to 1:
 
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = [[1, 2, 3], [NaN, 5, 6], [20, NaN, 40], [39, 34, 78]]
+let data = [[1, 2, 3], [NaN, 5, 6], [20, 30, 40], [39, 34, 78]]
 let cols = ["A", "B", "C"]
 let df = new dfd.DataFrame(data, { columns: cols })
 
 df.print()
 
-let df_drop = df.dropna(1)
+let df_drop = df.dropNa({ axis: 1 })
 df_drop.print()
 ```
 
@@ -1493,25 +1459,21 @@ df_drop.print()
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 1          │ NaN               │ 5                 │ 6                 ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ 20                │ NaN               │ 40                ║
+║ 2          │ 20                │ 30               │ 40                ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 3          │ 39                │ 34                │ 78                ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
-//after droppping
+//after dropping
 
-╔════════════╤═══════════════════╗
-║            │ C                 ║
-╟────────────┼───────────────────╢
-║ 0          │ 3                 ║
-╟────────────┼───────────────────╢
-║ 1          │ 6                 ║
-╟────────────┼───────────────────╢
-║ 2          │ 40                ║
-╟────────────┼───────────────────╢
-║ 3          │ 78                ║
-╚════════════╧═══════════════════╝
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ A                 │ B                 │ C                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0          │ 1                 │ 2                 │ 3                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3          │ 39                │ 20                │ 78                ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
 Filling missing data:
@@ -1527,7 +1489,7 @@ let data = {
   }
 
 let df = new dfd.DataFrame(data)
-let df_filled = df.fillna("Apples")
+let df_filled = df.fillNa("Apples")
 
 df_filled.print()
 ```
@@ -1560,7 +1522,7 @@ let data = {
 let df = new dfd.DataFrame(data)
 df.print()
 
-let df_filled = df.fillna(["Apples", df["Count"].mean()], { columns: ["Name", "Count"] })
+let df_filled = df.fillNa(["Apples", df["Count"].mean()], { columns: ["Name", "Count"] })
 df_filled.print()
 ```
 
@@ -1588,7 +1550,7 @@ let data = {"Name":["Apples", "Mango", "Banana", undefined],
             "Price": [200, 300, 40, 250]}
 
 let df = new dfd.DataFrame(data)
-df.isna().print()
+df.isNa().print()
 ```
 
 ```
@@ -1624,7 +1586,7 @@ cols = ["A", "B", "C"]
 
 let df = new dfd.DataFrame(data, { columns: cols })
 df.print()
-df.mean().print() //defaults to column axis
+df.mean().print() //defaults to column (1) axis
 ```
 {% endtab %}
 
@@ -1673,15 +1635,15 @@ df.mean().print() //defaults to column axis
 ║ 3 │ 2                 │ 89                │ 78                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ A │ 4                    ║
-╟───┼──────────────────────╢
-║ B │ 38.5                 ║
-╟───┼──────────────────────╢
-║ C │ 31.75                ║
-╚═══╧══════════════════════╝
+╔═══╤════════════════════╗
+║ 0 │ 11.333333333333334 ║
+╟───┼────────────────────╢
+║ 1 │ 7.333333333333333  ║
+╟───┼────────────────────╢
+║ 2 │ 24                 ║
+╟───┼────────────────────╢
+║ 3 │ 56.333333333333336 ║
+╚═══╧════════════════════╝
 ```
 
 Same operation on the row axis:
@@ -1695,7 +1657,7 @@ cols = ["A", "B", "C"]
 
 let df = new dfd.DataFrame(data)
 df.print()
-df.mean(0).print() //row axis=0, column=1
+df.mean({ axis: 0 }).print() //row axis=0, column=1
 ```
 
 ```
@@ -1711,20 +1673,16 @@ df.mean(0).print() //row axis=0, column=1
 ║ 3 │ 2                 │ 89                │ 78                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ 11.333333015441895   ║
-╟───┼──────────────────────╢
-║ 1 │ 7.333333492279053    ║
-╟───┼──────────────────────╢
-║ 2 │ 24                   ║
-╟───┼──────────────────────╢
-║ 3 │ 56.33333206176758    ║
-╚═══╧══════════════════════╝
+╔═══╤═══════╗
+║ A │ 4     ║
+╟───┼───────╢
+║ B │ 38.5  ║
+╟───┼───────╢
+║ C │ 31.75 ║
+╚═══╧═══════╝
 ```
 
-Operations on objects with different dimensionality and need alignment. danfo automatically broadcasts along the specified dimension.
+Operations on objects with different dimensionality and need alignment. Danfo automatically broadcasts along the specified dimension.
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -1755,7 +1713,7 @@ df_new.print()
 
 #### Apply
 
-Applying functions to the data along specified axis. If axis = 1 (default), then the specified function (`callable)` will be called with each column data, and vice versa:
+Applying functions to the data along a specified axis. If axis = 1 (default), then the specified function (`callable)` will be called with each row data, and vice versa:
 
 ```javascript
 const dfd = require("danfojs")
@@ -1790,17 +1748,19 @@ df_new.print()
 //after applying
 
 ╔═══╤═════╗
-║ A │ 64  ║
+║ 0 │ 6   ║
 ╟───┼─────╢
-║ B │ 126 ║
+║ 1 │ 15  ║
 ╟───┼─────╢
-║ C │ 127 ║
+║ 2 │ 90  ║
+╟───┼─────╢
+║ 3 │ 206 ║
 ╚═══╧═════╝
 ```
 
 Applying Element wise operations to the data:
 
-You can use the `apply_map` function if you need to apply a function to each element in the DataFrame. `apply_map` works element-wise.
+You can use the `applyMap` function if you need to apply a function to each element in the DataFrame. `applyMap` works element-wise.
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -1813,7 +1773,7 @@ function sum_vals(x) {
     return x + 10
 }
 
-let df_new = df.apply_map(sum_vals)
+let df_new = df.applyMap(sum_vals)
 df_new.print()
 ```
 
@@ -1832,7 +1792,7 @@ df_new.print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
- //after apply_map
+ //after applyMap
 
 ╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║            │ A                 │ B                 │ C                 ║
@@ -1854,8 +1814,8 @@ Series is equipped with a set of string processing methods in the **str** attrib
 ```javascript
 const dfd = require("danfojs-node")
 
-s = new dfd.Series(['A', 'B', 'C', 'Aaba', 'Baca', 'CABA', 'dog', 'cat'])
-lower_s = s.str.toLowerCase()
+let s = new dfd.Series(['A', 'B', 'C', 'Aaba', 'Baca', 'CABA', 'dog', 'cat'])
+let lower_s = s.str.toLowerCase()
 lower_s.print()
 ```
 
@@ -1908,22 +1868,23 @@ let df1 = new dfd.DataFrame(data, { columns: colum1 })
 let df2 = new dfd.DataFrame(data2, { columns: colum2 })
 
 
-let com_df = dfd.concat({ df_list: [df1, df2], axis: 1 }) //along column axis
+let com_df = dfd.concat({ dfList: [df1, df2], axis: 1 }) //along column axis
 com_df.print()
 ```
 
 ```
-╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ Key1              │ Key2              │ A                 │ ...               │ Key1_2            │ Key2_2            │ A_2               │ D                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0 │ K0                │ k0                │ A0                │ ...               │ K0                │ k0                │ C0                │ D0                ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ k0                │ K1                │ A1                │ ...               │ K1                │ K0                │ C1                │ D1                ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ K1                │ K0                │ A2                │ ...               │ K1                │ K0                │ C2                │ D2                ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ K2                │ K2                │ A3                │ ...               │ K2                │ K0                │ C3                │ D3                ║
-╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ Key1              │ Key2              │ A                 │ B                 │ Key11             │ Key21             │ A1                │ D                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0          │ K0                │ k0                │ A0                │ B0                │ K0                │ k0                │ C0                │ D0                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1          │ k0                │ K1                │ A1                │ B1                │ K1                │ K0                │ C1                │ D1                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2          │ K1                │ K0                │ A2                │ B2                │ K1                │ K0                │ C2                │ D2                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3          │ K2                │ K2                │ A3                │ B3                │ K2                │ K0                │ C3                │ D3                ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+
 ```
 
 Concatenate along row axis (0).
@@ -1945,7 +1906,7 @@ let df1 = new dfd.DataFrame(data, { columns: colum1 })
 let df2 = new dfd.DataFrame(data2, { columns: colum2 })
 
 
-let com_df = dfd.concat({ df_list: [df1, df2], axis: 0 }) //along row axis
+let com_df = dfd.concat({ dfList: [df1, df2], axis: 0 }) //along row axis
 com_df.print()
 ```
 
@@ -1992,7 +1953,7 @@ let df2 = new dfd.DataFrame(data2, { columns: colum2 })
 df1.print()
 df2.print()
 
-let merge_df = dfd.merge({ "left": df1, "right": df2, "on": ["Key1"]})
+let merge_df = dfd.merge({ "left": df1, "right": df2, "on": ["Key1"], how: "inner" })
 merge_df.print()
 ```
 
@@ -2108,19 +2069,17 @@ Grouping and then applying the[`sum()`](api-reference/groupby/groupby.sum.md) fu
 ```javascript
 const dfd = require("danfojs-node")
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
-                'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
-                'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+let data = {
+  A: ["foo", "bar", "foo", "bar", "foo", "bar", "foo", "foo"],
+  B: ["one", "one", "two", "three", "two", "two", "one", "three"],
+  C: [1, 3, 2, 4, 5, 2, 6, 7],
+  D: [3, 2, 4, 1, 5, 6, 7, 8],
+};
 
-let df = new dfd.DataFrame(data)
+let df = new dfd.DataFrame(data);
 
-
-let grp = df.groupby(["A"])
-grp.col(["C"]).sum().print()
+let grp = df.groupby(["A"]);
+grp.col(["C"]).sum().print();
 ```
 
 ```
@@ -2178,12 +2137,12 @@ danfo provides a simple but powerful, and efficient functionality for working wi
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = new dfd.date_range({"start":'2018-01', freq:'M', period:3})
+let data = new dfd.dateRange({"start":'2018-01', freq:'M', period:3})
 let sf = new dfd.Series(data)
 //print series
 sf.print()
 //print month names
-sf.dt.month_name().print()
+sf.dt.monthName().print()
 ```
 
 ```
@@ -2197,15 +2156,13 @@ sf.dt.month_name().print()
 ║ 2 │ 3/1/2018, 1:00:00 AM ║
 ╚═══╧══════════════════════╝
 
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ Jan                  ║
-╟───┼──────────────────────╢
-║ 1 │ Feb                  ║
-╟───┼──────────────────────╢
-║ 2 │ Mar                  ║
-╚═══╧══════════════════════╝
+╔═══╤══════════╗
+║ 0 │ January  ║
+╟───┼──────────╢
+║ 1 │ February ║
+╟───┼──────────╢
+║ 2 │ March    ║
+╚═══╧══════════╝
 ```
 
 More Examples:
@@ -2213,12 +2170,12 @@ More Examples:
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = new dfd.date_range({"start":'2018-01', freq:'M', period:3})
+let data = new dfd.dateRange({"start":'2018-01', freq:'M', period:3})
 let sf = new dfd.Series(data)
 //print series
 sf.print()
-//print month names
-sf.dt.weekdays().print()
+//print week day names
+sf.dt.dayOfWeekName().print()
 ```
 
 ```
@@ -2232,24 +2189,32 @@ sf.dt.weekdays().print()
 ║ 2 │ 3/1/2018, 1:00:00 AM ║
 ╚═══╧══════════════════════╝
 
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ Mon                  ║
-╟───┼──────────────────────╢
-║ 1 │ Thu                  ║
-╟───┼──────────────────────╢
-║ 2 │ Thu                  ║
-╚═══╧════════════════════
+╔═══╤══════════╗
+║ 0 │ Monday   ║
+╟───┼──────────╢
+║ 1 │ Thursday ║
+╟───┼──────────╢
+║ 2 │ Thursday ║
+╚═══╧══════════╝
 ```
 
 ### Plotting
 
 See the [Plotting](api-reference/plotting/) docs.
 
-We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. This gives you the ability to make interactive plots from DataFrame and Series. Plotting only works in the browser version of danfo.js, and requires an HTML div to show plots.
+We currently support [Plotly.js](https://plotly.com/javascript/) for plotting. In the future, we plan other JS plotting libraries like Vega, D3.&#x20;
 
-**Update**: As of `v0.2.3`, we stopped bundling Danfojs with Plotly. This has greatly reduced bundle size by about 80%. See more details in the release notes here. In order to make Plots, you must explicitly add the Plotly CDN to your file as we show in the updated examples:
+Using the `plot` API, you can make interactive plots from DataFrame and Series. Plotting only works in the browser/client-side version of Danfo.js, and requires an HTML div to display plots.
+
+{% tabs %}
+{% tab title="Browser" %}
+
+{% endtab %}
+
+{% tab title="Second Tab" %}
+
+{% endtab %}
+{% endtabs %}
 
 ```markup
 <!DOCTYPE html>
@@ -2258,7 +2223,6 @@ We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. 
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
      <script src="https://cdn.jsdelivr.net/npm/danfojs@0.3.3/lib/bundle.min.js"></script>
      <title>Document</title>
 </head>
@@ -2268,25 +2232,30 @@ We use [Plotly.js](https://plotly.com/javascript/) as our backend for plotting. 
     <div id="plot_div"></div>
     <script>
 
-         dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
-            .then(df => {
+          dfd.readCSV(
+          "https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv"
+        )
+        .then((df) => {
+          let layout = {
+            title: "A financial charts",
+            xaxis: {
+              title: "Date",
+            },
+            yaxis: {
+              title: "Count",
+            },
+          };
 
-                var layout = {
-                    title: 'A financial charts',
-                    xaxis: {
-                        title: 'Date',
-                    },
-                    yaxis: {
-                        title: 'Count',
-                    }
-                }
+          let config = {
+            columns: ["AAPL.Open", "AAPL.High"],
+          };
 
-                new_df = df.set_index({ column: "Date" })
-                new_df.plot("plot_div").line({ columns: ["AAPL.Open", "AAPL.High"], layout: layout })
-
-            }).catch(err => {
-                console.log(err);
-            })
+          let new_df = df.setIndex({ column: "Date" });
+          new_df.plot("plot_div").line({ config, layout });
+        })
+        .catch((err) => {
+          console.log(err);
+        });
 
     </script>
 </body>
@@ -2333,7 +2302,11 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 
 [Writing to a CSV file.](api-reference/dataframe/dataframe.to\_csv.md)
 
-Convert any DataFrame to csv format. If a file path is specified, then the CSV is saved to the path, else it is returned as a string.
+Convert any DataFrame to csv format.&#x20;
+
+In NodeJs, if a file path is specified, then the CSV is saved to the path, else it is returned as a string.
+
+In the browser, you can automatically download the file as CSV by setting the `download` paramater to `true`.
 
 ```javascript
 const dfd = require("danfojs-node")
@@ -2346,7 +2319,7 @@ let data = {
 
 let df = new dfd.DataFrame(data)
 
-const csv = df.to_csv()
+const csv = df.toCSV()
 console.log(csv);
 //output
 Abs,Count,country code
@@ -2355,11 +2328,10 @@ Abs,Count,country code
 47.3,5,GH
 
 
-df.to_csv({filePath: "testOut.csv" }) //writes to file in Nodejs
+df.toCSV({filePath: "testOut.csv" }) //writes to file system in Nodejs
 
 
-df.to_csv({fileName: "testOut", download: true }) //downloads the file in browser version
-
+df.toCSV({fileName: "testOut", download: true }) //downloads the file in browser version
 ```
 
 ```
@@ -2371,14 +2343,14 @@ Abs,Count,country code
 
 [Reading from a CSV file.](https://pandas.pydata.org/pandas-docs/stable/user\_guide/io.html#io-read-csv-table)
 
-The **read\_csv** method can read CSV file from local disk, or over the internet. If the file is to be read from a local disk in Node environment, you have to prefix the full path name with a "**file://**" prefix. For instance, to read a CSV file at the path **/home/Desktop/titanic.csv**, you can do the following:
+The **readCSV** method can read CSV files from local disk, or over the internet. Both full and relative paths are supported. For example, to read a CSV file at the path **/home/Desktop/titanic.csv**, you can do the following:
 
 {% tabs %}
 {% tab title="JavaScript" %}
 ```javascript
 const dfd = require("danfojs")
 
-dfd.read_csv("file:///home/Desktop/titanic.csv")
+dfd.readCSV("/home/Desktop/titanic.csv")
   .then(df => {
 
    //do something with the CSV file
@@ -2440,7 +2412,7 @@ let data = {
 
 let df = new dfd.DataFrame(data)
 
-const json = df.to_json()
+const json = df.toJSON()
 console.log(json);
 //output
 [
@@ -2450,7 +2422,7 @@ console.log(json);
 ]
 
 
-const json = df.to_json({format: "row"})
+const json = df.toJSON({format: "row"})
 console.log(json);
 //output
 {

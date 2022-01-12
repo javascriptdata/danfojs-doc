@@ -4,13 +4,13 @@ description: Prints the last n values in a Series
 
 # Series.tail
 
-> danfo.Series.tail\(rows\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L76)\]
+> danfo.Series.tail(rows)&#x20;
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| rows | Int | number of last n values | 5 |
+| Parameters | Type | Description             | Default |
+| ---------- | ---- | ----------------------- | ------- |
+| rows       | Int  | number of last n values | 5       |
 
- **Return:** Series
+**Return:** Series
 
 **Example**
 
@@ -29,7 +29,7 @@ sf1.tail().print()
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 ╔════╤══════════════════════╗
 ║    │ 0                    ║
 ╟────┼──────────────────────╢
@@ -46,4 +46,3 @@ sf1.tail().print()
 ```
 {% endtab %}
 {% endtabs %}
-

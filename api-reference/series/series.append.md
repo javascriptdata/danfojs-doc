@@ -4,19 +4,13 @@ description: Add a new value or values to the end of a Series.
 
 # Series.append
 
-danfo.Series.**append**(newValue, index, options) \[[source](https://github.com/opensource9ja/danfojs/blob/e25010c26d9c423412613d820015a48ad03d5c6d/danfojs-node/src/core/series.js#L1120)]
+danfo.Series.**append**(newValue, index, options)&#x20;
 
 | Parameters | Type          | Description                                                                                                                | Default |
 | ---------- | ------------- | -------------------------------------------------------------------------------------------------------------------------- | ------- |
 | newValue   | Array, Series | Object to append                                                                                                           |         |
 | index      | Array         | The new index value(s) to append to the Series. Must contain the same number of values as `newValues` as they map `1 - 1`. |         |
-| options    | Object        | <p>{ <br><strong>inplace</strong>: Whether to perform operation in-place or not.</p><p>}</p>                               | false   |
-
-**Returns:**
-
-&#x20;      ****       return **Series**
-
-****
+| options    | Object        | <p>{<br><strong>inplace</strong>: Whether to perform operation in-place or not.</p><p>}</p>                                | false   |
 
 ### **Append new Series to the end of a Series**
 
@@ -101,7 +95,6 @@ let sfArr = ["a", "b", "c"]
 
 new_sf = sf1.append(sfArr, ["f5", "f6", "f7"])
 new_sf.print()
-
 ```
 {% endtab %}
 
@@ -129,7 +122,6 @@ new_sf.print()
 ╟────┼───╢
 ║ f7 │ c ║
 ╚════╧═══╝
-
 ```
 {% endtab %}
 {% endtabs %}

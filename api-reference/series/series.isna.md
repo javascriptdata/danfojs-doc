@@ -2,13 +2,13 @@
 description: Detect Missing values
 ---
 
-# Series.isna
+# Series.isNa
 
-> danfo.Series.**isna**\(\)       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L449)\]
+> danfo.Series.isNa()&#x20;
 
 **Parameters**: None
 
-**Returns**:  Series \(Boolean element\)
+**Returns**: Series (Boolean element)
 
 **Example**
 
@@ -20,26 +20,23 @@ const dfd = require("danfojs-node")
 let data1 = [NaN, undefined, "girl", "Man"]
 let sf = new dfd.Series(data1)
 
-sf.isna().print()
+sf.isNa().print()
 ```
 {% endtab %}
 {% endtabs %}
 
 {% tabs %}
 {% tab title="Output" %}
-```text
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ 0 │ true                 ║
-╟───┼──────────────────────╢
-║ 1 │ true                 ║
-╟───┼──────────────────────╢
-║ 2 │ false                ║
-╟───┼──────────────────────╢
-║ 3 │ false                ║
-╚═══╧══════════════════════╝
+```
+╔═══╤═══════╗
+║ 0 │ true  ║
+╟───┼───────╢
+║ 1 │ true  ║
+╟───┼───────╢
+║ 2 │ false ║
+╟───┼───────╢
+║ 3 │ false ║
+╚═══╧═══════╝
 ```
 {% endtab %}
 {% endtabs %}
-

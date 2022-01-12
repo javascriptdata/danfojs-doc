@@ -6,19 +6,15 @@ description: >-
 
 # danfo.merge
 
-danfo.**merge**(kwargs) \[[source](https://github.com/opensource9ja/danfojs/blob/fe56860b0a303d218d60ba71dee6abf594401556/danfojs/src/core/frame.js#L254)]
+danfo.**merge**(options)&#x20;
 
-| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                | Default          |
-| ---------- | ------ | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------- |
-| **kwargs** | Object | <p>{</p><p><strong>left</strong>:  A DataFrame or named Series object.</p><p><strong>right</strong>:  Another DataFrame or named Series object.</p><p><strong>on</strong>: Column names to join on. Must be found in both the left and right DataFrame and/or Series objects. </p><p><strong>how</strong>: One of <code>'left','right'</code>,<code>'outer'</code>, <code>'inner'</code>. Defaults to 'inner' </p><p>}</p> | {**how**: inner} |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                               |
+| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
+| options    | Object | <p></p><p><strong>left</strong>: A DataFrame or named Series object.</p><p></p><p><strong>right</strong>: Another DataFrame or named Series object.</p><p></p><p><strong>on</strong>: Column names to join on. Must be found in both the left and right DataFrame and/or Series objects.</p><p></p><p><strong>how</strong>: One of <code>'left','right'</code>,<code>'outer'</code>, <code>'inner'</code>. Defaults to 'inner'</p><p></p> |
 
 ## **Examples**
 
-**danfo.js**  merge function is similar to Pandas merge and performs in-memory join operations idiomatically very similar to relational databases like SQL.
+**danfo.js** merge function is similar to Pandas merge and performs in-memory join operations idiomatically very similar to relational databases like SQL.
 
 danfo.js provides a single function, [`merge()`](danfo.merge.md), as the entry point for all standard database join operations between `DataFrame` or named `Series` objects.
 
@@ -26,7 +22,7 @@ For a more intuitive understanding, this [guide](https://pandas.pydata.org/panda
 
 ### **Merging by a single key found in both axis**
 
-By default, danfo performs _**inner**_ join. An inner join requires each row in the two joined DataFrames to have matching column values. This is similar to the **intersection** of two sets. It returns a DataFrame with only those rows that have common characteristics.
+In the following example, we perform an inner join. An inner join requires each row in the two joined DataFrames to have matching column values. This is similar to the **intersection** of two sets. It returns a DataFrame with only those rows that have common characteristics.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -48,7 +44,7 @@ let df2 = new dfd.DataFrame(data2, { columns: colum2 })
 df1.print()
 df2.print()
 
-let merge_df = dfd.merge({ "left": df1, "right": df2, "on": ["Key1"]})
+let merge_df = dfd.merge({ "left": df1, "right": df2, "on": ["Key1"], how: "inner"})
 merge_df.print()
 ```
 {% endtab %}
@@ -62,7 +58,6 @@ merge_df.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
  //first DataFrame
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ Key1              │ Key2              │ A                 │ B                 ║
@@ -105,7 +100,6 @@ merge_df.print()
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 3 │ K2                │ K2                │ A3                │ B3                │ K0                │ C3                │ D3                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-
 ```
 {% endtab %}
 {% endtabs %}
@@ -117,7 +111,6 @@ Merging by two keys takes into consideration the keys appearing in both`left` an
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-
 const dfd = require("danfojs-node")
 
 
@@ -190,12 +183,11 @@ merge_df.print()
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 2 │ K1                │ K0                │ A2                │ B2                │ C2                │ D2                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-
 ```
 {% endtab %}
 {% endtabs %}
 
-The how parameter takes other types of joins like left, right and outer join and these are  similar to their SQL equivalent
+The how parameter takes other types of joins like left, right and outer join and these are similar to their SQL equivalent
 
 ### Outer join/merge on DataFrame
 

@@ -1,12 +1,12 @@
 ---
 description: >-
-  Return Exponential power of series and other, element-wise (binary operator
-  pow).
+  Returns the exponential power of series and other, element-wise (binary
+  operator pow).
 ---
 
 # Series.pow
 
-> danfo.Series.pow(other, options)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L216)]
+> danfo.Series.pow(other, options)&#x20;
 
 | Parameters | Type          | Description                                                                                    | Default                               |
 | ---------- | ------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------- |

@@ -4,7 +4,7 @@ description: Return Multiplication of series and other, element-wise (binary ope
 
 # Series.mul
 
-> danfo.Series.mul(other, options)  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L168)]
+> danfo.Series.mul(other, options)&#x20;
 
 | Parameters | Type          | Description                                                                                    | Default                               |
 | ---------- | ------------- | ---------------------------------------------------------------------------------------------- | ------------------------------------- |
@@ -83,4 +83,3 @@ sf1.mul(2).print()
 ```
 {% endtab %}
 {% endtabs %}
-

@@ -1,10 +1,10 @@
 ---
-description: Obtain the median of a series
+description: Returns the median of a series
 ---
 
 # Series.median
 
-> danfo.Series.median()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L274)]
+> danfo.Series.median()&#x20;
 
 **Parameter:** None
 
@@ -33,4 +33,4 @@ console.log(sf1.median())
 {% endtab %}
 {% endtabs %}
 
-****
+***

@@ -4,11 +4,11 @@ description: Obtain the shape of a Series
 
 # Series.shape
 
-> danfo.Series.shape  \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/generic.js#L266)\]
+> danfo.Series.shape
 
 **Parameters**: None
 
-**Returns**:  Array \[int, int\]
+**Returns**: Array \[int, int]
 
 **Example**
 
@@ -27,9 +27,8 @@ console.log(sf1.shape)
 
 {% tabs %}
 {% tab title="Output" %}
-```text
+```
 [ 4, 1 ]
 ```
 {% endtab %}
 {% endtabs %}
-

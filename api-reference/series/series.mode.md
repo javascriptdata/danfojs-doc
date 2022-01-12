@@ -1,10 +1,10 @@
 ---
-description: Obtain the center value in a series
+description: Returns the mode of elements in a series
 ---
 
 # Series.mode
 
-> danfo.Series.min()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/series.js#L303)]
+> danfo.Series.mode()&#x20;
 
 **Parameter:** None
 
@@ -33,4 +33,4 @@ console.log(sf1.mode())
 {% endtab %}
 {% endtabs %}
 
-****
+***

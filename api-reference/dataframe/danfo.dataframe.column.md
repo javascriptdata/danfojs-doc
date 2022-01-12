@@ -1,18 +1,14 @@
 ---
-description: Return the elements of the specified column in the DataFrame
+description: Return the elements of the specified column as a Series
 ---
 
 # DataFrame.column
 
-danfo.DataFrame.**column**(column) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L1217)]
+danfo.DataFrame.**column**(column)
 
 | Parameters | Type   | Description                           | Default |
 | ---------- | ------ | ------------------------------------- | ------- |
 | column     | String | The name of a column in the DataFrame |         |
-
-**Returns:**
-
-&#x20;      ****       return **Series**
 
 ## **Examples**
 
@@ -32,7 +28,6 @@ df.column("Name").print()
 
 //Alternatively, you can retrieve columns by using the object property
 df['Name'].print() //produces the same result as above
-
 ```
 {% endtab %}
 
@@ -64,7 +59,6 @@ df['Name'].print() //produces the same result as above
 ╟───┼───────────╢
 ║ 3 │ undefined ║
 ╚═══╧═══════════╝
-
 ```
 {% endtab %}
 {% endtabs %}

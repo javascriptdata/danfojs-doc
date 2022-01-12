@@ -2,9 +2,9 @@
 description: Obtain the days of the weeks
 ---
 
-# Series.dt.weekdays
+# Series.dt.dayOfWeek
 
-> danfo.Series.dt.**weekdays**()    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L255)]
+> danfo.Series.dt.dayOfWeek() \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L255)]
 
 **Parameters**: None
 
@@ -17,12 +17,12 @@ description: Obtain the days of the weeks
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = new dfd.date_range({"start":'2016-12-31', "end":'2017-01-08'})
+let data = new dfd.dateRange({"start":'2016-12-31', "end":'2018-01-08'})
 let sf = new dfd.Series(data)
 //print series
 sf.print()
 //print days of the week
-sf.dt.weekdays().print()
+sf.dt.dayOfWeek().print()
 ```
 {% endtab %}
 
@@ -55,25 +55,25 @@ sf.dt.weekdays().print()
 ║ 9 │ 1/9/2017, 1:00:00 AM   ║
 ╚═══╧════════════════════════╝
 
-╔═══╤══════╗
-║ 0 │ Sat  ║
-╟───┼──────╢
-║ 1 │ Sun  ║
-╟───┼──────╢
-║ 2 │ Mon  ║
-╟───┼──────╢
-║ 3 │ Tue  ║
-╟───┼──────╢
-║ 4 │ Wed  ║
-╟───┼──────╢
-║ 5 │ Thur ║
-╟───┼──────╢
-║ 6 │ Fri  ║
-╟───┼──────╢
-║ 7 │ Sat  ║
-╟───┼──────╢
-║ 8 │ Sun  ║
-╟───┼──────╢
-║ 9 │ Mon  ║
-╚═══╧══════╝
+╔═══╤═══╗
+║ 0 │ 6 ║
+╟───┼───╢
+║ 1 │ 0 ║
+╟───┼───╢
+║ 2 │ 1 ║
+╟───┼───╢
+║ 3 │ 2 ║
+╟───┼───╢
+║ 4 │ 3 ║
+╟───┼───╢
+║ 5 │ 4 ║
+╟───┼───╢
+║ 6 │ 5 ║
+╟───┼───╢
+║ 7 │ 6 ║
+╟───┼───╢
+║ 8 │ 0 ║
+╟───┼───╢
+║ 9 │ 1 ║
+╚═══╧═══╝
 ```

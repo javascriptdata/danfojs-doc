@@ -4,7 +4,7 @@ description: Obtain the year in a date time series
 
 # Series.dt.year
 
-> danfo.Series.dt.**year**()    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/timeseries.js#L228)]
+> danfo.Series.dt.**year**()&#x20;
 
 **Parameters**: None
 
@@ -17,7 +17,7 @@ description: Obtain the year in a date time series
 ```javascript
 const dfd = require("danfojs-node")
 
-let data = new dfd.date_range({"start":"2000-01-01", period:3, freq:"Y"})
+let data = new dfd.dateRange({"start":"2000-01-01", period:3, freq:"Y"})
 let sf = new dfd.Series(data)
 sf.print()
 sf.dt.year().print()

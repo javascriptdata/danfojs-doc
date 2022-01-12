@@ -2,17 +2,13 @@
 description: Return cumulative sum over a DataFrame or Series axis.
 ---
 
-# DataFrame.cumsum
+# DataFrame.cumSum
 
-danfo.DataFrame.**cumsum**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L706)]
+danfo.DataFrame.cumSum(options)&#x20;
 
-| Parameters | Type   | Description                                                                                                                                                                           | Default                   |
-| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------------- |
-| options    | Object | <p><strong>axis</strong>: 0 for row and 1 for column</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p></p> | {axis: 1, inplace: false} |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type   | Description                                                                                                                                                                    | Default                   |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ------------------------- |
+| options    | Object | <p><strong>axis</strong>: 0 for row and 1 for column</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p> | {axis: 1, inplace: false} |
 
 ## **Examples**
 
@@ -23,11 +19,11 @@ danfo.DataFrame.**cumsum**(options) \[[source](https://github.com/opensource9ja/
 ```javascript
 const dfd = require("danfojs-node")
 
-data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
-cols = ["A", "B", "C"]
+let data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
+let cols = ["A", "B", "C"]
 
 let df = new dfd.DataFrame(data, { columns: cols })
-let new_df = df.cumsum({ axis: 0 })
+let new_df = df.cumSum({ axis: 0 })
 
 new_df.print()
 ```

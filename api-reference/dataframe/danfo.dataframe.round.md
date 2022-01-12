@@ -4,16 +4,12 @@ description: Round elements in a DataFrame to a specified number of decimal plac
 
 # DataFrame.round
 
-danfo.DataFrame.**round**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/3398c2f540c16ac95599a05b6f2db4eff8a258c9/danfojs/src/core/frame.js#L454)]
+danfo.DataFrame.**round**(options)
 
 | Parameters | Type   | Description                                                                                        | Default            |
 | ---------- | ------ | -------------------------------------------------------------------------------------------------- | ------------------ |
 | dp         | Int    | Number of decimal places to round to. Defaults to 1                                                | 1                  |
 | options    | Object | **inplace:** Boolean indicating whether to perform the operation inplace or not. Defaults to false | { inplace: false } |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
 
 ## **Examples**
 
@@ -24,8 +20,8 @@ danfo.DataFrame.**round**(options) \[[source](https://github.com/opensource9ja/d
 ```javascript
 const dfd = require("danfojs-node")
 
-data = [[11.20, 20.1234, 3.567], [1, 15.1, 6.0], [2, 3.09, 40.234]]
-cols = ["A", "B", "C"]
+let data = [[11.20, 20.1234, 3.567], [1, 15.1, 6.0], [2, 3.09, 40.234]]
+let cols = ["A", "B", "C"]
 
 let df = new dfd.DataFrame(data, { columns: cols })
 df.print()

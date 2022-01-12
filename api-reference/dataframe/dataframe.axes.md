@@ -1,17 +1,12 @@
 ---
 description: >-
-  Return an Object containing the axes of the DataFrame. It has the row axis
-  labels and column axis labels as the only members. They are returned in that
-  order.
+  Return an Object containing the axis of the DataFrame. It has the row axis
+  labels and column axis labels as the only members.
 ---
 
 # DataFrame.axis
 
-danfo.DataFrame.**axis** \[[source](https://github.com/opensource9ja/danfojs/blob/eb5919d2cac34271fc3b725fa24aa3ad4eacde37/danfojs/src/core/generic.js#L290)]
-
-**Returns:**
-
-&#x20;      ****       return **Object**
+danfo.DataFrame.**axis**&#x20;
 
 ## **Examples**
 
@@ -27,7 +22,6 @@ let data = {"A": [-20.1, 30, 47.3, -20],
 let df = new dfd.DataFrame(data, {index: ["a", "b", "c", "d"]})
 
 console.log(df.axis)
-
 
 ```
 {% endtab %}

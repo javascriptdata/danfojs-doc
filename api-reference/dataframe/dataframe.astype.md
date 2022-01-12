@@ -2,17 +2,13 @@
 description: Cast column of a DataFrame to a specified dtype.
 ---
 
-# DataFrame.astype
+# DataFrame.asType
 
-danfo.DataFrame.**astype**(options) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
+danfo.DataFrame.asType(options)&#x20;
 
-| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                | Default            |
-| ---------- | ------ | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| options    | Object | <p>{</p><p><strong>column</strong>:  Array, label/column name of column to cast</p><p><strong>dtype</strong>: dtype to cast to. One of [string, float32, int32, boolean]</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { inplace: false } |
-
-**Returns:**
-
-&#x20;      ****       return **DataFrame**
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                               | Default            |
+| ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
+| options    | Object | <p>{</p><p><strong>column</strong>: Array, label/column name of column to cast</p><p><strong>dtype</strong>: dtype to cast to. One of [string, float32, int32, boolean]</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { inplace: false } |
 
 ## **Examples**
 
@@ -32,7 +28,7 @@ let df = new dfd.DataFrame(data)
 df.print()
 df.ctypes.print()
 
-let df_new = df.astype({column: "A", dtype: "int32"})
+let df_new = df.asType("A", "int32")
 df_new.print()
 
 df.ctypes.print()
@@ -116,11 +112,10 @@ let data = { "A": [-20.1, 30, 47.3, -20] ,
              "D": ["20", "13", "45", "90"] }
 
 let df = new dfd.DataFrame(data)
-let df_new = df.astype({column: "D", dtype: "int32"})
+let df_new = df.asType("D", "int32")
 df_new.print()
 
 df_new.ctypes.print()
-
 
 ```
 {% endtab %}
@@ -146,18 +141,15 @@ df_new.ctypes.print()
 ║ 3 │ -20               │ 6                 │ 40.11             │ 90                ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ A │ float32              ║
-╟───┼──────────────────────╢
-║ B │ int32                ║
-╟───┼──────────────────────╢
-║ C │ float32              ║
-╟───┼──────────────────────╢
-║ D │ int32                ║
-╚═══╧══════════════════════╝
-
+╔═══╤═════════╗
+║ A │ float32 ║
+╟───┼─────────╢
+║ B │ int32   ║
+╟───┼─────────╢
+║ C │ float32 ║
+╟───┼─────────╢
+║ D │ int32   ║
+╚═══╧═════════╝
 ```
 {% endtab %}
 {% endtabs %}
@@ -175,11 +167,10 @@ let data = { "A": [-20.1, 30, 47.3, -20] ,
              "D": ["a", "b", "c", "c"] }
 
 let df = new dfd.DataFrame(data)
-let df_new = df.astype({column: "D", dtype: "int32"})
+let df_new = df.asType("D","int32")
 df_new.print()
 
 df_new.ctypes.print()
-
 
 ```
 {% endtab %}
@@ -193,7 +184,6 @@ df_new.ctypes.print()
 {% tabs %}
 {% tab title="Output" %}
 ```
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ B                 │ C                 │ D                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -206,17 +196,15 @@ df_new.ctypes.print()
 ║ 3 │ -20               │ 6                 │ 40.11             │ NaN               ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-╔═══╤══════════════════════╗
-║   │ 0                    ║
-╟───┼──────────────────────╢
-║ A │ float32              ║
-╟───┼──────────────────────╢
-║ B │ int32                ║
-╟───┼──────────────────────╢
-║ C │ float32              ║
-╟───┼──────────────────────╢
-║ D │ int32                ║
-╚═══╧══════════════════════╝
+╔═══╤═════════╗
+║ A │ float32 ║
+╟───┼─────────╢
+║ B │ int32   ║
+╟───┼─────────╢
+║ C │ float32 ║
+╟───┼─────────╢
+║ D │ int32   ║
+╚═══╧═════════╝
 ```
 {% endtab %}
 {% endtabs %}
