@@ -1,6 +1,6 @@
 # Building Data Driven Applications with Danfo.js - Book
 
-## Purchase on [Packt](https://www.packtpub.com/product/building-data-driven-applications-with-danfo-js/9781801070850) using _25Danfo_ code before  31st December 2020 and get 25% discount.&#x20;
+## Purchase on [Packt](https://www.packtpub.com/product/building-data-driven-applications-with-danfo-js/9781801070850)
 
 ## What this book is about
 
@@ -38,4 +38,3 @@ This book is for data analysts, data scientists, and JavaScript developers who w
 11. Building a Recommendation System with Danfo.js and TensorFlow.js
 12. Building a Twitter Analysis Dashboard
 13. Appendix: Essential JavaScript Concepts
-
