@@ -7,9 +7,9 @@ description: >-
 # Getting Started
 
 {% hint style="info" %}
-A stable version of Danfojs (v1), has been released, and it comes with full Typescript support, new features, and many bug fixes. See release note [here](release-notes.md#latest-release-node-v1.0.0-browser-v1.0.0).&#x20;
+A stable version of Danfojs (v1), has been released, and it comes with full Typescript support, new features, and many bug fixes. See release note [here](release-notes.md#latest-release-node-v1.0.0-browser-v1.0.0).
 
-There are a couple of breaking changes, so we have prepared a short migration [guide](examples/migrating-to-the-stable-version-of-danfo.js.md) for pre-v1.0.1 users.&#x20;
+There are a couple of breaking changes, so we have prepared a short migration [guide](examples/migrating-to-the-stable-version-of-danfo.js.md) for pre-v1 users.
 {% endhint %}
 
 ## Installation
@@ -39,11 +39,11 @@ yarn add danfojs
 For use directly in HTML files, you can add the latest script tag from [JsDelivr](https://www.jsdelivr.com/package/npm/danfojs?version=0.3.1\&path=lib):
 
 ```markup
-<script src="https://cdn.jsdelivr.net/npm/danfojs@1.0.0/lib/bundle.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/danfojs@1.0.1/lib/bundle.min.js"></script>
 ```
 
 {% hint style="info" %}
-To play with Danfo.js in a Notebook-like environment, see [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo) or the [VS-Code Nodejs notebook extension](https://marketplace.visualstudio.com/items?itemName=donjayamanne.typescript-notebook).&#x20;
+To play with Danfo.js in a Notebook-like environment, see [Dnotebooks](https://dnotebook.jsdata.org/getting-started) [here](https://playnotebook.jsdata.org/demo) or the [VS-Code Nodejs notebook extension](https://marketplace.visualstudio.com/items?itemName=donjayamanne.typescript-notebook).
 {% endhint %}
 
 ## 10 minutes to danfo.js
@@ -1885,7 +1885,6 @@ com_df.print()
 ╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 3          │ K2                │ K2                │ A3                │ B3                │ K2                │ K0                │ C3                │ D3                ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
-
 ```
 
 Concatenate along row axis (0).
@@ -2203,19 +2202,9 @@ sf.dt.dayOfWeekName().print()
 
 See the [Plotting](api-reference/plotting/) docs.
 
-We currently support [Plotly.js](https://plotly.com/javascript/) for plotting. In the future, we plan other JS plotting libraries like Vega, D3.&#x20;
+We currently support [Plotly.js](https://plotly.com/javascript/) for plotting. In the future, we plan other JS plotting libraries like Vega, D3.
 
 Using the `plot` API, you can make interactive plots from DataFrame and Series. Plotting only works in the browser/client-side version of Danfo.js, and requires an HTML div to display plots.
-
-{% tabs %}
-{% tab title="Browser" %}
-
-{% endtab %}
-
-{% tab title="Second Tab" %}
-
-{% endtab %}
-{% endtabs %}
 
 ```markup
 <!DOCTYPE html>
@@ -2303,7 +2292,7 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 
 [Writing to a CSV file.](api-reference/dataframe/dataframe.to\_csv.md)
 
-Convert any DataFrame to csv format.&#x20;
+Convert any DataFrame to csv format.
 
 In NodeJs, if a file path is specified, then the CSV is saved to the path, else it is returned as a string.
 

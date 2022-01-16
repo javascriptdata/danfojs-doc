@@ -1,6 +1,18 @@
 # Release Notes
 
-### \[LATEST] Release Node (v1.0.0), Browser (v1.0.0)
+### \[LATEST] Release Node (v1.0.1), Browser (v1.0.1)
+
+**Date:** 16th Jan 2022
+
+Minor bug fixes
+
+* [https://github.com/javascriptdata/danfojs/issues/354](https://github.com/javascriptdata/danfojs/issues/354)
+* [https://github.com/javascriptdata/danfojs/issues/344](https://github.com/javascriptdata/danfojs/issues/344)
+* [https://github.com/javascriptdata/danfojs/pull/347](https://github.com/javascriptdata/danfojs/pull/347)
+
+Contributors: @[**Devwulf**](https://github.com/Devwulf)**,** [@risenW](https://github.com/risenW)
+
+### Release Node (v1.0.0), Browser (v1.0.0)
 
 **Date:** 12th Jan 2022
 
