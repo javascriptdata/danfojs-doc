@@ -9,7 +9,7 @@ description: >-
 {% hint style="info" %}
 A stable version of Danfojs (v1), has been released, and it comes with full Typescript support, new features, and many bug fixes. See release note [here](release-notes.md#latest-release-node-v1.0.0-browser-v1.0.0).&#x20;
 
-There are a couple of breaking changes, so we have prepared a short migration [guide](examples/migrating-to-the-stable-version-of-danfo.js.md) for pre-v1.0.0 users.&#x20;
+There are a couple of breaking changes, so we have prepared a short migration [guide](examples/migrating-to-the-stable-version-of-danfo.js.md) for pre-v1.0.1 users.&#x20;
 {% endhint %}
 
 ## Installation
