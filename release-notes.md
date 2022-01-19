@@ -1,6 +1,16 @@
 # Release Notes
 
-### \[LATEST] Release Node (v1.0.1), Browser (v1.0.1)
+### \[LATEST] Release Node (v1.0.2), Browser (v1.0.2)
+**Date:** 19th Jan 2022
+
+#### What's Changed
+* Update TensorFlow version to fix M1 chip incompatibility by @risenW in https://github.com/javascriptdata/danfojs/pull/358
+* Add new feature `iat` and `at` by @risenW in https://github.com/javascriptdata/danfojs/pull/359
+* Fixed issue with sort by values by @risenW in https://github.com/javascriptdata/danfojs/pull/360
+
+
+**Full Changelog**: https://github.com/javascriptdata/danfojs/compare/v1.0.1...v1.0.2
+### Release Node (v1.0.1), Browser (v1.0.1)
 
 **Date:** 16th Jan 2022
 
@@ -134,7 +144,7 @@ A simple example:
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script src="https://cdn.plot.ly/plotly-1.2.0.min.js"></script> 
-    <script src="https://cdn.jsdelivr.net/npm/danfojs@1.0.1/lib/bundle.js"></script> 
+    <script src="https://cdn.jsdelivr.net/npm/danfojs@1.0.2/lib/bundle.min.js"></script> 
 
     <title>Document</title>
 </head>
