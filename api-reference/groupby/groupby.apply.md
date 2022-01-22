@@ -4,7 +4,7 @@ description: Apply custom aggregate function to grouped data
 
 # Groupby.apply
 
-danfo.Groupby.**apply**\(callable\) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs-node/src/core/groupby.js#L297)\]
+danfo.Groupby.**apply**\(callable\) \[[source](https://github.com/javascriptdata/danfojs/blob/9bfda6dcb6b2b620591ec7b3340d35e3f801c8ab/src/danfojs-base/aggregators/groupby.ts#L552)\]
 
 | Parameters | Type | Description | Default |
 | :--- | :--- | :--- | :--- |

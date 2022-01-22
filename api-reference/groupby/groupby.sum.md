@@ -4,7 +4,7 @@ description: Obtain the sum per groups for columns
 
 # Groupby.sum
 
-> danfo.Groupby.sum()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L256)]
+> danfo.Groupby.sum()     \[[source](https://github.com/javascriptdata/danfojs/blob/9bfda6dcb6b2b620591ec7b3340d35e3f801c8ab/src/danfojs-base/aggregators/groupby.ts#L440)]
 
 **Parameters**: None
 
@@ -19,16 +19,15 @@ Obtain the sum of a column for each group, group by one column
 ```javascript
 const dfd = require("danfojs-node")
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
-
 
 let grp = df.groupby(["A"])
 grp.col(["C"]).sum().print()
@@ -37,8 +36,6 @@ grp.col(["C"]).sum().print()
 {% endtabs %}
 
 ```
-
- Shape: (2,2) 
 
 ╔═══╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ C_sum             ║
@@ -56,16 +53,15 @@ Obtain the sum for two columns for each group, group by one column
 ```javascript
 const dfd = require("danfojs-node")
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
-
 
 let grp = df.groupby(["A"])
 grp.col(["C","D"]).sum().print()
@@ -74,8 +70,6 @@ grp.col(["C","D"]).sum().print()
 {% endtabs %}
 
 ```
- Shape: (2,3) 
-
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║   │ A                 │ C_sum             │ D_sum             ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -92,16 +86,15 @@ Obtain the sum for a column for each group, group by two columns
 ```javascript
 const dfd = require("danfojs-node")
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
-
 
 let grp = df.groupby(["A","B"])
 grp.col(["C"]).sum().print()
@@ -134,16 +127,15 @@ Obtain the sum for two columns for each group, group by two columns
 ```javascript
 const dfd = require("danfojs-node")
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
-
 
 let grp = df.groupby(["A","B"])
 grp.col(["C","D"]).sum().print()
@@ -152,21 +144,21 @@ grp.col(["C","D"]).sum().print()
 {% endtabs %}
 
 ```
-   Shape: (5,4) 
-
-╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ A                 │ B                 │ C_sum             │ D_sum             ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0 │ foo               │ one               │ 7                 │ 10                ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ foo               │ two               │ 7                 │ 9                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ foo               │ three             │ 7                 │ 8                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ bar               │ one               │ 3                 │ 2                 ║
-╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 4 │ bar               │ two               │ 2                 │ 6                 ║
-╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ A                 │ B                 │ C_sum             │ D_sum             ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0          │ foo               │ one               │ 7                 │ 10                ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1          │ foo               │ two               │ 7                 │ 9                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2          │ foo               │ three             │ 7                 │ 8                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3          │ bar               │ one               │ 3                 │ 2                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 4          │ bar               │ three             │ 4                 │ 1                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 5          │ bar               │ two               │ 2                 │ 6                 ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
 ****
