@@ -12,33 +12,40 @@ description: Obtain the column(s) per groups
 
 Returns: Groupby Data structure
 
-Note:    This is similar to pandas `df.groupby(["column"])["col_names"]`
+Note:    This is similar to pandas `df.groupby(["column"])["colNames"]`
 
 **Examples**
 
-Obtain a column
+Obtain the column to perform group aggregate operation on
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
 const dfd = require("danfojs-node")
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
         }
 
 let df = new dfd.DataFrame(data)
 
 
 let grp = df.groupby(["A"])
-grp.col(["C"])
 
-//for more coumns
-grp.col(["C","D"])
+//select single column
+let grpColumnC = grp.col(["C"])
+
+// convert grouop internal data to dataFrame
+grpColumnC.apply(x=> x).print()
+
+//select multiple column
+let grpColumnBD = grp.col(["B", "D"])
+
+grpColumnBD.apply(x=> x).print()
 ```
 {% endtab %}
 {% endtabs %}
@@ -46,59 +53,51 @@ grp.col(["C","D"])
 Apparently the output are not that useful unless you perform some operations like max\(\), count\(\) and the likes. 
 
 ```text
-//it returns the groupby data structure
-GroupBy {
-  key_col: [ 'A' ],
-  col_dict: {
-    foo: [ [Array], [Array], [Array], [Array], [Array] ],
-    bar: [ [Array], [Array], [Array] ]
-  },
-  data: [
-    [ 'foo', 'one', 1, 3 ],
-    [ 'bar', 'one', 3, 2 ],
-    [ 'foo', 'two', 2, 4 ],
-    [ 'bar', 'three', 4, 1 ],
-    [ 'foo', 'two', 5, 5 ],
-    [ 'bar', 'two', 2, 6 ],
-    [ 'foo', 'one', 6, 7 ],
-    [ 'foo', 'three', 7, 8 ]
-  ],
-  column_name: [ 'A', 'B', 'C', 'D' ],
-  data_tensors: {
-    foo: DataFrame {
-      kwargs: [Object],
-      series: false,
-      data: [Array],
-      row_data_tensor: [Tensor],
-      index_arr: [Array],
-      columns: [Array],
-      col_data: [Array],
-      col_data_tensor: [Tensor],
-      col_types: [Array],
-      A: [Getter/Setter],
-      B: [Getter/Setter],
-      C: [Getter/Setter],
-      D: [Getter/Setter]
-    },
-    bar: DataFrame {
-      kwargs: [Object],
-      series: false,
-      data: [Array],
-      row_data_tensor: [Tensor],
-      index_arr: [Array],
-      columns: [Array],
-      col_data: [Array],
-      col_data_tensor: [Tensor],
-      col_types: [Array],
-      A: [Getter/Setter],
-      B: [Getter/Setter],
-      C: [Getter/Setter],
-      D: [Getter/Setter]
-    }
-  },
-  group_col_name: [ 'C' ],
-  group_col: { foo: [ [Series] ], bar: [ [Series] ] }
-}
+// select single column C
+
+╔════════════╤═══════════════════╤═══════════════════╗
+║            │ A                 │ C                 ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 0          │ foo               │ 1                 ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 1          │ foo               │ 2                 ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 2          │ foo               │ 5                 ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 3          │ foo               │ 6                 ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 4          │ foo               │ 7                 ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 5          │ bar               │ 3                 ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 6          │ bar               │ 4                 ║
+╟────────────┼───────────────────┼───────────────────╢
+║ 7          │ bar               │ 2                 ║
+╚════════════╧═══════════════════╧═══════════════════╝
+
+// select multiple column: B and D
+
+╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
+║            │ A                 │ B                 │ D                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 0          │ foo               │ one               │ 3                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 1          │ foo               │ two               │ 4                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 2          │ foo               │ two               │ 5                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 3          │ foo               │ one               │ 7                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 4          │ foo               │ three             │ 8                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 5          │ bar               │ one               │ 2                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 6          │ bar               │ three             │ 1                 ║
+╟────────────┼───────────────────┼───────────────────┼───────────────────╢
+║ 7          │ bar               │ two               │ 6                 ║
+╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
+
+
 ```
 
 

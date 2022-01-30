@@ -1,10 +1,10 @@
 ---
-description: Obtain the cumulative sum per groups for each column
+description: Obtain the cummulative minimum per groups for each column
 ---
 
-# Groupby.cumsum
+# Groupby.cumMin
 
-> danfo.Groupby.**cumsum**()       \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L280)]
+> danfo.Groupby.**cummin**\(\)    \[[source](https://github.com/javascriptdata/danfojs/blob/4993242be7847ba7583dd40ed0188929898b8fd6/src/danfojs-base/aggregators/groupby.ts#L497)\]
 
 **Parameters**: None
 
@@ -12,7 +12,7 @@ description: Obtain the cumulative sum per groups for each column
 
 **Examples**
 
-Obtain the cumulative sum of a column for each groups, group by one column
+Obtain the cumulative min of a column for each groups, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
@@ -20,60 +20,62 @@ Obtain the cumulative sum of a column for each groups, group by one column
 const dfd = require("danfojs-node")
 
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
 
 let grp = df.groupby(["A"])
-grp.col(["C"]).cumsum().head().print()
-grp.col(["C"]).cumsum().tail().print()
+let grpColC = grp.col(["C"])
+grpColC.cumMin().head().print()
+grpColC.cumMin().tail().print()
+
 ```
 {% endtab %}
 {% endtabs %}
 
-```
+```text
 
-Shape: (5,2) 
+ Shape: (5,2) 
 
 ╔═══╤═══════════════════╤═══════════════════╗
-║   │ A                 │ C_cumsum          ║
+║   │ A                 │ C_cummin          ║
 ╟───┼───────────────────┼───────────────────╢
 ║ 0 │ foo               │ 1                 ║
 ╟───┼───────────────────┼───────────────────╢
-║ 1 │ foo               │ 3                 ║
+║ 1 │ foo               │ 1                 ║
 ╟───┼───────────────────┼───────────────────╢
-║ 2 │ foo               │ 8                 ║
+║ 2 │ foo               │ 1                 ║
 ╟───┼───────────────────┼───────────────────╢
-║ 3 │ foo               │ 14                ║
+║ 3 │ foo               │ 1                 ║
 ╟───┼───────────────────┼───────────────────╢
-║ 4 │ foo               │ 21                ║
+║ 4 │ foo               │ 1                 ║
 ╚═══╧═══════════════════╧═══════════════════╝
 
 
  Shape: (5,2) 
 
 ╔═══╤═══════════════════╤═══════════════════╗
-║   │ A                 │ C_cumsum          ║
+║   │ A                 │ C_cummin          ║
 ╟───┼───────────────────┼───────────────────╢
-║ 3 │ foo               │ 14                ║
+║ 3 │ foo               │ 1                 ║
 ╟───┼───────────────────┼───────────────────╢
-║ 4 │ foo               │ 21                ║
+║ 4 │ foo               │ 1                 ║
 ╟───┼───────────────────┼───────────────────╢
 ║ 5 │ bar               │ 3                 ║
 ╟───┼───────────────────┼───────────────────╢
-║ 6 │ bar               │ 7                 ║
+║ 6 │ bar               │ 3                 ║
 ╟───┼───────────────────┼───────────────────╢
-║ 7 │ bar               │ 9                 ║
+║ 7 │ bar               │ 2                 ║
 ╚═══╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cumsum for two columns for each group, group by one column
+Obtain the cummin for two columns for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
@@ -81,60 +83,61 @@ Obtain the cumsum for two columns for each group, group by one column
 const dfd = require("danfojs-node")
 
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
 
 let grp = df.groupby(["A"])
-grp.col(["C","D"]).cumsum().head().print()
-grp.col(["C","D"]).cumsum().tail().print()
+let grpCol = grp.col("C","D"])
+grpCol.cumMin().head().print()
+grpCol.cumMin().tail().print()
 ```
 {% endtab %}
 {% endtabs %}
 
-```
+```text
   
  Shape: (5,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ A                 │ C_cumsum          │ D_cumsum          ║
+║   │ A                 │ C_cummin          │ D_cummin          ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ 0 │ foo               │ 1                 │ 3                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ foo               │ 3                 │ 7                 ║
+║ 1 │ foo               │ 1                 │ 3                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 2 │ foo               │ 8                 │ 12                ║
+║ 2 │ foo               │ 1                 │ 3                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ foo               │ 14                │ 19                ║
+║ 3 │ foo               │ 1                 │ 3                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 4 │ foo               │ 21                │ 27                ║
+║ 4 │ foo               │ 1                 │ 3                 ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 
 
  Shape: (5,3) 
 
 ╔════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║    │ A                 │ C_cumsum          │ D_cumsum          ║
+║    │ A                 │ C_cummin          │ D_cummin          ║
 ╟────┼───────────────────┼───────────────────┼───────────────────╢
-║ 11 │ bar               │ 7                 │ 3                 ║
+║ 11 │ bar               │ 3                 │ 1                 ║
 ╟────┼───────────────────┼───────────────────┼───────────────────╢
-║ 12 │ bar               │ 9                 │ 9                 ║
+║ 12 │ bar               │ 2                 │ 1                 ║
 ╟────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 13 │ bar               │ 3                 │ 2                 ║
 ╟────┼───────────────────┼───────────────────┼───────────────────╢
-║ 14 │ bar               │ 7                 │ 3                 ║
+║ 14 │ bar               │ 3                 │ 1                 ║
 ╟────┼───────────────────┼───────────────────┼───────────────────╢
-║ 15 │ bar               │ 9                 │ 9                 ║
+║ 15 │ bar               │ 2                 │ 1                 ║
 ╚════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cumsum for a column for each group, group by two columns
+Obtain the cummin for a column for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
@@ -142,37 +145,38 @@ Obtain the cumsum for a column for each group, group by two columns
 const dfd = require("danfojs-node")
 
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
 
 let grp = df.groupby(["A","B"])
-grp.col(["C"]).cumsum().head().print()
-grp.col(["C"]).cumsum().tail().print()
+let grpCol = grp.col(["C"])
+grpCol.cumMin().head().print()
+grpCol.cumMin().tail().print()
 
 ```
 {% endtab %}
 {% endtabs %}
 
-```
+```text
   Shape: (5,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ A                 │ B                 │ C_cumsum          ║
+║   │ A                 │ B                 │ C_cummin          ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ 0 │ foo               │ one               │ 1                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ foo               │ one               │ 7                 ║
+║ 1 │ foo               │ one               │ 1                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ 2 │ foo               │ two               │ 2                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ foo               │ two               │ 7                 ║
+║ 3 │ foo               │ two               │ 2                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ 4 │ foo               │ three             │ 7                 ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
@@ -181,9 +185,9 @@ grp.col(["C"]).cumsum().tail().print()
  Shape: (5,3) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ A                 │ B                 │ C_cumsum          ║
+║   │ A                 │ B                 │ C_cummin          ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ foo               │ two               │ 7                 ║
+║ 3 │ foo               │ two               │ 2                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
 ║ 4 │ foo               │ three             │ 7                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────╢
@@ -195,7 +199,7 @@ grp.col(["C"]).cumsum().tail().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the count for two columns for each group, group by two columns
+Obtain the cummin for two columns for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
@@ -203,37 +207,38 @@ Obtain the count for two columns for each group, group by two columns
 const dfd = require("danfojs-node")
 
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
 
 let grp = df.groupby(["A","B"])
-grp.col(["C","D"]).cumsum().head().print()
-grp.col(["C","D"]).cumsum().tail().print()
+let grpCol = grp.col(["C","D"])
+grpCol.cumMin().head().print()
+grpCol.cumMin().tail().print()
 ```
 {% endtab %}
 {% endtabs %}
 
-```
+```text
   
-   Shape: (5,4) 
+  Shape: (5,4) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ A                 │ B                 │ C_cumsum          │ D_cumsum          ║
+║   │ A                 │ B                 │ C_cummin          │ D_cummin          ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 0 │ foo               │ one               │ 1                 │ 3                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 1 │ foo               │ one               │ 7                 │ 10                ║
+║ 1 │ foo               │ one               │ 1                 │ 3                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 2 │ foo               │ two               │ 2                 │ 4                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ foo               │ two               │ 7                 │ 9                 ║
+║ 3 │ foo               │ two               │ 2                 │ 4                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 4 │ foo               │ three             │ 7                 │ 8                 ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
@@ -242,9 +247,9 @@ grp.col(["C","D"]).cumsum().tail().print()
  Shape: (5,4) 
 
 ╔═══╤═══════════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
-║   │ A                 │ B                 │ C_cumsum          │ D_cumsum          ║
+║   │ A                 │ B                 │ C_cummin          │ D_cummin          ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 3 │ foo               │ two               │ 7                 │ 9                 ║
+║ 3 │ foo               │ two               │ 2                 │ 4                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 4 │ foo               │ three             │ 7                 │ 8                 ║
 ╟───┼───────────────────┼───────────────────┼───────────────────┼───────────────────╢
@@ -256,4 +261,3 @@ grp.col(["C","D"]).cumsum().tail().print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-****

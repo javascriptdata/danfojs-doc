@@ -4,7 +4,7 @@ description: Obtain the maximum value of columns per groups
 
 # Groupby.max
 
-> danfo.Groupby.max()      \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L309)]
+> danfo.Groupby.max()      \[[source](https://github.com/javascriptdata/danfojs/blob/0d33e344b80a3ed54c91c9393ac3b583d4b0b1a4/src/danfojs-base/aggregators/groupby.ts#L506)]
 
 **Parameters:** None
 
@@ -19,13 +19,13 @@ Obtain the maximum value for a column for each group, group by one column
 ```javascript
 const dfd = require("danfojs-node")
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
 
@@ -56,13 +56,13 @@ Obtain the maximum value for two columns for each group, group by one column
 const dfd = require("danfojs-node")
 
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
 
@@ -92,13 +92,13 @@ Obtain the maximum value for a column for each group, group by two columns
 ```javascript
 const dfd = require("danfojs-node")
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
 
@@ -134,13 +134,13 @@ Obtain the maximum value for two columns for each group, group by two columns
 ```javascript
 const dfd = require("danfojs-node")
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
 

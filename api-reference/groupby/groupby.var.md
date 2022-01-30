@@ -4,7 +4,7 @@ description: Obtain the variance per groups for a specified column
 
 # Groupby.var
 
-> danfo.Groupby.**var**()     \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L268)]
+> danfo.Groupby.**var**()     \[[source](https://github.com/javascriptdata/danfojs/blob/9bfda6dcb6b2b620591ec7b3340d35e3f801c8ab/src/danfojs-base/aggregators/groupby.ts#L456)]
 
 **Parameters**: None
 
@@ -20,16 +20,15 @@ Obtain the variance of a column for each group, group by one column
 const dfd = require("danfojs-node")
 
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
-
 
 let grp = df.groupby(["A"])
 grp.col(["C"]).var().print()
@@ -58,13 +57,13 @@ Obtain the var for two columns for each group, group by one column
 const dfd = require("danfojs-node")
 
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
 
@@ -94,13 +93,13 @@ Obtain the var for a column for each group, group by two columns
 const dfd = require("danfojs-node")
 
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
 
@@ -137,13 +136,13 @@ Obtain the var for two columns for each group, group by two columns
 const dfd = require("danfojs-node")
 
 
-let data ={'A': ['foo', 'bar', 'foo', 'bar',
+let data ={A: ['foo', 'bar', 'foo', 'bar',
                 'foo', 'bar', 'foo', 'foo'],
-           'B': ['one', 'one', 'two', 'three',
+           B: ['one', 'one', 'two', 'three',
                 'two', 'two', 'one', 'three'],
-           'C': [1,3,2,4,5,2,6,7],
-           'D': [3,2,4,1,5,6,7,8]
-        }
+           C: [1,3,2,4,5,2,6,7],
+           D: [3,2,4,1,5,6,7,8]
+}
 
 let df = new dfd.DataFrame(data)
 
