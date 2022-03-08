@@ -1,15 +1,34 @@
 # Release Notes
 
-### \[LATEST] Release Node (v1.0.2), Browser (v1.0.2)
+### \[LATEST] Release Node (v1.0.3), Browser (v1.0.3)
+
+**Date:** 8th March 2022
+
+#### What's Changed
+
+* add max to list of arithmetic operations by @steveoni in https://github.com/javascriptdata/danfojs/pull/367
+* correct lenght -> length by @adamgilman in https://github.com/javascriptdata/danfojs/pull/393
+* Bug fixes by @risenW in https://github.com/javascriptdata/danfojs/pull/395
+* Fix bug in groupby checking wrong colDtype by @igonro in https://github.com/javascriptdata/danfojs/pull/398
+* fix(test): Explicit type in test allows TS to compile by @NeonSpork in https://github.com/javascriptdata/danfojs/pull/411
+* Jan kaul esmodule by @risenW in https://github.com/javascriptdata/danfojs/pull/415
+
+#### Contributors: @risenW @steveoni @adamgilman @igonro @NeonSpork&#x20;
+
+**Full Changelog**: https://github.com/javascriptdata/danfojs/compare/v1.0.2...v1.0.3
+
+### Release Node (v1.0.2), Browser (v1.0.2)
+
 **Date:** 19th Jan 2022
 
 #### What's Changed
+
 * Update TensorFlow version to fix M1 chip incompatibility by @risenW in https://github.com/javascriptdata/danfojs/pull/358
 * Add new feature `iat` and `at` by @risenW in https://github.com/javascriptdata/danfojs/pull/359
 * Fixed issue with sort by values by @risenW in https://github.com/javascriptdata/danfojs/pull/360
 
-
 **Full Changelog**: https://github.com/javascriptdata/danfojs/compare/v1.0.1...v1.0.2
+
 ### Release Node (v1.0.1), Browser (v1.0.1)
 
 **Date:** 16th Jan 2022
