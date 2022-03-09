@@ -8,7 +8,7 @@ danfo.DataFrame.asType(options)&#x20;
 
 | Parameters | Type   | Description                                                                                                                                                                                                                                                                                               | Default            |
 | ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ------------------ |
-| options    | Object | <p>{</p><p><strong>column</strong>: Array, label/column name of column to cast</p><p><strong>dtype</strong>: dtype to cast to. One of [string, float32, int32, boolean]</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { inplace: false } |
+| options    | Object | <p>{</p><p><strong>column</strong>: String, label/column name of column to cast</p><p><strong>dtype</strong>: dtype to cast to. One of [string, float32, int32, boolean]</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p><p>}</p> | { inplace: false } |
 
 ## **Examples**
 
