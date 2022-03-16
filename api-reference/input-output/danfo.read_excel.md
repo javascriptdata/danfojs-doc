@@ -84,7 +84,8 @@ By specifying a valid [file object](https://developer.mozilla.org/en-US/docs/Web
 <body>
     <input type="file" id="file" name="file">
     <script>
-            
+        const inputFile = document.querySelector('#file')
+        
         inputFile.addEventListener("change", async () => {
             const excelFile = inputFile.files[0]
             dfd.readExcel(excelFile).then((df) => {
