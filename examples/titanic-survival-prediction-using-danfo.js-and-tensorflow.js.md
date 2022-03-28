@@ -107,7 +107,7 @@ df.ctypes.print()
 ╚═════════════════════════╧══════════════════════╝
 ```
 
-From the data types table above, you'll notice that there are two strong columns. The first is the Name column which contains Names of each passenger. From the head of the dataset you printed above, you'll confirm that each name has a title. So you can extract these titles from the names and this can serve as a new feature.
+From the data types table above, you'll notice that there are two string columns. The first is the Name column which contains Names of each passenger. From the head of the dataset you printed above, you'll confirm that each name has a title. So you can extract these titles from the names and this can serve as a new feature.
 
 ```javascript
 //A feature engineering: Extract all titles from names columns
