@@ -35,7 +35,6 @@ function App() {
 }
 
 export default App;
-
 ```
 {% endcode %}
 {% endtab %}
@@ -61,12 +60,11 @@ export default App;
     </script>
   </body>
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
 
-![](<../../.gitbook/assets/newplot (23).png>)
+![](../../.gitbook/assets/newplot-23-.png)
 
 ### Box plots on a DataFrame
 
@@ -102,7 +100,6 @@ function App() {
 }
 
 export default App;
-
 ```
 {% endcode %}
 {% endtab %}
@@ -137,12 +134,11 @@ export default App;
     </script>
   </body>
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
 
-![](<../../.gitbook/assets/screen-shot-2020-08-11-at-1.20.42-am (1).png>)
+![](<../../.gitbook/assets/screen-shot-2020-08-11-at-1.20.42-am (1) (1).png>)
 
 ### Box plot for selected columns in a DataFrame
 
@@ -183,7 +179,6 @@ function App() {
 }
 
 export default App;
-
 ```
 {% endcode %}
 {% endtab %}
@@ -217,12 +212,11 @@ export default App;
     </script>
   </body>
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
 
-![](<../../.gitbook/assets/newplot (24).png>)
+![](<../../.gitbook/assets/newplot-24- (1).png>)
 
 {% hint style="info" %}
 To customize your plots, see the [Configuring your plot page](configuring-your-plots.md)

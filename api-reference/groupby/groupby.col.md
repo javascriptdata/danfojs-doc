@@ -4,15 +4,15 @@ description: Obtain the column(s) per groups
 
 # Groupby.col
 
-> danfo.Groupby.col\(col\_names\)    \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L104)\]
+> danfo.Groupby.col(col\_names) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L104)]
 
-| Parameters | Type | Description | Default |
-| :--- | :--- | :--- | :--- |
-| col\_names | Array | List of column |  |
+| Parameters | Type  | Description    | Default |
+| ---------- | ----- | -------------- | ------- |
+| col\_names | Array | List of column |         |
 
 Returns: Groupby Data structure
 
-Note:    This is similar to pandas `df.groupby(["column"])["colNames"]`
+Note: This is similar to pandas `df.groupby(["column"])["colNames"]`
 
 **Examples**
 
@@ -50,9 +50,9 @@ grpColumnBD.apply(x=> x).print()
 {% endtab %}
 {% endtabs %}
 
-Apparently the output are not that useful unless you perform some operations like max\(\), count\(\) and the likes. 
+Apparently the output are not that useful unless you perform some operations like max(), count() and the likes.
 
-```text
+```
 // select single column C
 
 ╔════════════╤═══════════════════╤═══════════════════╗
@@ -97,8 +97,4 @@ Apparently the output are not that useful unless you perform some operations lik
 ║ 7          │ bar               │ two               │ 6                 ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-
 ```
-
-
-

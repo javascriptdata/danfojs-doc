@@ -8,7 +8,7 @@ The book then shows you how to load different datasets, combine and analyze them
 
 By the end of this app development book, you'll be able to build and embed data analytics, visualization, and ML capabilities into any JavaScript app in server-side Node.js or the browser.
 
-![Danfo.js book cover](.gitbook/assets/B17076\_Cover.jpg)
+![Danfo.js book cover](.gitbook/assets/b17076\_cover.jpg)
 
 ## **What you will learn**
 
