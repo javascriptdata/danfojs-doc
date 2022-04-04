@@ -137,6 +137,6 @@ export default App;
 {% endtab %}
 {% endtabs %}
 
-![](../../.gitbook/assets/newplot-32-.png)
+![](<../../.gitbook/assets/newplot (32).png>)
 
 ##

@@ -6,11 +6,15 @@ description: >-
 
 # DataFrame.toExcel
 
-> DataFrame.toExcel(options)&#x20;
+{% hint style="danger" %}
+Deprecated in v1.1.0: Use the [`dfd.toExcel`](../input-output/danfo.to\_excel.md) function directly instead
+{% endhint %}
 
-| **Parameters** | Type             | Description                                                                                                                                                                                                                                                                                                                                                                                                                              | Default                                                                                                  |
-| -------------- | ---------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
-| **options**    | object, optional | <p>Configuration object:</p><p></p><p><strong><code>filePath</code></strong>: Local file path to write the CSV file to. If not specified, the CSV will be returned as a string. Only needed in Nodejs version</p><p><br><strong><code>fileName</code></strong>: The name of the file to download as. Only needed in the browser environment.</p><p><br><strong><code>sheetName</code></strong>: Name to call the excel sheet.</p><p></p> | <p>{<br><strong>filePath</strong>: "./output.xlsx",<br><strong>sheetName</strong>: "Sheet1"<br><br>}</p> |
+> DataFrame.toExcel(options)
+
+| **Parameters** | Type             | Description                                                                                                                                                                                                                                                                                                                                                                                                                | Default                                                                                                  |
+| -------------- | ---------------- | -------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
+| **options**    | object, optional | <p>Configuration object:</p><p><strong><code>filePath</code></strong>: Local file path to write the CSV file to. If not specified, the CSV will be returned as a string. Only needed in Nodejs version</p><p><br><strong><code>fileName</code></strong>: The name of the file to download as. Only needed in the browser environment.</p><p><br><strong><code>sheetName</code></strong>: Name to call the excel sheet.</p> | <p>{<br><strong>filePath</strong>: "./output.xlsx",<br><strong>sheetName</strong>: "Sheet1"<br><br>}</p> |
 
 The **toExcel** function can be used to write out a DataFrame or Series to Excel (**.xlsx**) file. The output format will depend on the environment. In the following examples, we show you how to write/download an Excel file from Node and Browser environments.
 

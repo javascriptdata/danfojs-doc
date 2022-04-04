@@ -57,7 +57,7 @@ export default App;
 
 On running the app, we get the following output in the console:
 
-![](../.gitbook/assets/screen-shot-2021-02-14-at-7.22.16-pm.png)
+![](<../.gitbook/assets/Screen Shot 2021-02-14 at 7.22.16 PM.png>)
 
 Note that you can also import specific modules. For instance, in the code below we import only the DataFrame module:
 
