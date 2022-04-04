@@ -105,12 +105,11 @@ export default App;
     </script>
   </body>
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
 
-![](<../../.gitbook/assets/newplot-29- (2) (1).png>)
+![](<../../.gitbook/assets/newplot-29- (2) (2) (1).png>)
 
 {% hint style="info" %}
 To set customize your charts, see the [Customizing your plot page](configuring-your-plots.md)

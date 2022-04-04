@@ -13,7 +13,7 @@ D**anfo.js** is heavily inspired by the [Pandas](https://pandas.pydata.org/panda
 
 * Danfo.js is fast and supports[ Tensorflow.js](https://js.tensorflow.org)'s tensors out of the box. This means you can [convert Danfo.js ](api-reference/dataframe/)DataFrames to Tensors, and vice versa.
 * Easy handling of missing data (represented as `NaN, undefined, or null`) in data
-* Size mutability: columns can be inserted/deleted from DataFrame
+* Size mutability: columns can be inserted/deleted from DataFrames
 * Automatic and explicit alignment: objects can be explicitly aligned to a set of labels, or the user can simply ignore the labels and let [`Series`](api-reference/series/), [`DataFrame`](api-reference/dataframe/), etc. automatically align the data for you in computations
 * Powerful, flexible, [groupby](api-reference/groupby/) functionality to perform split-apply-combine operations on data sets, for both aggregating and transforming data
 * Make it easy to convert Arrays, JSONs, List or Objects, Tensors, and differently-indexed data structures into DataFrame objects

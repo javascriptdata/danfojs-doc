@@ -15,7 +15,7 @@ The config parameter extends the [Plotly.js config](https://plotly.com/javascrip
 | **columns**          | Array of column names to plot.                                                                                                                                                                 | All columns in the DataFrame when applicable |
 | **values**           | Used to configure a `pie` chart. A column name containing values for the pie. Maps 1-1 with labels.                                                                                            |                                              |
 | **labels**           | Used to configure a `pie` chart. A column name containing labels for the pie. Maps 1-1 with values.                                                                                            |                                              |
-| **rowPositions**     | Used to configure a `pie` chart.  Pie chart domain row. See [https://plotly.com/javascript/reference/pie/#pie-domain-row](https://plotly.com/javascript/reference/pie/#pie-domain-row)         | Range of `0 - DataFrame column length`       |
+| **rowPositions**     | Used to configure a `pie` chart. Pie chart domain row. See [https://plotly.com/javascript/reference/pie/#pie-domain-row](https://plotly.com/javascript/reference/pie/#pie-domain-row)          | Range of `0 - DataFrame column length`       |
 | **columnPositions**  | Used to configure a `pie` chart. Pie chart domain column. See [https://plotly.com/javascript/reference/pie/#pie-domain-column](https://plotly.com/javascript/reference/pie/#pie-domain-column) | Range of `0 - DataFrame column length`       |
 | **grid**             | <p>Used to configure a <code>pie</code> chart. Accepts the following parameter:<br><br><strong>row</strong>: Integer size<br><strong>column</strong>: Integer size</p>                         |                                              |
 | **tableHeaderStyle** | Table properties used for configuring table header. See [full list](https://plotly.com/javascript/reference/table/#table-header) of supported arguments.                                       |                                              |
@@ -80,7 +80,6 @@ function App() {
 }
 
 export default App;
-
 ```
 {% endtab %}
 
@@ -134,11 +133,10 @@ export default App;
     </script>
   </body>
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
 
-![](<../../.gitbook/assets/newplot (32).png>)
+![](../../.gitbook/assets/newplot-32-.png)
 
 ##

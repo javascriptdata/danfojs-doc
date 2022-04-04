@@ -38,7 +38,6 @@ function App() {
 }
 
 export default App;
-
 ```
 {% endcode %}
 {% endtab %}
@@ -72,12 +71,11 @@ export default App;
     </script>
   </body>
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
 
-![](<../../.gitbook/assets/Screen Shot 2020-08-11 at 12.34.08 AM.png>)
+![](../../.gitbook/assets/screen-shot-2020-08-11-at-12.34.08-am.png)
 
 ### Configure the header and cell of a table
 
@@ -134,7 +132,6 @@ function App() {
 }
 
 export default App;
-
 ```
 {% endcode %}
 {% endtab %}
@@ -189,9 +186,8 @@ export default App;
     </script>
   </body>
 </html>
-
 ```
 {% endtab %}
 {% endtabs %}
 
-![](<../../.gitbook/assets/Screen Shot 2020-08-11 at 12.38.30 AM.png>)
+![](../../.gitbook/assets/screen-shot-2020-08-11-at-12.38.30-am.png)
