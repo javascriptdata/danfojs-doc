@@ -49,7 +49,7 @@ Abs,Count,country code
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-     <script src="https://cdn.jsdelivr.net/npm/danfojs@1.0.5/lib/bundle.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/danfojs@1.1.0/lib/bundle.min.js"></script>
     <title>Document</title>
 </head>
 
