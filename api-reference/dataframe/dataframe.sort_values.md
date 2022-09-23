@@ -6,10 +6,10 @@ description: Sort a Dataframe in ascending or descending order by a specified co
 
 danfo.DataFrame.**sortValues**(by, options) \[[source](https://github.com/opensource9ja/danfojs/blob/cf5c7ae3a009458e61eedd18d9c9b5b6b10d5276/danfojs/src/core/frame.js#L125)]
 
-| Parameters | Type   | Description                                                                                                                                                                                                                                               | Default                                                                                  |
-| ---------- | ------ | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | ---------------------------------------------------------------------------------------- |
-| **by**     | Object | This key can be either a single column name or a single array of the same length as the calling DataFrame.                                                                                                                                                |                                                                                          |
-| options    | Object | <p>Optional configuratio<strong>n:</strong> </p><p><strong></strong></p><p><strong>ascending:</strong> Order of sorting </p><p></p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p> | <p>{</p><p><strong>ascending</strong>: true, <strong>inplace</strong>: false</p><p>}</p> |
+| Parameters | Type   | Description                                                                                                                                                                                                              | Default                                                                                  |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ | ---------------------------------------------------------------------------------------- |
+| **by**     | Object | This key can be either a single column name or a single array of the same length as the calling DataFrame.                                                                                                               |                                                                                          |
+| options    | Object | <p>Optional configuratio<strong>n:</strong></p><p><strong>ascending:</strong> Order of sorting</p><p><strong>inplace</strong>: Boolean indicating whether to perform the operation inplace or not. Defaults to false</p> | <p>{</p><p><strong>ascending</strong>: true, <strong>inplace</strong>: false</p><p>}</p> |
 
 ## **Examples**
 
@@ -86,9 +86,9 @@ df.print()
 ╔════════════╤═══════════════════╤═══════════════════╤═══════════════════╗
 ║            │ A                 │ B                 │ C                 ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 0          │ -20               │ 34                │ 20                ║
+║ 0          │ 47.3              │ 6                 │ 30                ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
-║ 2          │ 47.3              │ 6                 │ 30                ║
+║ 2          │ -20               │ 34                │ 20                ║
 ╟────────────┼───────────────────┼───────────────────┼───────────────────╢
 ║ 1          │ 30                │ 5                 │ 3                 ║
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
