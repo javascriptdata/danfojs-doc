@@ -13,7 +13,7 @@ The following list summarizes some of these updates:
 * **Typescript support:** This new version has been completely re-written using Typescript. This means we now have well-defined types that increase the developer experience.
 * **Standard naming convention:** Functions, methods, classes, and variable names have been standardized to follow JavaScript best practices.
 * Standardize function argument: Functions and methods have been updated to accept arguments and parameters intuitively resulting in improved developer experience.
-* **New features**: We added lots of new features which users have been requesting for. For example:
+* **New features**: We added a couple of new features which users have been requesting for. For example:
   * Stream and process large CSV data
 * General bug fixes and improvements
 * Better error messages
@@ -28,11 +28,11 @@ Update your function and/or method names to use camelCase instead of snake\_case
 
 ```javascript
 read_csv ==> readCSV
-to_json ==> toCSV
+to_json ==> toJSON
 drop_duplicates ==> dropDuplicates
 ```
 
-**Note:** that your code editor auto-complete will general suggest the new function or method names, so it will be easier to update to the new names. If using Typescript, then it is even easier as the TS compiler will show you warnings.
+**Note:** that your code editor will generally suggest the new function or method names, so it will be easier to update to the new names. If using Typescript, then it is even easier as the TS compiler will show you warnings.
 
 ### Functions and Methods argument structure
 
@@ -40,7 +40,7 @@ Another major breaking change of v1, is that the structure of arguments/paramete
 
 In general, it is important to understand our thought process behind this, so, here goes:
 
-Assuming we take the method called _**rename**_, which takes required object mapper, as well as, optional configuration argument. In pre-v1 version of Danfojs, the function signature is as follows:
+Assuming we take the method called _**rename**_, which takes the required argument **mapper**, as well as, an optional configuration argument. In pre-v1 version of Danfojs, the function signature is as follows:
 
 ```
 rename( { mapper, axis, inplace } ) => DataFrame
