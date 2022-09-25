@@ -4,12 +4,12 @@ description: Accessor object for date time properties of the Series values.
 
 # danfo.Dt
 
-For example, in the following example, we convert a Series to an `Dt` instance and apply a couple of **DateTime** methods.&#x20;
+For example, in the following example, we convert a Series to an `Dt` instance and apply a couple of **DateTime** methods.
 
 {% tabs %}
 {% tab title="Node" %}
 ```javascript
-import { Dt, Series } from "danfojs-node-nightly"
+import { Dt, Series } from "danfojs-node"
 
 const sf = new Series(["1/1/2000", "1/2/2000", "2/3/2000", "1/4/2000", "4/5/2000"])
 const dtS = new Dt(sf)
@@ -45,5 +45,4 @@ dtS.monthName().print()
 ╟───┼──────────╢
 ║ 4 │ April    ║
 ╚═══╧══════════╝
-
 ```
