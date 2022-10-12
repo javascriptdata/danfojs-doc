@@ -39,7 +39,6 @@ function App() {
 }
 
 export default App;
-
 ```
 {% endtab %}
 
@@ -75,7 +74,7 @@ e
 {% endtab %}
 {% endtabs %}
 
-![](<../../.gitbook/assets/newplot (12).png>)
+![](../../.gitbook/assets/newplot-12-.png)
 
 ### Multiple Pie Chart from Columns in a DataFrame
 
@@ -117,13 +116,13 @@ e
 </html>
 ```
 
-![](<../../.gitbook/assets/newplot (21).png>)
+![](../../.gitbook/assets/newplot-21-.png)
 
 ### Configure Position of Pie Charts
 
 If you have more than one pie chart to display, you can set the grid parameter, and also the position of each pie.
 
-&#x20;For example, in the snippet below, we set the `grid` to 2 by 2 and also pass a set of row and column index positions. Each row/column position index corresponds to each pie.
+For example, in the snippet below, we set the `grid` to 2 by 2 and also pass a set of row and column index positions. Each row/column position index corresponds to each pie.
 
 ```markup
 <!DOCTYPE html>
@@ -163,7 +162,7 @@ If you have more than one pie chart to display, you can set the grid parameter, 
 </html>
 ```
 
-![](<../../.gitbook/assets/newplot (22).png>)
+![](../../.gitbook/assets/newplot-22-.png)
 
 {% hint style="info" %}
 For more configuration options for Pie Charts, see the [Plotly](https://plotly.com/javascript/pie-charts/) style doc.

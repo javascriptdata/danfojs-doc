@@ -45,7 +45,7 @@ In the example below, we use the titanic dataset, to show a close to real-world 
 </html>
 ```
 
-![](<../../.gitbook/assets/newplot-8- (1) (1).png>)
+![](<../../.gitbook/assets/newplot-8- (1).png>)
 
 ### More Examples
 
@@ -85,7 +85,7 @@ In the example below, we use the titanic dataset, to show a close to real-world 
 </html>
 ```
 
-![](<../../.gitbook/assets/newplot (19).png>)
+![](../../.gitbook/assets/newplot-19-.png)
 
 {% hint style="info" %}
 To customize your plots, see the [Customize your plot page](configuring-your-plots.md)

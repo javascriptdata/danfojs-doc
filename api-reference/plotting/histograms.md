@@ -42,7 +42,6 @@ function App() {
 }
 
 export default App;
-
 ```
 {% endtab %}
 
@@ -80,7 +79,7 @@ export default App;
 {% endtab %}
 {% endtabs %}
 
-![](<../../.gitbook/assets/newplot (10).png>)
+![](../../.gitbook/assets/newplot-10-.png)
 
 ### Customized Histogram plots on DataFrame
 
@@ -169,7 +168,7 @@ a
 {% endtab %}
 {% endtabs %}
 
-![](<../../.gitbook/assets/newplot (20).png>)
+![](../../.gitbook/assets/newplot-20-.png)
 
 {% hint style="info" %}
 For more configuration options for Histograms, see the [Plotly](https://plotly.com/javascript/histograms/) doc.

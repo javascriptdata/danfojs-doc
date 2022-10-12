@@ -35,7 +35,7 @@ A bar plot presents categorical data with rectangular bars with lengths proporti
 </html>
 ```
 
-![](<../../.gitbook/assets/newplot (6).png>)
+![](../../.gitbook/assets/newplot-6-.png)
 
 ### Bar plot on DataFrame
 
@@ -64,7 +64,7 @@ A bar plot presents categorical data with rectangular bars with lengths proporti
 </html>
 ```
 
-![](<../../.gitbook/assets/newplot (7).png>)
+![](../../.gitbook/assets/newplot-7-.png)
 
 {% hint style="info" %}
 To customize plots, see the [Customizing your plot page](configuring-your-plots.md)

@@ -35,7 +35,7 @@ description: >-
 </html>
 ```
 
-![](<../../.gitbook/assets/newplot (4).png>)
+![](../../.gitbook/assets/newplot-4-.png)
 
 ### Line plots on DataFrame
 
@@ -67,7 +67,7 @@ The example below shows the plot of column values against a common x-axis (index
 </html>
 ```
 
-![](<../../.gitbook/assets/newplot (2) (2).png>)
+![](<../../.gitbook/assets/newplot (2) (2) (1).png>)
 
 The example below shows how to plot two columns in a DataFrame against each other.
 
@@ -105,7 +105,7 @@ The example below shows how to plot two columns in a DataFrame against each othe
 </html>
 ```
 
-![](<../../.gitbook/assets/newplot (3).png>)
+![](../../.gitbook/assets/newplot-3-.png)
 
 {% hint style="info" %}
 To customize your plots, see the [Customize your plot page](configuring-your-plots.md)

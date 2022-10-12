@@ -2284,7 +2284,7 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 </html>
 ```
 
-![](<.gitbook/assets/newplot-2- (1) (1).png>)
+![](<.gitbook/assets/newplot-2- (1) (1) (1).png>)
 
 ### Getting data in/out
 

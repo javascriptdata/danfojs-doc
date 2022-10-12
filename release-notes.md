@@ -1,6 +1,24 @@
 # Release Notes
 
-### \[LATEST] Release Node (v1.0.3), Browser (v1.0.3)
+### \[LATEST] Release Node (v1.1.2), Browser (v1.1.2)
+
+**Date:** 12th October 2022
+
+#### What's Changed
+
+* Fix copy/paste error in df.apply documentation by @kgeis in https://github.com/javascriptdata/danfojs/pull/469
+* Makes an ESM bundle using esbuild by @dcrescim in https://github.com/javascriptdata/danfojs/pull/447
+* Fix invalid assert.throws statements by @igonro in https://github.com/javascriptdata/danfojs/pull/419
+* Allow Series.append() to use zero, fixes #486 by @BowTiedAztec in https://github.com/javascriptdata/danfojs/pull/487
+* Add error handler for io functions by @risenW in https://github.com/javascriptdata/danfojs/pull/503
+* add support for excel parsing options arg by @risenW in https://github.com/javascriptdata/danfojs/pull/505
+* Chore/add default support for datetime by @risenW in https://github.com/javascriptdata/danfojs/pull/511
+
+#### Contributors: @risenW @BowTiedAztec @kgeis
+
+**Full Changelog**: https://github.com/javascriptdata/danfojs/compare/v1.1.1...v1.1.2
+
+### Release Node (v1.0.3), Browser (v1.0.3)
 
 **Date:** 8th March 2022
 
@@ -13,7 +31,7 @@
 * fix(test): Explicit type in test allows TS to compile by @NeonSpork in https://github.com/javascriptdata/danfojs/pull/411
 * Jan kaul esmodule by @risenW in https://github.com/javascriptdata/danfojs/pull/415
 
-#### Contributors: @risenW @steveoni @adamgilman @igonro @NeonSpork&#x20;
+#### Contributors: @risenW @steveoni @adamgilman @igonro @NeonSpork
 
 **Full Changelog**: https://github.com/javascriptdata/danfojs/compare/v1.0.2...v1.0.3
 
