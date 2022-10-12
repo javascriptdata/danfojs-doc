@@ -2253,7 +2253,7 @@ Using the `plot` API, you can make interactive plots from DataFrame and Series. 
 </html>
 ```
 
-![](<.gitbook/assets/newplot-29- (2).png>)
+![](<.gitbook/assets/newplot-29- (2) (1).png>)
 
 On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.DataFrame.plot.html#pandas.DataFrame.plot)method exposes various [plot types](api-reference/plotting/). And by default, all columns are plotted unless specified otherwise.
 
@@ -2284,7 +2284,7 @@ On a DataFrame, the [`plot()`](https://pandas.pydata.org/pandas-docs/stable/refe
 </html>
 ```
 
-![](<.gitbook/assets/newplot-2- (1) (1) (1).png>)
+![](<.gitbook/assets/newplot-2- (1) (1).png>)
 
 ### Getting data in/out
 

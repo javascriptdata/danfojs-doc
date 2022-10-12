@@ -6,10 +6,10 @@ description: Reads a JSON file from local or remote location into a DataFrame.
 
 > danfo.**readExcel**(source, options)
 
-| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                     |
-| ---------- | ------ | ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
-| source     | string | **source** : string, URL or local file path to Excel file.                                                                                                                                                                                                                                                                                                                                      |
-| options    | Object | <p>{</p><p><strong>sheet</strong> : string, (Optional) Name of the sheet which u want to parse. Default will be the first sheet.<br><strong>method</strong>: The HTTP method to use.</p><p><strong>headers</strong>: Additional headers to send with the request if reading JSON from remote url. Supports all the node-fetch options in Nodejs, and all fetch options in browsers.</p><p>}</p> |
+| Parameters | Type   | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  |
+| ---------- | ------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
+| source     | string | **source** : string, URL or local file path to Excel file.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   |
+| options    | Object | <p>{</p><p><strong>sheet</strong> : string, (Optional) Name of the sheet which u want to parse. Default will be the first sheet.<br><strong>method</strong>: The HTTP method to use.</p><p><strong>headers</strong>: Additional headers to send with the request if reading JSON from remote url. Supports all the node-fetch options in Nodejs, and all fetch options in browsers.</p><p><strong>frameConfig</strong>: Optional arguments passed when creating the DataFrame. e.g column names, index. etc.</p><p><strong>parsingOptions</strong>: supports all xlsx options. See <a href="https://docs.sheetjs.com/docs/api/parse-options">https://docs.sheetjs.com/docs/api/parse-options</a></p><p>}</p> |
 
 ### Example
 
@@ -61,8 +61,6 @@ load_process_data()
 ```
 {% endtab %}
 {% endtabs %}
-
-
 
 ### **Reading an input file object in the browser**
 

@@ -67,7 +67,7 @@ The example below shows the plot of column values against a common x-axis (index
 </html>
 ```
 
-![](<../../.gitbook/assets/newplot (2) (2) (1).png>)
+![](<../../.gitbook/assets/newplot (2) (2).png>)
 
 The example below shows how to plot two columns in a DataFrame against each other.
 
