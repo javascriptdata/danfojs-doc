@@ -6,7 +6,7 @@ description: >-
 
 # danfo.toExcel
 
-> danfo.**toExcel**(data, options)&#x20;
+> danfo.**toExcel**(data, options)
 
 | **Parameters** | Type                | Description                                                                                                                                                                                                                                                                                                                                                                                                                  | Default                                                                                                  |
 | -------------- | ------------------- | ---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- | -------------------------------------------------------------------------------------------------------- |
@@ -17,7 +17,7 @@ The **toExcel** function can be used to write out a DataFrame or Series to Excel
 
 ### Convert DataFrame to Excel and write to file path
 
-Writing an Excel file to a local file path is only supported in the Nodejs environment
+You can write a DataFrame or Series in Excel format using the toExcel function and specifying the file path.&#x20;
 
 {% tabs %}
 {% tab title="Node.js" %}
@@ -39,7 +39,7 @@ dfd.toExcel(df, { filePath: "testOut.xlsx"});
 
 ### Convert DataFrame to Excel and download the file in Client-side lib
 
-You can automatically convert and download an Excel file in a browser environment, by specifying a filename and setting download to `true`
+You can automatically convert and download an Excel file in a browser environment, by specifying a filename. This will open a download window.&#x20;
 
 ```javascript
 let data = {
@@ -50,5 +50,5 @@ let data = {
 
 let df = new DataFrame(data);
 
-dfd.toExcel(df, { fileName: "testOut.xlsx", download: true});
+dfd.toExcel(df, { fileName: "testOut.xlsx"});
 ```

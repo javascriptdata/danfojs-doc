@@ -2309,7 +2309,7 @@ let data = {
 
 let df = new dfd.DataFrame(data)
 
-const csv = df.toCSV()
+const csv = dfd.toCSV(df)
 console.log(csv);
 //output
 Abs,Count,country code
@@ -2318,10 +2318,10 @@ Abs,Count,country code
 47.3,5,GH
 
 
-df.toCSV({filePath: "testOut.csv" }) //writes to file system in Nodejs
+dfd.toCSV(df, {filePath: "testOut.csv" }) //writes to file system in Nodejs
 
 
-df.toCSV({fileName: "testOut", download: true }) //downloads the file in browser version
+dfd.toCSV(df, {fileName: "testOut", download: true }) //downloads the file in browser version
 ```
 
 ```
@@ -2402,7 +2402,7 @@ let data = {
 
 let df = new dfd.DataFrame(data)
 
-const json = df.toJSON()
+const json = dfd.toJSON(df)
 console.log(json);
 //output
 [
@@ -2412,7 +2412,7 @@ console.log(json);
 ]
 
 
-const json = df.toJSON({format: "row"})
+const json = dfd.toJSON(df, {format: "row"})
 console.log(json);
 //output
 {

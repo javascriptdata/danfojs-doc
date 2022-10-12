@@ -7,31 +7,29 @@ description: >-
 
 # danfo.streamCsvTransformer
 
-danfo.**streamCsvTransformer**(func)&#x20;
+danfo.**streamCsvTransformer**(func)
 
 | Parameters    | Type     | Description                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                             |
 | ------------- | -------- | --------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------- |
 | inputFilePath | Function | The path to the CSV file to stream from.                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                |
-| transformer   | Function | <p>The transformer function to apply to each row. </p><p>Note that each row of the CSV file is passed as a DataFrame with a single row to the transformer function, and the transformer function is expected to return a transformed DataFrame.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                     |
+| transformer   | Function | <p>The transformer function to apply to each row.</p><p>Note that each row of the CSV file is passed as a DataFrame with a single row to the transformer function, and the transformer function is expected to return a transformed DataFrame.</p>                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      |
 | options       | object   | <p>Configuration options for the pipeline. These include:</p><ul><li><code>outputFilePath</code> The local file path to write the transformed CSV file to.</li><li><code>customCSVStreamWriter</code> A custom CSV stream writer function. This is applied at the end of each transform. If not provided, a default CSV stream writer is used, and this writes to local storage.</li></ul><ul><li><code>inputStreamOptions</code> Configuration options for the input stream. Supports all Papaparse CSV reader config options.</li><li><code>outputStreamOptions</code> Configuration options for the output stream. This is only applied when using the default CSV stream writer. Supports all <code>toCSV</code> options.</li></ul> |
 
 **Returns:**
 
-> return A promise that resolves when the pipeline transformation is complete.
+> A promise that resolves when the pipeline transformation is complete.
 
 The streamCsvTransformer can be used to [incrementally transform](https://en.wikipedia.org/wiki/Stream\_processing) a CSV file. This is done by:
 
 * Streaming a CSV file from a local or **remote** path.
 * Passing each corresponding row as a DataFrame to the specified transformer function.
-* Writing the result to an output stream. &#x20;
-
-
+* Writing the result to an output stream.
 
 ## **Stream processing a local file**
 
-In the example below, we stream a local CSV file (titanic.csv), applies a transformer function, and write the output to the `titanicOutLocal` file.
+In the example below, we stream a local CSV file (titanic.csv), apply a transformer function, and write the output to **`titanicOutLocal.csv`**.
 
-The transformer takes each `Name` column, splits the person's title, and creates a new column from it.&#x20;
+The transformer takes each `Name` column, splits the person's title, and creates a new column from it.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -86,7 +84,7 @@ PassengerId,Survived,Pclass,Name,Sex,Age,SibSp,Parch,Ticket,Fare,Cabin,Embarked,
 
 In the example below, we stream a remote CSV file (titanic.csv), applies a transformer function, and write the output to the `titanicOutLocal` file.
 
-The transformer takes each `Name` column, splits the person's title, and creates a new column from it.&#x20;
+The transformer takes each `Name` column, splits the person's title, and creates a new column from it.
 
 {% tabs %}
 {% tab title="Node" %}
@@ -121,7 +119,7 @@ dfd.streamCsvTransformer(inputFilePath, transformer, {
 
 If you need custom control of the output writer, then you can provide a pipe-able custom writer. See [https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/](https://www.freecodecamp.org/news/node-js-streams-everything-you-need-to-know-c9141306be93/)
 
-In the example below, we add a custom writer that logs each row. You can extend this to upload each chunk to a database, or any other function you need.&#x20;
+In the example below, we add a custom writer that logs each row. You can extend this to upload each chunk to a database, or any other function you need.
 
 {% tabs %}
 {% tab title="Node" %}

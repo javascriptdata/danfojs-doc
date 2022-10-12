@@ -109,7 +109,7 @@ export default App;
 {% endtab %}
 {% endtabs %}
 
-![](<../../.gitbook/assets/newplot-29- (2) (2) (1).png>)
+![](<../../.gitbook/assets/newplot-29- (2) (1) (1) (3).png>)
 
 {% hint style="info" %}
 To set customize your charts, see the [Customizing your plot page](configuring-your-plots.md)

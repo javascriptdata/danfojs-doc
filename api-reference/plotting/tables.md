@@ -75,7 +75,7 @@ export default App;
 {% endtab %}
 {% endtabs %}
 
-![](../../.gitbook/assets/screen-shot-2020-08-11-at-12.34.08-am.png)
+![](<../../.gitbook/assets/Screen Shot 2020-08-11 at 12.34.08 AM.png>)
 
 ### Configure the header and cell of a table
 
@@ -190,4 +190,4 @@ export default App;
 {% endtab %}
 {% endtabs %}
 
-![](../../.gitbook/assets/screen-shot-2020-08-11-at-12.38.30-am.png)
+![](<../../.gitbook/assets/Screen Shot 2020-08-11 at 12.38.30 AM.png>)
