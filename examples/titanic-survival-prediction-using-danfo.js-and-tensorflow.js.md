@@ -53,7 +53,7 @@ Below your import add the following lines of code:
 ```javascript
 async function load_process_data() {
 
-    let df = await dfd.redCSV("https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv")
+    let df = await dfd.readCSV("https://web.stanford.edu/class/archive/cs/cs109/cs109.1166/stuff/titanic.csv")
     df.head().print()
 
 
@@ -145,7 +145,7 @@ let encoder = new dfd.LabelEncoder()
 let cols = ["Sex", "Name"]
 cols.forEach(col => {
   encoder.fit(df[col])
-  enc_val = encoder.transform(df[col])
+  const enc_val = encoder.transform(df[col])
   df.addColumn( col, enc_val, { inplace: true })
 })
 
