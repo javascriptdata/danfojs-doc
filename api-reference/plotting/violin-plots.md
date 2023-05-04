@@ -122,7 +122,7 @@ export default App;
     <div id="plot_div"></div>
     <script>
 
-          dfd.read_csv("https://raw.githubusercontent.com/pandas-dev/pandas/master/doc/data/titanic.csv")
+          dfd.readCSV("https://raw.githubusercontent.com/pandas-dev/pandas/master/doc/data/titanic.csv")
             .then(df => {
 
                 sub_df = df.loc({ columns: ["Age", "Fare"] })
