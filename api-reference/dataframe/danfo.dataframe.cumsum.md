@@ -64,7 +64,7 @@ data = [[11, 20, 3], [1, 15, 6], [2, 30, 40], [2, 89, 78]]
 cols = ["A", "B", "C"]
 
 let df = new dfd.DataFrame(data, { columns: cols })
-let new_df = df.cumsum({ axis: 1 })
+let new_df = df.cumSum({ axis: 1 })
 
 new_df.print()
 ```

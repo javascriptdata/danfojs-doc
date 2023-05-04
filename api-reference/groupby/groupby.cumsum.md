@@ -2,9 +2,9 @@
 description: Obtain the cumulative sum per groups for each column
 ---
 
-# Groupby.cumsum
+# Groupby.cumSum
 
-> danfo.Groupby.**cumsum**()       \[[source](https://github.com/javascriptdata/danfojs/blob/0d33e344b80a3ed54c91c9393ac3b583d4b0b1a4/src/danfojs-base/aggregators/groupby.ts#L473)]
+> danfo.Groupby.**cumSum**()       \[[source](https://github.com/javascriptdata/danfojs/blob/0d33e344b80a3ed54c91c9393ac3b583d4b0b1a4/src/danfojs-base/aggregators/groupby.ts#L473)]
 
 **Parameters**: None
 

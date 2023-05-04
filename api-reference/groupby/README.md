@@ -21,10 +21,10 @@ description: 'GroupBy objects are returned by groupby calls: danfo.DataFrame.gro
 |  |  |
 | :--- | :--- |
 | [`GroupBy.count`](groupby.count.md) | Compute count of group, excluding missing values. |
-| [`GroupBy.cummax`](groupby.cummax.md) | Cumulative max for each group. |
-| [`GroupBy.cummin`](groupby.cummin.md) | Cumulative min for each group. |
-| [`GroupBy.cumprod`](groupby.cumprod.md) | Cumulative product for each group. |
-| [`GroupBy.cumsum`](groupby.cumsum.md) | Cumulative sum for each group. |
+| [`GroupBy.cumMax`](groupby.cummax.md) | Cumulative max for each group. |
+| [`GroupBy.cumMin`](groupby.cummin.md) | Cumulative min for each group. |
+| [`GroupBy.cumProd`](groupby.cumprod.md) | Cumulative product for each group. |
+| [`GroupBy.cumSum`](groupby.cumsum.md) | Cumulative sum for each group. |
 | [`GroupBy.max`](https://pandas.pydata.org/pandas-docs/stable/reference/api/pandas.core.groupby.GroupBy.max.html#pandas.core.groupby.GroupBy.max) | Compute max of group values. |
 | [`GroupBy.mean`](groupby.mean.md) | Compute mean of groups, excluding missing values. |
 | [`GroupBy.min`](groupby.min.md) | Compute min of group values. |

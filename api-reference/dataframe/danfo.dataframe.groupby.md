@@ -65,7 +65,7 @@ A groupby operation will return a GroupBy class object. You can apply any of the
 6. [cumSum](danfo.dataframe.cumsum.md)
 7. [cumMax](danfo.dataframe.cummax.md)
 8. [cumProd](danfo.dataframe.cumprod.md)
-9. [cummin](danfo.dataframe.cummin.md)
+9. [cumMin](danfo.dataframe.cummin.md)
 10. [max](danfo.dataframe.max.md)
 11. [min](danfo.dataframe.min.md)
 

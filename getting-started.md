@@ -2368,7 +2368,7 @@ dfd.readCSV("/home/Desktop/titanic.csv")
 
     <script>
 
-         dfd.read_csv("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
+         dfd.readCSV("https://raw.githubusercontent.com/plotly/datasets/master/finance-charts-apple.csv")
             .then(df => {
 
                 //do something like display descriptive statistics

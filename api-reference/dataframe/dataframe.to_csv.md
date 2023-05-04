@@ -69,7 +69,7 @@ Abs,Count,country code
         
         let df = new dfd.DataFrame(data);
         
-        const csv = df.to_csv({ download: false });
+        const csv = df.toCSV({ download: false });
         console.log(csv);
     </script>
 </body>
