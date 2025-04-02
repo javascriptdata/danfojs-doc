@@ -11,7 +11,7 @@ danfo.**DataFrame**(data, options)
 | data       | 2D Array, 2D Tensor, JSON object. | Flat data structure to load into DataFrame                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                 |
 | options    | Object                            | <p>Optional configuration object. Supported properties are:<br></p><p><strong>index:</strong> Array of numeric or string names for subseting array. If not specified, indexes are auto-generated.<br></p><p><strong>columns:</strong> Array of column names. If not specified, column names are auto generated.<br></p><p><strong>dtypes:</strong> Array of data types for each the column. If not specified, dtypes are/is inferred.<br></p><p><strong>config</strong>: General configuration object for extending or setting NDframe behavior. See full options here</p> |
 
-In order to create a DataFrame, you new to call the new Keyword and pass in a flat data structure. In the following examples, we show you how to create DataFrames by specifying different config options.
+In order to create a DataFrame, you need to call the new Keyword and pass in a flat data structure. In the following examples, we show you how to create DataFrames by specifying different config options.
 
 ### Creating a `DataFrame` from a JSON object:
 
