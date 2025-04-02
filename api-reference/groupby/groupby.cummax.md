@@ -73,7 +73,7 @@ Shape: (5,2)
 ╚═══╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cumsum for two columns for each group, group by one column
+Obtain the cumMax for two columns for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
@@ -134,7 +134,7 @@ grp.col(["C","D"]).cumMax().tail().print()
 ╚════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cummax for a column for each group, group by two columns
+Obtain the cumMax for a column for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}

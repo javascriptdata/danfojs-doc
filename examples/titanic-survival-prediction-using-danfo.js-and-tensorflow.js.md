@@ -77,7 +77,7 @@ async function load_process_data() {
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-You wrote an async function because loading a dataset over the internet takes a few seconds depending on your network. Inside the async function, you pass in the url of the titanic dataset to the read\_csv function.
+You wrote an async function because loading a dataset over the internet takes a few seconds depending on your network. Inside the async function, you pass in the url of the titanic dataset to the readCSV function.
 
 Next you'll perform some basic data preprocessing. The [ctypes](../api-reference/dataframe/dataframe.dtypes.md) attribute returns the column data types:
 

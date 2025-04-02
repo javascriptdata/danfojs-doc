@@ -4,7 +4,7 @@ description: Obtain the cummulative minimum per groups for each column
 
 # Groupby.cumMin
 
-> danfo.Groupby.**cummin**\(\)    \[[source](https://github.com/javascriptdata/danfojs/blob/4993242be7847ba7583dd40ed0188929898b8fd6/src/danfojs-base/aggregators/groupby.ts#L497)\]
+> danfo.Groupby.**cumMin**\(\)    \[[source](https://github.com/javascriptdata/danfojs/blob/4993242be7847ba7583dd40ed0188929898b8fd6/src/danfojs-base/aggregators/groupby.ts#L497)\]
 
 **Parameters**: None
 
@@ -75,7 +75,7 @@ grpColC.cumMin().tail().print()
 ╚═══╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cummin for two columns for each group, group by one column
+Obtain the cumMin for two columns for each group, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
@@ -137,7 +137,7 @@ grpCol.cumMin().tail().print()
 ╚════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cummin for a column for each group, group by two columns
+Obtain the cumMin for a column for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
