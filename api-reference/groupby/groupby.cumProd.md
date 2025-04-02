@@ -4,7 +4,7 @@ description: Obtain the cumulative product per group for each column
 
 # Groupby.cumProd
 
-> danfo.Groupby.**cumprod**\(\)     \[[source](https://github.com/javascriptdata/danfojs/blob/65f9b3753389b08101d4bb00a2d6488255476aaf/src/danfojs-base/aggregators/groupby.ts#L489)\]
+> danfo.Groupby.**cumProd**\(\)     \[[source](https://github.com/javascriptdata/danfojs/blob/65f9b3753389b08101d4bb00a2d6488255476aaf/src/danfojs-base/aggregators/groupby.ts#L489)\]
 
 **Parameters**: None
 
@@ -74,7 +74,7 @@ grpCol.cumProd().tail().print()
 ╚═══╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cumprod for two columns for each groups, group by one column
+Obtain the cumProd for two columns for each groups, group by one column
 
 {% tabs %}
 {% tab title="Node" %}
@@ -122,7 +122,7 @@ grpCol.cumProd().print()
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cumprod for a column for each group, group by two columns
+Obtain the cumProd for a column for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
@@ -170,7 +170,7 @@ grpCol.cumProd().print()
 ╚════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Obtain the cumprod for two columns for each group, group by two columns
+Obtain the cumProd for two columns for each group, group by two columns
 
 {% tabs %}
 {% tab title="Node" %}
