@@ -145,7 +145,7 @@ let encoder = new dfd.LabelEncoder()
 let cols = ["Sex", "Name"]
 cols.forEach(col => {
   encoder.fit(df[col])
-  enc_val = encoder.transform(df[col])
+  const enc_val = encoder.transform(df[col])
   df.addColumn( col, enc_val, { inplace: true })
 })
 
@@ -225,7 +225,7 @@ async function load_process_data() {
     let cols = ["Sex", "Name"]
     cols.forEach(col => {
         encoder.fit(df[col])
-        enc_val = encoder.transform(df[col])
+        const enc_val = encoder.transform(df[col])
         df.addColumn( col, enc_val, { inplace: true })
     })
 
