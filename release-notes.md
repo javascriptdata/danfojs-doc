@@ -1,6 +1,24 @@
 # Release Notes
 
-### \[LATEST] Release Node (v1.1.2), Browser (v1.1.2)
+### \[LATEST] Release Node (v1.2.0), Browser (v1.2.0)
+
+**Date:** 3rd April 2025
+
+#### What's Changed
+
+* Upgrade of SheetJS dependency
+* fix: replace does not accept falsy strings or numbers
+* Adds function overload to NDFrame toCSV and toJSON so danfojs-base and danfojs-browser can use the same code
+* Better error handling for io functions
+* Update io.excel.ts to use default values for options
+* fix dtypes not used on csv parse
+* fix isEmpty bug with bigInt
+
+#### Contributors: @risenW @BowTiedAztec @kgeis @geoextra @pensono @acctsi1 @babennettdev @kitfit-dave @ekynoxe @nucoinha @lyhue1991
+
+**Full Changelog**: https://github.com/javascriptdata/danfojs/releases/tag/v1.2.0
+
+### Release Node (v1.1.2), Browser (v1.1.2)
 
 **Date:** 12th October 2022
 
@@ -110,17 +128,14 @@ Minor patch update for column name display after aggregation functions like sum,
 * Add loc indexing support for Series
 * Add configuration support for formating DataFrame display in the console
 * New DataFrame `applyMap` function for element-wise apply function
-* `and` and `or` logical comparison support. E.g\
-  `df.loc({`\
-  `rows: df['Salary_in_1000'].gte(100)).and(df['Age'].gt(60))`\
-  `})`
+* `and` and `or` logical comparison support. E.g`df.loc({``rows: df['Salary_in_1000'].gte(100)).and(df['Age'].gt(60))``})`
 * `read_csv` now uses [Papaparse](https://www.papaparse.com) and supports config values for headers, separator, etc.
 * `to_csv` , `to_json` and `to_excel` functions now support saving to local disk in Node and downloadable in the browser. Also, supports config parameters for output.
 * `read_json` now supports config values for headers, authentication, separator, etc.
 * `read_excel` now uses [XLSX](https://www.npmjs.com/package/xlsx) parser, hence supports all XLSX config options.
-* DataFrame `query` function now accepts boolean masks with single or multiple conditions. E.g\
-  `df.query({`\
-  `rows: df['Salary_in_1000'].gte(100)).and(df['Age'].gt(60))`\
+* DataFrame `query` function now accepts boolean masks with single or multiple conditions. E.g
+  `df.query({`
+  `rows: df['Salary_in_1000'].gte(100)).and(df['Age'].gt(60))`
   `})`
 
 **Bug Fixes**
@@ -138,7 +153,7 @@ Contributors [@risenW](https://github.com/risenW)
 
 **Date:** 30th May 2021
 
-\[Bug Fixes]: [#206](https://github.com/opensource9ja/danfojs/issues/206) [#203](https://github.com/opensource9ja/danfojs/issues/203) [#200](https://github.com/opensource9ja/danfojs/issues/200) [#198](https://github.com/opensource9ja/danfojs/issues/198) [#198](https://github.com/opensource9ja/danfojs/issues/198) [#188](https://github.com/opensource9ja/danfojs/issues/188) [#181](https://github.com/opensource9ja/danfojs/issues/181) [#175](https://github.com/opensource9ja/danfojs/issues/175) [#183](https://github.com/opensource9ja/danfojs/issues/183) [#168](https://github.com/opensource9ja/danfojs/issues/168)\
+\[Bug Fixes]: [#206](https://github.com/opensource9ja/danfojs/issues/206) [#203](https://github.com/opensource9ja/danfojs/issues/203) [#200](https://github.com/opensource9ja/danfojs/issues/200) [#198](https://github.com/opensource9ja/danfojs/issues/198) [#198](https://github.com/opensource9ja/danfojs/issues/198) [#188](https://github.com/opensource9ja/danfojs/issues/188) [#181](https://github.com/opensource9ja/danfojs/issues/181) [#175](https://github.com/opensource9ja/danfojs/issues/175) [#183](https://github.com/opensource9ja/danfojs/issues/183) [#168](https://github.com/opensource9ja/danfojs/issues/168)
 \[Patches] [#191](https://github.com/opensource9ja/danfojs/issues/191) [#161](https://github.com/opensource9ja/danfojs/issues/161) [#206](https://github.com/opensource9ja/danfojs/issues/206)
 
 Contributors [@risenW](https://github.com/risenW) [@steveoni](https://github.com/steveoni) [@jpjagt](https://github.com/jpjagt) [@sponsfreixes](https://github.com/sponsfreixes) [@bherbruck](https://github.com/bherbruck) [@woosuk288](https://github.com/woosuk288) and [@adithyaakrishna](https://github.com/adithyaakrishna)
@@ -209,7 +224,7 @@ A simple example:
             })
 
     </script>
-    
+  
 </body>
 
 </html>
