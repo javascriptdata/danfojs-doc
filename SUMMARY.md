@@ -203,7 +203,7 @@
     * [Line Charts](api-reference/plotting/line-charts.md)
     * [Customizing your plots](api-reference/plotting/configuring-your-plots.md)
   * [Groupby](api-reference/groupby/README.md)
-    * [Groupby.get\_groups](api-reference/groupby/groupby.get\_groups.md)
+    * [Groupby.getGroups](api-reference/groupby/groupby.getGroups.md)
     * [Groupby.col](api-reference/groupby/groupby.col.md)
     * [Groupby.max](api-reference/groupby/groupby.max.md)
     * [Groupby.min](api-reference/groupby/groupby.min.md)

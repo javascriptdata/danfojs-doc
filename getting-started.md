@@ -2030,9 +2030,9 @@ let df = new dfd.DataFrame(data)
 
 let grp = df.groupby(["A"])
 
-grp.get_groups(["foo"]).print()
+grp.getGroup(["foo"]).print()
 
-grp.get_groups(["bar"]).print()
+grp.getGroup(["bar"]).print()
 ```
 
 ```

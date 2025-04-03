@@ -2,9 +2,9 @@
 description: Obtain the data for each element of the groupby column
 ---
 
-# Groupby.get\_groups
+# Groupby.getGroups
 
-> danfo.Groupby.get\_groups(key) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L313)]
+> danfo.Groupby.getGroups(key) \[[source](https://github.com/opensource9ja/danfojs/blob/master/danfojs/src/core/groupby.js#L313)]
 
 | Parameters | Type  | Description                   | default |
 | ---------- | ----- | ----------------------------- | ------- |
@@ -34,9 +34,9 @@ let df = new dfd.DataFrame(data)
 
 let grp = df.groupby(["A"])
 
-grp.get_groups(["foo"]).print()
+grp.getGroup(["foo"]).print()
 
-grp.get_groups(["bar"]).print()
+grp.getGroup(["bar"]).print()
 ```
 {% endtab %}
 {% endtabs %}
@@ -74,7 +74,7 @@ grp.get_groups(["bar"]).print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Group dataframe by two columns and obtain their groups. Since the dataframe is grouped by two columns we most specify two keys in the get\_groups belonging to these two columns
+Group dataframe by two columns and obtain their groups. Since the dataframe is grouped by two columns we most specify two keys in the getGroups belonging to these two columns
 
 {% tabs %}
 {% tab title="Node" %}
@@ -94,15 +94,15 @@ let df = new dfd.DataFrame(data)
 
 let grp = df.groupby(["A","B"])
 
-grp.get_groups(["foo","one"]).print()
+grp.getGroup(["foo","one"]).print()
 
-grp.get_groups(["bar","one"]).print()
+grp.getGroup(["bar","one"]).print()
 ```
 {% endtab %}
 {% endtabs %}
 
 ```
-//get_groups(["foo","one"]
+//getGroup(["foo","one"]
 
 
  Shape: (2,4) 
@@ -115,7 +115,7 @@ grp.get_groups(["bar","one"]).print()
 ║ 1 │ foo               │ one               │ 6                 │ 7                 ║
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 
-//get_groups(["bar","one"])
+//getGroup(["bar","one"])
 
 
  Shape: (1,4) 

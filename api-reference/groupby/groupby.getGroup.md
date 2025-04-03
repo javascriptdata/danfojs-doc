@@ -74,7 +74,7 @@ grp.getGroup(["bar"]).print()
 ╚═══╧═══════════════════╧═══════════════════╧═══════════════════╧═══════════════════╝
 ```
 
-Group dataframe by two columns and obtain their groups. Since the dataframe is grouped by two columns we most specify two keys in the get\_groups belonging to these two columns
+Group dataframe by two columns and obtain their groups. Since the dataframe is grouped by two columns we most specify two keys in the getGroups belonging to these two columns
 
 {% tabs %}
 {% tab title="Node" %}
@@ -102,7 +102,7 @@ grp.getGroup(["bar","one"]).print()
 {% endtabs %}
 
 ```text
-//get_groups(["foo","one"]
+//getGroup(["foo","one"]
 
 
  Shape: (2,4) 

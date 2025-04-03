@@ -8,7 +8,7 @@ description: 'GroupBy objects are returned by groupby calls: danfo.DataFrame.gro
 
 |  |  |
 | :--- | :--- |
-| [`GroupBy.get_group`](groupby.get_groups.md) | Construct DataFrame from group with provided name. |
+| [`GroupBy.get_group`](groupby.getGroup.md) | Construct DataFrame from group with provided name. |
 
 ### Function application
 
